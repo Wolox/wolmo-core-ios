@@ -1,0 +1,9 @@
+config:
+   ci: 'TRAVIS'
+   url: http://codestats.wolox.com.ar/
+metrics:
+   slather:
+     name: 'Code Coverage'
+     enabled: true
+     minimum: 70
+     upload_report: false
