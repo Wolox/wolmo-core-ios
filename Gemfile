@@ -6,4 +6,4 @@ gem 'xcpretty'
 gem 'synx'
 gem 'linterbot'
 gem 'slather'
-gem 'codestats-metrics-reporter', require: nil, git: 'git@github.com:Wolox/codestats-metrics-reporter.git'
+gem 'codestats-metrics-reporter', require: nil
