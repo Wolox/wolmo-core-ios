@@ -5,5 +5,5 @@ metrics:
    slather:
      name: 'Code Coverage'
      enabled: true
-     minimum: 70
+     minimum: 40
      upload_report: true
