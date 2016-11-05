@@ -29,7 +29,7 @@ public class NSURLSpec: QuickSpec {
                 
                 it("should append the path component to the base URL") {
                     let rawURL = remoteURL / "Hello"
-                    expect(rawURL.absoluteString).to(equal(remoteURL.absoluteString + "/Hello"))
+                    expect(rawURL!.absoluteString).to(equal(remoteURL.absoluteString! + "/Hello"))
                 }
             }
             
@@ -37,7 +37,7 @@ public class NSURLSpec: QuickSpec {
                 
                 it("should append the path component to the base URL") {
                     let rawURL = remoteURL / 1
-                    expect(rawURL.absoluteString).to(equal(remoteURL.absoluteString + "/1"))
+                    expect(rawURL!.absoluteString).to(equal(remoteURL.absoluteString! + "/1"))
                 }
             }
             
