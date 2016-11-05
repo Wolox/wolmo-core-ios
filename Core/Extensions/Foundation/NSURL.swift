@@ -16,7 +16,7 @@ import Foundation
  
  - returns: The new NSURL, with pathComponent appended to baseURL
  */
-public func / (baseURL: NSURL, pathComponent: String) -> NSURL {
+public func / (baseURL: NSURL, pathComponent: String) -> NSURL? {
     return baseURL.URLByAppendingPathComponent(pathComponent)
 }
 
@@ -28,7 +28,7 @@ public func / (baseURL: NSURL, pathComponent: String) -> NSURL {
  
  - returns: The new NSURL, with pathComponent appended to baseURL
  */
-public func / (baseURL: NSURL, pathComponent: Int) -> NSURL {
+public func / (baseURL: NSURL, pathComponent: Int) -> NSURL? {
     return baseURL / String(pathComponent)
 }
 
@@ -38,6 +38,11 @@ public extension NSURL {
      Returns if the URL is of type HTTP protocol.
     */
     public var isHTTPProtocol: Bool {
+        
+        guard let absoluteString = absoluteString else {
+            return false
+        }
+        
         return absoluteString
                 .lowercaseString
                 .substringToIndex(absoluteString.startIndex.advancedBy(5)) // We want HTTP (4) or HTTPS(5)
