@@ -23,6 +23,15 @@ internal let DefaultWeekDateFormatter: DateFormatter = {
 public extension Date {
     
     /**
+     Returns a Date with right now's time and date.
+     
+     - seealso: NSDate.init()
+    */
+    public static func now() -> Date {
+        return Date()
+    }
+    
+    /**
      Returns the hours from a date.
         
      - parameter calendar: the calendar to get the date components from. 
