@@ -104,7 +104,7 @@ public extension String {
     /**
      Returns true if the string is not empty, false if not.
     */
-    public func isNotEmpty() -> Bool {
+    public var isNotEmpty: Bool {
         return !isEmpty
     }
     
