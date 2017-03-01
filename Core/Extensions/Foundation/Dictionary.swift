@@ -15,9 +15,9 @@ extension Dictionary {
         If both dictionaries have the same key with different value, the result
         will have that key with the value found in `dictionary`.
     */
-    func append(contentsOf dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
+    func appending(contentsOf dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
         var result = self
-        result.appending(contentsOf: dictionary)
+        result.append(contentsOf: dictionary)
         return result
     }
     
@@ -26,9 +26,9 @@ extension Dictionary {
          If both dictionaries have the same key with different value,
          the result will have that key with the value found in `dictionary`.
      */
-    mutating func appending(contentsOf dictionary: Dictionary<Key, Value>) {
+    mutating func append(contentsOf dictionary: Dictionary<Key, Value>) {
         for (key,value) in dictionary {
-            updateValue(value, forKey:key)
+            updateValue(value, forKey: key)
         }
     }
     
