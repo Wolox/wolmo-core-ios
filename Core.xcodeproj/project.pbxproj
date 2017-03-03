@@ -67,6 +67,7 @@
 		CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8B1E607B28005D7E8F /* NibLoadable.swift */; };
 		CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8C1E607B28005D7E8F /* UIView.swift */; };
 		CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */; };
+		CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0F01E82D1F9005C300E /* PathAppendable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		CE3A9B8B1E607B28005D7E8F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CE3A9B8C1E607B28005D7E8F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		CE80E0F01E82D1F9005C300E /* PathAppendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,8 +324,9 @@
 				B988B97A1D244D6300824685 /* ProgressHUD */,
 				B988B96E1D24482200824685 /* ActionHandler.swift */,
 				B988B9721D244BAE00824685 /* AssociatedObject.swift */,
-				B988B9801D24621000824685 /* DeviceType.swift */,
 				B9F63CC11D5CE7FA00D09C1D /* CellIdentifiable.swift */,
+				B988B9801D24621000824685 /* DeviceType.swift */,
+				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
 				B9F63CC21D5CE7FA00D09C1D /* CellIdentifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
