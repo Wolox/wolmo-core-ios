@@ -15,6 +15,7 @@ import Foundation
      - parameter pathComponent: PathAppendable that will be appended.
      
      - returns: The new NSURL, with pathComponent appended to baseURL.
+     - seealso: `appendingPathComponent` from NSString.
  */
 public func / (basePath: String, pathComponent: PathAppendable) -> String {
     return (basePath as NSString).appendingPathComponent(pathComponent.toPath())
@@ -24,16 +25,19 @@ public func / (basePath: String, pathComponent: PathAppendable) -> String {
 /**
     Represents a component that can be part of a path,
     by representing itself with a string to be appended to the path.
- 
-    By default, it uses the String's describing init.
-    This means you can override the `toPath` function,
-    or implement the `CustomStringConvertible` protocol and override
-    the `description` property.
- 
-    - see also: `String(describing: Subject)`
  */
 public protocol PathAppendable {
     
+    /**
+         String represention of the path that represents the component.
+     
+         By default, it uses the String's describing init.
+         This means you can override the `toPath` function,
+         or implement the `CustomStringConvertible` protocol and override
+         the `description` property.
+         
+         - see also: `String(describing: Subject)` init.
+    */
     func toPath() -> String
     
 }
