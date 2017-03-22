@@ -275,9 +275,9 @@
 				B95948201D4FD599003A082F /* DateSpec.swift */,
 				CE4E3E241E830D8F007196F7 /* DictionarySpec.swift */,
 				B95948231D4FD599003A082F /* RawRepresentableSpec.swift */,
-				B95948221D4FD599003A082F /* URLSpec.swift */,
 				B9F63CB31D53D2C200D09C1D /* StringSpec.swift */,
 				B95948211D4FD599003A082F /* TimerSpec.swift */,
+				B95948221D4FD599003A082F /* URLSpec.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
