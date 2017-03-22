@@ -25,7 +25,7 @@ public extension Date {
     /**
      Returns a Date with right now's time and date.
      
-     - seealso: NSDate.init()
+     - seealso: Date.init()
     */
     public static func now() -> Date {
         return Date()
@@ -37,7 +37,7 @@ public extension Date {
      - parameter calendar: the calendar to get the date components from. 
      Default: current user calendar.
      
-     - seealso: NSCalendar().component()
+     - seealso: Calendar().component()
      - returns: An Int value representing the hours, between 0 - 24.
      */
     public func hours(using calendar: Calendar = .current) -> Int {
@@ -50,7 +50,7 @@ public extension Date {
      - parameter calendar: the calendar to get the date components from. 
      Default: current user calendar.
      
-     - seealso: NSCalendar().component()
+     - seealso: Calendar().component()
      - returns: An Int value representing the minutes, between 0 - 60.
      */
     public func minutes(using calendar: Calendar = .current) -> Int {
@@ -63,11 +63,50 @@ public extension Date {
      - parameter calendar: the calendar to get the date components from. 
      Default: current user calendar.
      
-     - seealso: NSCalendar().component()
+     - seealso: Calendar().component()
      - returns: An Int value representing the seconds, between 0 - 60.
      */
     public func seconds(using calendar: Calendar = .current) -> Int {
         return calendar.component(.second, from: self)
+    }
+    
+    /**
+     Returns the day from a date.
+     
+     - parameter calendar: the calendar to get the date components from.
+     Default: current user calendar.
+     
+     - seealso: Calendar().component()
+     - returns: An Int value representing the day of month.
+     */
+    public func day(using calendar: Calendar = .current) -> Int {
+        return calendar.component(.day, from: self)
+    }
+    
+    /**
+     Returns the month from a date.
+     
+     - parameter calendar: the calendar to get the date components from.
+     Default: current user calendar.
+     
+     - seealso: Calendar().component()
+     - returns: An Int value representing the month.
+     */
+    public func month(using calendar: Calendar = .current) -> Int {
+        return calendar.component(.month, from: self)
+    }
+    
+    /**
+     Returns the year from a date.
+     
+     - parameter calendar: the calendar to get the date components from.
+     Default: current user calendar.
+     
+     - seealso: Calendar().component()
+     - returns: An Int value representing the year.
+     */
+    public func year(using calendar: Calendar = .current) -> Int {
+        return calendar.component(.year, from: self)
     }
     
     /**
@@ -77,7 +116,7 @@ public extension Date {
      - parameter calendar: the calendar to get the date components from. 
      Default: current user calendar.
      
-     - seealso: NSCalendar().dateComponents()
+     - seealso: Calendar().dateComponents()
      - note: You could pass an array to units, such as [.Hour, .Second] to 
      retrieve both components at the same time.
      - returns: The requested date components.
@@ -109,7 +148,7 @@ public extension Date {
      */
     public init?(dateString: String, formatString: String) {
         let formatter = DateFormatter()
-        formatter.setLocalizedDateFormatFromTemplate(formatString)
+        formatter.dateFormat = formatString
         self.init(dateString: dateString, dateFormatter: formatter)
     }
     
@@ -119,15 +158,10 @@ public extension Date {
      - seealso: init(dateString: String)
      */
     public init?(day: Int, month: Int, year: Int) {
-        var monthString: String = "\(month)"
-        var dayString: String = "\(day)"
-        if month < 10 {
-            monthString = "0\(month)"
-        }
-        if day < 10 {
-            dayString = "0\(day)"
-        }
-        self.init(dateString: "\(year)-\(monthString)-\(dayString)")
+        let yearString = String(format: "%.4d", year)
+        let monthString = String(format: "%.2d", month)
+        let dayString = String(format: "%.2d", day)
+        self.init(dateString: "\(yearString)-\(monthString)-\(dayString)")
     }
     
     /**
@@ -172,7 +206,19 @@ public extension Date {
      */
     public func toString(with format: String) -> String {
         let formatter = DateFormatter()
-        formatter.setLocalizedDateFormatFromTemplate(format)
+        formatter.dateFormat = format
+        return toString(accordingTo: formatter)
+    }
+    
+    /**
+     Returns a the string representation of self with the localized format
+     created from the format specified.
+     
+     - seealso: Dateformatter.setLocalizedDateFormatFromTemplate
+     */
+    public func toString(withLocalized formatToLocalize: String) -> String {
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate(formatToLocalize)
         return toString(accordingTo: formatter)
     }
     
