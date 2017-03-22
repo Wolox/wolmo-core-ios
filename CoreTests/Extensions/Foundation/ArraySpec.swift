@@ -16,7 +16,7 @@ public class ArraySpec: QuickSpec {
     
     override public func spec() {
         
-        describe("#groupBy") {
+        describe("#group(withCriteria:)") {
             
             it("should group the array based on condition") {
                 
@@ -74,7 +74,7 @@ public class ArraySpec: QuickSpec {
             
         }
         
-        describe("#filterFirst") {
+        describe("#getFirst(where:)") {
             
             let array = [1, 2, 3]
             
