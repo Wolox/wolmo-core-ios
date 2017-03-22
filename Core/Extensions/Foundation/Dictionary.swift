@@ -8,14 +8,14 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
     
     /**
         Returns a new dictionary with the contents of self and the given `dictionary`.
         If both dictionaries have the same key with different value, the result
         will have that key with the value found in `dictionary`.
     */
-    func appending(contentsOf dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
+    public func appending(contentsOf dictionary: [Key: Value]) -> [Key: Value] {
         var result = self
         result.append(contentsOf: dictionary)
         return result
@@ -26,8 +26,8 @@ extension Dictionary {
          If both dictionaries have the same key with different value,
          the result will have that key with the value found in `dictionary`.
      */
-    mutating func append(contentsOf dictionary: Dictionary<Key, Value>) {
-        for (key,value) in dictionary {
+    public mutating func append(contentsOf dictionary: [Key: Value]) {
+        for (key, value) in dictionary {
             updateValue(value, forKey: key)
         }
     }

@@ -12,7 +12,7 @@ import Quick
 import Nimble
 import Core
 
-public class NSTimerSpec: QuickSpec {
+public class TimerSpec: QuickSpec {
     
     override public func spec() {
         

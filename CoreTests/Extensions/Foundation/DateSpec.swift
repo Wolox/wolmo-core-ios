@@ -51,7 +51,7 @@ private let week: [Date] = {
     return week
 }()
 
-public class NSDateSpec: QuickSpec {
+public class DateSpec: QuickSpec {
     
     override public func spec() {
         

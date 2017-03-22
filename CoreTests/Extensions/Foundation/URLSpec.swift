@@ -12,7 +12,7 @@ import Quick
 import Nimble
 import Core
 
-public class NSURLSpec: QuickSpec {
+public class URLSpec: QuickSpec {
     
     override public func spec() {
         
