@@ -223,8 +223,8 @@
 		9D896AC61CDE3EC5008B0E5F /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D896AF11CDE6565008B0E5F /* Extensions */,
 				B959483A1D4FDD54003A082F /* Utilities */,
+				9D896AF11CDE6565008B0E5F /* Extensions */,
 				9D896AC91CDE3EC5008B0E5F /* Info.plist */,
 			);
 			path = CoreTests;

@@ -112,6 +112,7 @@ public class StringSpec: QuickSpec {
         describe("#trimmed") {
             
             context("When the string has whitespaces") {
+                
                 var string: String!
                 
                 beforeEach {
@@ -132,26 +133,39 @@ public class StringSpec: QuickSpec {
         
         describe("#replacing(with:)") {
             
+            var string: String!
+            var target: String!
+            var replacement: String!
+            
             context("When the string doesn't contain the target string to replace") {
                 
+                beforeEach {
+                    string = "this is my string"
+                    target = "hello"
+                    replacement = "world"
+                }
+                
                 it("should return the same string") {
-                    let string = "this is my string"
-                    let replaced = string.replacing("hello", with: "world")
+                    let replaced = string.replacing(target, with: replacement)
                     expect(string).to(equal(replaced))
                 }
             }
             
             context("When the string contains the target string to replace") {
                 
+                beforeEach {
+                    string = "this is my string"
+                    target = "this"
+                    replacement = "that"
+                }
+                
                 it("should return the string with the target replaced") {
-                    let string = "this is my string"
-                    let replaced = string.replacing("this", with: "that")
+                    let replaced = string.replacing(target, with: replacement)
                     expect(replaced).to(equal("that is my string"))
                 }
                 
                 it("should not mutate the string") {
-                    let string = "this is my string"
-                    let _ = string.replacing("this", with: "that")
+                    let _ = string.replacing(target, with: replacement)
                     expect(string).to(equal("this is my string"))
                 }
             }
@@ -181,6 +195,197 @@ public class StringSpec: QuickSpec {
                     expect(string.withoutWhiteSpaces).to(equal("test@test.com"))
                 }
             }
+        }
+        
+        describe("#isNotEmpty") {
+            
+            var string: String!
+            
+            context("when string is empty") {
+                
+                beforeEach {
+                    string = ""
+                }
+                
+                it("returns false") {
+                    expect(string.isNotEmpty).to(beFalse())
+                }
+                
+            }
+            
+            context("when string is not empty") {
+                
+                beforeEach {
+                    string = "something"
+                }
+                
+                it("returns true") {
+                    expect(string.isNotEmpty).to(beTrue())
+                }
+                
+            }
+            
+        }
+        
+        describe("#remove(suffix:)") {
+            
+            var string: String!
+            var suffix: String!
+            
+            beforeEach {
+                string = "this is my string"
+            }
+            
+            context("when the string has the string to remove as prefix") {
+                
+                beforeEach {
+                    suffix = "this"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(suffix: suffix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string has the string to remove in the middle") {
+                
+                beforeEach {
+                    suffix = " my s"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(suffix: suffix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string has the string to remove as suffix") {
+                
+                beforeEach {
+                    suffix = "ring"
+                }
+                
+                it("returns the  string without the suffix") {
+                    let removed = string.remove(suffix: suffix)
+                    expect(removed).to(equal("this is my st"))
+                }
+                
+                it("doesn't change the original string") {
+                    let _ = string.remove(suffix: suffix)
+                    expect(string).to(equal("this is my string"))
+                }
+                
+            }
+            
+            context("when the string hasn't got the string to remove as substring") {
+                
+                beforeEach {
+                    suffix = "hello"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(suffix: suffix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string has the string to remove as suffix but case don't match") {
+                
+                beforeEach {
+                    suffix = "riNg"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(suffix: suffix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+        }
+        
+        describe("#remove(prefix:)") {
+            var string: String!
+            var prefix: String!
+            
+            beforeEach {
+                string = "this is my string"
+            }
+            
+            context("when the string has the string to remove as prefix") {
+                
+                beforeEach {
+                    prefix = "this"
+                }
+                
+                it("returns the string without the prefix") {
+                    let removed = string.remove(prefix: prefix)
+                    expect(removed).to(equal(" is my string"))
+                }
+                
+                it("doesn't change the original string") {
+                    let _ = string.remove(prefix: prefix)
+                    expect(string).to(equal("this is my string"))
+                }
+                
+            }
+            
+            context("when the string has the string to remove in the middle") {
+                
+                beforeEach {
+                    prefix = " my"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(prefix: prefix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string has the string to remove as suffix") {
+                
+                beforeEach {
+                    prefix = "ring"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(prefix: prefix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string hasn't got the string to remove as substring") {
+                
+                beforeEach {
+                    prefix = "hello"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(prefix: prefix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
+            context("when the string has the string to remove as prefix but case don't match") {
+                
+                beforeEach {
+                    prefix = "This"
+                }
+                
+                it("returns the same string as before") {
+                    let removed = string.remove(prefix: prefix)
+                    expect(removed).to(equal(string))
+                }
+                
+            }
+            
         }
         
     }
