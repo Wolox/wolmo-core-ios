@@ -18,9 +18,9 @@
 		B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481B1D3EA051003A082F /* UIKit.framework */; };
 		B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481D1D3EA060003A082F /* Foundation.framework */; };
 		B95948241D4FD599003A082F /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959481F1D4FD599003A082F /* ArraySpec.swift */; };
-		B95948251D4FD599003A082F /* NSDateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948201D4FD599003A082F /* NSDateSpec.swift */; };
-		B95948261D4FD599003A082F /* NSTimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948211D4FD599003A082F /* NSTimerSpec.swift */; };
-		B95948271D4FD599003A082F /* NSURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948221D4FD599003A082F /* NSURLSpec.swift */; };
+		B95948251D4FD599003A082F /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948201D4FD599003A082F /* DateSpec.swift */; };
+		B95948261D4FD599003A082F /* TimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948211D4FD599003A082F /* TimerSpec.swift */; };
+		B95948271D4FD599003A082F /* URLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948221D4FD599003A082F /* URLSpec.swift */; };
 		B95948281D4FD599003A082F /* RawRepresentableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95948231D4FD599003A082F /* RawRepresentableSpec.swift */; };
 		B959482D1D4FDB3A003A082F /* UIAlertControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959482A1D4FDB3A003A082F /* UIAlertControllerSpec.swift */; };
 		B959482E1D4FDB3A003A082F /* UIColorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959482B1D4FDB3A003A082F /* UIColorSpec.swift */; };
@@ -51,9 +51,9 @@
 		CE3A9B901E607B28005D7E8F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B781E607B28005D7E8F /* Array.swift */; };
 		CE3A9B911E607B28005D7E8F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B791E607B28005D7E8F /* Date.swift */; };
 		CE3A9B921E607B28005D7E8F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7A1E607B28005D7E8F /* Dictionary.swift */; };
-		CE3A9B931E607B28005D7E8F /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7B1E607B28005D7E8F /* NSBundle.swift */; };
-		CE3A9B941E607B28005D7E8F /* NSTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7C1E607B28005D7E8F /* NSTimer.swift */; };
-		CE3A9B951E607B28005D7E8F /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7D1E607B28005D7E8F /* NSURL.swift */; };
+		CE3A9B931E607B28005D7E8F /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7B1E607B28005D7E8F /* Bundle.swift */; };
+		CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7C1E607B28005D7E8F /* Timer.swift */; };
+		CE3A9B951E607B28005D7E8F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7D1E607B28005D7E8F /* URL.swift */; };
 		CE3A9B961E607B28005D7E8F /* RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7E1E607B28005D7E8F /* RawRepresentable.swift */; };
 		CE3A9B971E607B28005D7E8F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B7F1E607B28005D7E8F /* String.swift */; };
 		CE3A9B981E607B28005D7E8F /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B811E607B28005D7E8F /* Signal.swift */; };
@@ -110,9 +110,9 @@
 		B959481B1D3EA051003A082F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B959481D1D3EA060003A082F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B959481F1D4FD599003A082F /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArraySpec.swift; path = Extensions/Foundation/ArraySpec.swift; sourceTree = "<group>"; };
-		B95948201D4FD599003A082F /* NSDateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateSpec.swift; path = Extensions/Foundation/NSDateSpec.swift; sourceTree = "<group>"; };
-		B95948211D4FD599003A082F /* NSTimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTimerSpec.swift; path = Extensions/Foundation/NSTimerSpec.swift; sourceTree = "<group>"; };
-		B95948221D4FD599003A082F /* NSURLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURLSpec.swift; path = Extensions/Foundation/NSURLSpec.swift; sourceTree = "<group>"; };
+		B95948201D4FD599003A082F /* DateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSpec.swift; path = Extensions/Foundation/DateSpec.swift; sourceTree = "<group>"; };
+		B95948211D4FD599003A082F /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerSpec.swift; path = Extensions/Foundation/TimerSpec.swift; sourceTree = "<group>"; };
+		B95948221D4FD599003A082F /* URLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSpec.swift; path = Extensions/Foundation/URLSpec.swift; sourceTree = "<group>"; };
 		B95948231D4FD599003A082F /* RawRepresentableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawRepresentableSpec.swift; path = Extensions/Foundation/RawRepresentableSpec.swift; sourceTree = "<group>"; };
 		B959482A1D4FDB3A003A082F /* UIAlertControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerSpec.swift; sourceTree = "<group>"; };
 		B959482B1D4FDB3A003A082F /* UIColorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorSpec.swift; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 		CE3A9B781E607B28005D7E8F /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CE3A9B791E607B28005D7E8F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CE3A9B7A1E607B28005D7E8F /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		CE3A9B7B1E607B28005D7E8F /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
-		CE3A9B7C1E607B28005D7E8F /* NSTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimer.swift; sourceTree = "<group>"; };
-		CE3A9B7D1E607B28005D7E8F /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
+		CE3A9B7B1E607B28005D7E8F /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		CE3A9B7C1E607B28005D7E8F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		CE3A9B7D1E607B28005D7E8F /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		CE3A9B7E1E607B28005D7E8F /* RawRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawRepresentable.swift; sourceTree = "<group>"; };
 		CE3A9B7F1E607B28005D7E8F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE3A9B811E607B28005D7E8F /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
@@ -269,12 +269,12 @@
 		9D896AF21CDE656B008B0E5F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				B9F63CB31D53D2C200D09C1D /* StringSpec.swift */,
 				B959481F1D4FD599003A082F /* ArraySpec.swift */,
-				B95948201D4FD599003A082F /* NSDateSpec.swift */,
-				B95948211D4FD599003A082F /* NSTimerSpec.swift */,
-				B95948221D4FD599003A082F /* NSURLSpec.swift */,
+				B95948201D4FD599003A082F /* DateSpec.swift */,
 				B95948231D4FD599003A082F /* RawRepresentableSpec.swift */,
+				B95948221D4FD599003A082F /* URLSpec.swift */,
+				B9F63CB31D53D2C200D09C1D /* StringSpec.swift */,
+				B95948211D4FD599003A082F /* TimerSpec.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -372,13 +372,13 @@
 			isa = PBXGroup;
 			children = (
 				CE3A9B781E607B28005D7E8F /* Array.swift */,
+				CE3A9B7B1E607B28005D7E8F /* Bundle.swift */,
 				CE3A9B791E607B28005D7E8F /* Date.swift */,
 				CE3A9B7A1E607B28005D7E8F /* Dictionary.swift */,
-				CE3A9B7B1E607B28005D7E8F /* NSBundle.swift */,
-				CE3A9B7C1E607B28005D7E8F /* NSTimer.swift */,
-				CE3A9B7D1E607B28005D7E8F /* NSURL.swift */,
 				CE3A9B7E1E607B28005D7E8F /* RawRepresentable.swift */,
 				CE3A9B7F1E607B28005D7E8F /* String.swift */,
+				CE3A9B7C1E607B28005D7E8F /* Timer.swift */,
+				CE3A9B7D1E607B28005D7E8F /* URL.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -568,7 +568,7 @@
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
 				B9F63CC21D5CE7FA00D09C1D /* CellIdentifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
-				CE3A9B941E607B28005D7E8F /* NSTimer.swift in Sources */,
+				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
 				CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */,
 				CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */,
 				CE3A9B981E607B28005D7E8F /* Signal.swift in Sources */,
@@ -584,8 +584,8 @@
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
 				CE3A9B901E607B28005D7E8F /* Array.swift in Sources */,
-				CE3A9B931E607B28005D7E8F /* NSBundle.swift in Sources */,
-				CE3A9B951E607B28005D7E8F /* NSURL.swift in Sources */,
+				CE3A9B931E607B28005D7E8F /* Bundle.swift in Sources */,
+				CE3A9B951E607B28005D7E8F /* URL.swift in Sources */,
 				CE3A9B971E607B28005D7E8F /* String.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,
 				CED934851E8456480017CF96 /* UICollectionView.swift in Sources */,
@@ -607,10 +607,10 @@
 				B9F63CA21D522CDA00D09C1D /* AssociatedObjectSpec.swift in Sources */,
 				B9F63CA61D522CE600D09C1D /* ErrorAlertViewModelSpec.swift in Sources */,
 				B9F63CB41D53D2C200D09C1D /* StringSpec.swift in Sources */,
-				B95948251D4FD599003A082F /* NSDateSpec.swift in Sources */,
-				B95948271D4FD599003A082F /* NSURLSpec.swift in Sources */,
+				B95948251D4FD599003A082F /* DateSpec.swift in Sources */,
+				B95948271D4FD599003A082F /* URLSpec.swift in Sources */,
 				B95948281D4FD599003A082F /* RawRepresentableSpec.swift in Sources */,
-				B95948261D4FD599003A082F /* NSTimerSpec.swift in Sources */,
+				B95948261D4FD599003A082F /* TimerSpec.swift in Sources */,
 				B95948241D4FD599003A082F /* ArraySpec.swift in Sources */,
 				B95948381D4FDCD6003A082F /* SignalProducerSpec.swift in Sources */,
 				B95948391D4FDCD6003A082F /* SignalSpec.swift in Sources */,

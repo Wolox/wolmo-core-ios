@@ -1,5 +1,5 @@
 //
-//  NSURLSpec.swift
+//  URLSpec.swift
 //  Core
 //
 //  Created by Francisco Depascuali on 7/18/16.

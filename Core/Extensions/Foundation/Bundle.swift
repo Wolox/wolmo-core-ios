@@ -1,5 +1,5 @@
 //
-//  NSBundle.swift
+//  Bundle.swift
 //  Core
 //
 //  Created by Guido Marucci Blas on 5/7/16.
