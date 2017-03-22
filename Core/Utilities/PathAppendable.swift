@@ -14,13 +14,24 @@ import Foundation
      - parameter basePath: base string.
      - parameter pathComponent: PathAppendable that will be appended.
      
-     - returns: The new NSURL, with pathComponent appended to baseURL.
+     - returns: The new String, with pathComponent appended to basePath.
      - seealso: `appendingPathComponent` from NSString.
  */
 public func / (basePath: String, pathComponent: PathAppendable) -> String {
     return (basePath as NSString).appendingPathComponent(pathComponent.toPath())
 }
 
+/**
+     Appends a path component to a URL.
+     
+     - parameter baseURL: base URL.
+     - parameter pathComponent: PathAppendable that will be appended.
+     
+     - returns: The new URL, with pathComponent appended to baseURL
+ */
+public func / (baseURL: URL, pathComponent: PathAppendable) -> URL {
+    return baseURL.appendingPathComponent(pathComponent.toPath())
+}
 
 /**
     Represents a component that can be part of a path,

@@ -21,7 +21,7 @@ public class DictionarySpec: QuickSpec {
             var dict1: [Int: String]!
             var dict2: [Int: String]!
             
-            context("when dictionaries have no same keys") {
+            context("when dictionaries have all different keys") {
                 
                 beforeEach {
                     dict1 = [2: "dos", 3: "tres"]
