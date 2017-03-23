@@ -3,7 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/Wolox/wolmo-core-ios/badge.svg?branch=master)](https://coveralls.io/github/Wolox/wolmo-core-ios?branch=master)
 [![GitHub release](https://img.shields.io/github/release/Wolox/wolmo-core-ios.svg)](https://github.com/Wolox/wolmo-core-ios/releases)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg)
+![Swift 2.3](https://img.shields.io/badge/Swift-2.3-orange.svg)
+![Swift 3](https://img.shields.io/badge/Swift-3-orange.svg)
 
 WolMo - Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
 
