@@ -68,6 +68,7 @@
 		CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8C1E607B28005D7E8F /* UIView.swift */; };
 		CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */; };
 		CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0F01E82D1F9005C300E /* PathAppendable.swift */; };
+		CED934851E8456480017CF96 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED934841E8456480017CF96 /* UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		CE3A9B8C1E607B28005D7E8F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE80E0F01E82D1F9005C300E /* PathAppendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendable.swift; sourceTree = "<group>"; };
+		CED934841E8456480017CF96 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +397,7 @@
 			children = (
 				CE3A9B841E607B28005D7E8F /* UIAlertController.swift */,
 				CE3A9B851E607B28005D7E8F /* UIButton.swift */,
+				CED934841E8456480017CF96 /* UICollectionView.swift */,
 				CE3A9B861E607B28005D7E8F /* UIColor.swift */,
 				CE3A9B871E607B28005D7E8F /* UITableView.swift */,
 				CE3A9B881E607B28005D7E8F /* UITextField.swift */,
@@ -585,6 +588,7 @@
 				CE3A9B951E607B28005D7E8F /* NSURL.swift in Sources */,
 				CE3A9B971E607B28005D7E8F /* String.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,
+				CED934851E8456480017CF96 /* UICollectionView.swift in Sources */,
 				B988B9811D24621000824685 /* DeviceType.swift in Sources */,
 				B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */,
 				CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */,
