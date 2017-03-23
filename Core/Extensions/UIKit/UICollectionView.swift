@@ -14,8 +14,9 @@ public extension UICollectionView {
          Registers a cell to be used by a UICollectionView.
          
          - parameter cellType: An identifiable cell to take the identifier from.
+         - parameter bundle: The Bundle where the Nib for the cell is located.
      */
-    func register(cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
+    public func register(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
         register(UINib(nibName: cellType.cellIdentifier, bundle: bundle), forCellWithReuseIdentifier: cellType.cellIdentifier)
     }
     
@@ -26,7 +27,7 @@ public extension UICollectionView {
          - parameter cellType: An identifiable cell to take the identifier from.
          - parameter indexPath: IndexPath where to add the cell to the collection view.
      */
-    func dequeue<T: IdentifiableCell>(_ cellType: T.Type, for indexPath: IndexPath) -> T {
+    public func dequeue<T: IdentifiableCell>(_ cellType: T.Type, for indexPath: IndexPath) -> T {
         //swiftlint:disable:next force_cast
         return dequeueReusableCell(withReuseIdentifier: cellType.cellIdentifier, for: indexPath) as! T
     }
