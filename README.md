@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Wolox/wolmo-core-ios.svg?branch=master)](https://travis-ci.org/Wolox/wolmo-core-ios)
 [![Coverage Status](https://coveralls.io/repos/github/Wolox/wolmo-core-ios/badge.svg?branch=master)](https://coveralls.io/github/Wolox/wolmo-core-ios?branch=master)
 [![GitHub release](https://img.shields.io/github/release/Wolox/wolmo-core-ios.svg)](https://github.com/Wolox/wolmo-core-ios/releases)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg)
 
 WolMo - Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
@@ -16,7 +16,7 @@ WolMo - Core iOS is a framework which provides extensions and utilities for iOS 
   * [Usage](#usage)
     * [Utilities](#utilities)
     * [Extensions](#extensions)
-  * [Bootstrap](#bootstrap) 
+  * [Bootstrap](#bootstrap)
   * [Contributing](#usage)
   * [About](#about)
   * [License](#license)
@@ -43,14 +43,14 @@ github "Wolox/wolmo-core-ios" ~> 0.1.0
 
 ## Usage
 
-The framework is divided into 2 sections: [Utilities](#utilities) and [Extensions](#extensions). 
+The framework is divided into 2 sections: [Utilities](#utilities) and [Extensions](#extensions).
 
 The main difference between them is that `utilities` represent components that are independent of the existance of another component. On the other hand, `extensions` represent extra functionality for other existent components. Extensions exist only because the components they rely on exists.
 
 ### Utilities
 Constitutes a component which is independent from another component.
 
-For example, [AlertViewPresenter](Core/Utilities/Alerts/AlertViewPresenter.swift) represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc...) which can adopt this behaviour may be an `AlertViewPresenter`. 
+For example, [AlertViewPresenter](Core/Utilities/Alerts/AlertViewPresenter.swift) represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc...) which can adopt this behaviour may be an `AlertViewPresenter`.
 
 In this framework, we give a default implementation of `UIViewController` as an `AlertViewPresenter`. However, note that they are independent one from another.
 
@@ -59,14 +59,15 @@ In this framework, we give a default implementation of `UIViewController` as an 
 1. [AlertViewPresenter](Core/Utilities/Alerts/AlertViewPresenter.swift): Abstracts the logic of presenting different type of alerts.
 2. [ProgressHUDDelegate](Core/Utilities/ProgressHUD/ProgressHUDDelegate.swift): Abstracts the logic of presenting a progress HUD, usually used in blocking operation (like a sign up).
 3. [ActionHandler](Core/Utilities/ActionHandler.swift): Closure-based handlers for UIControlEvents (great for UIButtons).
-4. [AssociatedObject](Core/Utilities/AssociatedObject.swift): Setter and getted for associated objects. Works with objects and value types.
-5. [DeviceType](Core/Utilities/DeviceType.swift): Provides the current device type.
-6. [CellIdentifiable](Core/Utilities/CellIdentifiable.swift): Identifies a cell. Usually used with `UICollectionView` and `UITableView`.
+4. [AssociatedObject](Core/Utilities/AssociatedObject.swift): Setter and getter for associated objects. Works with objects and value types.
+5. [CellIdentifiable](Core/Utilities/CellIdentifiable.swift): Identifies a cell. Usually used with `UICollectionView` and `UITableView`.
+6. [DeviceType](Core/Utilities/DeviceType.swift): Provides the current device type.
+7. [PathAppendable](Core/Utilities/PathAppendable.swift): Makes a component able to be appended to a URL or string.
 
 ### Extensions
-Extends the behaviour of a component (`class`, `struct`, `enum`, ...) by adding common functionality (functions, computed properties, initializers, ...). 
+Extends the behaviour of a component (`class`, `struct`, `enum`, ...) by adding common functionality (functions, computed properties, initializers, ...).
 
-Extensions contain components which depends exclusively on other components. 
+Extensions contain components which depends exclusively on other components.
 
 For example, [Collapsable](Core/Extensions/UIKit/UIView/Collapsable.swift) represents a collapsable element. This behaviour is an addition to a `UIView`; it would not make sense to have something which is not renderable as `Collapsable`. Furthermore, it doesn't make sense for `Collapsable` to exist per se; it is a behaviour added to any view which conforms to it.
 
