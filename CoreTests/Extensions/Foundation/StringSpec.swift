@@ -16,6 +16,16 @@ public class StringSpec: QuickSpec {
     // swiftlint:disable function_body_length
     override public func spec() {
         
+        describe("#format(with:)") {
+            
+            it("should returned the formatted string as expected") {
+                let string = "%@ is %.3d %@ long"
+                let formatted = string.format(with: "Earth equator line", 25, "thousand miles")
+                expect(formatted).to(equal("Earth equator line is 025 thousand miles long"))
+            }
+            
+        }
+        
         describe("#length") {
             
             it("should return the string length") {

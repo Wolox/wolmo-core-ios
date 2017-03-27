@@ -15,13 +15,26 @@ public extension String {
      
      - parameter bundle: Bundle were to search for localization.
      - parameter arguments: Formatting arguments.
+     
+     -seealso: NSLocalizedString.
      */
     public func localized(withArguments arguments: CVarArg..., bundle: Bundle = Bundle.main) -> String {
-        let localized = NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+        let localized = NSLocalizedString(self, tableName: .none, bundle: bundle, value: "", comment: "")
         if arguments.count > 0 {
-            return String(format: localized, arguments: arguments)
+            return localized.format(with: arguments)
         }
         return localized
+    }
+    
+    /**
+     Returns a the formatted string.
+     
+     - parameter arguments: Formatting arguments.
+     
+     -seealso: String.init(format:arguments:)
+     */
+    public func format(with arguments: CVarArg...) -> String {
+        return String(format: self, arguments: arguments)
     }
     
     /**
