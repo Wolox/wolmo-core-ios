@@ -9,6 +9,8 @@
 WolMo - Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
 
 
+_Note: Swift 2.3 version (in swift-2.3 branch) won't be updated and maintained._
+
 ## Table of Contents
 
   * [Installation](#installation)
