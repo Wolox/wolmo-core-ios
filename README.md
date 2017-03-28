@@ -20,7 +20,7 @@ _Note: Swift 2.3 version (in swift-2.3 branch) won't be updated and maintained._
     * [Utilities](#utilities)
     * [Extensions](#extensions)
   * [Bootstrap](#bootstrap)
-  * [Contributing](#usage)
+  * [Contributing](#contributing)
   * [About](#about)
   * [License](#license)
 
