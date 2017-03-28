@@ -97,7 +97,7 @@ script/bootstrap
 
 ## About
 
-This project is maintained by [Francisco Depascuali](https://github.com/FranDepascuali) and it is written by [Wolox](http://www.wolox.com.ar).
+This project is maintained by [Daniela Riesgo](https://github.com/danielaRiesgo) and it is written by [Wolox](http://www.wolox.com.ar).
 
 ![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
 
