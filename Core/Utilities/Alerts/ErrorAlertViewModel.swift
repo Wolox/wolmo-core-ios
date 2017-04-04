@@ -38,8 +38,10 @@ public struct ErrorAlertViewModel {
     }
     
     /**
-     Default title key for dismiss button. It will fetch the localized value from the corresponding strings file.
+     Default title key for dismiss button. It will fetch the localized value from the corresponding strings file
+     in the main bundle. So you'll have to add this key and give it a value in your Localizable.strings file.
      You can provide a different key by changing this property.
+     
      - seealso: Localizable.String
      */
     public static var DefaultDismissButtonTitleKey: String = "error-alert-view.dismiss.title"

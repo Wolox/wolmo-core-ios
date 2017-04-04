@@ -49,15 +49,19 @@ public struct ConfirmationAlertViewModel {
     }
     
     /**
-     Default title key for confirm button. It will fetch the localized value from the corresponding Localizable.String. 
+     Default title key for confirm button. It will fetch the localized value from the Localizable.strings file
+     in the main bundle. So you'll have to add this key and give it a value in your Localizable.strings file.
      You can provide a different key by changing this property.
+     
      - seealso: Localizable.String
      */
     public static var DefaultConfirmButtonTitleKey: String = "confirmation-alert-view.dismiss.title"
     
     /**
-     Default title key for dismiss button. It will fetch the localized value from the corresponding Localizable.String.
+     Default title key for dismiss button. It will fetch the localized value from the Localizable.strings file
+     in the main bundle. So you'll have to add this key and give it a value in your Localizable.strings file.
      You can provide a different key by changing this property.
+     
      - seealso: Localizable.String
      */
     public static var DefaultDismissButtonTitleKey: String = "confirmation-alert-view.confirm.title"
