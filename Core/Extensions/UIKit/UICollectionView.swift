@@ -16,8 +16,9 @@ public extension UICollectionView {
          - parameter cellType: An identifiable cell to take the identifier from.
          - parameter bundle: The Bundle where the Nib for the cell is located.
      */
-    public func register(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
-        register(UINib(nibName: cellType.cellIdentifier, bundle: bundle), forCellWithReuseIdentifier: cellType.cellIdentifier)
+    public func registerCell(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
+        let nib = UINib(nibName: cellType.cellIdentifier, bundle: bundle)
+        register(nib, forCellWithReuseIdentifier: cellType.cellIdentifier)
     }
     
     /**

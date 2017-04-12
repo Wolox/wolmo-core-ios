@@ -16,8 +16,20 @@ public extension UITableView {
          - parameter cellType: An identifiable cell to take the identifier from.
          - parameter bundle: The Bundle where the Nib for the cell is located.
      */
-    public func register(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
-        register(UINib(nibName: cellType.cellIdentifier, bundle: bundle), forCellReuseIdentifier: cellType.cellIdentifier)
+    public func registerCell(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
+        let nib = UINib(nibName: cellType.cellIdentifier, bundle: bundle)
+        register(nib, forCellReuseIdentifier: cellType.cellIdentifier)
+    }
+    
+    /**
+        Registers a header or footer to be used by a UITableView.
+    
+        - parameter cellType: An identifiable cell to take the identifier from.
+        - parameter bundle: The Bundle where the Nib for the cell is located.
+    */
+    func registerHeaderFooter(_ cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
+        let nib = UINib(nibName: cellType.cellIdentifier, bundle: bundle)
+        register(nib, forHeaderFooterViewReuseIdentifier: cellType.cellIdentifier)
     }
     
     /**
