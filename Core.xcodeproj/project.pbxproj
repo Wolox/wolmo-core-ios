@@ -73,6 +73,7 @@
 		CEE9BFCB1E8986DC00D0E65D /* CellIdentifiableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC61E8986DC00D0E65D /* CellIdentifiableSpec.swift */; };
 		CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */; };
 		CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFCD1E8986F700D0E65D /* Collection.swift */; };
+		E1EC53001E9FCD5E00A8FA8C /* ViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		CEE9BFC61E8986DC00D0E65D /* CellIdentifiableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				B9F63CC11D5CE7FA00D09C1D /* CellIdentifiable.swift */,
 				B988B9801D24621000824685 /* DeviceType.swift */,
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
+				E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
 				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
 				CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */,
+				E1EC53001E9FCD5E00A8FA8C /* ViewIdentifiable.swift in Sources */,
 				CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */,
 				CE3A9B981E607B28005D7E8F /* Signal.swift in Sources */,
 				CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */,

@@ -24,12 +24,12 @@ public extension UITableView {
     /**
         Registers a header or footer to be used by a UITableView.
     
-        - parameter cellType: An identifiable cell to take the identifier from.
+        - parameter viewType: An identifiable view to take the identifier from.
         - parameter bundle: The Bundle where the Nib for the cell is located.
     */
-    func register(headerFooter cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
-        let nib = UINib(nibName: cellType.cellIdentifier, bundle: bundle)
-        register(nib, forHeaderFooterViewReuseIdentifier: cellType.cellIdentifier)
+    func register(headerFooter viewType: IdentifiableView.Type, bundle: Bundle? = .none) {
+        let nib = UINib(nibName: viewType.viewIdentifier, bundle: bundle)
+        register(nib, forHeaderFooterViewReuseIdentifier: viewType.viewIdentifier)
     }
     
     /**
