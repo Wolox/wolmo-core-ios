@@ -2,10 +2,6 @@ language: objective-c
 osx_image: xcode8.2
 before_install:
 - sudo gem install bundler
-#For OS 10.2 all simulators are duplicated so we need to delete one
-# or a valid destination won't be found. (At least until travis fixes this)
-# Deleting an iPhone 6 simulator
-- xcrun simctl delete 1FD54EA7-5A25-4D6F-8599-D6F7687DA4EE
 script:
 - REPO_SLUG="$TRAVIS_REPO_SLUG" PULL_REQUEST="$TRAVIS_PULL_REQUEST" FORCE_CARTHAGE_VERSION=true
   script/cibuild
