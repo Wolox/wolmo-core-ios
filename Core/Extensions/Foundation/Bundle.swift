@@ -18,7 +18,7 @@ public extension Bundle {
      - seealso: loadNibNamed()
      */
     public func loadNib<NibType, T: RawRepresentable>(named nibName: T) -> NibType? where T.RawValue == String {
-        return loadNibNamed(nibName.rawValue, owner: self, options: nil)?[0] as? NibType
+        return loadNibNamed(nibName.rawValue, owner: self, options: .none)?[0] as? NibType
     }
     
     /**

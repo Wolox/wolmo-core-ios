@@ -13,23 +13,31 @@ public extension UITableView {
     /**
          Registers a cell to be used by a UITableView.
          
-         - parameter cellType: An identifiable cell to take the identifier from.
-         - parameter bundle: The Bundle where the Nib for the cell is located.
+         - parameter cellType: An identifiable, nibloadable cell type
+                to take the identifier and nib from.
      */
-    public func register(cell cellType: IdentifiableCell.Type, bundle: Bundle? = .none) {
-        let nib = UINib(nibName: cellType.cellIdentifier, bundle: bundle)
-        register(nib, forCellReuseIdentifier: cellType.cellIdentifier)
+    public func register<T: Identifiable>(cell cellType: T.Type) where T: NibLoadable {
+        register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
     }
     
     /**
-        Registers a header or footer to be used by a UITableView.
+         Registers a header to be used by a UITableView.
+         
+         - parameter headerType: An identifiable, nibloadable header type
+                to take the identifier and nib from.
+     */
+    func register<T: Identifiable>(header headerType: T.Type) where T: NibLoadable {
+        register(headerType.nib, forHeaderFooterViewReuseIdentifier: headerType.identifier)
+    }
     
-        - parameter viewType: An identifiable view to take the identifier from.
-        - parameter bundle: The Bundle where the Nib for the cell is located.
-    */
-    func register(headerFooter viewType: IdentifiableView.Type, bundle: Bundle? = .none) {
-        let nib = UINib(nibName: viewType.viewIdentifier, bundle: bundle)
-        register(nib, forHeaderFooterViewReuseIdentifier: viewType.viewIdentifier)
+    /**
+         Registers a footer to be used by a UITableView.
+         
+         - parameter footerType: An identifiable, nibloadable footer type
+                to take the identifier and nib from.
+     */
+    func register<T: Identifiable>(footer footerType: T.Type) where T: NibLoadable {
+        register(footerType.nib, forHeaderFooterViewReuseIdentifier: footerType.identifier)
     }
     
     /**
@@ -37,9 +45,8 @@ public extension UITableView {
          
          - parameter cellType: An identifiable cell to take the identifier from.
      */
-    public func dequeue<T: IdentifiableCell>(_ cellType: T.Type) -> T {
-        //swiftlint:disable:next force_cast
-        return dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! T
+    public func dequeue<T: Identifiable>(cell cellType: T.Type) -> T? {
+        return dequeueReusableCell(withIdentifier: cellType.identifier) as? T
     }
     
     /**
@@ -49,9 +56,26 @@ public extension UITableView {
          - parameter cellType: An identifiable cell to take the identifier from.
          - parameter indexPath: IndexPath where to add the cell to the table view.
      */
-    public func dequeue<T: IdentifiableCell>(_ cellType: T.Type, for indexPath: IndexPath) -> T {
-        //swiftlint:disable:next force_cast
-        return dequeueReusableCell(withIdentifier: cellType.cellIdentifier, for: indexPath) as! T
+    public func dequeue<T: Identifiable>(cell cellType: T.Type, for indexPath: IndexPath) -> T? {
+        return dequeueReusableCell(withIdentifier: cellType.identifier, for: indexPath) as? T
+    }
+    
+    /**
+         Returns a reusable header of the type specified to be used in the UITableView.
+         
+         - parameter headerType: An identifiable header to take the identifier from.
+     */
+    public func dequeue<T: Identifiable>(header headerType: T.Type) -> T? {
+        return dequeueReusableHeaderFooterView(withIdentifier: headerType.identifier) as? T
+    }
+    
+    /**
+         Returns a reusable footer of the type specified to be used in the UITableView.
+         
+         - parameter footerType: An identifiable footer to take the identifier from.
+     */
+    public func dequeue<T: Identifiable>(footer footerType: T.Type) -> T? {
+        return dequeueReusableHeaderFooterView(withIdentifier: footerType.identifier) as? T
     }
     
 }

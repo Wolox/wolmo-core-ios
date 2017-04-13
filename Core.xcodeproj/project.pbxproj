@@ -28,7 +28,7 @@
 		B988B9811D24621000824685 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B9801D24621000824685 /* DeviceType.swift */; };
 		B9F011F81D512C2000F72672 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9661D24457D00824685 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F011F91D512C3200F72672 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9671D24457D00824685 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9F63CC21D5CE7FA00D09C1D /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F63CC11D5CE7FA00D09C1D /* CellIdentifiable.swift */; };
+		B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */; };
 		BE1CE2B71E1C0B1E00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
 		BE1CE2B81E1C0B4A00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
 		CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B751E607B28005D7E8F /* AVAsset.swift */; };
@@ -70,10 +70,9 @@
 		CEE9BFC81E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC31E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift */; };
 		CEE9BFC91E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC41E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift */; };
 		CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC51E8986DC00D0E65D /* AssociatedObjectSpec.swift */; };
-		CEE9BFCB1E8986DC00D0E65D /* CellIdentifiableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC61E8986DC00D0E65D /* CellIdentifiableSpec.swift */; };
+		CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */; };
 		CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */; };
 		CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFCD1E8986F700D0E65D /* Collection.swift */; };
-		E1EC53001E9FCD5E00A8FA8C /* ViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +122,7 @@
 		B988B9791D244D6300824685 /* ErrorAlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModel.swift; sourceTree = "<group>"; };
 		B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDDelegate.swift; sourceTree = "<group>"; };
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
-		B9F63CC11D5CE7FA00D09C1D /* CellIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		CE3A9B751E607B28005D7E8F /* AVAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAsset.swift; sourceTree = "<group>"; };
 		CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerItem.swift; sourceTree = "<group>"; };
@@ -164,10 +163,9 @@
 		CEE9BFC31E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewModelSpec.swift; sourceTree = "<group>"; };
 		CEE9BFC41E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModelSpec.swift; sourceTree = "<group>"; };
 		CEE9BFC51E8986DC00D0E65D /* AssociatedObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedObjectSpec.swift; sourceTree = "<group>"; };
-		CEE9BFC61E8986DC00D0E65D /* CellIdentifiableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiableSpec.swift; sourceTree = "<group>"; };
+		CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,10 +271,9 @@
 				B988B97A1D244D6300824685 /* ProgressHUD */,
 				B988B96E1D24482200824685 /* ActionHandler.swift */,
 				B988B9721D244BAE00824685 /* AssociatedObject.swift */,
-				B9F63CC11D5CE7FA00D09C1D /* CellIdentifiable.swift */,
+				B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */,
 				B988B9801D24621000824685 /* DeviceType.swift */,
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
-				E1EC52FF1E9FCD5E00A8FA8C /* ViewIdentifiable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -415,7 +412,7 @@
 			children = (
 				CEE9BFC21E8986DC00D0E65D /* Alerts */,
 				CEE9BFC51E8986DC00D0E65D /* AssociatedObjectSpec.swift */,
-				CEE9BFC61E8986DC00D0E65D /* CellIdentifiableSpec.swift */,
+				CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */,
 				CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */,
 			);
 			path = Utilities;
@@ -579,11 +576,10 @@
 			files = (
 				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
-				B9F63CC21D5CE7FA00D09C1D /* CellIdentifiable.swift in Sources */,
+				B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
 				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
 				CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */,
-				E1EC53001E9FCD5E00A8FA8C /* ViewIdentifiable.swift in Sources */,
 				CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */,
 				CE3A9B981E607B28005D7E8F /* Signal.swift in Sources */,
 				CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */,
@@ -621,7 +617,7 @@
 				CEE9BFC01E8986D400D0E65D /* UITextFieldSpec.swift in Sources */,
 				CEE9BFB61E8986D400D0E65D /* DateSpec.swift in Sources */,
 				CEE9BFC81E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift in Sources */,
-				CEE9BFCB1E8986DC00D0E65D /* CellIdentifiableSpec.swift in Sources */,
+				CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */,
 				CEE9BFBC1E8986D400D0E65D /* SignalProducerSpec.swift in Sources */,
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,

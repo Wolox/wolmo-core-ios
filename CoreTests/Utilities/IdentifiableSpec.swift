@@ -1,5 +1,5 @@
 //
-//  CellIdentifiableSpec.swift
+//  IdentifiableSpec.swift
 //  Core
 //
 //  Created by Francisco Depascuali on 7/18/16.
@@ -16,15 +16,15 @@ class IdentifiableTableViewCellMock: UITableViewCell {}
 
 class IdentifiableCollectionViewCellMock: UICollectionViewCell {}
 
-public class CellIdentifiableSpec: QuickSpec {
+public class IdentifiableSpec: QuickSpec {
     
     override public func spec() {
         
-        describe("#cellIdentifier") {
+        describe("#identifier") {
             
             it("should match with the class name") {
-                expect(IdentifiableTableViewCellMock.cellIdentifier).to(equal("IdentifiableTableViewCellMock"))
-                expect(IdentifiableCollectionViewCellMock.cellIdentifier).to(equal("IdentifiableCollectionViewCellMock"))
+                expect(IdentifiableTableViewCellMock.identifier).to(equal("IdentifiableTableViewCellMock"))
+                expect(IdentifiableCollectionViewCellMock.identifier).to(equal("IdentifiableCollectionViewCellMock"))
             }
         }
     }
