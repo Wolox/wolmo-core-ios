@@ -63,7 +63,7 @@ In this framework, we give a default implementation of `UIViewController` as an 
 2. [ProgressHUDDelegate](Core/Utilities/ProgressHUD/ProgressHUDDelegate.swift): Abstracts the logic of presenting a progress HUD, usually used in blocking operation (like a sign up).
 3. [ActionHandler](Core/Utilities/ActionHandler.swift): Closure-based handlers for UIControlEvents (great for UIButtons).
 4. [AssociatedObject](Core/Utilities/AssociatedObject.swift): Setter and getter for associated objects. Works with objects and value types.
-5. [CellIdentifiable](Core/Utilities/CellIdentifiable.swift): Identifies a cell. Usually used with `UICollectionView` and `UITableView`.
+5. [Identifiable](Core/Utilities/Identifiable.swift): Identifies a reusable view. Usually used with `UICollectionView` and `UITableView` for cells, headers or footers.
 6. [DeviceType](Core/Utilities/DeviceType.swift): Provides the current device type.
 7. [PathAppendable](Core/Utilities/PathAppendable.swift): Makes a component able to be appended to a URL or string.
 
