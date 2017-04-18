@@ -29,7 +29,6 @@
 		B9F011F81D512C2000F72672 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9661D24457D00824685 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F011F91D512C3200F72672 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9671D24457D00824685 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */; };
-		BE1CE2B71E1C0B1E00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
 		BE1CE2B81E1C0B4A00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
 		CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B751E607B28005D7E8F /* AVAsset.swift */; };
 		CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */; };
@@ -187,7 +186,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1CE2B71E1C0B1E00A7F7CF /* ReactiveSwift.framework in Frameworks */,
 				9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */,
 				9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* Core.framework in Frameworks */,
@@ -203,8 +201,7 @@
 				9D896ABA1CDE3EC5008B0E5F /* Core */,
 				9D896AC61CDE3EC5008B0E5F /* CoreTests */,
 				9D896AB91CDE3EC5008B0E5F /* Products */,
-				9D896AF01CDE6504008B0E5F /* Framewokrs */,
-				BE1CE2B51E1C0B1E00A7F7CF /* Frameworks */,
+				9D896AF01CDE6504008B0E5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,19 +246,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9D896AF01CDE6504008B0E5F /* Framewokrs */ = {
+		9D896AF01CDE6504008B0E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
 				B95948021D3E78FD003A082F /* MBProgressHUD.framework */,
+				BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */,
 				B988B9661D24457D00824685 /* ReactiveCocoa.framework */,
 				B988B9671D24457D00824685 /* Result.framework */,
 				9D896AE91CDE642F008B0E5F /* Nimble.framework */,
 				9D896AEA1CDE642F008B0E5F /* Quick.framework */,
 			);
-			name = Framewokrs;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B988B96D1D24481400824685 /* Utilities */ = {
@@ -294,14 +292,6 @@
 				B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */,
 			);
 			path = ProgressHUD;
-			sourceTree = "<group>";
-		};
-		BE1CE2B51E1C0B1E00A7F7CF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE3A9B741E607B28005D7E8F /* AVFoundation */ = {
@@ -450,7 +440,7 @@
 				9D896AB51CDE3EC5008B0E5F /* Headers */,
 				9D896AB61CDE3EC5008B0E5F /* Resources */,
 				9D896AD31CDE5E64008B0E5F /* Swiftlint */,
-				B988B9A41D2EBD7000824685 /* Run Script */,
+				B988B9A41D2EBD7000824685 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -492,10 +482,13 @@
 				TargetAttributes = {
 					9D896AB71CDE3EC5008B0E5F = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0820;
+						DevelopmentTeam = 7XS5GQGS29;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 					9D896AC11CDE3EC5008B0E5F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7XS5GQGS29;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -550,7 +543,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		B988B9A41D2EBD7000824685 /* Run Script */ = {
+		B988B9A41D2EBD7000824685 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -559,8 +552,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 			);
-			name = "Run Script";
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,8 +739,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -759,6 +754,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.Core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -769,8 +765,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -783,6 +780,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.Core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -791,6 +789,7 @@
 		9D896AD01CDE3EC5008B0E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -806,6 +805,7 @@
 		9D896AD11CDE3EC5008B0E5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
