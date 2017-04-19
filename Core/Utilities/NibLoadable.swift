@@ -30,23 +30,27 @@ public protocol NibLoadable {
 
 public extension NibLoadable {
     
-    static var nibName: String {
-        return String(describing: self).components(separatedBy: ".").last!
+    public static var nibName: String {
+        return SimpleName(ofType: self)
     }
     
-    static var nibBundle: Bundle {
+    public static var nibBundle: Bundle {
         if let classSelf = self as? AnyClass {
             return Bundle(for: classSelf.self)
         }
         return Bundle.main
     }
     
-    static var nib: UINib {
+    public static var nib: UINib {
         return UINib(nibName: nibName, bundle: nibBundle)
     }
     
     /**
      Loads the nib for the specific component.
+     
+     - warning: This may through an ObjC NSException if there is no
+        nib with that name in that bundle.
+     - seealso: Bundle.loadNib(named:)
      */
     public static func loadFromNib<T>() -> T? {
         return nibBundle.loadNib(named: nibName)
@@ -55,6 +59,3 @@ public extension NibLoadable {
     //   provide default implementations for non-final classes.
     
 }
-
-extension UITableViewCell: NibLoadable {}
-extension UICollectionReusableView: NibLoadable {}

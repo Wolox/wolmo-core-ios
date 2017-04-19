@@ -14,7 +14,6 @@ import Core
 
 public class CollectionSpec: QuickSpec {
 
-    // swiftlint:disable function_body_length
     override public func spec() {
         
         describe("#isNotEmpty") {

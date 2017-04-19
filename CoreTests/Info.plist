@@ -20,5 +20,29 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>My Personal String Key</key>
+	<string>My key&apos;s value</string>
+	<key>My Personal Number Key</key>
+	<integer>5</integer>
+	<key>My Personal Float Key</key>
+	<real>7.1</real>
+	<key>My Personal Boolean Key</key>
+	<true/>
+	<key>My Personal Date Key</key>
+	<date>2017-04-20T18:34:41Z</date>
+	<key>My Personal Data Key</key>
+	<data></data>
+	<key>My Personal Array Key</key>
+	<array>
+		<string>1asg7</string>
+		<string>2153a</string>
+	</array>
+	<key>My Personal Dictionary Key</key>
+	<dict>
+		<key>0</key>
+		<integer>5</integer>
+		<key>1</key>
+		<integer>7</integer>
+	</dict>
 </dict>
 </plist>

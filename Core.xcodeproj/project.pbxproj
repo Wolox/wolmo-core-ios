@@ -30,6 +30,21 @@
 		B9F011F91D512C3200F72672 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9671D24457D00824685 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */; };
 		BE1CE2B81E1C0B4A00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
+		CE1186891EA79EFF00105D6F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186881EA79EFF00105D6F /* NibLoadable.swift */; };
+		CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */; };
+		CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */; };
+		CE1186921EA7A5FE00105D6F /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186911EA7A5FE00105D6F /* General.swift */; };
+		CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186931EA7A7C600105D6F /* GeneralSpec.swift */; };
+		CE1186961EA7C70700105D6F /* NibLoadableCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186951EA7C70700105D6F /* NibLoadableCollectionView.xib */; };
+		CE1186981EA7C7F800105D6F /* NibLoadableCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186971EA7C7F800105D6F /* NibLoadableCollectionCell.xib */; };
+		CE11869A1EA7C84D00105D6F /* NibLoadableTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186991EA7C84D00105D6F /* NibLoadableTableCell.xib */; };
+		CE11869C1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE11869B1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib */; };
+		CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869D1EA7C9DE00105D6F /* Resources.swift */; };
+		CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */; };
+		CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948021D3E78FD003A082F /* MBProgressHUD.framework */; };
+		CE1186A61EA7E2A200105D6F /* NibLoadableUICollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */; };
+		CE1186A81EA7EF2E00105D6F /* NibLoadableUITableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */; };
+		CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186AB1EA7F67800105D6F /* BundleSpec.swift */; };
 		CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B751E607B28005D7E8F /* AVAsset.swift */; };
 		CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */; };
 		CE3A9B901E607B28005D7E8F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B781E607B28005D7E8F /* Array.swift */; };
@@ -48,7 +63,6 @@
 		CE3A9B9D1E607B28005D7E8F /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B871E607B28005D7E8F /* UITableView.swift */; };
 		CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B881E607B28005D7E8F /* UITextField.swift */; };
 		CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */; };
-		CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8B1E607B28005D7E8F /* NibLoadable.swift */; };
 		CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8C1E607B28005D7E8F /* UIView.swift */; };
 		CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */; };
 		CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0F01E82D1F9005C300E /* PathAppendable.swift */; };
@@ -123,6 +137,21 @@
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		CE1186881EA79EFF00105D6F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSpec.swift; sourceTree = "<group>"; };
+		CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewSpec.swift; sourceTree = "<group>"; };
+		CE1186911EA7A5FE00105D6F /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		CE1186931EA7A7C600105D6F /* GeneralSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSpec.swift; sourceTree = "<group>"; };
+		CE1186951EA7C70700105D6F /* NibLoadableCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableCollectionView.xib; sourceTree = "<group>"; };
+		CE1186971EA7C7F800105D6F /* NibLoadableCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableCollectionCell.xib; sourceTree = "<group>"; };
+		CE1186991EA7C84D00105D6F /* NibLoadableTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableTableCell.xib; sourceTree = "<group>"; };
+		CE11869B1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableTableViewCustom.xib; sourceTree = "<group>"; };
+		CE11869D1EA7C9DE00105D6F /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableSpec.swift; sourceTree = "<group>"; };
+		CE1186A11EA7CEE300105D6F /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
+		CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableUICollectionView.xib; sourceTree = "<group>"; };
+		CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableUITableView.xib; sourceTree = "<group>"; };
+		CE1186AB1EA7F67800105D6F /* BundleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleSpec.swift; sourceTree = "<group>"; };
 		CE3A9B751E607B28005D7E8F /* AVAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAsset.swift; sourceTree = "<group>"; };
 		CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerItem.swift; sourceTree = "<group>"; };
 		CE3A9B781E607B28005D7E8F /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -141,7 +170,6 @@
 		CE3A9B871E607B28005D7E8F /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		CE3A9B881E607B28005D7E8F /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collapsable.swift; sourceTree = "<group>"; };
-		CE3A9B8B1E607B28005D7E8F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CE3A9B8C1E607B28005D7E8F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE80E0F01E82D1F9005C300E /* PathAppendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendable.swift; sourceTree = "<group>"; };
@@ -186,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */,
 				9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */,
 				9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* Core.framework in Frameworks */,
@@ -228,6 +257,7 @@
 		9D896AC61CDE3EC5008B0E5F /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE1186901EA7A1CA00105D6F /* Resources */,
 				CEE9BFC11E8986DC00D0E65D /* Utilities */,
 				CEE9BFA31E8986D400D0E65D /* Extensions */,
 				9D896AC91CDE3EC5008B0E5F /* Info.plist */,
@@ -249,6 +279,7 @@
 		9D896AF01CDE6504008B0E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE1186A11EA7CEE300105D6F /* Result.framework.dSYM */,
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
@@ -269,9 +300,11 @@
 				B988B97A1D244D6300824685 /* ProgressHUD */,
 				B988B96E1D24482200824685 /* ActionHandler.swift */,
 				B988B9721D244BAE00824685 /* AssociatedObject.swift */,
-				B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */,
 				B988B9801D24621000824685 /* DeviceType.swift */,
+				B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */,
+				CE1186881EA79EFF00105D6F /* NibLoadable.swift */,
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
+				CE1186911EA7A5FE00105D6F /* General.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -292,6 +325,20 @@
 				B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		CE1186901EA7A1CA00105D6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE1186971EA7C7F800105D6F /* NibLoadableCollectionCell.xib */,
+				CE1186951EA7C70700105D6F /* NibLoadableCollectionView.xib */,
+				CE1186991EA7C84D00105D6F /* NibLoadableTableCell.xib */,
+				CE11869B1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib */,
+				CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */,
+				CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */,
+				CE11869D1EA7C9DE00105D6F /* Resources.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CE3A9B741E607B28005D7E8F /* AVFoundation */ = {
@@ -347,7 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */,
-				CE3A9B8B1E607B28005D7E8F /* NibLoadable.swift */,
 				CE3A9B8C1E607B28005D7E8F /* UIView.swift */,
 			);
 			path = UIView;
@@ -367,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE9BFA51E8986D400D0E65D /* ArraySpec.swift */,
+				CE1186AB1EA7F67800105D6F /* BundleSpec.swift */,
 				CEE9BFA61E8986D400D0E65D /* CollectionSpec.swift */,
 				CEE9BFA71E8986D400D0E65D /* DateSpec.swift */,
 				CEE9BFA81E8986D400D0E65D /* DictionarySpec.swift */,
@@ -391,7 +438,9 @@
 			isa = PBXGroup;
 			children = (
 				CEE9BFB11E8986D400D0E65D /* UIAlertControllerSpec.swift */,
+				CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */,
 				CEE9BFB21E8986D400D0E65D /* UIColorSpec.swift */,
+				CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */,
 				CEE9BFB31E8986D400D0E65D /* UITextFieldSpec.swift */,
 			);
 			path = UIKit;
@@ -403,7 +452,9 @@
 				CEE9BFC21E8986DC00D0E65D /* Alerts */,
 				CEE9BFC51E8986DC00D0E65D /* AssociatedObjectSpec.swift */,
 				CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */,
+				CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */,
 				CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */,
+				CE1186931EA7A7C600105D6F /* GeneralSpec.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -523,6 +574,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE11869A1EA7C84D00105D6F /* NibLoadableTableCell.xib in Resources */,
+				CE11869C1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib in Resources */,
+				CE1186961EA7C70700105D6F /* NibLoadableCollectionView.xib in Resources */,
+				CE1186A81EA7EF2E00105D6F /* NibLoadableUITableView.xib in Resources */,
+				CE1186A61EA7E2A200105D6F /* NibLoadableUICollectionView.xib in Resources */,
+				CE1186981EA7C7F800105D6F /* NibLoadableCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +630,6 @@
 				B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
 				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
-				CE3A9BA01E607B28005D7E8F /* NibLoadable.swift in Sources */,
 				CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */,
 				CE3A9B981E607B28005D7E8F /* Signal.swift in Sources */,
 				CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */,
@@ -581,6 +637,7 @@
 				CE3A9B991E607B28005D7E8F /* SignalProducer.swift in Sources */,
 				CE3A9B921E607B28005D7E8F /* Dictionary.swift in Sources */,
 				CE3A9B961E607B28005D7E8F /* RawRepresentable.swift in Sources */,
+				CE1186921EA7A5FE00105D6F /* General.swift in Sources */,
 				CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */,
 				B988B97C1D244D6300824685 /* AlertViewPresenter.swift in Sources */,
 				B988B9731D244BAE00824685 /* AssociatedObject.swift in Sources */,
@@ -594,6 +651,7 @@
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,
 				CED934851E8456480017CF96 /* UICollectionView.swift in Sources */,
+				CE1186891EA79EFF00105D6F /* NibLoadable.swift in Sources */,
 				B988B9811D24621000824685 /* DeviceType.swift in Sources */,
 				B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */,
 				CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */,
@@ -609,21 +667,27 @@
 			files = (
 				CEE9BFBB1E8986D400D0E65D /* URLSpec.swift in Sources */,
 				CEE9BFC01E8986D400D0E65D /* UITextFieldSpec.swift in Sources */,
+				CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */,
 				CEE9BFB61E8986D400D0E65D /* DateSpec.swift in Sources */,
 				CEE9BFC81E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift in Sources */,
 				CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */,
 				CEE9BFBC1E8986D400D0E65D /* SignalProducerSpec.swift in Sources */,
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
+				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
 				CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */,
 				CEE9BFBF1E8986D400D0E65D /* UIColorSpec.swift in Sources */,
+				CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */,
 				CEE9BFBD1E8986D400D0E65D /* SignalSpec.swift in Sources */,
 				CEE9BFB41E8986D400D0E65D /* ArraySpec.swift in Sources */,
+				CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */,
 				CEE9BFB81E8986D400D0E65D /* RawRepresentableSpec.swift in Sources */,
 				CEE9BFC91E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift in Sources */,
 				CEE9BFBE1E8986D400D0E65D /* UIAlertControllerSpec.swift in Sources */,
+				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
+				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
 				CEE9BFB51E8986D400D0E65D /* CollectionSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

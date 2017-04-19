@@ -13,7 +13,6 @@ import Core
 
 public class StringSpec: QuickSpec {
     
-    // swiftlint:disable function_body_length
     override public func spec() {
         
         describe("#format(with:)") {
