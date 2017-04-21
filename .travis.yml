@@ -5,6 +5,10 @@ before_install:
 script:
 - REPO_SLUG="$TRAVIS_REPO_SLUG" PULL_REQUEST="$TRAVIS_PULL_REQUEST" FORCE_CARTHAGE_VERSION=true
   script/cibuild
+after_success:
+  - bundle exec slather coverage --html --output-directory coverage
+  - bundle exec slather coverage -x --output-directory coverage-xml
+  - bundle exec codestats-metrics-reporter
 branches:
   only:
   - master
