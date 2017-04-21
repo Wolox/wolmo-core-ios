@@ -25,10 +25,6 @@ class NibLoadableTableView: UITableViewHeaderFooterView, NibLoadable {
 
 class NibLoadableTableViewCustom: UITableViewHeaderFooterView, NibLoadable {
     
-    static var nibName: String {
-        return "NibLoadableTableViewCustom"
-    }
-    
     static var nibBundle: Bundle {
         return Bundle(for: MBProgressHUD.self)
     }
