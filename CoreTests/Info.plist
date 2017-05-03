@@ -44,5 +44,7 @@
 		<key>1</key>
 		<integer>7</integer>
 	</dict>
+	<key>My Personal String Key With inverted commas</key>
+	<string>This is a string with some &quot;quotation&quot;</string>
 </dict>
 </plist>

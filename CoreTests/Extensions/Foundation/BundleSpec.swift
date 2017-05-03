@@ -55,10 +55,24 @@ public class BundleSpec: QuickSpec {
                 
                 context("when the value is a string") {
                     
-                    it("should return the value") {
-                        let value = bundle["My Personal String Key"]
-                        expect(value).toNot(beNil())
-                        expect(value).to(equal("My key's value"))
+                    context("when it has inverted commas") {
+                        
+                        it("should return the value") {
+                            let value = bundle["My Personal String Key With inverted commas"]
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal("This is a string with some \"quotation\""))
+                        }
+                        
+                    }
+                    
+                    context("when the string is simple") {
+                        
+                        it("should return the value") {
+                            let value = bundle["My Personal String Key"]
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal("My key's value"))
+                        }
+                        
                     }
                     
                 }
@@ -146,10 +160,24 @@ public class BundleSpec: QuickSpec {
                 
                 context("when the value is the expected type") {
                     
-                    it("should return the value") {
-                        let value = bundle.getString(from: "My Personal String Key")
-                        expect(value).toNot(beNil())
-                        expect(value).to(equal("My key's value"))
+                    context("when the string has inverted commas") {
+                        
+                        it("should return the value") {
+                            let value = bundle.getString(from: "My Personal String Key With inverted commas")
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal("This is a string with some \"quotation\""))
+                        }
+                        
+                    }
+                    
+                    context("when the string is simple") {
+                        
+                        it("should return the value") {
+                            let value = bundle.getString(from: "My Personal String Key")
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal("My key's value"))
+                        }
+                        
                     }
                     
                 }
