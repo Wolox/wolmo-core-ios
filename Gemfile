@@ -6,3 +6,4 @@ gem 'carthage_cache'
 gem 'synx'
 gem 'linterbot'
 gem 'slather'
+gem 'codestats-metrics-reporter', require: nil

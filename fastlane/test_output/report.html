@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Results | xcpretty</title>
+    <style type="text/css">
+      body { font-family:Avenir Next, Helvetica Neue, sans-serif; color: #4A4A4A; background-color: #F0F3FB; margin:0;}
+      h1 { font-weight: normal; font-size: 24px; margin: 10px 0 0 0;}
+      h3 { font-weight: normal; margin: 2px; font-size: 1.1em;}
+      header { position: fixed;width: 100%;background: rgba(249, 254, 255, 0.9);margin: 0;padding: 10px;}
+      header:before, header:after { content:""; display:table;}
+      header:after { clear:both;}
+      a:link { color: #A1D761;}
+      footer { clear: both;position: relative;z-index: 10;height: 40px;margin-top: -10px; margin-left:30px; font-size:12px;}
+      table { width:100%; border-collapse: collapse;}
+      tr td:first-child { width:7%}
+      .left { float: left; margin-left:30px;}
+      .right { float: right; margin-right: 40px; margin-top: 0; margin-bottom:0;}
+      .test-suite { margin: 0 0 30px 0;}
+      .test-suite > .heading { font-family:Menlo, Monaco, monospace; font-weight: bold; border-color: #A1D761; background-color: #B8E986; border-width: 1px;}
+      .test-suite.failing > .heading { border-color: #C84F5E; background-color: #E58591;}
+      .test-suite > .heading > .title { margin-top: 4px; margin-left: 10px;}
+      .tests { overflow: scroll;margin: 0 30px 0 60px;}
+      .test, .test-suite > .heading { height: 30px; overflow: hidden; margin: 0 30px;}
+      .test, .test-suite > .heading { border-width: 1px; border-collapse: collapse; border-style: solid; }
+      .test { margin-left: 30px; border-top:none;}
+      .test.failing { border-color: #C84F5E; background-color: #F4DDE0;}
+      .test.passing { border-color: #A1D761;}
+      .test.failing { background-color: #E7A1AA;}
+      .test.passing { background-color: #CAF59F;}
+      .test.failing.odd { background-color: #EEC7CC;}
+      .test.passing.odd { background-color: #E5FBCF;}
+      .details { background-color: #F4DDE0; border: 1px solid #C84F5E;}
+      .test .test-detail:last-child { padding-bottom: 8px;}
+      .test .title { float: left; font-size: 0.9em; margin-top: 8px; font-family: Menlo, Monaco, monospace;}
+      .test .time { float: left;margin: 4px 10px 0 20px;}
+      .test-detail { font-family:Menlo, Monaco, monospace; font-size: 0.9em; margin: 5px 0 5px 0px;}
+      .screenshots { height: auto; overflow: hidden; padding: 4px 4px 0 4px; background-color: #B8E986; border: #A1D761; border-width: 0 1px; border-style: solid; }
+      .screenshots.failing { border-color: #C84F5E; background-color: #E58591; }
+      .screenshot { max-height: 60px; float: left; transition: max-height 0.2s; margin: 0 4px 4px 0 }
+      .screenshot.selected { max-height: 568px; }
+      #test-suites { display: inline-block; width: 100%;margin-top:100px;}
+      #segment-bar { margin-top: 10px;margin-left: 14px;float:right;}
+      #segment-bar a:first-child { border-radius: 9px 0 0 9px; border-right: none;}
+      #segment-bar a:last-child { border-radius: 0 9px 9px 0; border-left: none;}
+      #segment-bar > a { color: #565656; border: 2px solid  #7B7B7B; width: 80px; font-weight: bold; display:inline-block;text-align:center; font-weight: normal;}
+      #segment-bar > a.selected { background-color: #979797; color: #F0F3FB;}
+      #counters { float: left;margin: 10px;text-align: right;}
+      #counters h2 { font-size: 16px; font-family: Avenir, sans-serif; font-weight: lighter; display:inline;}
+      #counters .number { font-size: 20px;}
+      #fail-count { color: #D0021B; margin-left:10px;}
+      @media (max-width: 640px) {
+        h1, #counters, #segment-bar { margin: 5px auto; text-align:center;}
+        header, #segment-bar { width: 100%; position: relative; background:none;}
+        .left, .right { float:none; margin:0;}
+        #test-suites { margin-top: 0;}
+        #counters { float:none;}
+      }
+    </style>
+    <script type="text/javascript">
+      var hide = function(element) { element.style.display = 'none';}
+      var show = function(element) { element.style.display = '';}
+      var isHidden = function(element) { return element.style.display == 'none';}
+      var isSelected = function(element) { return element.classList.contains("selected");}
+      var deselect = function(element) { return element.classList.remove("selected");}
+      var select = function(element) { return element.classList.add("selected");}
+      var toggle = function(element) { isHidden(element) ? show(element) : hide(element);};
+      var toggleTests = function(heading) { toggle(heading.parentNode.children[1]);};
+      var toggleDetails = function(detailClass) {
+        var details = document.querySelectorAll('.' + detailClass);
+        for (var i = details.length - 1; i >= 0; i--) { toggle(details[i]);};
+      };
+      var hideAll = function(collection) {
+        for (var i = collection.length - 1; i >= 0; i--) { hide(collection[i]); };
+      }
+      var showAll = function(collection) {
+        for (var i = collection.length - 1; i >= 0; i--) { show(collection[i]); };
+      }
+      var selectSegment = function(segment) {
+        if (isSelected(segment)) return;
+        var segments = document.querySelectorAll('#segment-bar > a');
+        for (var i = segments.length - 1; i >= 0; i--) { deselect(segments[i]);};
+        select(segment);
+        if (segment.id == "all-segment") {
+          showAll(document.querySelectorAll('.test-suite'));
+          showAll(document.querySelectorAll('.test'));
+        } else if (segment.id == "failing-segment") {
+          hideAll(document.querySelectorAll('.test.passing'));
+          showAll(document.querySelectorAll('.test.failing'));
+          hideAll(document.querySelectorAll('.test-suite.passing'));
+          showAll(document.querySelectorAll('.test-suite.failing'));
+        } else if (segment.id == "passing-segment") {
+          hideAll(document.querySelectorAll('.test.failing'));
+          showAll(document.querySelectorAll('.test.passing'));
+          hideAll(document.querySelectorAll('.test-suite.failing'));
+          showAll(document.querySelectorAll('.test-suite.passing'));
+        }
+      }
+      var toggleScreenshot = function(suiteName, index) {
+        var screenshot = document.getElementById("screenshot-" + suiteName + "-" + index);
+        isSelected(screenshot) ? deselect(screenshot) : select(screenshot);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <section class="left">
+        <h1>Test Results</h1>
+      </section>
+      <section class="right">
+        <section id="counters">
+          <h2 id="test-count"><span class="number">182</span> tests</h2>
+          
+        </section>
+        <section id="segment-bar">
+          <a id="all-segment" onclick="selectSegment(this);" class="selected">All</a><a id="failing-segment" onclick="selectSegment(this);">Failing</a><a id="passing-segment" onclick="selectSegment(this);">Passing</a>
+        </section>
+      </section>
+    </header>
+    <section id="test-suites">
+      
+        
+        <section class="test-suite passing" id="CoreTests.ArraySpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.ArraySpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_group_withCriteria____should_group_the_array_based_on_condition');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">_group_withCriteria____should_group_the_array_based_on_condition</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_appending__should_return_a_new_array_appending_the_new_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending__should_return_a_new_array_appending_the_new_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_appending__should_not_mutate_the_base_array');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending__should_not_mutate_the_base_array</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_get__When_the_array_contains_indexth_element__returns_that_element');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_get__When_the_array_contains_indexth_element__returns_that_element</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_get__When_the_array_doesn_t_contain_the_indexth_element__returns_nil');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_get__When_the_array_doesn_t_contain_the_indexth_element__returns_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_getFirst_where____When_an_element_satisfies_the_condition__should_return_that_element');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getFirst_where____When_an_element_satisfies_the_condition__should_return_that_element</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_getFirst_where____When_an_element_satisfies_the_condition__When_another_element_satisfies_the_condition__should_return_the_first_one');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getFirst_where____When_an_element_satisfies_the_condition__When_another_element_satisfies_the_condition__should_return_the_first_one</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_getFirst_where____When_none_of_the_elements_satisfies_the_condition__should_return_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getFirst_where____When_none_of_the_elements_satisfies_the_condition__should_return_nil</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.AssociatedObjectSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.AssociatedObjectSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_class__should_set_an_associated_object');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_class__should_set_an_associated_object</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_struct__should_set_an_associated_object');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_struct__should_set_an_associated_object</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_getAssociatedObject__When_there_is_no_associated_value__should_return_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getAssociatedObject__When_there_is_no_associated_value__should_return_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_getAssociatedObject__when_there_is_an_associated_value__should_return_the_associated_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getAssociatedObject__when_there_is_an_associated_value__should_return_the_associated_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_getAssociatedObject__when_there_is_an_associated_value__when_there_is_a_new_associated_value__should_return_the_new_associated_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getAssociatedObject__when_there_is_an_associated_value__when_there_is_a_new_associated_value__should_return_the_new_associated_value</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.CollectionSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.CollectionSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isNotEmpty__when_using_an_Array__when_collection_is_empty__returns_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isNotEmpty__when_using_an_Array__when_collection_is_empty__returns_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isNotEmpty__when_using_an_Array__when_collection_is_not_empty__returns_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isNotEmpty__when_using_an_Array__when_collection_is_not_empty__returns_true</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.ConfirmationAlertViewModelSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.ConfirmationAlertViewModelSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_title__should_return_the_confirmationAlertViewModel_s_title');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">_title__should_return_the_confirmationAlertViewModel_s_title</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_message__should_return_the_confirmationAlertViewModel_s_message');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_message__should_return_the_confirmationAlertViewModel_s_message</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_confirmButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultConfirmButtonTitleKey');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_confirmButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultConfirmButtonTitleKey</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_confirmButtonTitle__When_providing_a__confirmButtonTitle__should_return_the__confirmButtonTitle_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_confirmButtonTitle__When_providing_a__confirmButtonTitle__should_return_the__confirmButtonTitle_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_dismissAction__When_using_the_default_parameter__should_do_nothing');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissAction__When_using_the_default_parameter__should_do_nothing</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_confirmAction__When_using_the_default_parameter__should_do_nothing');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_confirmAction__When_using_the_default_parameter__should_do_nothing</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_confirmAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_confirmAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.DateSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.DateSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_now__should_return_the_current_date');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">_now__should_return_the_current_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_hours_using____should_return_the_hours_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">_hours_using____should_return_the_hours_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_minutes_using____should_return_the_minutes_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_minutes_using____should_return_the_minutes_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_seconds_using____should_return_the_seconds_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_seconds_using____should_return_the_seconds_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_day_using____should_return_the_day_of_month_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_day_using____should_return_the_day_of_month_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_month_using____should_return_the_month_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_month_using____should_return_the_month_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_year_using____should_return_the_year_of_the_date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_year_using____should_return_the_year_of_the_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_components___using____should_give_us_all_the_components_asked_for');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">_components___using____should_give_us_all_the_components_asked_for</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_components___using____shouldn_t_give_us_the_component_that_weren_t_asked_for');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_components___using____shouldn_t_give_us_the_component_that_weren_t_asked_for</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_be_a_Date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_be_a_Date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_day');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_day</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_month');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_month</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_year');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_year</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_hours_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_hours_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_minutes_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_minutes_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_seconds_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_seconds_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_incorrect__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_incorrect__should_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_be_a_Date');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_be_a_Date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_day');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_day</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_month');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_month</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_year');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_year</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_hours');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_hours</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_minutes');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_minutes</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_seconds');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_seconds</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_incorrect__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_incorrect__should_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_be_a_Date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_be_a_Date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_day');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_day</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_month');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_month</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_year');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_year</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_hours');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_hours</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_minutes');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_minutes</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_seconds');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_seconds</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_dateString_formatString____when_the_format_is_incorrect__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_dateString_formatString____when_the_format_is_incorrect__should_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_be_a_Date');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_be_a_Date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_the_correct_day');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_the_correct_day</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_the_correct_month');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_the_correct_month</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_the_correct_year');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_the_correct_year</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_hours_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_hours_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_minutes_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_minutes_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init_day_month_year____when_arguments_are_valid__should_have_seconds_in_00');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_valid__should_have_seconds_in_00</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init_day_month_year____when_arguments_are_invalid__should_be_a_Date');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init_day_month_year____when_arguments_are_invalid__should_be_a_Date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_getWeekDay_withFormat____When_getting_the_week_day_for_every_day_in_a_week__should_match_to_the_week_made_of_date_s_string_representation');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">_getWeekDay_withFormat____When_getting_the_week_day_for_every_day_in_a_week__should_match_to_the_week_made_of_date_s_string_representation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_adding_days____When_adding_one_day_to_a_week__should_return_the_new_week');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_adding_days____When_adding_one_day_to_a_week__should_return_the_new_week</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_adding_hours____When_adding_hours_in_the_same_date__should_add_the_hours_to_the_current_hours');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_adding_hours____When_adding_hours_in_the_same_date__should_add_the_hours_to_the_current_hours</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_adding_hours____When_adding_hours_in_the_same_date__should_remain_being_the_same_date');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_adding_hours____When_adding_hours_in_the_same_date__should_remain_being_the_same_date</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_adding_hours____When_adding_hours_and_getting_a_new_date__should_be_the_day_after');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_adding_hours____When_adding_hours_and_getting_a_new_date__should_be_the_day_after</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_adding_hours____When_adding_hours_and_getting_a_new_date__should_have_the_corresponding_hours');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_adding_hours____When_adding_hours_and_getting_a_new_date__should_have_the_corresponding_hours</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_toString_accordingTo____when_using_the_default_formatter__should_return_the_string_with_the_format_documented_in_function');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toString_accordingTo____when_using_the_default_formatter__should_return_the_string_with_the_format_documented_in_function</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toString_accordingTo____when_using_another_formatter__should_return_the_string_with_the_format_specified_in_the_formatter');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toString_accordingTo____when_using_another_formatter__should_return_the_string_with_the_format_specified_in_the_formatter</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_toString_with____when_requiring_day__month_and_year__should_return_the_string_with_the_right_format_and_date_information');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toString_with____when_requiring_day__month_and_year__should_return_the_string_with_the_right_format_and_date_information</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toString_with____when_requiring_time__should_return_the_string_with_the_right_format_and_time_information');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toString_with____when_requiring_time__should_return_the_string_with_the_right_format_and_time_information</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_toString_withLocalized____should_return_the_string_with_the_right_format_and_time_information');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toString_withLocalized____should_return_the_string_with_the_right_format_and_time_information</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.DictionarySpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.DictionarySpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_appending_contentsOf____when_dictionaries_have_all_different_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending_contentsOf____when_dictionaries_have_all_different_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_appending_contentsOf____when_dictionaries_have_all_different_keys__should_not_change_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending_contentsOf____when_dictionaries_have_all_different_keys__should_not_change_the_original_ones</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_not_change_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_not_change_the_original_ones</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_append_contentsOf____when_dictionaries_have_no_same_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_append_contentsOf____when_dictionaries_have_no_same_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_append_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_append_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.ErrorAlertViewModelSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.ErrorAlertViewModelSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_title__should_return_the_confirmationAlertViewModel_s_title');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_title__should_return_the_confirmationAlertViewModel_s_title</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_message__should_return_the_confirmationAlertViewModel_s_message');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_message__should_return_the_confirmationAlertViewModel_s_message</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_dismissAction__When_using_the_default_parameter__should_do_nothing');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissAction__When_using_the_default_parameter__should_do_nothing</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.IdentifiableSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.IdentifiableSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_identifier__should_match_with_the_class_name');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_identifier__should_match_with_the_class_name</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.PathAppendableSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.PathAppendableSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_URLs__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_URL');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_URLs__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_URL</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('___for_strings__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">___for_strings__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_string</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.RawRepresentableGeneratorSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.RawRepresentableGeneratorSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_next__When_using_the_identity_function_as_generator__should_return_always_the_same_element');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_next__When_using_the_identity_function_as_generator__should_return_always_the_same_element</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_next__When_adding_one_in_the_generator__should_return_the_following_element');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_next__When_adding_one_in_the_generator__should_return_the_following_element</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.RawRepresentableSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.RawRepresentableSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_allValues__When_specifying_an_existent_initial_value__should_return_all_values_starting_at_the_initial_value');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_allValues__When_specifying_an_existent_initial_value__should_return_all_values_starting_at_the_initial_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_first_one__should_return_all_values');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_first_one__should_return_all_values</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_last_one__should_return_the_last_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_last_one__should_return_the_last_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_count__When_specifying_an_initial_value__should_return_the_count_of_all_the_values_starting_at_the_initial_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_count__When_specifying_an_initial_value__should_return_the_count_of_all_the_values_starting_at_the_initial_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_count__When_specifying_an_initial_value__When_the_value_is_the_first_one__should_return_the_count_of_all_the_values');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_count__When_specifying_an_initial_value__When_the_value_is_the_first_one__should_return_the_count_of_all_the_values</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_count__When_specifying_an_initial_value__When_the_value_is_the_last_one__should_return_one');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_count__When_specifying_an_initial_value__When_the_value_is_the_last_one__should_return_one</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.SignalProducerSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.SignalProducerSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_liftError__When_lifting_an_error__should_ignore_the_error_and_complete');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">_liftError__When_lifting_an_error__should_ignore_the_error_and_complete</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_liftError__When_lifting_an_error__should_not_ignore_a_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_liftError__When_lifting_an_error__should_not_ignore_a_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toResultSignalProducer__When_sending_a_value__should_send_on_the_value_wrapped');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignalProducer__When_sending_a_value__should_send_on_the_value_wrapped</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_toResultSignalProducer__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignalProducer__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toResultSignalProducer__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignalProducer__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_filterValues__When_sending_a_success_value__should_send_on_the_value');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterValues__When_sending_a_success_value__should_send_on_the_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_filterErrors__When_sending_a_failure_value__should_send_on_the_error');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterErrors__When_sending_a_failure_value__should_send_on_the_error</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.SignalSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.SignalSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_liftError__When_lifting_an_error__should_ignore_the_error_and_complete');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_liftError__When_lifting_an_error__should_ignore_the_error_and_complete</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_liftError__When_lifting_an_error__should_not_ignore_a_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_liftError__When_lifting_an_error__should_not_ignore_a_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toResultSignal__When_sending_a_value__should_send_on_the_value_wrapped');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignal__When_sending_a_value__should_send_on_the_value_wrapped</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_toResultSignal__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignal__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_toResultSignal__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_toResultSignal__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_filterValues__When_sending_a_success_value__should_send_on_the_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterValues__When_sending_a_success_value__should_send_on_the_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_filterErrors__When_sending_a_failure_value__should_send_on_the_error');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_filterErrors__When_sending_a_failure_value__should_send_on_the_error</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.StringSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.StringSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_format_with____should_returned_the_formatted_string_as_expected');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_format_with____should_returned_the_formatted_string_as_expected</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_length__should_return_the_string_length');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_length__should_return_the_string_length</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_url__When_it_is_a_valid_url__should_return_the_url');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_url__When_it_is_a_valid_url__should_return_the_url</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_url__When_it_is_an_invalid_url__should_return_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_url__When_it_is_an_invalid_url__should_return_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_hasSpaces__When_the_string_doesn_t_have_spaces__should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_hasSpaces__When_the_string_doesn_t_have_spaces__should_return_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_hasSpaces__When_the_string_has_spaces__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_hasSpaces__When_the_string_has_spaces__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains____should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains____should_return_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false_2');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false_2</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isValidEmail__When_the_email_is_valid__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isValidEmail__When_the_email_is_valid__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isValidEmail__When_the_email_is_valid__With_any_provider__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isValidEmail__When_the_email_is_valid__With_any_provider__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_trimmed__When_the_string_has_whitespaces__removes_leading_and_trailing_whitespaces');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_trimmed__When_the_string_has_whitespaces__removes_leading_and_trailing_whitespaces</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_trimmed__When_the_string_has_whitespaces__maintains_not_leading_or_trailing_spaces');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_trimmed__When_the_string_has_whitespaces__maintains_not_leading_or_trailing_spaces</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_replacing_with____When_the_string_doesn_t_contain_the_target_string_to_replace__should_return_the_same_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_replacing_with____When_the_string_doesn_t_contain_the_target_string_to_replace__should_return_the_same_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_replacing_with____When_the_string_contains_the_target_string_to_replace__should_return_the_string_with_the_target_replaced');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_replacing_with____When_the_string_contains_the_target_string_to_replace__should_return_the_string_with_the_target_replaced</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_replacing_with____When_the_string_contains_the_target_string_to_replace__should_not_mutate_the_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_replacing_with____When_the_string_contains_the_target_string_to_replace__should_not_mutate_the_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_withoutWhiteSpaces__When_the_string_has_whitespaces__should_remove_them_all');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_withoutWhiteSpaces__When_the_string_has_whitespaces__should_remove_them_all</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_withoutWhiteSpaces__When_the_string_doesn_t_have_whitespaces__should_return_the_same_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_withoutWhiteSpaces__When_the_string_doesn_t_have_whitespaces__should_return_the_same_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_withoutWhiteSpaces__When_the_string_contains_leading_or_trailing_whitespaces__should_remove_them');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_withoutWhiteSpaces__When_the_string_contains_leading_or_trailing_whitespaces__should_remove_them</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isNotEmpty__when_string_is_empty__returns_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isNotEmpty__when_string_is_empty__returns_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isNotEmpty__when_string_is_not_empty__returns_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isNotEmpty__when_string_is_not_empty__returns_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_suffix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_suffix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__returns_the__string_without_the_suffix');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__returns_the__string_without_the_suffix</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__doesn_t_change_the_original_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__doesn_t_change_the_original_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_suffix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix_but_case_don_t_match__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix_but_case_don_t_match__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_string_without_the_prefix');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_string_without_the_prefix</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__doesn_t_change_the_original_string');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__doesn_t_change_the_original_string</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_prefix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_prefix____when_the_string_has_the_string_to_remove_as_suffix__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_has_the_string_to_remove_as_suffix__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_remove_prefix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix_but_case_don_t_match__returns_the_same_string_as_before');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix_but_case_don_t_match__returns_the_same_string_as_before</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.TimerSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.TimerSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_schedule_withDelay____should_trigger_handler_after_delay');">
+                <td>
+                  
+                    <h3 class="time">1.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">_schedule_withDelay____should_trigger_handler_after_delay</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_schedule_repeatInterval____should_repeteadly_trigger_handler_after_delay');">
+                <td>
+                  
+                    <h3 class="time">2.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">_schedule_repeatInterval____should_repeteadly_trigger_handler_after_delay</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.UIAlertControllerSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.UIAlertControllerSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_title');">
+                <td>
+                  
+                    <h3 class="time">0.016s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_title</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_message');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_message</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_confirm_button_title');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_confirm_button_title</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_dismiss_button_title');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_dismiss_button_title</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_providing_a_ConfirmationAlertViewModel__should_have_two_possible_actions__dismiss_and_confirm');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_providing_a_ConfirmationAlertViewModel__should_have_two_possible_actions__dismiss_and_confirm</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.UIColorSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.UIColorSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_the_hexString_is_valid__should_not_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_the_hexString_is_valid__should_not_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init__When_the_hexString_is_valid__When_the_string_contains_a___prefix__should_not_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_the_hexString_is_valid__When_the_string_contains_a___prefix__should_not_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_the_hexString_is_valid__When_the_length_is_8__it_has_alpha___should_not_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_the_hexString_is_valid__When_the_length_is_8__it_has_alpha___should_not_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_init__When_the_hexString_is_invalid__When_the_hexString_length_is_greater_than_6__When_the_length_is_different_from_8__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_the_hexString_is_invalid__When_the_hexString_length_is_greater_than_6__When_the_length_is_different_from_8__should_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_init__When_the_hexString_is_invalid__When_the_length_is_less_than_6__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_init__When_the_hexString_is_invalid__When_the_length_is_less_than_6__should_be_nil</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.UITextFieldSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.UITextFieldSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_nextTextField__When_there_isn_t_next_textfield_associated__should_be_nil');">
+                <td>
+                  
+                    <h3 class="time">0.031s</h3>
+                  
+                </td>
+                <td><h3 class="title">_nextTextField__When_there_isn_t_next_textfield_associated__should_be_nil</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_nextTextField__When_there_is_a_next_textfield_associated__should_return_the_next_textfield');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_nextTextField__When_there_is_a_next_textfield_associated__should_return_the_next_textfield</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_nextTextField__When_there_is_a_next_textfield_associated__When_the_next_textField_is_changed__should_return_the_new_textfield');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">_nextTextField__When_there_is_a_next_textfield_associated__When_the_next_textField_is_changed__should_return_the_new_textfield</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="CoreTests.URLSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">CoreTests.URLSpec</h3>
+          </section>
+          <section class="tests">
+            
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isHTTPProtocol__When_the_URL_is_of_type_HTTP__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isHTTPProtocol__When_the_URL_is_of_type_HTTP__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isHTTPProtocol__When_the_URL_isn_t_of_type_HTTP__should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isHTTPProtocol__When_the_URL_isn_t_of_type_HTTP__should_return_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_isHTTPSProtocol__When_the_URL_is_of_type_HTTPS__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isHTTPSProtocol__When_the_URL_is_of_type_HTTPS__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_isHTTPSProtocol__When_the_URL_isn_t_of_type_HTTPS__should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_isHTTPSProtocol__When_the_URL_isn_t_of_type_HTTPS__should_return_false</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('_contains_subDirectory____When_the_directory_contains_the_subDirectory__should_return_true');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_contains_subDirectory____When_the_directory_contains_the_subDirectory__should_return_true</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('_contains_subDirectory____When_the_directory_doesn_t_contain_the_subDirectory__should_return_false');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">_contains_subDirectory____When_the_directory_doesn_t_contain_the_subDirectory__should_return_false</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+    </section>
+    <footer>Report generated with <a href="https://github.com/supermarin/xcpretty">xcpretty</a></footer>
+  </body>
+</html>

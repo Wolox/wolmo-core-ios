@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CoreTests.xctest' tests='182' failures='0'>
+  <testsuite name='CoreTests.ArraySpec' tests='8' failures='0'>
+    <testcase classname='CoreTests.ArraySpec' name='_group_withCriteria____should_group_the_array_based_on_condition' time='0.007'/>
+    <testcase classname='CoreTests.ArraySpec' name='_appending__should_return_a_new_array_appending_the_new_value' time='0.001'/>
+    <testcase classname='CoreTests.ArraySpec' name='_appending__should_not_mutate_the_base_array' time='0.001'/>
+    <testcase classname='CoreTests.ArraySpec' name='_get__When_the_array_contains_indexth_element__returns_that_element' time='0.002'/>
+    <testcase classname='CoreTests.ArraySpec' name='_get__When_the_array_doesn_t_contain_the_indexth_element__returns_nil' time='0.002'/>
+    <testcase classname='CoreTests.ArraySpec' name='_getFirst_where____When_an_element_satisfies_the_condition__should_return_that_element' time='0.001'/>
+    <testcase classname='CoreTests.ArraySpec' name='_getFirst_where____When_an_element_satisfies_the_condition__When_another_element_satisfies_the_condition__should_return_the_first_one' time='0.001'/>
+    <testcase classname='CoreTests.ArraySpec' name='_getFirst_where____When_none_of_the_elements_satisfies_the_condition__should_return_nil' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.AssociatedObjectSpec' tests='5' failures='0'>
+    <testcase classname='CoreTests.AssociatedObjectSpec' name='setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_class__should_set_an_associated_object' time='0.002'/>
+    <testcase classname='CoreTests.AssociatedObjectSpec' name='setAssociatedObject__When_the_value_to_associate_the_object_to_is_a_struct__should_set_an_associated_object' time='0.001'/>
+    <testcase classname='CoreTests.AssociatedObjectSpec' name='_getAssociatedObject__When_there_is_no_associated_value__should_return_nil' time='0.001'/>
+    <testcase classname='CoreTests.AssociatedObjectSpec' name='_getAssociatedObject__when_there_is_an_associated_value__should_return_the_associated_value' time='0.001'/>
+    <testcase classname='CoreTests.AssociatedObjectSpec' name='_getAssociatedObject__when_there_is_an_associated_value__when_there_is_a_new_associated_value__should_return_the_new_associated_value' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.CollectionSpec' tests='2' failures='0'>
+    <testcase classname='CoreTests.CollectionSpec' name='_isNotEmpty__when_using_an_Array__when_collection_is_empty__returns_false' time='0.001'/>
+    <testcase classname='CoreTests.CollectionSpec' name='_isNotEmpty__when_using_an_Array__when_collection_is_not_empty__returns_true' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.ConfirmationAlertViewModelSpec' tests='10' failures='0'>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_title__should_return_the_confirmationAlertViewModel_s_title' time='0.003'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_message__should_return_the_confirmationAlertViewModel_s_message' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_confirmButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultConfirmButtonTitleKey' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_confirmButtonTitle__When_providing_a__confirmButtonTitle__should_return_the__confirmButtonTitle_provided' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_dismissAction__When_using_the_default_parameter__should_do_nothing' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_confirmAction__When_using_the_default_parameter__should_do_nothing' time='0.001'/>
+    <testcase classname='CoreTests.ConfirmationAlertViewModelSpec' name='_confirmAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.DateSpec' tests='52' failures='0'>
+    <testcase classname='CoreTests.DateSpec' name='_now__should_return_the_current_date' time='0.003'/>
+    <testcase classname='CoreTests.DateSpec' name='_hours_using____should_return_the_hours_of_the_date' time='0.003'/>
+    <testcase classname='CoreTests.DateSpec' name='_minutes_using____should_return_the_minutes_of_the_date' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_seconds_using____should_return_the_seconds_of_the_date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_day_using____should_return_the_day_of_month_of_the_date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_month_using____should_return_the_month_of_the_date' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_year_using____should_return_the_year_of_the_date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_components___using____should_give_us_all_the_components_asked_for' time='0.003'/>
+    <testcase classname='CoreTests.DateSpec' name='_components___using____shouldn_t_give_us_the_component_that_weren_t_asked_for' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_be_a_Date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_day' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_month' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_the_correct_year' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_hours_in_00' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_minutes_in_00' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_correct__should_have_seconds_in_00' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_the_default_formatter__When_the_format_is_incorrect__should_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_be_a_Date' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_day' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_month' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_year' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_hours' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_minutes' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_correct__should_have_the_correct_seconds' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_dateFormatter____When_using_another_formatter__When_the_format_is_incorrect__should_be_nil' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_be_a_Date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_day' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_month' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_year' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_hours' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_minutes' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_correct__should_have_the_correct_seconds' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_dateString_formatString____when_the_format_is_incorrect__should_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_be_a_Date' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_the_correct_day' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_the_correct_month' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_the_correct_year' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_hours_in_00' time='0.002'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_minutes_in_00' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_valid__should_have_seconds_in_00' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_init_day_month_year____when_arguments_are_invalid__should_be_a_Date' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_getWeekDay_withFormat____When_getting_the_week_day_for_every_day_in_a_week__should_match_to_the_week_made_of_date_s_string_representation' time='0.004'/>
+    <testcase classname='CoreTests.DateSpec' name='_adding_days____When_adding_one_day_to_a_week__should_return_the_new_week' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_adding_hours____When_adding_hours_in_the_same_date__should_add_the_hours_to_the_current_hours' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_adding_hours____When_adding_hours_in_the_same_date__should_remain_being_the_same_date' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_adding_hours____When_adding_hours_and_getting_a_new_date__should_be_the_day_after' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_adding_hours____When_adding_hours_and_getting_a_new_date__should_have_the_corresponding_hours' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_toString_accordingTo____when_using_the_default_formatter__should_return_the_string_with_the_format_documented_in_function' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_toString_accordingTo____when_using_another_formatter__should_return_the_string_with_the_format_specified_in_the_formatter' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_toString_with____when_requiring_day__month_and_year__should_return_the_string_with_the_right_format_and_date_information' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_toString_with____when_requiring_time__should_return_the_string_with_the_right_format_and_time_information' time='0.001'/>
+    <testcase classname='CoreTests.DateSpec' name='_toString_withLocalized____should_return_the_string_with_the_right_format_and_time_information' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.DictionarySpec' tests='6' failures='0'>
+    <testcase classname='CoreTests.DictionarySpec' name='_appending_contentsOf____when_dictionaries_have_all_different_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones' time='0.002'/>
+    <testcase classname='CoreTests.DictionarySpec' name='_appending_contentsOf____when_dictionaries_have_all_different_keys__should_not_change_the_original_ones' time='0.002'/>
+    <testcase classname='CoreTests.DictionarySpec' name='_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones' time='0.001'/>
+    <testcase classname='CoreTests.DictionarySpec' name='_appending_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_not_change_the_original_ones' time='0.001'/>
+    <testcase classname='CoreTests.DictionarySpec' name='_append_contentsOf____when_dictionaries_have_no_same_keys__should_return_a_new_dictionary_with_the_union_of_the_original_ones' time='0.001'/>
+    <testcase classname='CoreTests.DictionarySpec' name='_append_contentsOf____when_both_dictionaries_have_some_keys_in_common__should_return_a_new_dictionary_with_the_union_of_the_original_ones' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.ErrorAlertViewModelSpec' tests='6' failures='0'>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_title__should_return_the_confirmationAlertViewModel_s_title' time='0.001'/>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_message__should_return_the_confirmationAlertViewModel_s_message' time='0.001'/>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_dismissButtonTitle__When_using_the_default_parameter__should_match_the_localized_value_of__DefaultDismissButtonTitleKey' time='0.001'/>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_dismissButtonTitle__When_providing_a__dismissButtonTitle__should_return_the__dismissButtonTitle_provided' time='0.001'/>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_dismissAction__When_using_the_default_parameter__should_do_nothing' time='0.001'/>
+    <testcase classname='CoreTests.ErrorAlertViewModelSpec' name='_dismissAction__When_providing_a__dismissAction__should_execute_the__dismissAction_provided' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.IdentifiableSpec' tests='1' failures='0'>
+    <testcase classname='CoreTests.IdentifiableSpec' name='_identifier__should_match_with_the_class_name' time='0.002'/>
+  </testsuite>
+  <testsuite name='CoreTests.PathAppendableSpec' tests='12' failures='0'>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_URL' time='0.002'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_URL' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_URL' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_URL' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_URL' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_URLs__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_URL' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__when_the_path_to_append_is_a_string__should_append_the_path_component_to_the_base_string' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_int__should_append_the_path_component_to_the_base_string' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_is_an_uint__should_append_the_path_component_to_the_base_string' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_default_implementation_of_String_describing____should_append_the_path_component_s_name_to_the_base_string' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_comes_from_default_implementation_of_protocol__When_the_path_to_append_uses_a_custom__CustomStringConvertible__implementation__should_append_the_path_component_s__description__to_the_base_string' time='0.001'/>
+    <testcase classname='CoreTests.PathAppendableSpec' name='___for_strings__When_the_path_to_append_uses_a_custom_protocol_implementation__should_append_the_path_component_s__toPath__result_to_the_base_string' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.RawRepresentableGeneratorSpec' tests='2' failures='0'>
+    <testcase classname='CoreTests.RawRepresentableGeneratorSpec' name='_next__When_using_the_identity_function_as_generator__should_return_always_the_same_element' time='0.001'/>
+    <testcase classname='CoreTests.RawRepresentableGeneratorSpec' name='_next__When_adding_one_in_the_generator__should_return_the_following_element' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.RawRepresentableSpec' tests='6' failures='0'>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_allValues__When_specifying_an_existent_initial_value__should_return_all_values_starting_at_the_initial_value' time='0.002'/>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_first_one__should_return_all_values' time='0.001'/>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_allValues__When_specifying_an_existent_initial_value__When_the_value_is_the_last_one__should_return_the_last_value' time='0.001'/>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_count__When_specifying_an_initial_value__should_return_the_count_of_all_the_values_starting_at_the_initial_value' time='0.001'/>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_count__When_specifying_an_initial_value__When_the_value_is_the_first_one__should_return_the_count_of_all_the_values' time='0.001'/>
+    <testcase classname='CoreTests.RawRepresentableSpec' name='_count__When_specifying_an_initial_value__When_the_value_is_the_last_one__should_return_one' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.SignalProducerSpec' tests='9' failures='0'>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_liftError__When_lifting_an_error__should_ignore_the_error_and_complete' time='0.005'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_liftError__When_lifting_an_error__should_not_ignore_a_value' time='0.001'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_toResultSignalProducer__When_sending_a_value__should_send_on_the_value_wrapped' time='0.003'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_toResultSignalProducer__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value' time='0.002'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_toResultSignalProducer__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes' time='0.001'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_filterValues__When_sending_a_success_value__should_send_on_the_value' time='0.002'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error' time='0.001'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value' time='0.002'/>
+    <testcase classname='CoreTests.SignalProducerSpec' name='_filterErrors__When_sending_a_failure_value__should_send_on_the_error' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.SignalSpec' tests='9' failures='0'>
+    <testcase classname='CoreTests.SignalSpec' name='_liftError__When_lifting_an_error__should_ignore_the_error_and_complete' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_liftError__When_lifting_an_error__should_not_ignore_a_value' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_toResultSignal__When_sending_a_value__should_send_on_the_value_wrapped' time='0.002'/>
+    <testcase classname='CoreTests.SignalSpec' name='_toResultSignal__When_sending_an_error__should_send_on_the_error_as_a_wrapped_value' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_toResultSignal__When_sending_values_and_errors__should_send_on_everything_wrapped_up_until_it_completes' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_filterValues__When_sending_a_success_value__should_send_on_the_value' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_filterValues__When_sending_a_failure_value__shouldn_t_send_on_the_error' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_filterErrors__When_sending_a_success_value__shouldn_t_send_on_the_value' time='0.001'/>
+    <testcase classname='CoreTests.SignalSpec' name='_filterErrors__When_sending_a_failure_value__should_send_on_the_error' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.StringSpec' tests='33' failures='0'>
+    <testcase classname='CoreTests.StringSpec' name='_format_with____should_returned_the_formatted_string_as_expected' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_length__should_return_the_string_length' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_url__When_it_is_a_valid_url__should_return_the_url' time='0.002'/>
+    <testcase classname='CoreTests.StringSpec' name='_url__When_it_is_an_invalid_url__should_return_nil' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_hasSpaces__When_the_string_doesn_t_have_spaces__should_return_false' time='0.002'/>
+    <testcase classname='CoreTests.StringSpec' name='_hasSpaces__When_the_string_has_spaces__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains____should_return_false' time='0.005'/>
+    <testcase classname='CoreTests.StringSpec' name='_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isValidEmail__When_the_email_isn_t_valid__When_the_email_doesn_t_contains_anything_after____should_return_false_2' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isValidEmail__When_the_email_is_valid__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isValidEmail__When_the_email_is_valid__With_any_provider__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_trimmed__When_the_string_has_whitespaces__removes_leading_and_trailing_whitespaces' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_trimmed__When_the_string_has_whitespaces__maintains_not_leading_or_trailing_spaces' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_replacing_with____When_the_string_doesn_t_contain_the_target_string_to_replace__should_return_the_same_string' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_replacing_with____When_the_string_contains_the_target_string_to_replace__should_return_the_string_with_the_target_replaced' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_replacing_with____When_the_string_contains_the_target_string_to_replace__should_not_mutate_the_string' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_withoutWhiteSpaces__When_the_string_has_whitespaces__should_remove_them_all' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_withoutWhiteSpaces__When_the_string_doesn_t_have_whitespaces__should_return_the_same_string' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_withoutWhiteSpaces__When_the_string_contains_leading_or_trailing_whitespaces__should_remove_them' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isNotEmpty__when_string_is_empty__returns_false' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_isNotEmpty__when_string_is_not_empty__returns_true' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__returns_the__string_without_the_suffix' time='0.002'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix__doesn_t_change_the_original_string' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_suffix____when_the_string_has_the_string_to_remove_as_suffix_but_case_don_t_match__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__returns_the_string_without_the_prefix' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix__doesn_t_change_the_original_string' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_has_the_string_to_remove_in_the_middle__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_has_the_string_to_remove_as_suffix__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_hasn_t_got_the_string_to_remove_as_substring__returns_the_same_string_as_before' time='0.001'/>
+    <testcase classname='CoreTests.StringSpec' name='_remove_prefix____when_the_string_has_the_string_to_remove_as_prefix_but_case_don_t_match__returns_the_same_string_as_before' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.TimerSpec' tests='2' failures='0'>
+    <testcase classname='CoreTests.TimerSpec' name='_schedule_withDelay____should_trigger_handler_after_delay' time='1.004'/>
+    <testcase classname='CoreTests.TimerSpec' name='_schedule_repeatInterval____should_repeteadly_trigger_handler_after_delay' time='2.006'/>
+  </testsuite>
+  <testsuite name='CoreTests.UIAlertControllerSpec' tests='5' failures='0'>
+    <testcase classname='CoreTests.UIAlertControllerSpec' name='_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_title' time='0.016'/>
+    <testcase classname='CoreTests.UIAlertControllerSpec' name='_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_message' time='0.002'/>
+    <testcase classname='CoreTests.UIAlertControllerSpec' name='_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_confirm_button_title' time='0.002'/>
+    <testcase classname='CoreTests.UIAlertControllerSpec' name='_init__When_providing_a_ConfirmationAlertViewModel__should_return_confirmationAlertViewModel_s_dismiss_button_title' time='0.002'/>
+    <testcase classname='CoreTests.UIAlertControllerSpec' name='_init__When_providing_a_ConfirmationAlertViewModel__should_have_two_possible_actions__dismiss_and_confirm' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.UIColorSpec' tests='5' failures='0'>
+    <testcase classname='CoreTests.UIColorSpec' name='_init__When_the_hexString_is_valid__should_not_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.UIColorSpec' name='_init__When_the_hexString_is_valid__When_the_string_contains_a___prefix__should_not_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.UIColorSpec' name='_init__When_the_hexString_is_valid__When_the_length_is_8__it_has_alpha___should_not_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.UIColorSpec' name='_init__When_the_hexString_is_invalid__When_the_hexString_length_is_greater_than_6__When_the_length_is_different_from_8__should_be_nil' time='0.001'/>
+    <testcase classname='CoreTests.UIColorSpec' name='_init__When_the_hexString_is_invalid__When_the_length_is_less_than_6__should_be_nil' time='0.001'/>
+  </testsuite>
+  <testsuite name='CoreTests.UITextFieldSpec' tests='3' failures='0'>
+    <testcase classname='CoreTests.UITextFieldSpec' name='_nextTextField__When_there_isn_t_next_textfield_associated__should_be_nil' time='0.031'/>
+    <testcase classname='CoreTests.UITextFieldSpec' name='_nextTextField__When_there_is_a_next_textfield_associated__should_return_the_next_textfield' time='0.002'/>
+    <testcase classname='CoreTests.UITextFieldSpec' name='_nextTextField__When_there_is_a_next_textfield_associated__When_the_next_textField_is_changed__should_return_the_new_textfield' time='0.002'/>
+  </testsuite>
+  <testsuite name='CoreTests.URLSpec' tests='6' failures='0'>
+    <testcase classname='CoreTests.URLSpec' name='_isHTTPProtocol__When_the_URL_is_of_type_HTTP__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.URLSpec' name='_isHTTPProtocol__When_the_URL_isn_t_of_type_HTTP__should_return_false' time='0.001'/>
+    <testcase classname='CoreTests.URLSpec' name='_isHTTPSProtocol__When_the_URL_is_of_type_HTTPS__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.URLSpec' name='_isHTTPSProtocol__When_the_URL_isn_t_of_type_HTTPS__should_return_false' time='0.001'/>
+    <testcase classname='CoreTests.URLSpec' name='_contains_subDirectory____When_the_directory_contains_the_subDirectory__should_return_true' time='0.001'/>
+    <testcase classname='CoreTests.URLSpec' name='_contains_subDirectory____When_the_directory_doesn_t_contain_the_subDirectory__should_return_false' time='0.001'/>
+  </testsuite>
+</testsuites>
