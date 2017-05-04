@@ -32,6 +32,8 @@ workflows:
         title: Calculating coverage...
         inputs:
         - content:
+            #!/bin/bash
+            set -ex
             bundle exec slather coverage --html --output-directory coverage
             bundle exec slather coverage -x --output-directory coverage-xml
             bundle exec codestats-metrics-reporter
