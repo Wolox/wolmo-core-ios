@@ -3,3 +3,14 @@ scheme: Core
 ignore:
   - CoreTests/*
   - Carthage/*
+# UI can't be tested
+  - Core/Utilities/Alerts/AlertViewPresenter.swift
+  - Core/Utilities/ProgressHUD/ProgressHUDDelegate.swift
+  - Core/Extensions/UIKit/UIButton.swift
+  - Core/Extensions/UIKit/UIView/Collapsable.swift
+  - Core/Extensions/UIKit/UIView/UIView.swift
+  - Core/Extensions/UIKit/UIViewController.swift
+# UIControl can't be sent events programatically.
+  - Core/Utilities/ActionHandler.swift
+# AV objects can't be tested.
+  - Core/Extensions/AVFoundation/*
