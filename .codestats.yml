@@ -8,6 +8,6 @@ metrics:
      minimum: 70
      upload_report: false
    swiftlint:
-       enabled: true
-       minimum: 70
-       upload_report: false
+     enabled: true
+     minimum: 70
+     upload_report: false
