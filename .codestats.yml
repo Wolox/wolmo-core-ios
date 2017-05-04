@@ -1,7 +1,7 @@
 config:
    ci: 'BITRISE'
    url: http://codestats.wolox.com.ar/
-   token: <%= ENV[‘CODE_STATS_TOKEN’] %>
+   token: <%= ENV['CODE_STATS_TOKEN'] %>
 metrics:
    slather:
      name: 'Code Coverage'
