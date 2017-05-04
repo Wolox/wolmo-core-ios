@@ -31,12 +31,11 @@ workflows:
     - script@1.1.3:
         title: Calculating coverage...
         inputs:
-        - content:
-            #!/bin/bash
-            set -ex
-            bundle exec slather coverage --html --output-directory coverage
-            bundle exec slather coverage -x --output-directory coverage-xml
-            bundle exec codestats-metrics-reporter
+        - content: bundle exec slather coverage --html --output-directory coverage
+    - script@1.1.3:
+        title: Sending coverage information to CodeStats ...
+        inputs:
+        - content: bundle exec codestats-metrics-reporter
     envs:
     - opts:
         is_expand: true
