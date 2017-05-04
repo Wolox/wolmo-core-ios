@@ -7,4 +7,4 @@ metrics:
      name: 'Code Coverage'
      enabled: true
      minimum: 70
-     upload_report: true
+     upload_report: false
