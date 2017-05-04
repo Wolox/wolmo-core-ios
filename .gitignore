@@ -27,3 +27,8 @@ Thumbs.db
 Carthage/
 
 .swiftlint-report.json
+
+# Fastlane
+fastlane/README.md
+fastlane/report.xml
+fastlane/test_output/
