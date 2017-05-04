@@ -13,17 +13,20 @@ workflows:
     - script@1.1.3:
         title: Bootstrapping...
         inputs:
-        - content: RUNNING_ON_CI=1 DISABLE_CARTHAGE_CACHE_CONFIG=true FORCE_CARTHAGE_VERSION=true
-            FORCE_SWIFTLINT_VERSION=true VERBOSE=true script/bootstrap
-    - script@1.1.3:
-        run_if: '{{getenv "PR" | eq "true"}}'
-        title: Running linter...
-        inputs:
-        - content:
+        - content: |-
             #!/bin/bash
             set -ex
-            echo `swiftlint lint --reporter json > .swiftlint-report.json || true`
-            bundle exec linterbot "$BITRISE_APP_SLUG" "$BITRISE_PULL_REQUEST" --trace < .swiftlint-report.json
+
+            RUNNING_ON_CI=1 DISABLE_CARTHAGE_CACHE_CONFIG=true FORCE_CARTHAGE_VERSION=true FORCE_SWIFTLINT_VERSION=true VERBOSE=true script/bootstrap
+    - script@1.1.3:
+        title: Running linter...
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+
+            mkdir swiftlint-output
+            swiftlint lint --reporter html > swiftlint-output/index.html || true
     - script@1.1.3:
         title: Testing...
         inputs:
@@ -31,9 +34,13 @@ workflows:
     - script@1.1.3:
         title: Calculating coverage...
         inputs:
-        - content: bundle exec slather coverage --html --output-directory coverage
+        - content: |-
+            #!/bin/bash
+            set -ex
+
+            bundle exec slather coverage --html --output-directory slather-output
     - script@1.1.3:
-        title: Sending coverage information to CodeStats ...
+        title: Sending CodeStats report...
         inputs:
         - content: bundle exec codestats-metrics-reporter
     envs:
@@ -42,7 +49,7 @@ workflows:
       CARTHAGE_CACHE_BUCKET_NAME: carthage-cache
     - opts:
         is_expand: true
-      REPO_SLUG: wolmo-core-ios
+      REPO_SLUG: wolox/wolmo-core-ios
     before_run:
 
 app:
