@@ -33,11 +33,8 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:) and String(describing:)
     */
     public subscript(key: String) -> String? {
-        guard let value = object(forInfoDictionaryKey: key) else {
-            return .none
-        }
-        let stringValue = value as? String ?? String(describing: value)
-        return stringValue
+        let value: Any? = get(from: key)
+        return value.flatMap { $0 as? String ?? String(describing: $0) }
     }
     
     /**
@@ -50,10 +47,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getString(from key: String) -> String? {
-        guard let value = object(forInfoDictionaryKey: key) as? String else {
-            return .none
-        }
-        return value
+        return get(from: key)
     }
     
     /**
@@ -66,10 +60,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getInt(from key: String) -> Int? {
-        guard let value = object(forInfoDictionaryKey: key) as? Int else {
-            return .none
-        }
-        return value
+        return get(from: key)
     }
     
     /**
@@ -82,10 +73,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getFloat(from key: String) -> Float? {
-        guard let value = object(forInfoDictionaryKey: key) as? Float else {
-            return .none
-        }
-        return value
+        return get(from: key)
     }
     
     /**
@@ -98,10 +86,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getDate(from key: String) -> Date? {
-        guard let value = object(forInfoDictionaryKey: key) as? Date else {
-            return .none
-        }
-        return value
+        return get(from: key)
     }
     
     /**
@@ -114,10 +99,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getData(from key: String) -> Data? {
-        guard let value = object(forInfoDictionaryKey: key) as? Data else {
-            return .none
-        }
-        return value
+        return get(from: key)
     }
     
     /**
@@ -131,11 +113,7 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getArray<T>(from key: String) -> [T]? {
-        guard let value = object(forInfoDictionaryKey: key) as? NSArray,
-              let swiftArray = value as? [T] else {
-            return .none
-        }
-        return swiftArray
+        return get(from: key)
     }
     
     /**
@@ -149,11 +127,15 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getDictionary<V>(from key: String) -> [String: V]? {
-        guard let value = object(forInfoDictionaryKey: key) as? NSDictionary,
-              let swiftDictionary = value as? [String: V] else {
-            return .none
-        }
-        return swiftDictionary
+        return get(from: key)
+    }
+    
+}
+
+fileprivate extension Bundle {
+    
+    fileprivate func get<T>(from key: String) -> T? {
+        return object(forInfoDictionaryKey: key) as? T
     }
     
 }
