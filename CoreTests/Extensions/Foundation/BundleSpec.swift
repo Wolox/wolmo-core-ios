@@ -60,7 +60,7 @@ public class BundleSpec: QuickSpec {
                         it("should return the value") {
                             let value = bundle["My Personal String Key With inverted commas"]
                             expect(value).toNot(beNil())
-                            expect(value).to(equal("This is a string with some \"quotation\""))
+                            expect(value as? String).to(equal("This is a string with some \"quotation\""))
                         }
                         
                     }
@@ -70,7 +70,7 @@ public class BundleSpec: QuickSpec {
                         it("should return the value") {
                             let value = bundle["My Personal String Key"]
                             expect(value).toNot(beNil())
-                            expect(value).to(equal("My key's value"))
+                            expect(value as? String).to(equal("My key's value"))
                         }
                         
                     }
@@ -79,64 +79,63 @@ public class BundleSpec: QuickSpec {
                 
                 context("when the value is a number") {
                     
-                    it("should return the value as a string") {
+                    it("should return the value") {
                         let value = bundle["My Personal Number Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal("5"))
+                        expect(value as? Int).to(equal(5))
                     }
                     
                 }
                 
                 context("when the value is a boolean") {
                     
-                    it("shouldn't return the value as a string") {
+                    it("shouldn't return the value") {
                         let value = bundle["My Personal Boolean Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal("1"))
+                        expect(value as? Bool).to(equal(true))
                     }
                     
                 }
                 
                 context("when the value is a date") {
                     
-                    it("shouldn't return the value as a string") {
+                    it("shouldn't return the value") {
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "yyy-MM-dd'T'HH:mm:ssZ"
                         let date = dateFormatter.date(from: "2017-04-20T18:34:41Z")!
-                        let dateString = String(describing: date)
                         let value = bundle["My Personal Date Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal(dateString))
+                        expect(value as? Date).to(equal(date))
                     }
                     
                 }
                 
                 context("when the value is a data") {
                     
-                    it("shouldn't return the value as a string") {
+                    it("shouldn't return the value") {
                         let value = bundle["My Personal Data Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal("<>"))
+                        expect(value as? Data).to(equal(Data()))
                     }
                     
                 }
                 
                 context("when the value is a array") {
                     
-                    it("shouldn't return the value as a string") {
+                    it("shouldn't return the value") {
                         let value = bundle["My Personal Array Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal("(\n    1asg7,\n    2153a\n)"))
+                        expect(value as? [String]).to(equal(["1asg7", "2153a"]))
                     }
                     
                 }
                 
                 context("when the value is a dictionary") {
                     
-                    it("shouldn't return the value as a string") {
+                    it("shouldn't return the value") {
                         let value = bundle["My Personal Dictionary Key"]
                         expect(value).toNot(beNil())
-                        expect(value).to(equal("{\n    0 = 5;\n    1 = 7;\n}"))
+                        expect(value as? [String: Int]).to(equal(["0": 5, "1": 7]))
                     }
                     
                 }
@@ -157,7 +156,7 @@ public class BundleSpec: QuickSpec {
         describe("#getString(from:)") {
             
             context("when the key exists in bundle's info plist") {
-                
+
                 context("when the value is the expected type") {
                     
                     context("when the string has inverted commas") {
@@ -166,6 +165,26 @@ public class BundleSpec: QuickSpec {
                             let value = bundle.getString(from: "My Personal String Key With inverted commas")
                             expect(value).toNot(beNil())
                             expect(value).to(equal("This is a string with some \"quotation\""))
+                        }
+                        
+                    }
+
+                    context("when the string has only inverted commas") {
+
+                        it("should return the value") {
+                            let value = bundle.getString(from: "My Just inverted commas key")
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal("\"\""))
+                        }
+
+                    }
+
+                    context("when the string is empty") {
+
+                        it("should return the value") {
+                            let value = bundle.getString(from: "My Empty string key")
+                            expect(value).toNot(beNil())
+                            expect(value).to(equal(""))
                         }
                         
                     }
@@ -183,12 +202,30 @@ public class BundleSpec: QuickSpec {
                 }
                 
                 context("when the value is not the expected type") {
-                    
-                    it("should return .none") {
-                        let value = bundle.getString(from: "My Personal Number Key")
-                        expect(value).to(beNil())
+
+                    context("when the value is empty") {
+
+                        it("should return .none for array") {
+                            let value = bundle.getString(from: "My Empty array key")
+                            expect(value).to(beNil())
+                        }
+
+                        it("should return .none for data") {
+                            let value = bundle.getString(from: "My Empty data key")
+                            expect(value).to(beNil())
+                        }
+
                     }
-                    
+
+                    context("wnhen the value is not empty") {
+
+                        it("should return .none") {
+                            let value = bundle.getString(from: "My Personal Number Key")
+                            expect(value).to(beNil())
+                        }
+
+                    }
+
                 }
                 
             }

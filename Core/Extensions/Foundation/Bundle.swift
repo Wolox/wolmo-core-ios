@@ -28,13 +28,12 @@ public extension Bundle {
      information property list (Info.plist).
      
      - parameter key: A key in the bundle's property list.
-     - returns: The string representation of the value associated with key in the
-            receiver's property list (Info.plist) or .none if the key doesn't exist.
+     - returns: The value associated with key in the receiver's property 
+                list (Info.plist) as Any or .none if the key doesn't exist.
      - seealso: object(forInfoDictionaryKey:) and String(describing:)
     */
-    public subscript(key: String) -> String? {
-        let value: Any? = get(from: key)
-        return value.flatMap { $0 as? String ?? String(describing: $0) }
+    public subscript(key: String) -> Any? {
+        return get(from: key)
     }
     
     /**

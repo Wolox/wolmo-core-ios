@@ -46,5 +46,13 @@
 	</dict>
 	<key>My Personal String Key With inverted commas</key>
 	<string>This is a string with some &quot;quotation&quot;</string>
+	<key>My Empty string key</key>
+	<string></string>
+	<key>My Just inverted commas key</key>
+	<string>&quot;&quot;</string>
+	<key>My Empty array key</key>
+	<array/>
+	<key>My Empty data key</key>
+	<data></data>
 </dict>
 </plist>
