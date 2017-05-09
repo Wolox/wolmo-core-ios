@@ -46,7 +46,8 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getString(from key: String) -> String? {
-        return get(from: key)
+        let string: String? = get(from: key)
+        return (string?.isEmpty ?? true) ? .none : string
     }
     
     /**

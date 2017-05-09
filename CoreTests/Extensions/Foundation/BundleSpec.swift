@@ -181,10 +181,9 @@ public class BundleSpec: QuickSpec {
 
                     context("when the string is empty") {
 
-                        it("should return the value") {
+                        it("should return .none") {
                             let value = bundle.getString(from: "My Empty string key")
-                            expect(value).toNot(beNil())
-                            expect(value).to(equal(""))
+                            expect(value).to(beNil())
                         }
                         
                     }
