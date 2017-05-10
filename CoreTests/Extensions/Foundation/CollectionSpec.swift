@@ -48,14 +48,14 @@ public class CollectionSpec: QuickSpec {
                 
             }
 
-            describe("#getFirst(where:)") {
+            describe("#first(where:)") {
 
                 let array = [1, 2, 3]
 
                 context("When an element satisfies the condition") {
 
                     it("should return that element") {
-                        expect(array.getFirst(where: { (elem) -> Bool in
+                        expect(array.first(where: { (elem) -> Bool in
                             elem == 1
                         })).to(equal(1))
                     }
@@ -63,7 +63,7 @@ public class CollectionSpec: QuickSpec {
                     context("When another element satisfies the condition") {
 
                         it("should return the first one") {
-                            expect(array.getFirst(where: { (elem) -> Bool in
+                            expect(array.first(where: { (elem) -> Bool in
                                 elem % 2 == 1
                             })).to(equal(1))
                         }
@@ -75,7 +75,7 @@ public class CollectionSpec: QuickSpec {
                 context("When none of the elements satisfies the condition") {
 
                     it("should return nil") {
-                        expect([1, 2, 3].getFirst(where: { (elem) -> Bool in
+                        expect([1, 2, 3].first(where: { (elem) -> Bool in
                             elem == 5
                         })).to(beNil())
                     }

@@ -100,7 +100,7 @@ private var CollapsableHeightConstraintKey: UInt8 = 0
 fileprivate extension UIView {
     
     fileprivate var previousHeightConstraint: NSLayoutConstraint? {
-        return constraints.getFirst(where: { (constraint) -> Bool in
+        return constraints.first(where: { (constraint) -> Bool in
             constraint.firstAttribute == .height
         })
     }
