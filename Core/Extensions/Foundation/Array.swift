@@ -58,19 +58,7 @@ public extension Array {
         that index
      */
     public func get(_ index: Int) -> Element? {
-        return indices ~= index ? self[index] : nil
-    }
-    
-    /**
-     Returns the first element of the array for which the predicate returns true,
-     or .none if there is no such element.
-     
-     - parameter condition: The condition that will be applied.
-     - returns: The element that satisfies the predicate or .none if none satisfies.
-     - seealso: indexOf()
-    */
-    public func getFirst(where condition: (Element) -> Bool) -> Element? {
-        return index(where: condition).map { self[$0] }
+        return indices ~= index ? self[index] : .none
     }
     
 }

@@ -62,6 +62,7 @@ public class ArraySpec: QuickSpec {
                     expect(array.get(1)).to(equal(2))
                     expect(array.get(2)).to(equal(6))
                 }
+                
             }
             
             context("When the array doesn't contain the indexth element") {
@@ -70,40 +71,10 @@ public class ArraySpec: QuickSpec {
                     expect(array.get(-1)).to(beNil())
                     expect(array.get(3)).to(beNil())
                 }
+
             }
             
         }
         
-        describe("#getFirst(where:)") {
-            
-            let array = [1, 2, 3]
-            
-            context("When an element satisfies the condition") {
-                
-                it("should return that element") {
-                    expect(array.getFirst(where: { (elem) -> Bool in
-                        elem == 1
-                    })).to(equal(1))
-                }
-                
-                context("When another element satisfies the condition") {
-                    
-                    it("should return the first one") {
-                        expect(array.getFirst(where: { (elem) -> Bool in
-                            elem % 2 == 1
-                        })).to(equal(1))
-                    }
-                }
-            }
-            
-            context("When none of the elements satisfies the condition") {
-                
-                it("should return nil") {
-                    expect([1, 2, 3].getFirst(where: { (elem) -> Bool in
-                        elem == 5
-                    })).to(beNil())
-                }
-            }
-        }
     }
 }

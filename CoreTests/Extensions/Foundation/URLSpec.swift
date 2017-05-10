@@ -46,14 +46,14 @@ public class URLSpec: QuickSpec {
             context("When the URL is of type HTTPS") {
                 
                 it("should return true") {
-                    expect(remoteURL.isHTTPProtocol).to(beTrue())
+                    expect(remoteURL.isHTTPSProtocol).to(beTrue())
                 }
             }
             
             context("When the URL isn't of type HTTPS") {
                 
                 it("should return false") {
-                    expect(localURL.isHTTPProtocol).to(beFalse())
+                    expect(localURL.isHTTPSProtocol).to(beFalse())
                 }
             }
         }

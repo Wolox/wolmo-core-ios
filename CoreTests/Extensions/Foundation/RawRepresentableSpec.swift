@@ -104,9 +104,13 @@ public class RawRepresentableGeneratorSpec: QuickSpec {
                     generator = RawRepresentableGenerator(startingAt: .zero) { IntRepresentable(rawValue: $0.rawValue + 1) }
                 }
                 
-                it("should return the following element") {
+                it("should return the following element until there is no following") {
                     expect(generator.next()).to(equal(IntRepresentable.zero))
                     expect(generator.next()).to(equal(IntRepresentable.one))
+                    expect(generator.next()).to(equal(IntRepresentable.two))
+                    expect(generator.next()).to(equal(IntRepresentable.three))
+                    expect(generator.next()).to(beNil())
+                    expect(generator.next()).to(beNil())
                 }
                 
             }
