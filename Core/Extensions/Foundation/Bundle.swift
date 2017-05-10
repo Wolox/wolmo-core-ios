@@ -42,7 +42,7 @@ public extension Bundle {
      
      - parameter key: A key in the bundle's property list.
      - returns: The string associated with key in the receiver's property list (Info.plist)
-            or .none if the key doesn't exist or if the value is not a string.
+            or .none if the key doesn't exist or if the value is not a string or if it's an empty string.
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getString(from key: String) -> String? {
