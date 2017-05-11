@@ -29,7 +29,7 @@ public struct ErrorAlertViewModel {
     public init(
         title: String,
         message: String,
-        dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized().localizedCapitalized,
+        dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ErrorAlertViewModel) -> Void = { _ in }) {
         self.title = title
         self.message = message

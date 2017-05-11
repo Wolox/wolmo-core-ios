@@ -36,9 +36,9 @@ public struct ConfirmationAlertViewModel {
     public init(
         title: String,
         message: String,
-        dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized().localizedCapitalized,
+        dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ConfirmationAlertViewModel) -> Void = { _ in },
-        confirmButtonTitle: String = DefaultConfirmButtonTitleKey.localized().localizedCapitalized,
+        confirmButtonTitle: String = DefaultConfirmButtonTitleKey.localized(),
         confirmAction: @escaping (ConfirmationAlertViewModel) -> Void = { _ in }) {
         self.title = title
         self.message = message
