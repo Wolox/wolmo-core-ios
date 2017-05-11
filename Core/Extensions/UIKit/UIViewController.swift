@@ -12,14 +12,16 @@ public extension UIViewController {
     
     /**
      Toggles the visibility of the status and tabBar.
+     
+     This will true only if both bars are hidden.
      */
-    public var hideBars: Bool {
+    public var areBarsHidden: Bool {
         set {
             setBarsHidden(newValue)
         }
         
         get {
-            return false
+            return getBarsHidden()
         }
     }
     
@@ -60,11 +62,15 @@ public extension UIViewController {
     
 }
 
-private extension UIViewController {
+fileprivate extension UIViewController {
     
-    func setBarsHidden(_ hidden: Bool) {
+    fileprivate func setBarsHidden(_ hidden: Bool) {
         tabBarController?.tabBar.isHidden = hidden
         UIApplication.shared.isStatusBarHidden = hidden
+    }
+
+    fileprivate func getBarsHidden() -> Bool {
+        return (tabBarController?.tabBar.isHidden ?? true) && UIApplication.shared.isStatusBarHidden
     }
     
 }
