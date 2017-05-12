@@ -30,5 +30,41 @@ public extension UIButton {
         let underlinedText = NSAttributedString(string: title, attributes: attributes)
         setAttributedTitle(underlinedText, for: state)
     }
+
+    /* 
+     Sets the button's title and image with the specified spacing and arrangement.
+    
+     - parameter title: Title for the button.
+     - parameter image: Image for the button.
+     - parameter spacing: Spacing between the title and the button.
+     - parameter imageOnRight: Boolean indicating whether the the image should be to the
+            right of the text or to the left. By default, false (to the left).
+     
+     - seealso: CGAffineTransform(scaleX:y:)
+    **/
+    public func setTitle(title: String, image: UIImage, spacing: CGFloat = 0, imageOnRight: Bool = false) {
+        setTitle(title, for: .normal)
+        setImage(image, for: .normal)
+
+        imageView!.contentMode = .scaleAspectFill
+        imageView!.clipsToBounds = false
+        contentHorizontalAlignment = .fill
+        contentVerticalAlignment = .fill
+
+        // UIButton Insets: http://stackoverflow.com/a/25559946
+        let inset = spacing / 2
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: -inset)
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: -inset, bottom: 0, right: inset)
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
+
+        if imageOnRight {
+            // Image to the right: http://stackoverflow.com/a/32174204
+            transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+            titleLabel!.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+            imageView!.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        }
+
+        sizeToFit()
+    }
     
 }
