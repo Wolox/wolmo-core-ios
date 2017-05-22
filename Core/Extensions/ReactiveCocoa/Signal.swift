@@ -18,7 +18,7 @@ public extension SignalProtocol {
          
          - returns: A signal with the same value type but with `NewError` as the error type
      */
-    func liftError<NewError>() -> Signal<Value, NewError> {
+    public func liftError<NewError>() -> Signal<Value, NewError> {
         return flatMapError { _ in SignalProducer<Value, NewError>.empty }
     }
     
@@ -38,14 +38,35 @@ public extension SignalProtocol {
      
         It may be considered similar to the `events` signal of an `Action` (with only next and failed).
     */
-    func toResultSignal() -> Signal<Result<Value, Error>, NoError> {
+    public func toResultSignal() -> Signal<Result<Value, Error>, NoError> {
         return map { Result<Value, Error>.success($0) }
             .flatMapError { error -> SignalProducer<Result<Value, Error>, NoError> in
                 let errorValue = Result<Value, Error>.failure(error)
                 return SignalProducer<Result<Value, Error>, NoError>(value: errorValue)
         }
     }
-    
+
+    /**
+         Filters stream and only passes through the values that respond
+         to the specific type, as elements of that specific type.
+
+         - returns: A signal with value type T and the same error type.
+     */
+    public func filterType<T>() -> Signal<T, Error> {
+        return filter { $0 is T }.map { $0 as! T }
+    }
+
+}
+
+public extension SignalProtocol where Value: OptionalProtocol {
+
+    /**
+     Skips all not-nil values, sending only the .none values through.
+     */
+    public func skipNotNil() -> Signal<Value.Wrapped, Error> {
+        return filter { $0.optional != nil }.map { $0.optional! }
+    }
+
 }
 
 public extension SignalProtocol where Value: ResultProtocol {
@@ -56,7 +77,7 @@ public extension SignalProtocol where Value: ResultProtocol {
      
         It may be considered similar to the `values` signal of an `Action`.
     */
-    func filterValues() -> Signal<Value.Value, Error> {
+    public func filterValues() -> Signal<Value.Value, Error> {
         return filter {
             if let _ = $0.value {
                 return true
@@ -71,7 +92,7 @@ public extension SignalProtocol where Value: ResultProtocol {
      
          It may be considered similar to the `errors` signal of an `Action`.
      */
-    func filterErrors() -> Signal<Value.Error, Error> {
+    public func filterErrors() -> Signal<Value.Error, Error> {
         return filter {
             if let _ = $0.error {
                 return true

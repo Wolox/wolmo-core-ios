@@ -12,13 +12,13 @@ import Result
 public extension SignalProducerProtocol {
     
     /**
-     Transforms a `SignalProducer<Value, Error>` to `SignalProducer<Value, NewError>`
-     This is usually pretty useful when the `flatMap` operator is used and the outer
-     producer has `NoError` error type and the inner one a different type of error.
-     
-     - returns: A signal producer with the same value type but with `NewError` as the error type
+         Transforms a `SignalProducer<Value, Error>` to `SignalProducer<Value, NewError>`
+         This is usually pretty useful when the `flatMap` operator is used and the outer
+         producer has `NoError` error type and the inner one a different type of error.
+         
+         - returns: A signal producer with the same value type but with `NewError` as the error type
      */
-    func liftError<NewError>() -> SignalProducer<Value, NewError> {
+    public func liftError<NewError>() -> SignalProducer<Value, NewError> {
         return flatMapError { _ in SignalProducer<Value, NewError>.empty }
     }
     
@@ -39,14 +39,37 @@ public extension SignalProducerProtocol {
          
          It may be considered similar to the `events` signal of an `Action` (with only next and failed).
      */
-    func toResultSignalProducer() -> SignalProducer<Result<Value, Error>, NoError> {
+    public func toResultSignalProducer() -> SignalProducer<Result<Value, Error>, NoError> {
         return map { Result<Value, Error>.success($0) }
             .flatMapError { error -> SignalProducer<Result<Value, Error>, NoError> in
                 let errorValue = Result<Value, Error>.failure(error)
                 return SignalProducer<Result<Value, Error>, NoError>(value: errorValue)
         }
     }
-    
+
+    /**
+        Filters stream and only passes through the values that respond
+        to the specific type, as elements of that specific type.
+     
+        - returns: A signal producer with value type T and the same error type.
+    */
+    public func filterType<T>() -> SignalProducer<T, Error> {
+        return filter { $0 is T }.map { $0 as! T }
+    }
+
+}
+
+
+
+public extension SignalProducerProtocol where Value: OptionalProtocol {
+
+    /**
+        Skips all not-nil values, sending only the .none values through.
+     */
+    public func skipNotNil() -> SignalProducer<Value.Wrapped, Error> {
+        return filter { $0.optional != nil }.map { $0.optional! }
+    }
+
 }
 
 public extension SignalProducerProtocol where Value: ResultProtocol {
@@ -58,7 +81,7 @@ public extension SignalProducerProtocol where Value: ResultProtocol {
          It may be considered similar to the `values` signal of an `Action`,
          but for producers.
      */
-    func filterValues() -> SignalProducer<Value.Value, Error> {
+    public func filterValues() -> SignalProducer<Value.Value, Error> {
         return filter {
             if let _ = $0.value {
                 return true
@@ -74,7 +97,7 @@ public extension SignalProducerProtocol where Value: ResultProtocol {
          It may be considered similar to the `errors` signal of an `Action`,
          but for producers.
      */
-    func filterErrors() -> SignalProducer<Value.Error, Error> {
+    public func filterErrors() -> SignalProducer<Value.Error, Error> {
         return filter {
             if let _ = $0.error {
                 return true
