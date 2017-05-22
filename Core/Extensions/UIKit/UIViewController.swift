@@ -11,21 +11,6 @@ import UIKit
 public extension UIViewController {
     
     /**
-     Toggles the visibility of the status and tabBar.
-     
-     This will be true only if both bars are hidden.
-     */
-    public var barsAreHidden: Bool {
-        set {
-            setBarsHidden(newValue)
-        }
-        
-        get {
-            return getBarsHidden()
-        }
-    }
-    
-    /**
      Loads the childViewController into the specified containerView.
      
      It can be done after self's view is initialized, as it uses constraints to determine the childViewController size.
@@ -58,19 +43,6 @@ public extension UIViewController {
         for childController in self.childViewControllers {
             childController.unloadFromParentViewController()
         }
-    }
-    
-}
-
-fileprivate extension UIViewController {
-    
-    fileprivate func setBarsHidden(_ hidden: Bool) {
-        tabBarController?.tabBar.isHidden = hidden
-        UIApplication.shared.isStatusBarHidden = hidden
-    }
-
-    fileprivate func getBarsHidden() -> Bool {
-        return (tabBarController?.tabBar.isHidden ?? true) && UIApplication.shared.isStatusBarHidden
     }
     
 }
