@@ -53,7 +53,8 @@ public extension SignalProtocol {
          - returns: A signal with value type T and the same error type.
      */
     public func filterType<T>() -> Signal<T, Error> {
-        return filter { $0 is T }.map { $0 as! T }
+        return filter { $0 is T }.map { $0 as! T }  //swiftlint:disable:this force_cast
+        //Can't restrict T to conform/inherit-from Value
     }
 
 }
@@ -63,8 +64,8 @@ public extension SignalProtocol where Value: OptionalProtocol {
     /**
      Skips all not-nil values, sending only the .none values through.
      */
-    public func skipNotNil() -> Signal<Value.Wrapped, Error> {
-        return filter { $0.optional != nil }.map { $0.optional! }
+    public func skipNotNil() -> Signal<Value, Error> {
+        return filter { $0.optional == nil }
     }
 
 }

@@ -106,6 +106,120 @@ public class SignalSpec: QuickSpec {
             }
             
         }
+
+        describe("#filterType") {
+
+            var signal: Signal<MockParentClass, NoError>!
+            var observer: Observer<MockParentClass, NoError>!
+
+            beforeEach {
+                let (_signal, _observer) = Signal<MockParentClass, NoError>.pipe()
+                signal = _signal
+                observer = _observer
+            }
+
+            context("When the type is 'invalid'") {
+
+                var convertedInvalid: Signal<UIViewController, NoError>!
+
+                beforeEach {
+                    convertedInvalid = signal.filterType()
+                }
+
+                it("shouldn't send any value") { waitUntil { done in
+                    convertedInvalid.collect().observeValues {
+                        expect($0.isEmpty).to(beTrue())
+                        done()
+                    }
+                    observer.send(value: MockChild1Class(name: "1"))
+                    observer.sendCompleted()
+                }}
+
+            }
+
+            context("When the type is 'valid'") {
+
+                var convertedValid: Signal<MockChild1Class, NoError>!
+
+                beforeEach {
+                    convertedValid = signal.filterType()
+                }
+
+                context("when there are values of that type") {
+
+                    it("should send those values") { waitUntil { done in
+                        convertedValid.collect().observeValues {
+                            expect($0.count).to(equal(1))
+                            expect($0.first!.name).to(equal("1"))
+                            done()
+                        }
+                        observer.send(value: MockChild1Class(name: "1"))
+                        observer.send(value: MockChild2Class(name: "2"))
+                        observer.sendCompleted()
+                    }}
+
+                }
+
+                context("when there aren't values of that type") {
+
+                    it("shouldn't send any value") { waitUntil { done in
+                        convertedValid.collect().observeValues {
+                            expect($0.isEmpty).to(beTrue())
+                            done()
+                        }
+                        observer.send(value: MockChild2Class(name: "1"))
+                        observer.send(value: MockChild2Class(name: "2"))
+                        observer.sendCompleted()
+                    }}
+
+                }
+
+            }
+
+        }
+
+        describe("#skipNotNil") {
+
+            var signal: Signal<Int?, NoError>!
+            var observer: Observer<Int?, NoError>!
+            var converted: Signal<Int?, NoError>!
+
+            beforeEach {
+                let (_signal, _observer) = Signal<Int?, NoError>.pipe()
+                signal = _signal
+                observer = _observer
+                converted = signal.skipNotNil()
+            }
+
+            context("when there are non-nil values") {
+
+                it("shouldn't send those values") { waitUntil { done in
+                    converted.collect().observeValues {
+                        expect($0).to(equal([.none]))
+                        done()
+                    }
+                    observer.send(value: .none)
+                    observer.send(value: 7)
+                    observer.sendCompleted()
+                }}
+
+            }
+            
+            context("when there aren't non-nil values") {
+                
+                it("should send all valuee") { waitUntil { done in
+                    converted.collect().observeValues {
+                        expect($0).to(equal([.none, .none]))
+                        done()
+                    }
+                    observer.send(value: .none)
+                    observer.send(value: .none)
+                    observer.sendCompleted()
+                }}
+
+            }
+            
+        }
         
         describe("#filterValues") {
             

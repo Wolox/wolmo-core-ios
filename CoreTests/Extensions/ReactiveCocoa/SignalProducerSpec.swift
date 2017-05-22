@@ -12,8 +12,16 @@ import Result
 import ReactiveSwift
 import Core
 
+class MockParentClass {
+    let name: String
+
+    init(name: String) { self.name = name }
+}
+final class MockChild1Class: MockParentClass { }
+final class MockChild2Class: MockParentClass { }
+
 public class SignalProducerSpec: QuickSpec {
-    
+
     override public func spec() {
         
         describe("#liftError") {
@@ -108,7 +116,101 @@ public class SignalProducerSpec: QuickSpec {
             }
             
         }
-        
+
+        describe("#filterType") {
+
+            context("When the type is 'invalid'") {
+
+                it("shouldn't send any value") { waitUntil { done in
+                    let producer = SignalProducer<(), NoError> { observer, _ in
+                        observer.send(value: ())
+                        observer.sendCompleted()
+                    }
+                    let converted: SignalProducer<UIViewController, NoError> = producer.filterType()
+                    converted.on(completed: { done() },
+                                 value: { _ in fail() }).start()
+
+                }}
+
+            }
+
+            context("When the type is 'valid'") {
+
+                context("when there are values of that type") {
+
+                    it("should send those values") { waitUntil { done in
+                        let producer = SignalProducer<MockParentClass, NoError> { observer, _ in
+                            observer.send(value: MockChild1Class(name: "1"))
+                            observer.send(value: MockChild2Class(name: "2"))
+                            observer.sendCompleted()
+                        }
+                        let converted: SignalProducer<MockChild1Class, NoError> = producer.filterType()
+                        converted.collect().startWithValues {
+                            expect($0.count).to(equal(1))
+                            expect($0.first!.name).to(equal("1"))
+                            done()
+                        }
+                    }}
+
+                }
+
+                context("when there aren't values of that type") {
+
+                    it("shouldn't send any value") { waitUntil { done in
+                        let producer = SignalProducer<MockParentClass, NoError> { observer, _ in
+                            observer.send(value: MockChild2Class(name: "1"))
+                            observer.send(value: MockChild2Class(name: "2"))
+                            observer.sendCompleted()
+                        }
+                        let converted: SignalProducer<MockChild1Class, NoError> = producer.filterType()
+                        converted.on(completed: { done() },
+                                     value: { _ in fail() }).start()
+                    }}
+
+                }
+
+            }
+
+        }
+
+        describe("#skipNotNil") {
+
+            context("when there are non-nil values") {
+
+                it("shouldn't send those values") { waitUntil { done in
+                    let producer = SignalProducer<Int?, NoError> { observer, _ in
+                        observer.send(value: 3)
+                        observer.send(value: .none)
+                        observer.sendCompleted()
+                    }
+                    let converted = producer.skipNotNil()
+                    converted.collect().startWithValues {
+                        expect($0).to(equal([.none]))
+                        done()
+                    }
+                }}
+
+            }
+
+            context("when there aren't non-nil values") {
+
+                it("should send all valuee") { waitUntil { done in
+                    let producer = SignalProducer<Int?, NoError> { observer, _ in
+                        observer.send(value: .none)
+                        observer.send(value: .none)
+                        observer.sendCompleted()
+                    }
+                    let converted = producer.skipNotNil()
+                    converted.collect().startWithValues {
+                        expect($0).to(equal([.none, .none]))
+                        done()
+                    }
+                }}
+
+            }
+
+        }
+
         describe("#filterValues") {
             
             context("When sending a success value") {
