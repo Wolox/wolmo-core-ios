@@ -15,7 +15,7 @@ public extension UIViewController {
      
      This will be true only if both bars are hidden.
      */
-    public var areBarsHidden: Bool {
+    public var barsAreHidden: Bool {
         set {
             setBarsHidden(newValue)
         }
