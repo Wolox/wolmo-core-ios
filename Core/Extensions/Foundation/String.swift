@@ -48,7 +48,7 @@ public extension String {
      
      - seealso: NSMutableAttributedString.addAttributes(_:range:)
     */
-    public func format(attributes attrs: [String: [String : Any]]) -> NSAttributedString {
+    public func format(withAttributes attrs: [String: [String : Any]]) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let nSStringWithFormat = self as NSString
         for (substring, attributes) in attrs {
