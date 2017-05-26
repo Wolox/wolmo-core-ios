@@ -36,7 +36,27 @@ public extension String {
     public func format(with arguments: CVarArg...) -> String {
         return String(format: self, arguments: arguments)
     }
-    
+
+    /**
+     Returns an NSAttributedString with the same content as self but
+     with the attributes specified for each first appearance of substrings passed.
+     
+     - parameter attributes: A dictionary that specifies the attributes to add to the
+        substring specified. The attributes should be specified with a dictionary itself
+        in the same format required by the NSAttributedString. The possible keys are
+        specified in `NSAttributedString.h` (like `NSFontAttributeName`).
+     
+     - seealso: NSMutableAttributedString.addAttributes(_:range:)
+    */
+    public func format(attributes attrs: [String: [String : Any]]) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: self)
+        let nSStringWithFormat = self as NSString
+        for (substring, attributes) in attrs {
+            attributedString.addAttributes(attributes, range: nSStringWithFormat.range(of: substring))
+        }
+        return attributedString
+    }
+
     /**
      Returns the length of the string.
      
