@@ -194,7 +194,7 @@ public class SignalProducerSpec: QuickSpec {
 
             context("when there aren't non-nil values") {
 
-                it("should send all valuee") { waitUntil { done in
+                it("should send all values") { waitUntil { done in
                     let producer = SignalProducer<Int?, NoError> { observer, _ in
                         observer.send(value: .none)
                         observer.send(value: .none)
