@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import ReactiveSwift
+import ReactiveCocoa
 
 public extension UITextField {
     
@@ -25,6 +27,30 @@ public extension UITextField {
             setAssociatedObject(self, key: &nextTextFieldKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+
+    public var fontTextStyle: UIFontTextStyle? {
+        get {
+            return getAssociatedObject(self, key: &fontTextStyleKey)
+        }
+        set {
+            setAssociatedObject(self, key: &fontTextStyleKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if let fontStyle = fontTextStyle {
+                font = UIFont.preferredFont(forTextStyle: fontStyle)
+            }
+            reactive.signal(forKeyPath: "font")
+                .take(during: self.reactive.lifetime)
+                .take(first: 1)
+                .observeValues { [unowned self] _ in
+                    setAssociatedObject(self,
+                                        key: &fontTextStyleKey,
+                                        value: UIFontTextStyle?.none,
+                                        policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
+    }
+
 }
 
 private var nextTextFieldKey: UInt8 = 0
+private var fontTextStyleKey: UInt8 = 0
+
