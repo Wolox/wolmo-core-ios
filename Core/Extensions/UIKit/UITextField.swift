@@ -32,19 +32,25 @@ public extension UITextField {
         get {
             return getAssociatedObject(self, key: &fontTextStyleKey)
         }
+
         set {
+            if let disposable: Disposable = getAssociatedObject(self, key: &fontTextStyleDisposableKey) {
+                disposable.dispose()
+                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: Disposable?.none, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
             setAssociatedObject(self, key: &fontTextStyleKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             if let fontStyle = fontTextStyle {
                 font = UIFont.preferredFont(forTextStyle: fontStyle)
-            }
-            reactive.signal(forKeyPath: "font")
-                .take(during: self.reactive.lifetime)
-                .take(first: 1)
-                .observeValues { [unowned self] _ in
-                    setAssociatedObject(self,
-                                        key: &fontTextStyleKey,
-                                        value: UIFontTextStyle?.none,
-                                        policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                let disposable = reactive.signal(forKeyPath: "font")
+                    .take(during: self.reactive.lifetime)
+                    .take(first: 1)
+                    .observeValues { [unowned self] _ in
+                        setAssociatedObject(self,
+                                            key: &fontTextStyleKey,
+                                            value: UIFontTextStyle?.none,
+                                            policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                }
+                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: disposable, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
         }
     }
@@ -52,5 +58,5 @@ public extension UITextField {
 }
 
 private var nextTextFieldKey: UInt8 = 0
-private var fontTextStyleKey: UInt8 = 0
-
+private var fontTextStyleKey: UInt8 = 1
+private var fontTextStyleDisposableKey: UInt8 = 2
