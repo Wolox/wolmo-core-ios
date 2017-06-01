@@ -109,6 +109,75 @@ public class DictionarySpec: QuickSpec {
             }
             
         }
+
+        describe("value(forKey:or:)") {
+
+            var dict1: [Int: String]!
+
+            beforeEach {
+                dict1 = [1: "one", 2: "two", 3: "three"]
+            }
+
+            context("when the key is already in the dictionary") {
+
+                it("should return the key's value") {
+                    let value = dict1.value(forKey: 2, or: "dos")
+                    expect(value).to(equal("two"))
+                }
+
+            }
+
+            context("when the key is not in the dictionary") {
+
+                it("should return the default value") {
+                    let value = dict1.value(forKey: 4, or: "cuatro")
+                    expect(value).to(equal("cuatro"))
+                }
+                
+            }
+
+        }
+
+        describe("castedValue(forKey:or:)") {
+
+            var dict1: [Int: Any]!
+
+            beforeEach {
+                dict1 = [1: "one", 2: 2, 3: [",", ".", ":"]]
+            }
+
+            context("when the key is already in the dictionary") {
+
+                context("when the key's value's type is not T") {
+
+                    it("should return the default value") {
+                        let value = dict1.castedValue(forKey: 2, or: "two")
+                        expect(value).to(equal("two"))
+                    }
+
+                }
+
+                context("when the key's value's type is T") {
+
+                    it("should return the key's value") {
+                        let value = dict1.castedValue(forKey: 1, or: "uno")
+                        expect(value).to(equal("one"))
+                    }
+
+                }
+
+            }
+
+            context("when the key is not in the dictionary") {
+                
+                it("should return the default value") {
+                    let value = dict1.castedValue(forKey: 5, or: ["español": "cinco"])
+                    expect(value).to(equal(["español": "cinco"]))
+                }
+                
+            }
+
+        }
         
     }
 

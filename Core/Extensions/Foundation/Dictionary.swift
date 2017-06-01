@@ -31,5 +31,30 @@ public extension Dictionary {
             updateValue(value, forKey: key)
         }
     }
-    
+
+    /**
+         Returns the value associated with the specified key,
+         or the specified default value if the key didn't have a value.
+     
+         Uses autoclosure so your default value won't be created if it's not needed.
+     */
+    public func value(forKey key: Key, or defaultValue: @autoclosure () -> Value) -> Value {
+        return self[key] ?? defaultValue()
+    }
+
+}
+
+public extension Dictionary where Value == Any {
+
+    /**
+         Returns the value associated with the specified key casted to T
+         (the type of the default value), or the specified default value
+         if the key didn't have a value or if it couldn't be casted to T.
+
+         Uses autoclosure so your default value won't be created if it's not needed.
+     */
+    public func castedValue<T>(forKey key: Key, or defaultValue: @autoclosure () -> T) -> T {
+       return self[key] as? T ?? defaultValue()
+    }
+
 }
