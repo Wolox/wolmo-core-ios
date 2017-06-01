@@ -99,7 +99,7 @@ public class UITextFieldSpec: QuickSpec {
                         textField.font = UIFont.systemFont(ofSize: 30)
                     }
 
-                    it("should return that style") {
+                    it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
                     
