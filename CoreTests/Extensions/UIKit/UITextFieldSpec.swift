@@ -105,33 +105,6 @@ public class UITextFieldSpec: QuickSpec {
                     
                 }
 
-                context("When a style was set after font property was changed") {
-
-                    beforeEach {
-                        textField.fontTextStyle = .body
-                        textField.font = UIFont.systemFont(ofSize: 30)
-                        textField.fontTextStyle = .title1
-                    }
-
-                    it("should return the new textStyle") {
-                        expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title1))
-                    }
-                    
-                }
-
-                context("When a style was set after another one") {
-
-                    beforeEach {
-                        textField.fontTextStyle = .body
-                        textField.fontTextStyle = .title1
-                    }
-
-                    it("should return the new textStyle") {
-                        expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title1))
-                    }
-                    
-                }
-
                 context("When a font was set after setting various styles") {
 
                     beforeEach {
@@ -164,6 +137,33 @@ public class UITextFieldSpec: QuickSpec {
                         expect(textField.font).to(equal(UIFont.preferredFont(forTextStyle: .body)))
                     }
 
+                }
+
+                context("When a style was set after another one") {
+
+                    beforeEach {
+                        textField.fontTextStyle = .body
+                        textField.fontTextStyle = .title1
+                    }
+
+                    it("should return the new textStyle") {
+                        expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title1))
+                    }
+                    
+                }
+
+                context("When a style was set after font property was changed") {
+
+                    beforeEach {
+                        textField.fontTextStyle = .body
+                        textField.font = UIFont.systemFont(ofSize: 30)
+                        textField.fontTextStyle = .title1
+                    }
+
+                    it("should return the new textStyle") {
+                        expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title1))
+                    }
+                    
                 }
 
             }

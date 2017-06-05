@@ -86,6 +86,8 @@
 		CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */; };
 		CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */; };
 		CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFCD1E8986F700D0E65D /* Collection.swift */; };
+		CEEC517E1EE5ECD300BC41FE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC517D1EE5ECD300BC41FE /* UILabel.swift */; };
+		CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +195,8 @@
 		CEE9BFC61E8986DC00D0E65D /* IdentifiableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendableSpec.swift; sourceTree = "<group>"; };
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +386,7 @@
 				CE3A9B851E607B28005D7E8F /* UIButton.swift */,
 				CED934841E8456480017CF96 /* UICollectionView.swift */,
 				CE3A9B861E607B28005D7E8F /* UIColor.swift */,
+				CEEC517D1EE5ECD300BC41FE /* UILabel.swift */,
 				CE3A9B871E607B28005D7E8F /* UITableView.swift */,
 				CE3A9B881E607B28005D7E8F /* UITextField.swift */,
 				CE3A9B891E607B28005D7E8F /* UIView */,
@@ -442,6 +447,7 @@
 				CEE9BFB21E8986D400D0E65D /* UIColorSpec.swift */,
 				CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */,
 				CEE9BFB31E8986D400D0E65D /* UITextFieldSpec.swift */,
+				CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -606,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEC517E1EE5ECD300BC41FE /* UILabel.swift in Sources */,
 				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
 				B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */,
@@ -657,6 +664,7 @@
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
 				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
+				CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */,
 				CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */,
 				CEE9BFBF1E8986D400D0E65D /* UIColorSpec.swift in Sources */,
 				CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */,

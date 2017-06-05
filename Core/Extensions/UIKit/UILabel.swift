@@ -1,40 +1,24 @@
 //
-//  UITextFieldExtension.swift
+//  UILabel.swift
 //  Core
 //
-//  Created by Francisco Depascuali on 6/29/16.
-//  Copyright © 2016 Wolox. All rights reserved.
+//  Created by Daniela Riesgo on 6/5/17.
+//  Copyright © 2017 Wolox. All rights reserved.
 //
 
 import Foundation
-import ReactiveSwift
 import ReactiveCocoa
+import ReactiveSwift
 
-public extension UITextField {
-    
-    /**
-     nextTextField is intended to be used in a form, so that the delegate uses it, for example, in the textFieldShouldReturn method.
-     
-     - warning: Avoid setting nextTextField in the didSet hook of an outlet.
-                Override awakeFromNib() of the containing view in that case.
-     */
-    public var nextTextField: UITextField? {
-        get {
-            return getAssociatedObject(self, key: &nextTextFieldKey)
-        }
-        
-        set {
-            setAssociatedObject(self, key: &nextTextFieldKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
+public extension UILabel {
 
     /**
      fontTextStyle is intended to be used instead of setting the font style by taking advantage of
-     `UIFont.preferredFont(forTextStyle:)` to manage your app's fonts.
-     
+     `UIFont.preferredFont(forTextStyle:)` to manage your apps fonts.
+
      When the style is set, the corresponding font will be set.
-     If the font is changed, then the textfield will have no specific font text style.
-    */
+     If the font is changed, then the label will have no specific font text style.
+     */
     public var fontTextStyle: UIFontTextStyle? {
         get {
             return getAssociatedObject(self, key: &fontTextStyleKey)
@@ -64,6 +48,5 @@ public extension UITextField {
 
 }
 
-private var nextTextFieldKey: UInt8 = 0
-private var fontTextStyleKey: UInt8 = 1
-private var fontTextStyleDisposableKey: UInt8 = 2
+private var fontTextStyleKey: UInt8 = 0
+private var fontTextStyleDisposableKey: UInt8 = 1
