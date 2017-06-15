@@ -45,6 +45,7 @@
 		CE1186A61EA7E2A200105D6F /* NibLoadableUICollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */; };
 		CE1186A81EA7EF2E00105D6F /* NibLoadableUITableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */; };
 		CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186AB1EA7F67800105D6F /* BundleSpec.swift */; };
+		CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE228ADF1EF2FE1E00097B19 /* UIFont.swift */; };
 		CE3A9B8E1E607B28005D7E8F /* AVAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B751E607B28005D7E8F /* AVAsset.swift */; };
 		CE3A9B8F1E607B28005D7E8F /* AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */; };
 		CE3A9B901E607B28005D7E8F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B781E607B28005D7E8F /* Array.swift */; };
@@ -154,6 +155,7 @@
 		CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableUICollectionView.xib; sourceTree = "<group>"; };
 		CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableUITableView.xib; sourceTree = "<group>"; };
 		CE1186AB1EA7F67800105D6F /* BundleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleSpec.swift; sourceTree = "<group>"; };
+		CE228ADF1EF2FE1E00097B19 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CE3A9B751E607B28005D7E8F /* AVAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAsset.swift; sourceTree = "<group>"; };
 		CE3A9B761E607B28005D7E8F /* AVPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerItem.swift; sourceTree = "<group>"; };
 		CE3A9B781E607B28005D7E8F /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				CE3A9B881E607B28005D7E8F /* UITextField.swift */,
 				CE3A9B891E607B28005D7E8F /* UIView */,
 				CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */,
+				CE228ADF1EF2FE1E00097B19 /* UIFont.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				CEEC517E1EE5ECD300BC41FE /* UILabel.swift in Sources */,
 				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
+				CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */,
 				B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
 				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
