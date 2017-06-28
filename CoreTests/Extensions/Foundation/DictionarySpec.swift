@@ -150,10 +150,11 @@ public class DictionarySpec: QuickSpec {
 
                 context("when the key's value's type is not T") {
 
-                    it("should return the default value") {
-                        let value = dict1.castedValue(forKey: 2, or: "two")
-                        expect(value).to(equal("two"))
-                    }
+                    // Not being able to catch error with Nimble.
+                    // Tried with throwError, raiseException or throwAssertion.
+//                    it("should raise a runtime error") {
+//                        expect(_ = dict1.castedValue(forKey: 2, or: "two")).to(throwError())
+//                    }
 
                 }
 
