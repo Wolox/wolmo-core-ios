@@ -52,9 +52,15 @@ public extension Dictionary where Value == Any {
          if the key didn't have a value or if it couldn't be casted to T.
 
          Uses autoclosure so your default value won't be created if it's not needed.
+     
+         - warning: This will raise a runtime error if there is a value in the dictionary
+                but it's not of the same time as the default value. For that case, you should
+                handle it some other way.
      */
     public func castedValue<T>(forKey key: Key, or defaultValue: @autoclosure () -> T) -> T {
-       return self[key] as? T ?? defaultValue()
+        guard let value = self[key] else { return defaultValue() }
+        //swiftlint:disable:next force_cast
+        return value as! T
     }
 
 }
