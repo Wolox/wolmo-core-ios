@@ -54,9 +54,8 @@ public extension UIFont {
         let fontName = provider.appFontName(for: style)
         if let newFont = UIFont(name: fontName, size: defaultFont.pointSize) {
             return newFont
-        } else {
-            fatalError("The font name associated with UIFontTextStyle \(style) is not valid.")
         }
+        fatalError("The font name associated with UIFontTextStyle \(style) is not valid.")
     }
 
 }
