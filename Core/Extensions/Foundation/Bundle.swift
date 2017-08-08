@@ -60,7 +60,8 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getInt(from key: String) -> Int? {
-        return get(from: key)
+        let value: NSNumber? = get(from: key)
+        return value.flatMap { Int($0) }
     }
     
     /**
@@ -73,7 +74,8 @@ public extension Bundle {
      - seealso: object(forInfoDictionaryKey:)
      */
     public func getFloat(from key: String) -> Float? {
-        return get(from: key)
+        let value: NSNumber? = get(from: key)
+        return value.flatMap { Float($0) }
     }
     
     /**

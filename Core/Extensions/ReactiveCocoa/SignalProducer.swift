@@ -9,7 +9,7 @@
 import ReactiveSwift
 import Result
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
     
     /**
          Transforms a `SignalProducer<Value, Error>` to `SignalProducer<Value, NewError>`
@@ -60,7 +60,7 @@ public extension SignalProducerProtocol {
 
 }
 
-public extension SignalProducerProtocol where Value: OptionalProtocol {
+public extension SignalProducer where Value: OptionalProtocol {
 
     /**
         Skips all not-nil values, sending only the .none values through.
@@ -71,7 +71,7 @@ public extension SignalProducerProtocol where Value: OptionalProtocol {
 
 }
 
-public extension SignalProducerProtocol where Value: ResultProtocol {
+public extension SignalProducer where Value: ResultProtocol {
     
     /**
          Transforms a `SignalProducer<ResultProtocol<Value2, Error2>, Error>`
