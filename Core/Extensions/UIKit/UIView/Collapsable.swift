@@ -12,35 +12,34 @@ import Foundation
  Represents a collapsable element.
  */
 public protocol Collapsable {
-    
+
     /**
      Collapse self.
-     
+
      - Parameter animated: Indicates if the collapse should be animated.
      - Parameter animationDuration: The animationDuration of the collapse.
      */
     func collapse(animated: Bool, animationDuration: TimeInterval)
-    
+
     /**
      Uncollapse self.
-     
+
      - Parameter animated: Indicates if the collapse should be animated.
      - Parameter animationDuration: The animationDuration of the collapse.
      */
     func uncollapse(animated: Bool, animationDuration: TimeInterval)
-    
 }
 
 /**
  Represents a vertical collapsable view, which when collapsed not only isn't shown but isn't considered in vertical layout.
  */
 extension Collapsable where Self: UIView {
-    
+
     /**
      Collapse a view by adding/modifying constraint height. It works also if they view already has a constraint.
-     
+
      - Warning: It is intended to be used to collapse a view *without* subviews.
-     
+
      - Parameter view: The view to collapse
      - Parameter animated: Indicates if the collapse should be animated.
      - Parameter animationDuration: The animationDuration of the collapse.
@@ -55,15 +54,15 @@ extension Collapsable where Self: UIView {
             let zeroheightConstraint = heightAnchor.constraint(equalToConstant: 0)
             zeroheightConstraint.isActive = true
         }
-        
+
         updateView(animated: animated, animationDuration: animationDuration)
     }
-    
+
     /**
      Uncollapse a view by removing/modifying constraint height. It works also if they view already has a constraint.
-     
+
      **Warning:** It is intended to be used to uncollapse a view *without* subviews.
-     
+
      - Parameter view: The view to collapse
      - Parameter animated: Indicates if the collapse should be animated.
      - Parameter animationDuration: The animationDuration of the collapse.
@@ -78,13 +77,13 @@ extension Collapsable where Self: UIView {
                 heightConstraint.isActive = false
             }
         }
-        
+
         updateView(animated: animated, animationDuration: animationDuration)
     }
-    
+
     private func updateView(animated: Bool, animationDuration: TimeInterval) {
         setNeedsLayout()
-        
+
         if animated {
             UIView.animate(withDuration: animationDuration) {
                 self.layoutIfNeeded()
@@ -98,11 +97,10 @@ extension Collapsable where Self: UIView {
 private var CollapsableHeightConstraintKey: UInt8 = 0
 
 fileprivate extension UIView {
-    
+
     fileprivate var previousHeightConstraint: NSLayoutConstraint? {
         return constraints.first(where: { (constraint) -> Bool in
             constraint.firstAttribute == .height
         })
     }
-    
 }

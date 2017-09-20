@@ -20,7 +20,6 @@ public protocol UIFontProvider {
      - seealso: `UIFont.preferredFont(forTextStyle:)`.
      */
     func appFontName(for style: UIFontTextStyle) -> String
-
 }
 
 public extension UIFontProvider {
@@ -28,7 +27,6 @@ public extension UIFontProvider {
     public func appFontName(for style: UIFontTextStyle) -> String {
         return UIFont.preferredFont(forTextStyle: style).fontName
     }
-
 }
 
 fileprivate class DefaultFontProvider: UIFontProvider {}
@@ -37,7 +35,7 @@ public extension UIFont {
 
     /**
      UIFontProvider used to get the fonts associated with UIFontTextStyles.
-    */
+     */
     public static var fontProvider: UIFontProvider? {
         get {
             return getAssociatedObject(self, key: &fontProviderKey)
@@ -57,7 +55,6 @@ public extension UIFont {
         }
         fatalError("The font name associated with UIFontTextStyle \(style) is not valid.")
     }
-
 }
 
 private var fontProviderKey: UInt8 = 0

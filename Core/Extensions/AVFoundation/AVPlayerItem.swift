@@ -11,12 +11,12 @@ import ReactiveSwift
 import enum Result.NoError
 
 public extension AVPlayerItem {
-    
+
     /**
      Moves the playback cursor to a given time.
-     
+
      - parameter time: The time to which to seek.
-     
+
      - seealso: seekToTime(time, completionHandler)
      */
     public func seek(to time: CMTime) -> SignalProducer<Bool, NoError> {
@@ -27,5 +27,4 @@ public extension AVPlayerItem {
             }
         }
     }
-    
 }

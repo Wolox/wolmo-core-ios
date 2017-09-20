@@ -14,16 +14,15 @@ import Foundation
 public protocol AlertViewPresenter {
 
     func presentAlert(_ alertViewModel: ErrorAlertViewModel, completion: (() -> Void)?)
-    
+
     func presentAlert(_ alertViewModel: ConfirmationAlertViewModel, completion: (() -> Void)?)
-    
 }
 
 extension UIViewController: AlertViewPresenter {
-    
+
     /**
      Presents a new alert. The alert's information is stored in the ErrorAlertViewModel passed by parameter.
-     
+
      - Parameter alertViewModel: ErrorAlertViewModel.
      - Parameter completion: Closure that fires when the alert is shown.
      - Warning: The closure is fired *when* the alert is shown, it is not related to the dismiss/confirmation.
@@ -34,10 +33,10 @@ extension UIViewController: AlertViewPresenter {
         let alert = UIAlertController(alertViewModel: alertViewModel)
         present(alert, animated: true, completion: completion)
     }
-    
+
     /**
      Presents a new alert. The alert's information is stored in the ConfirmationAlertViewModel passed by parameter.
-     
+
      - Parameter alertViewModel: ConfirmationAlertViewModel.
      - Parameter completion: Closure that fires when the alert is shown.
      - Warning: The closure is fired *when* the alert is shown, it is not related to the dismiss/confirmation.
@@ -48,5 +47,4 @@ extension UIViewController: AlertViewPresenter {
         let alert = UIAlertController(alertViewModel: alertViewModel)
         present(alert, animated: true, completion: completion)
     }
-    
 }

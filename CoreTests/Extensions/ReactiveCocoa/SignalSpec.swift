@@ -13,32 +13,32 @@ import ReactiveSwift
 import Core
 
 public class SignalSpec: QuickSpec {
-    
-    override public func spec() {
-        
+
+    public override func spec() {
+
         describe("#liftError") {
-            
+
             context("When lifting an error") {
 
                 var signal: Signal<(), NSError>!
                 var observer: Observer<(), NSError>!
                 var converted: Signal<(), NoError>!
-                
+
                 beforeEach {
                     let (_signal, _observer) = Signal<(), NSError>.pipe()
                     signal = _signal
                     observer = _observer
                     converted = signal.liftError()
                 }
-                
+
                 it("should ignore the error and complete") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0).to(beEmpty())
                         done()
                     }
                     observer.send(error: NSError(domain: "", code: 0, userInfo: [:]))
-                }}
-                
+                } }
+
                 it("should not ignore a value") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(2))
@@ -47,27 +47,25 @@ public class SignalSpec: QuickSpec {
                     observer.send(value: ())
                     observer.send(value: ())
                     observer.sendCompleted()
-                }}
-                
+                } }
             }
-            
         }
-        
+
         describe("#toResultSignal") {
-            
+
             var signal: Signal<(), NSError>!
             var observer: Observer<(), NSError>!
             var converted: Signal<Result<(), NSError>, NoError>!
-            
+
             beforeEach {
                 let (_signal, _observer) = Signal<(), NSError>.pipe()
                 signal = _signal
                 observer = _observer
                 converted = signal.toResultSignal()
             }
-            
+
             context("When sending a value") {
-                
+
                 it("should send on the value wrapped") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(1))
@@ -75,24 +73,22 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: ())
                     observer.sendCompleted()
-                }}
-                
+                } }
             }
-            
+
             context("When sending an error") {
-                
+
                 it("should send on the error as a wrapped value") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(1))
                         done()
                     }
                     observer.send(error: NSError(domain: "", code: 0, userInfo: [:]))
-                }}
-                
+                } }
             }
-            
+
             context("When sending values and errors") {
-                
+
                 it("should send on everything wrapped up until it completes") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(2))
@@ -101,10 +97,8 @@ public class SignalSpec: QuickSpec {
                     observer.send(value: ())
                     observer.send(error: NSError(domain: "", code: 0, userInfo: [:]))
                     observer.send(value: ())
-                }}
-                
+                } }
             }
-            
         }
 
         describe("#filterType") {
@@ -133,8 +127,7 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: MockChild1Class(name: "1"))
                     observer.sendCompleted()
-                }}
-
+                } }
             }
 
             context("When the type is 'valid'") {
@@ -156,8 +149,7 @@ public class SignalSpec: QuickSpec {
                         observer.send(value: MockChild1Class(name: "1"))
                         observer.send(value: MockChild2Class(name: "2"))
                         observer.sendCompleted()
-                    }}
-
+                    } }
                 }
 
                 context("when there aren't values of that type") {
@@ -170,12 +162,9 @@ public class SignalSpec: QuickSpec {
                         observer.send(value: MockChild2Class(name: "1"))
                         observer.send(value: MockChild2Class(name: "2"))
                         observer.sendCompleted()
-                    }}
-
+                    } }
                 }
-
             }
-
         }
 
         describe("#skipNotNil") {
@@ -201,12 +190,11 @@ public class SignalSpec: QuickSpec {
                     observer.send(value: .none)
                     observer.send(value: 7)
                     observer.sendCompleted()
-                }}
-
+                } }
             }
-            
+
             context("when there aren't non-nil values") {
-                
+
                 it("should send all valuee") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0).to(equal([.none, .none]))
@@ -215,27 +203,25 @@ public class SignalSpec: QuickSpec {
                     observer.send(value: .none)
                     observer.send(value: .none)
                     observer.sendCompleted()
-                }}
-
+                } }
             }
-            
         }
-        
+
         describe("#filterValues") {
-            
+
             var signal: Signal<Result<(), NSError>, NoError>!
             var observer: Observer<Result<(), NSError>, NoError>!
             var converted: Signal<(), NoError>!
-            
+
             beforeEach {
                 let (_signal, _observer) = Signal<Result<(), NSError>, NoError>.pipe()
                 signal = _signal
                 observer = _observer
                 converted = signal.filterValues()
             }
-            
+
             context("When sending a success value") {
-                
+
                 it("should send on the value") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(1))
@@ -243,12 +229,11 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: .success())
                     observer.sendCompleted()
-                }}
-                
+                } }
             }
-            
+
             context("When sending a failure value") {
-                
+
                 it("shouldn't send on the error") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(0))
@@ -256,27 +241,25 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: .failure(NSError(domain: "", code: 0, userInfo: [:])))
                     observer.sendCompleted()
-                }}
-            
+                } }
             }
-        
         }
-        
+
         describe("#filterErrors") {
-            
+
             var signal: Signal<Result<(), NSError>, NoError>!
             var observer: Observer<Result<(), NSError>, NoError>!
             var converted: Signal<NSError, NoError>!
-            
+
             beforeEach {
                 let (_signal, _observer) = Signal<Result<(), NSError>, NoError>.pipe()
                 signal = _signal
                 observer = _observer
                 converted = signal.filterErrors()
             }
-            
+
             context("When sending a success value") {
-                
+
                 it("shouldn't send on the value") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(0))
@@ -284,12 +267,11 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: .success())
                     observer.sendCompleted()
-                }}
-                
+                } }
             }
-            
+
             context("When sending a failure value") {
-                
+
                 it("should send on the error") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(1))
@@ -297,12 +279,8 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(value: .failure(NSError(domain: "", code: 0, userInfo: [:])))
                     observer.sendCompleted()
-                }}
-                
+                } }
             }
-            
         }
-        
     }
-    
 }
