@@ -21,61 +21,57 @@ fileprivate class MyFontProvider: UIFontProvider {
         default: return "Helvetica"
         }
     }
-    
 }
 
 public class UITextFieldSpec: QuickSpec {
-    
-    override public func spec() {
+
+    public override func spec() {
 
         beforeSuite {
             UIFont.fontProvider = MyFontProvider()
         }
 
         describe("#nextTextField") {
-            
+
             context("When there isn't next textfield associated") {
-            
+
                 it("should be nil") {
                     let textField = UITextField()
                     expect(textField.nextTextField).to(beNil())
                 }
             }
-            
+
             context("When there is a next textfield associated") {
-                
+
                 var textField: UITextField!
                 var nextTextField: UITextField!
-                
+
                 beforeEach {
                     textField = UITextField()
                     nextTextField = UITextField()
                     textField.nextTextField = nextTextField
                 }
-                
+
                 it("should return the next textfield") {
                     expect(textField.nextTextField).toNot(beNil())
                     expect(textField.nextTextField!).to(equal(nextTextField))
                 }
-                
+
                 context("When the next textField is changed") {
-                    
+
                     var otherTextField: UITextField!
-                    
+
                     beforeEach {
                         otherTextField = UITextField()
                         textField.nextTextField = otherTextField
                     }
-                    
+
                     it("should return the new textfield") {
                         expect(textField.nextTextField).toNot(beNil())
                         expect(textField.nextTextField!).to(equal(otherTextField))
                     }
-
                 }
-
             }
-            
         }
 
         describe("#fontTextStyle") {
@@ -97,7 +93,6 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return that style") {
                         expect(textField.fontTextStyle).to(equal(UIFontTextStyle.body))
                     }
-                    
                 }
 
                 context("When no style was set") {
@@ -105,7 +100,6 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
 
                 context("When a style was set but then font property was changed") {
@@ -118,7 +112,6 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
 
                 context("When a font was set after setting various styles") {
@@ -132,9 +125,7 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
-
             }
 
             describe("set") {
@@ -155,7 +146,6 @@ public class UITextFieldSpec: QuickSpec {
                             expect(textField.font?.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .headline).pointSize))
                             expect(textField.font?.fontName).to(equal("Helvetica-Bold"))
                         }
-
                     }
 
                     context("that has the base font") {
@@ -172,15 +162,13 @@ public class UITextFieldSpec: QuickSpec {
                             expect(textField.font?.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .body).pointSize))
                             expect(textField.font?.fontName).to(equal("Helvetica"))
                         }
-
                     }
 
                     context("that is associated with an invalid font name") {
-                        
+
                         it("should throw a runtime error") {
                             expect(textField.fontTextStyle = .title1).to(throwAssertion())
                         }
-                        
                     }
 
                     context("When a style is set after another one") {
@@ -193,7 +181,6 @@ public class UITextFieldSpec: QuickSpec {
                         it("should return the new textStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title2))
                         }
-
                     }
 
                     context("When a style is set after font property was changed") {
@@ -207,15 +194,9 @@ public class UITextFieldSpec: QuickSpec {
                         it("should return the new textStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title2))
                         }
-                        
                     }
-                    
                 }
-
             }
-
         }
-
     }
-
 }

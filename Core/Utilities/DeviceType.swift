@@ -8,7 +8,7 @@
 
 import Foundation
 
-/* 
+/*
  DeviceType provides the current device type.
  */
 public enum DeviceType: CGFloat {
@@ -17,10 +17,10 @@ public enum DeviceType: CGFloat {
     case iPhone6 = 667.0
     case iPhone6Plus = 736.0
     case unknown = -1
-    
+
     /**
      Initializer that returns the current DeviceType.
-    */
+     */
     public init() {
         let height = UIScreen.main.bounds.size.height
         self = DeviceType(rawValue: height) ?? .unknown

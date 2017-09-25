@@ -21,12 +21,11 @@ fileprivate class MyFontProvider: UIFontProvider {
         default: return "Helvetica"
         }
     }
-
 }
 
 public class UILabelSpec: QuickSpec {
 
-    override public func spec() {
+    public override func spec() {
 
         beforeSuite {
             UIFont.fontProvider = MyFontProvider()
@@ -51,7 +50,6 @@ public class UILabelSpec: QuickSpec {
                     it("should return that style") {
                         expect(label.fontTextStyle).to(equal(UIFontTextStyle.body))
                     }
-
                 }
 
                 context("When no style was set") {
@@ -59,7 +57,6 @@ public class UILabelSpec: QuickSpec {
                     it("should return .none") {
                         expect(label.fontTextStyle).to(beNil())
                     }
-
                 }
 
                 context("When a style was set but then font property was changed") {
@@ -72,7 +69,6 @@ public class UILabelSpec: QuickSpec {
                     it("should return .none") {
                         expect(label.fontTextStyle).to(beNil())
                     }
-
                 }
 
                 context("When a font was set after setting various styles") {
@@ -86,9 +82,7 @@ public class UILabelSpec: QuickSpec {
                     it("should return .none") {
                         expect(label.fontTextStyle).to(beNil())
                     }
-
                 }
-
             }
 
             describe("set") {
@@ -109,7 +103,6 @@ public class UILabelSpec: QuickSpec {
                             expect(label.font.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .headline).pointSize))
                             expect(label.font.fontName).to(equal("Helvetica-Bold"))
                         }
-
                     }
 
                     context("that has the base font") {
@@ -126,7 +119,6 @@ public class UILabelSpec: QuickSpec {
                             expect(label.font.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .body).pointSize))
                             expect(label.font.fontName).to(equal("Helvetica"))
                         }
-
                     }
 
                     context("that is associated with an invalid font name") {
@@ -134,9 +126,7 @@ public class UILabelSpec: QuickSpec {
                         it("should throw a runtime error") {
                             expect(label.fontTextStyle = .title1).to(throwAssertion())
                         }
-
                     }
-
                 }
 
                 context("When a style is set after another one") {
@@ -149,7 +139,6 @@ public class UILabelSpec: QuickSpec {
                     it("should return the new textStyle") {
                         expect(label.fontTextStyle).to(equal(UIFontTextStyle.title2))
                     }
-                    
                 }
 
                 context("When a style is set after font property was changed") {
@@ -163,13 +152,8 @@ public class UILabelSpec: QuickSpec {
                     it("should return the new textStyle") {
                         expect(label.fontTextStyle).to(equal(UIFontTextStyle.title2))
                     }
-                    
                 }
-                
             }
-            
         }
-        
     }
-    
 }

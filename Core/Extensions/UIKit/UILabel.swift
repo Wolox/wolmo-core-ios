@@ -18,7 +18,7 @@ public extension UILabel {
 
      When the style is set, the corresponding font will be set.
      If the font is changed, then the label will have no specific font text style.
-     
+
      - warning: Setting this property may arise a runtime error if the font name returned by
      `UIFont.appFontName(for:)` is not valid.
      - seealso: UIFont.appFontName(for:).
@@ -37,19 +37,18 @@ public extension UILabel {
             if let fontStyle = fontTextStyle {
                 font = UIFont.appFont(for: fontStyle)
                 let disposable = reactive.signal(forKeyPath: "font")
-                    .take(during: self.reactive.lifetime)
+                    .take(during: reactive.lifetime)
                     .take(first: 1)
                     .observeValues { [unowned self] _ in
                         setAssociatedObject(self,
                                             key: &fontTextStyleKey,
                                             value: UIFontTextStyle?.none,
                                             policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                }
+                    }
                 setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: disposable, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
         }
     }
-
 }
 
 private var fontTextStyleKey: UInt8 = 0

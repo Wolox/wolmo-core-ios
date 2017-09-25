@@ -11,35 +11,32 @@ import UIKit
 import Core
 import MBProgressHUD
 
-class NibLoadableCollectionCell: UICollectionViewCell, NibLoadable { }
-class NibLoadableCollectionView: UICollectionReusableView, NibLoadable { }
+class NibLoadableCollectionCell: UICollectionViewCell, NibLoadable {}
+class NibLoadableCollectionView: UICollectionReusableView, NibLoadable {}
 
-class NibLoadableTableCell: UITableViewCell, NibLoadable { }
+class NibLoadableTableCell: UITableViewCell, NibLoadable {}
 class NibLoadableTableView: UITableViewHeaderFooterView, NibLoadable {
 
     static var nibName: String {
         return "NibLoadableTableViewCustom"
     }
-
 }
 
 class NibLoadableTableViewCustom: UITableViewHeaderFooterView, NibLoadable {
-    
+
     static var nibBundle: Bundle {
         return Bundle(for: MBProgressHUD.self)
     }
-    
 }
 
 class NibLoadableTableViewCustom2: UITableViewHeaderFooterView, NibLoadable {
-    
+
     static var nibName: String {
         return "NibLoadableTableViewCustom"
     }
-    
 }
 
-struct NibLoadableStruct: NibLoadable { }
+struct NibLoadableStruct: NibLoadable {}
 
-class NibLoadableUICollectionView: UICollectionView, NibLoadable { }
-class NibLoadableUITableView: UITableView, NibLoadable { }
+class NibLoadableUICollectionView: UICollectionView, NibLoadable {}
+class NibLoadableUITableView: UITableView, NibLoadable {}

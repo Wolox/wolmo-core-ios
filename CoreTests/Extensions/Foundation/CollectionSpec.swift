@@ -14,38 +14,35 @@ import Core
 
 public class CollectionSpec: QuickSpec {
 
-    override public func spec() {
-        
+    public override func spec() {
+
         describe("#isNotEmpty") {
-            
+
             context("when using an Array") {
-                
+
                 var collection: [Int]!
-                
+
                 context("when collection is empty") {
-                    
+
                     beforeEach {
                         collection = []
                     }
-                    
+
                     it("returns false") {
                         expect(collection.isNotEmpty).to(beFalse())
                     }
-                    
                 }
-                
+
                 context("when collection is not empty") {
-                    
+
                     beforeEach {
                         collection = [1, 2, 3]
                     }
-                    
+
                     it("returns true") {
                         expect(collection.isNotEmpty).to(beTrue())
                     }
-                    
                 }
-                
             }
 
             describe("#first(where:)") {
@@ -67,9 +64,7 @@ public class CollectionSpec: QuickSpec {
                                 elem % 2 == 1
                             })).to(equal(1))
                         }
-
                     }
-
                 }
 
                 context("When none of the elements satisfies the condition") {
@@ -79,12 +74,8 @@ public class CollectionSpec: QuickSpec {
                             elem == 5
                         })).to(beNil())
                     }
-
                 }
             }
-            
         }
-        
     }
-    
 }
