@@ -33,6 +33,7 @@
 		B9F011F91D512C3200F72672 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9671D24457D00824685 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */; };
 		BE1CE2B81E1C0B4A00A7F7CF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
+		CE0DA7D11FD847D600D0B1E3 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */; };
 		CE1186891EA79EFF00105D6F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186881EA79EFF00105D6F /* NibLoadable.swift */; };
 		CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */; };
 		CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */; };
@@ -146,6 +147,7 @@
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		CE1186881EA79EFF00105D6F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSpec.swift; sourceTree = "<group>"; };
 		CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewSpec.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 		CE3A9B891E607B28005D7E8F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */,
 				CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */,
 				CE3A9B8C1E607B28005D7E8F /* UIView.swift */,
 			);
@@ -663,6 +666,7 @@
 				CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */,
 				CE3A9B9B1E607B28005D7E8F /* UIButton.swift in Sources */,
 				B988B97F1D244D6300824685 /* ProgressHUDDelegate.swift in Sources */,
+				CE0DA7D11FD847D600D0B1E3 /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
