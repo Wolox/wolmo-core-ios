@@ -6,7 +6,6 @@
 //  Copyright © 2017 Wolox. All rights reserved.
 //
 
-
 import Foundation
 
 /**
@@ -56,8 +55,18 @@ private extension GradientDirection {
 /**
     Represents a gradient that can be applied to a view.
     It can have many colors distributed in many ways and directions.
+    There can only be one gradient at a time in a view.
  */
 public struct ViewGradient {
+    
+    // Direction of the gradient.
+    public let direction: GradientDirection
+    // Colors involved in the order involved.
+    public let colors: [UIColor]
+    // Locations where the colors are placed.
+    public var locations: [Float] {
+        return layer.locations!.map { $0.floatValue }
+    }
     
     fileprivate let layer: CAGradientLayer
     
@@ -79,6 +88,9 @@ public struct ViewGradient {
             precondition(locs.first(where: { $0 < 0 || $0 > 1 }) == .none)
             precondition(locs.count == colors.count)
         }
+        
+        self.colors = colors
+        self.direction = direction
         
         layer = CAGradientLayer()
         layer.anchorPoint = .zero
@@ -112,12 +124,28 @@ public struct ViewGradient {
 public extension UIView {
     
     /**
-     Functions that applies the gradient to the view.
-     The gradient will always have the same direction in relation to the view's
-        orientation at a certain time.
-     The gradient will always acommodate to the view's change in size or orientation.
+        ViewGradient applied currently to the view.
+        A view can only have one gradient at a time.
+        When setting this property to a new gradient, the old one will be removed,
+            and when set to .none the current one will be removed.
+        The gradient will always have the same direction in relation to the view's
+            orientation at a certain time.
+        The gradient will always acommodate to the view's change in size or orientation.
     */
-    public func apply(gradient: ViewGradient) {
+    public var gradient: ViewGradient? {
+        set {
+            if let grad = newValue {
+                apply(gradient: grad)
+            } else if let _ = gradient {
+                removeGradient()
+            }
+        }
+        get {
+            return getGradient()
+        }
+    }
+    
+    private func apply(gradient: ViewGradient) {
         let gradientLayer = gradient.layer
         gradientLayer.bounds = bounds
         reactive.producer(forKeyPath: "bounds")
@@ -127,6 +155,20 @@ public extension UIView {
             .on(value: { [unowned gradientLayer] in gradientLayer.bounds = $0})
             .start()
         layer.insertSublayer(gradientLayer, at: 0)
+        setAssociatedObject(self, key: &ViewGradientKey, value: gradient as ViewGradient?)
+    }
+    
+    private func removeGradient() {
+        if let gradient = getGradient() {
+            gradient.layer.removeFromSuperlayer()
+            setAssociatedObject(self, key: &ViewGradientKey, value: Optional<ViewGradient>.none)
+        }
+    }
+    
+    private func getGradient() -> ViewGradient? {
+        return getAssociatedObject(self, key: &ViewGradientKey)
     }
     
 }
+
+private var ViewGradientKey: UInt8 = 1
