@@ -20,8 +20,12 @@ public extension String {
      */
     public func localized(withArguments arguments: CVarArg..., bundle: Bundle = Bundle.main) -> String {
         let localized = NSLocalizedString(self, tableName: .none, bundle: bundle, value: "", comment: "")
-        if arguments.count > 0 {
-            return localized.format(with: arguments)
+        if arguments.isNotEmpty {
+            // Can't call .format(with:): https://stackoverflow.com/a/24024724
+            // Once inside the function, a CVarArg... becomes a [CVarArg]
+            // and when passing it on to another function that receives CVarArg,
+            // it interprets that you are passing only one CVarArg which is an array.
+            return String(format: localized, arguments: arguments)
         }
         return localized
     }
