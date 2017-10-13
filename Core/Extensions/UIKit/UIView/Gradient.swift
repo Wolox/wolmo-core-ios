@@ -29,12 +29,12 @@ private extension GradientDirection {
         switch self {
         case .leftToRight: return CGPoint(x: 0, y: 0.5)
         case .rightToLeft: return CGPoint(x: 1, y: 0.5)
-        case .topToBottom: return CGPoint(x: 0.5, y: 1)
-        case .bottomToTop: return CGPoint(x: 0.5, y: 0)
-        case .topLeftToBottomRight: return CGPoint(x: 0, y: 1)
-        case .bottomRightToTopLeft: return CGPoint(x: 1, y: 0)
-        case .topRightToBottomLeft: return CGPoint(x: 1, y: 1)
-        case .bottomLeftToTopRight: return CGPoint(x: 0, y: 0)
+        case .topToBottom: return CGPoint(x: 0.5, y: 0)
+        case .bottomToTop: return CGPoint(x: 0.5, y: 1)
+        case .topLeftToBottomRight: return CGPoint(x: 0, y: 0)
+        case .bottomRightToTopLeft: return CGPoint(x: 1, y: 1)
+        case .topRightToBottomLeft: return CGPoint(x: 1, y: 0)
+        case .bottomLeftToTopRight: return CGPoint(x: 0, y: 1)
         }
     }
     
@@ -42,12 +42,12 @@ private extension GradientDirection {
         switch self {
         case .leftToRight: return CGPoint(x: 1, y: 0.5)
         case .rightToLeft: return CGPoint(x: 0, y: 0.5)
-        case .topToBottom: return CGPoint(x: 0.5, y: 0)
-        case .bottomToTop: return CGPoint(x: 0.5, y: 1)
-        case .topLeftToBottomRight: return CGPoint(x: 1, y: 0)
-        case .bottomRightToTopLeft: return CGPoint(x: 0, y: 1)
-        case .topRightToBottomLeft: return CGPoint(x: 0, y: 0)
-        case .bottomLeftToTopRight: return CGPoint(x: 1, y: 1)
+        case .topToBottom: return CGPoint(x: 0.5, y: 1)
+        case .bottomToTop: return CGPoint(x: 0.5, y: 0)
+        case .topLeftToBottomRight: return CGPoint(x: 1, y: 1)
+        case .bottomRightToTopLeft: return CGPoint(x: 0, y: 0)
+        case .topRightToBottomLeft: return CGPoint(x: 0, y: 1)
+        case .bottomLeftToTopRight: return CGPoint(x: 1, y: 0)
         }
     }
     
@@ -59,7 +59,7 @@ private extension GradientDirection {
  */
 public struct ViewGradient {
     
-    private let layer: CAGradientLayer
+    fileprivate let layer: CAGradientLayer
     
     /**
      Initializes an inmutable ViewGradient.
