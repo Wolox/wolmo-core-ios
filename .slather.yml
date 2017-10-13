@@ -9,6 +9,7 @@ ignore:
   - Core/Extensions/UIKit/UIButton.swift
   - Core/Extensions/UIKit/UIView/Collapsable.swift
   - Core/Extensions/UIKit/UIView/UIView.swift
+  - Core/Extensions/UIKit/UIView/Gradient.swift
   - Core/Extensions/UIKit/UIViewController.swift
 # UIControl can't be sent events programatically.
   - Core/Utilities/ActionHandler.swift
