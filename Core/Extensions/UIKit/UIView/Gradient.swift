@@ -123,7 +123,7 @@ public extension UIView {
         reactive.producer(forKeyPath: "bounds")
             .take(duringLifetimeOf: self)
             .take(duringLifetimeOf: gradientLayer)
-            .map { $0 as! CGRect }
+            .map { $0 as! CGRect } //swiftlint:disable:this force_cast
             .on(value: { [unowned gradientLayer] in gradientLayer.bounds = $0})
             .start()
         layer.insertSublayer(gradientLayer, at: 0)
