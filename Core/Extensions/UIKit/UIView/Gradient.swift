@@ -22,9 +22,9 @@ public enum GradientDirection {
     case bottomLeftToTopRight
 }
 
-private extension GradientDirection {
+fileprivate extension GradientDirection {
     
-    var startPoint: CGPoint {
+    fileprivate var startPoint: CGPoint {
         switch self {
         case .leftToRight: return CGPoint(x: 0, y: 0.5)
         case .rightToLeft: return CGPoint(x: 1, y: 0.5)
@@ -37,7 +37,7 @@ private extension GradientDirection {
         }
     }
     
-    var endPoint: CGPoint {
+    fileprivate var endPoint: CGPoint {
         switch self {
         case .leftToRight: return CGPoint(x: 1, y: 0.5)
         case .rightToLeft: return CGPoint(x: 0, y: 0.5)
@@ -84,9 +84,9 @@ public struct ViewGradient {
     */
     public init(colors: [UIColor], direction: GradientDirection, locations: [Float]? = .none) {
         precondition(colors.count > 1)
-        if let locs = locations {
-            precondition(locs.first(where: { $0 < 0 || $0 > 1 }) == .none)
-            precondition(locs.count == colors.count)
+        if let locations = locations {
+            precondition(locations.first(where: { $0 < 0 || $0 > 1 }) == .none)
+            precondition(locations.count == colors.count)
         }
         
         self.colors = colors
@@ -96,11 +96,13 @@ public struct ViewGradient {
         layer.anchorPoint = .zero
         layer.colors = colors.map { $0.cgColor }
         
-        setUpLocations(locations: locations, numberOfColors: colors.count)
-        setUpDirection(direction)
+        layer.locations = calculateLocations(from: locations, numberOfColors: colors.count)
+        
+        layer.startPoint = direction.startPoint
+        layer.endPoint = direction.endPoint
     }
     
-    private func setUpLocations(locations: [Float]?, numberOfColors: Int) {
+    private func calculateLocations(from locations: [Float]?, numberOfColors: Int) -> [NSNumber] {
         var locs: [NSNumber] = []
         if let locations = locations {
             locs = locations.map { NSNumber(value: $0) }
@@ -111,12 +113,7 @@ public struct ViewGradient {
                 locs.append(NSNumber(value: location))
             }
         }
-        layer.locations = locs
-    }
-    
-    private func setUpDirection(_ direction: GradientDirection) {
-        layer.startPoint = direction.startPoint
-        layer.endPoint = direction.endPoint
+        return locs
     }
     
 }
@@ -136,7 +133,7 @@ public extension UIView {
         set {
             if let grad = newValue {
                 apply(gradient: grad)
-            } else if let _ = gradient {
+            } else if gradient != nil {
                 removeGradient()
             }
         }
@@ -151,7 +148,7 @@ public extension UIView {
         reactive.producer(forKeyPath: "bounds")
             .take(duringLifetimeOf: self)
             .take(duringLifetimeOf: gradientLayer)
-            .map { $0 as! CGRect } //swiftlint:disable:this force_cast
+            .map { $0 as! CGRect }      //swiftlint:disable:this force_cast
             .on(value: { [unowned gradientLayer] in gradientLayer.bounds = $0})
             .start()
         layer.insertSublayer(gradientLayer, at: 0)
@@ -161,7 +158,7 @@ public extension UIView {
     private func removeGradient() {
         if let gradient = getGradient() {
             gradient.layer.removeFromSuperlayer()
-            setAssociatedObject(self, key: &ViewGradientKey, value: Optional<ViewGradient>.none)
+            setAssociatedObject(self, key: &ViewGradientKey, value: ViewGradient?.none)
         }
     }
     
