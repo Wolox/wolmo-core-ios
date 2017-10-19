@@ -131,10 +131,11 @@ public extension UIView {
     */
     public var gradient: ViewGradient? {
         set {
+            if gradient != nil {
+                removeGradient()
+            }
             if let grad = newValue {
                 apply(gradient: grad)
-            } else if gradient != nil {
-                removeGradient()
             }
         }
         get {
