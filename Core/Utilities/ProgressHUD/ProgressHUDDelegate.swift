@@ -12,7 +12,7 @@ import MBProgressHUD
 /**
  ProgressHUDDelegate abstracts the logic of presenting a progress HUD, usually used in blocking operation, just as sign up.
  */
-public protocol ProgressHUDDelegate {
+public protocol ProgressHUDDelegate: class {
     
     /**
      Shows a progress hud.

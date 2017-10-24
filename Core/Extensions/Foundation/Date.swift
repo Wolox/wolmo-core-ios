@@ -8,14 +8,14 @@
 
 import Foundation
 
-internal let DefaultDateFormatter: DateFormatter = {
+public let DefaultDateFormatter: DateFormatter = {
     $0.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     $0.dateFormat = "yyyy-MM-dd"
     $0.locale = Locale(identifier: "en_US_POSIX")
     return $0
 }(DateFormatter())
 
-internal let DefaultWeekDateFormatter: DateFormatter = {
+public let DefaultWeekDateFormatter: DateFormatter = {
     $0.setLocalizedDateFormatFromTemplate("EEEE")
     return $0
 }(DateFormatter())

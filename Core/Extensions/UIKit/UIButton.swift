@@ -23,9 +23,9 @@ public extension UIButton {
      
      */
     public func setUnderlined(title: String, style: NSUnderlineStyle = .styleSingle, color: UIColor? = .none, forState state: UIControlState = .normal) {
-        var attributes: [String : AnyObject] = [NSUnderlineStyleAttributeName: style.rawValue as AnyObject]
+        var attributes: [NSAttributedStringKey : AnyObject] = [NSAttributedStringKey.underlineStyle: style.rawValue as AnyObject]
         if let colorAttr = color {
-            attributes[NSUnderlineColorAttributeName] = colorAttr
+            attributes[NSAttributedStringKey.underlineColor] = colorAttr
         }
         let underlinedText = NSAttributedString(string: title, attributes: attributes)
         setAttributedTitle(underlinedText, for: state)

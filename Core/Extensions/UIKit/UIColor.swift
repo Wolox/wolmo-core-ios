@@ -25,7 +25,7 @@ public extension UIColor {
             start = hex.startIndex
         }
         
-        var hexColor = hex.substring(from: start)
+        var hexColor = String(hex.suffix(from: start))
         
         if hexColor.characters.count == 6 {
             hexColor.append("ff")
