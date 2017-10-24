@@ -25,7 +25,7 @@
 	<key>My Personal Number Key</key>
 	<integer>5</integer>
 	<key>My Personal Float Key</key>
-	<real>7.1</real>
+	<integer>7</integer>
 	<key>My Personal Boolean Key</key>
 	<true/>
 	<key>My Personal Date Key</key>
