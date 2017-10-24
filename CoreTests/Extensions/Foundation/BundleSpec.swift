@@ -92,7 +92,7 @@ public class BundleSpec: QuickSpec {
                     it("shouldn't return the value") {
                         let value = bundle["My Personal Boolean Key"]
                         expect(value).toNot(beNil())
-                        expect(value as? Bool).to(equal(true))
+                        expect(value as? Bool).to(beTrue())
                     }
                     
                 }
@@ -264,11 +264,11 @@ public class BundleSpec: QuickSpec {
                     
                 }
                 
-                context("when the value is not the expected type") {
+                context("when the value is not the expected type but is Boolean") {
                     
-                    it("should return .none") {
+                    it("should return numeric representation") {
                         let value = bundle.getInt(from: "My Personal Boolean Key")
-                        expect(value).to(beNil())
+                        expect(value).to(equal(1))
                     }
                     
                 }
