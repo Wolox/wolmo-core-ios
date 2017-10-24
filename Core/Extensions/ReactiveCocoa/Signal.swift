@@ -9,7 +9,7 @@
 import ReactiveSwift
 import Result
 
-public extension SignalProtocol {
+public extension Signal {
     
     /**
          Transforms a `Signal<Value, Error>` to `Signal<Value, NewError>`.
@@ -59,7 +59,7 @@ public extension SignalProtocol {
 
 }
 
-public extension SignalProtocol where Value: OptionalProtocol {
+public extension Signal where Value: OptionalProtocol {
 
     /**
      Skips all not-nil values, sending only the .none values through.
@@ -70,7 +70,7 @@ public extension SignalProtocol where Value: OptionalProtocol {
 
 }
 
-public extension SignalProtocol where Value: ResultProtocol {
+public extension Signal where Value: ResultProtocol {
     
     /**
         Transforms a `Signal<ResultProtocol<Value2, Error2>, Error>` to `Signal<Value2, Error>`,
@@ -80,7 +80,7 @@ public extension SignalProtocol where Value: ResultProtocol {
     */
     public func filterValues() -> Signal<Value.Value, Error> {
         return filter {
-            if let _ = $0.value {
+            if $0.value != nil {
                 return true
             }
             return false
@@ -95,7 +95,7 @@ public extension SignalProtocol where Value: ResultProtocol {
      */
     public func filterErrors() -> Signal<Value.Error, Error> {
         return filter {
-            if let _ = $0.error {
+            if $0.error != nil {
                 return true
             }
             return false
