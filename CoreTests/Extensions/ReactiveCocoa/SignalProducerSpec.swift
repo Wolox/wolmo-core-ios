@@ -217,7 +217,7 @@ public class SignalProducerSpec: QuickSpec {
                 
                 it("should send on the value") { waitUntil { done in
                     let producer = SignalProducer<Result<(), NSError>, NoError> { observer, _ in
-                        observer.send(value: .success())
+                        observer.send(value: .success(()))
                         observer.sendCompleted()
                     }
                     let converted = producer.filterValues()
@@ -253,7 +253,7 @@ public class SignalProducerSpec: QuickSpec {
                 
                 it("shouldn't send on the value") { waitUntil { done in
                     let producer = SignalProducer<Result<(), NSError>, NoError> { observer, _ in
-                        observer.send(value: .success())
+                        observer.send(value: .success(()))
                         observer.sendCompleted()
                     }
                     let converted = producer.filterErrors()

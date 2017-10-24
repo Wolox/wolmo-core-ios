@@ -59,16 +59,16 @@ public class StringSpec: QuickSpec {
 
             it("should add the attributes to the string when the substring exists") {
                 let string = "Come and check our interesting posts at Wolox."
-                let attrs = ["Come and check our interesting posts at Wolox.":
-                                [NSFontAttributeName: "Helvetica-Regular"],
+                let attrs: [String: [NSAttributedStringKey: Any]] = ["Come and check our interesting posts at Wolox.":
+                                [NSAttributedStringKey.font: "Helvetica-Regular"],
                              "Wolox":
-                                [NSLinkAttributeName: URL(string: "www.wolox.com.ar")!,
-                                 NSForegroundColorAttributeName: UIColor.blue],
+                                [NSAttributedStringKey.link: URL(string: "www.wolox.com.ar")!,
+                                 NSAttributedStringKey.foregroundColor: UIColor.blue],
                              "posts":
-                                [NSForegroundColorAttributeName: UIColor.red],
+                                [NSAttributedStringKey.foregroundColor: UIColor.red],
                              "and some more":
-                                [NSForegroundColorAttributeName: UIColor.green]]
-                let attrString = string.format(withAttributes: attrs)
+                                [NSAttributedStringKey.foregroundColor: UIColor.green]]
+                let attrString: NSAttributedString = string.format(withAttributes: attrs)
                 attrString.enumerateAttributes(in: NSRange(location: 0, length: attrString.length),
                                                using: { (attributes, range, _) in
                     let nsString = string as NSString
@@ -76,16 +76,16 @@ public class StringSpec: QuickSpec {
                        nsString.substring(with: range) == " at " ||
                        nsString.substring(with: range) == "." {
                         expect(attributes.count).to(equal(1))
-                        expect(attributes[NSFontAttributeName] as? String).to(equal("Helvetica-Regular"))
+                        expect(attributes[NSAttributedStringKey.font] as? String).to(equal("Helvetica-Regular"))
                     } else if nsString.substring(with: range) == "Wolox" {
                         expect(attributes.count).to(equal(3))
-                        expect(attributes[NSFontAttributeName] as? String).to(equal("Helvetica-Regular"))
-                        expect(attributes[NSLinkAttributeName] as? URL).to(equal(URL(string: "www.wolox.com.ar")))
-                        expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.blue))
+                        expect(attributes[NSAttributedStringKey.font] as? String).to(equal("Helvetica-Regular"))
+                        expect(attributes[NSAttributedStringKey.link] as? URL).to(equal(URL(string: "www.wolox.com.ar")))
+                        expect(attributes[NSAttributedStringKey.foregroundColor] as? UIColor).to(equal(UIColor.blue))
                     } else if nsString.substring(with: range) == "posts" {
                         expect(attributes.count).to(equal(2))
-                        expect(attributes[NSFontAttributeName] as? String).to(equal("Helvetica-Regular"))
-                        expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.red))
+                        expect(attributes[NSAttributedStringKey.font] as? String).to(equal("Helvetica-Regular"))
+                        expect(attributes[NSAttributedStringKey.foregroundColor] as? UIColor).to(equal(UIColor.red))
                     } else {
                         fail()
                     }
