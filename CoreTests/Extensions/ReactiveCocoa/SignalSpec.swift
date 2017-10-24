@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import Result
+import enum Result.NoError
 import ReactiveSwift
 import Core
 
@@ -21,7 +22,7 @@ public class SignalSpec: QuickSpec {
             context("When lifting an error") {
 
                 var signal: Signal<(), NSError>!
-                var observer: Observer<(), NSError>!
+                var observer: Signal<(), NSError>.Observer!
                 var converted: Signal<(), NoError>!
                 
                 beforeEach {
@@ -56,7 +57,7 @@ public class SignalSpec: QuickSpec {
         describe("#toResultSignal") {
             
             var signal: Signal<(), NSError>!
-            var observer: Observer<(), NSError>!
+            var observer: Signal<(), NSError>.Observer!
             var converted: Signal<Result<(), NSError>, NoError>!
             
             beforeEach {
@@ -110,7 +111,7 @@ public class SignalSpec: QuickSpec {
         describe("#filterType") {
 
             var signal: Signal<MockParentClass, NoError>!
-            var observer: Observer<MockParentClass, NoError>!
+            var observer: Signal<MockParentClass, NoError>.Observer!
 
             beforeEach {
                 let (_signal, _observer) = Signal<MockParentClass, NoError>.pipe()
@@ -181,7 +182,7 @@ public class SignalSpec: QuickSpec {
         describe("#skipNotNil") {
 
             var signal: Signal<Int?, NoError>!
-            var observer: Observer<Int?, NoError>!
+            var observer: Signal<Int?, NoError>.Observer!
             var converted: Signal<Int?, NoError>!
 
             beforeEach {
@@ -224,7 +225,7 @@ public class SignalSpec: QuickSpec {
         describe("#filterValues") {
             
             var signal: Signal<Result<(), NSError>, NoError>!
-            var observer: Observer<Result<(), NSError>, NoError>!
+            var observer: Signal<Result<(), NSError>, NoError>.Observer!
             var converted: Signal<(), NoError>!
             
             beforeEach {
@@ -241,7 +242,7 @@ public class SignalSpec: QuickSpec {
                         expect($0.count).to(equal(1))
                         done()
                     }
-                    observer.send(value: .success())
+                    observer.send(value: .success(()))
                     observer.sendCompleted()
                 }}
                 
@@ -265,7 +266,7 @@ public class SignalSpec: QuickSpec {
         describe("#filterErrors") {
             
             var signal: Signal<Result<(), NSError>, NoError>!
-            var observer: Observer<Result<(), NSError>, NoError>!
+            var observer: Signal<Result<(), NSError>, NoError>.Observer!
             var converted: Signal<NSError, NoError>!
             
             beforeEach {
@@ -282,7 +283,7 @@ public class SignalSpec: QuickSpec {
                         expect($0.count).to(equal(0))
                         done()
                     }
-                    observer.send(value: .success())
+                    observer.send(value: .success(()))
                     observer.sendCompleted()
                 }}
                 

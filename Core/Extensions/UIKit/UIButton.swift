@@ -23,7 +23,7 @@ public extension UIButton {
      
      */
     public func setUnderlined(title: String, style: NSUnderlineStyle = .styleSingle, color: UIColor? = .none, forState state: UIControlState = .normal) {
-        var attributes: [NSAttributedStringKey : AnyObject] = [NSAttributedStringKey.underlineStyle: style.rawValue as AnyObject]
+        var attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.underlineStyle: style.rawValue as AnyObject]
         if let colorAttr = color {
             attributes[NSAttributedStringKey.underlineColor] = colorAttr
         }
