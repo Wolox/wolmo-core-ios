@@ -53,73 +53,98 @@ fileprivate extension GradientDirection {
 }
 
 /**
+     Represents a color that takes place ina gradient that can be applied to a view.
+     It has a UIColor and a location which indicates where that color should be placed in the gradient.
+ */
+public struct GradientColor {
+
+    // Color to use in gradient.
+    public let color: UIColor
+    // Location where to place color inside the gradient.
+    // Number between 0 and 1 (inclusive).
+    public let location: Float
+
+    /**
+     Initializes an inmutable GradientColor.
+
+     - parameter color: UIColor to use.
+     - parameter location: Locations of the center of the color through out the gradient.
+     A location is any possible number between 0 and 1, being 0 the start of the gradient
+     and 1 the end of the gradient in the direction specified.
+     - warning: If the location isn't between 0 and 1 (inclusive) the init will fail.
+     */
+    public init?(color: UIColor, location: Float) {
+        if location < 0 || location > 1 {
+            return nil
+        }
+        self.color = color
+        self.location = location
+    }
+
+}
+
+/**
     Represents a gradient that can be applied to a view.
     It can have many colors distributed in many ways and directions.
-    There can only be one gradient at a time in a view.
+
+    - note: There can only be one gradient at a time in a view.
  */
 public struct ViewGradient {
     
     // Direction of the gradient.
     public let direction: GradientDirection
-    // Colors involved in the order involved.
-    public let colors: [UIColor]
-    // Locations where the colors are placed.
-    public var locations: [Float] {
-        return layer.locations!.map { $0.floatValue }
-    }
+    // GradientColors involved in the order involved.
+    public let colors: [GradientColor]
     
     fileprivate let layer: CAGradientLayer
-    
+
+    /**
+     Initializes an inmutable ViewGradient.
+
+     - parameter colors: Array of GradientColors to be used.
+     - parameter direction: Direction in which the gradient should develop.
+     */
+    public init(colors: [GradientColor], direction: GradientDirection) {
+        self.colors = colors.sorted { g1, g2 in g1.location < g2.location }
+        self.direction = direction
+
+        layer = CAGradientLayer()
+        layer.anchorPoint = .zero
+
+        layer.colors = self.colors.map { $0.color.cgColor }
+        layer.locations = self.colors.map { NSNumber(value: $0.location) }
+
+        layer.startPoint = direction.startPoint
+        layer.endPoint = direction.endPoint
+    }
+
     /**
      Initializes an inmutable ViewGradient.
      
      - parameter colors: Array of UIColors in the order in which to place them.
-        There should be more than one.
+        They will be evenly separated.
      - parameter direction: Direction in which the gradient should develop.
-     - parameter locations: Locations of the center of each color through out the screen.
-        A location is any possible number between 0 and 1, being 0 the start of the gradient
-        and 1 the end of the gradient in the direction specified.
-        By default, it spreads the colors uniformly.
-        If passed a value, it should have as many locations as it does colors.
     */
-    public init(colors: [UIColor], direction: GradientDirection, locations: [Float]? = .none) {
-        precondition(colors.count > 1)
-        if let locations = locations {
-            precondition(locations.first(where: { $0 < 0 || $0 > 1 }) == .none)
-            precondition(locations.count == colors.count)
-        }
-        
-        self.colors = colors
-        self.direction = direction
-        
-        layer = CAGradientLayer()
-        layer.anchorPoint = .zero
-        layer.colors = colors.map { $0.cgColor }
-        
-        layer.locations = calculateLocations(from: locations, numberOfColors: colors.count)
-        
-        layer.startPoint = direction.startPoint
-        layer.endPoint = direction.endPoint
-    }
-    
-    private func calculateLocations(from locations: [Float]?, numberOfColors: Int) -> [NSNumber] {
-        var locs: [NSNumber] = []
-        if let locations = locations {
-            locs = locations.map { NSNumber(value: $0) }
-        } else {
-            let colorProportion = 1.0 / Double(numberOfColors - 1)
-            for i in 0...numberOfColors {
-                let location = Double(i) * colorProportion
-                locs.append(NSNumber(value: location))
-            }
-        }
-        return locs
+    public init(colors: [UIColor], direction: GradientDirection) {
+        let locations = calculateLocations(for: colors.count)
+        let gradientColors = colors.enumerated().map { (index, color) in GradientColor(color: color, location: locations[index].floatValue)! }
+        self.init(colors: gradientColors, direction: direction)
     }
     
 }
 
+private func calculateLocations(for numberOfColors: Int) -> [NSNumber] {
+    var locs: [NSNumber] = []
+    let colorProportion = 1.0 / Double(numberOfColors - 1)
+    for i in 0...numberOfColors {
+        let location = Double(i) * colorProportion
+        locs.append(NSNumber(value: location))
+    }
+    return locs
+}
+
 public extension UIView {
-    
+
     /**
         ViewGradient applied currently to the view.
         A view can only have one gradient at a time.
