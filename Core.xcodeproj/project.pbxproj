@@ -13,7 +13,6 @@
 		9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AEA1CDE642F008B0E5F /* Quick.framework */; };
 		9D896AEE1CDE64FF008B0E5F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D896AEF1CDE64FF008B0E5F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AEA1CDE642F008B0E5F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B95948031D3E78FD003A082F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948021D3E78FD003A082F /* MBProgressHUD.framework */; };
 		B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948191D3EA039003A082F /* AVFoundation.framework */; };
 		B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481B1D3EA051003A082F /* UIKit.framework */; };
 		B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481D1D3EA060003A082F /* Foundation.framework */; };
@@ -24,7 +23,6 @@
 		B988B97C1D244D6300824685 /* AlertViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B9771D244D6300824685 /* AlertViewPresenter.swift */; };
 		B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B9781D244D6300824685 /* ConfirmationAlertViewModel.swift */; };
 		B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B9791D244D6300824685 /* ErrorAlertViewModel.swift */; };
-		B988B97F1D244D6300824685 /* ProgressHUDDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */; };
 		B988B9811D24621000824685 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988B9801D24621000824685 /* DeviceType.swift */; };
 		B9F011F81D512C2000F72672 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9661D24457D00824685 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F011F91D512C3200F72672 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B988B9671D24457D00824685 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -41,7 +39,6 @@
 		CE11869C1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE11869B1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib */; };
 		CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869D1EA7C9DE00105D6F /* Resources.swift */; };
 		CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */; };
-		CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948021D3E78FD003A082F /* MBProgressHUD.framework */; };
 		CE1186A61EA7E2A200105D6F /* NibLoadableUICollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */; };
 		CE1186A81EA7EF2E00105D6F /* NibLoadableUITableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */; };
 		CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186AB1EA7F67800105D6F /* BundleSpec.swift */; };
@@ -122,7 +119,6 @@
 		9D896AC91CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D896AE91CDE642F008B0E5F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9D896AEA1CDE642F008B0E5F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		B95948021D3E78FD003A082F /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		B95948191D3EA039003A082F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B959481B1D3EA051003A082F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B959481D1D3EA060003A082F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,7 +129,6 @@
 		B988B9771D244D6300824685 /* AlertViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewPresenter.swift; sourceTree = "<group>"; };
 		B988B9781D244D6300824685 /* ConfirmationAlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewModel.swift; sourceTree = "<group>"; };
 		B988B9791D244D6300824685 /* ErrorAlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModel.swift; sourceTree = "<group>"; };
-		B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDDelegate.swift; sourceTree = "<group>"; };
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -204,7 +199,6 @@
 				B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */,
 				B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */,
 				B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */,
-				B95948031D3E78FD003A082F /* MBProgressHUD.framework in Frameworks */,
 				B988B9681D24457D00824685 /* ReactiveCocoa.framework in Frameworks */,
 				B988B9691D24457D00824685 /* Result.framework in Frameworks */,
 			);
@@ -214,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */,
 				9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */,
 				9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* Core.framework in Frameworks */,
@@ -283,7 +276,6 @@
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
-				B95948021D3E78FD003A082F /* MBProgressHUD.framework */,
 				BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */,
 				B988B9661D24457D00824685 /* ReactiveCocoa.framework */,
 				B988B9671D24457D00824685 /* Result.framework */,
@@ -297,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				B988B9761D244D6300824685 /* Alerts */,
-				B988B97A1D244D6300824685 /* ProgressHUD */,
 				B988B96E1D24482200824685 /* ActionHandler.swift */,
 				B988B9721D244BAE00824685 /* AssociatedObject.swift */,
 				B988B9801D24621000824685 /* DeviceType.swift */,
@@ -317,14 +308,6 @@
 				B988B9791D244D6300824685 /* ErrorAlertViewModel.swift */,
 			);
 			path = Alerts;
-			sourceTree = "<group>";
-		};
-		B988B97A1D244D6300824685 /* ProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				B988B97B1D244D6300824685 /* ProgressHUDDelegate.swift */,
-			);
-			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		CE1186901EA7A1CA00105D6F /* Resources */ = {
@@ -637,7 +620,6 @@
 				B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */,
 				CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */,
 				CE3A9B9B1E607B28005D7E8F /* UIButton.swift in Sources */,
-				B988B97F1D244D6300824685 /* ProgressHUDDelegate.swift in Sources */,
 				B988B96F1D24482200824685 /* ActionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

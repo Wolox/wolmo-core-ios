@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Core
-import MBProgressHUD
+import ReactiveSwift
 
 class NibLoadableCollectionCell: UICollectionViewCell, NibLoadable { }
 class NibLoadableCollectionView: UICollectionReusableView, NibLoadable { }
@@ -26,7 +26,7 @@ class NibLoadableTableView: UITableViewHeaderFooterView, NibLoadable {
 class NibLoadableTableViewCustom: UITableViewHeaderFooterView, NibLoadable {
     
     static var nibBundle: Bundle {
-        return Bundle(for: MBProgressHUD.self)
+        return Bundle(for: AnyDisposable.self) // Testing with a class that's outside of our framework, it could be any class from outside
     }
     
 }
