@@ -88,7 +88,7 @@ public class URLSpec: QuickSpec {
             
             context("When passing an invalid URL") {
                 
-                it("should return a URL") {
+                it("should throw assertion error") {
                     expect { () -> Void in let _: URL = "invalid url" }.to(throwAssertion())
                 }
                 
