@@ -17,7 +17,6 @@
 		B82058CD1EEF33950002D7D4 /* UIImageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */; };
 		B82058D01EEF3A040002D7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */; };
-		B95948031D3E78FD003A082F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948021D3E78FD003A082F /* MBProgressHUD.framework */; };
 		B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948191D3EA039003A082F /* AVFoundation.framework */; };
 		B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481B1D3EA051003A082F /* UIKit.framework */; };
 		B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481D1D3EA060003A082F /* Foundation.framework */; };
@@ -44,7 +43,6 @@
 		CE11869C1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE11869B1EA7C9C600105D6F /* NibLoadableTableViewCustom.xib */; };
 		CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869D1EA7C9DE00105D6F /* Resources.swift */; };
 		CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */; };
-		CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948021D3E78FD003A082F /* MBProgressHUD.framework */; };
 		CE1186A61EA7E2A200105D6F /* NibLoadableUICollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A51EA7E2A200105D6F /* NibLoadableUICollectionView.xib */; };
 		CE1186A81EA7EF2E00105D6F /* NibLoadableUITableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1186A71EA7EF2E00105D6F /* NibLoadableUITableView.xib */; };
 		CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1186AB1EA7F67800105D6F /* BundleSpec.swift */; };
@@ -132,7 +130,6 @@
 		B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageSpec.swift; sourceTree = "<group>"; };
 		B82058CE1EEF39230002D7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CoreTests/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		B95948021D3E78FD003A082F /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		B95948191D3EA039003A082F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B959481B1D3EA051003A082F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B959481D1D3EA060003A082F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -217,7 +214,6 @@
 				B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */,
 				B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */,
 				B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */,
-				B95948031D3E78FD003A082F /* MBProgressHUD.framework in Frameworks */,
 				B988B9681D24457D00824685 /* ReactiveCocoa.framework in Frameworks */,
 				B988B9691D24457D00824685 /* Result.framework in Frameworks */,
 			);
@@ -227,7 +223,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1186A41EA7CFF900105D6F /* MBProgressHUD.framework in Frameworks */,
 				9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */,
 				9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* Core.framework in Frameworks */,
@@ -298,7 +293,6 @@
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
-				B95948021D3E78FD003A082F /* MBProgressHUD.framework */,
 				BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */,
 				B988B9661D24457D00824685 /* ReactiveCocoa.framework */,
 				B988B9671D24457D00824685 /* Result.framework */,
