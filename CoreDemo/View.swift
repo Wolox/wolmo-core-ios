@@ -9,7 +9,7 @@
 import UIKit
 import Core
 
-class View: UIView, NibLoadable {
+final internal class View: UIView, NibLoadable {
     
     @IBOutlet weak var childContainerView: UIView!
     

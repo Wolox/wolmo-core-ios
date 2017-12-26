@@ -9,7 +9,7 @@
 import UIKit
 import Core
 
-class ChildView: UIView, NibLoadable {
+final internal class ChildView: UIView, NibLoadable {
 
     @IBOutlet weak var centralView: UIView! {
         didSet {
