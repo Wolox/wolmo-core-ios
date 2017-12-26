@@ -133,7 +133,7 @@ public extension String {
     */
     public func remove(suffix: String) -> String {
         if hasSuffix(suffix) {
-            return String(characters.dropLast(suffix.characters.count))
+            return String(self.dropLast(suffix.count))
         }
         return self
     }
@@ -150,7 +150,7 @@ public extension String {
      */
     public func remove(prefix: String) -> String {
         if hasPrefix(prefix) {
-            return String(characters.dropFirst(prefix.characters.count))
+            return String(self.dropFirst(prefix.count))
         }
         return self
     }
