@@ -3,6 +3,7 @@ scheme: Core
 ignore:
   - CoreTests/*
   - Carthage/*
+  - CoreDemo/*
 # UI can't be tested
   - Core/Utilities/Alerts/AlertViewPresenter.swift
   - Core/Utilities/ProgressHUD/ProgressHUDDelegate.swift
