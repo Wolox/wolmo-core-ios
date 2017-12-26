@@ -20,18 +20,18 @@ public extension UIColor {
         
         let start: String.Index
         if hex.hasPrefix("#") {
-            start = hex.characters.index(hex.startIndex, offsetBy: 1)
+            start = hex.index(hex.startIndex, offsetBy: 1)
         } else {
             start = hex.startIndex
         }
         
         var hexColor = String(hex[start...])
         
-        if hexColor.characters.count == 6 {
+        if hexColor.count == 6 {
             hexColor.append("ff")
         }
         
-        if hexColor.characters.count == 8 {
+        if hexColor.count == 8 {
             let scanner = Scanner(string: hexColor)
             var hexNumber: UInt64 = 0
             
