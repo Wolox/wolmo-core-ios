@@ -60,18 +60,6 @@ public extension String {
         }
         return attributedString
     }
-
-    /**
-     Returns the length of the string.
-     
-     - Complexity: O(1) if String's `Index` conforms to `RandomAccessIndexType`;
-     O(N) otherwise.
-     - note: It is a function and not a property because possible O(N) computation cost.
-     - seealso: CharacterView.count
-     */
-    public func length() -> Int {
-        return characters.count
-    }
     
     /**
      Builds an NSURL from a string.
