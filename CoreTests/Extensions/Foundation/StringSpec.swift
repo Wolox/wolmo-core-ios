@@ -95,15 +95,6 @@ public class StringSpec: QuickSpec {
 
         }
         
-        describe("#length") {
-            
-            it("should return the string length") {
-                let string = "hello"
-                expect(string.length()).to(equal(5))
-            }
-    
-        }
-        
         describe("#url") {
             
             context("When it is a valid url") {
