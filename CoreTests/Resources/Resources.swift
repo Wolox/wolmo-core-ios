@@ -25,8 +25,9 @@ class NibLoadableTableView: UITableViewHeaderFooterView, NibLoadable {
 
 class NibLoadableTableViewCustom: UITableViewHeaderFooterView, NibLoadable {
     
+    // Testing with a class that's outside of our framework, it could be any class from outside
     static var nibBundle: Bundle {
-        return Bundle(for: AnyDisposable.self) // Testing with a class that's outside of our framework, it could be any class from outside
+        return Bundle(for: AnyDisposable.self)
     }
     
 }
