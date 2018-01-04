@@ -264,13 +264,22 @@ public class BundleSpec: QuickSpec {
                     
                 }
                 
-                context("when the value is not the expected type but is Boolean") {
+                context("when the value is not the expected type but it is a compatible one") {
                     
                     it("should return numeric representation") {
                         let value = bundle.getInt(from: "My Personal Boolean Key")
                         expect(value).to(equal(1))
                     }
                     
+                }
+
+                context("when the value is not the expected type and it is not a compatible one") {
+
+                    it("should return numeric representation") {
+                        let value = bundle.getInt(from: "My Personal String Key")
+                        expect(value).to(beNil())
+                    }
+
                 }
                 
             }
