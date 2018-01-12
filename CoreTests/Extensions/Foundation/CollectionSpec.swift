@@ -48,41 +48,6 @@ public class CollectionSpec: QuickSpec {
                 
             }
 
-            describe("#first(where:)") {
-
-                let array = [1, 2, 3]
-
-                context("When an element satisfies the condition") {
-
-                    it("should return that element") {
-                        expect(array.first(where: { (elem) -> Bool in
-                            elem == 1
-                        })).to(equal(1))
-                    }
-
-                    context("When another element satisfies the condition") {
-
-                        it("should return the first one") {
-                            expect(array.first(where: { (elem) -> Bool in
-                                elem % 2 == 1
-                            })).to(equal(1))
-                        }
-
-                    }
-
-                }
-
-                context("When none of the elements satisfies the condition") {
-
-                    it("should return nil") {
-                        expect([1, 2, 3].first(where: { (elem) -> Bool in
-                            elem == 5
-                        })).to(beNil())
-                    }
-
-                }
-            }
-            
         }
         
     }
