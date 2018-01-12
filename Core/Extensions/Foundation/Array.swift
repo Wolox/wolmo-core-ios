@@ -17,18 +17,8 @@ public extension Array {
      
      - returns: Dictionary with elements grouped by their corresponding keys.
      */
-    public func group<K>(withCriteria keyForElement: (Element) -> K) -> [K: [Element]] {
-        var result: [K : [Element]] = [:]
-        for element in self {
-            let key = keyForElement(element)
-            if var groupedElements = result[key] {
-                groupedElements.append(element)
-                result[key] = groupedElements
-            } else {
-                result[key] = [element]
-            }
-        }
-        return result
+    public func group<K>(by keyForElement: (Element) -> K) -> [K: [Element]] {
+        return Dictionary(grouping: self, by: keyForElement)
     }
     
     /**
