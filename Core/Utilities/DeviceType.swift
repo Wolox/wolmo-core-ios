@@ -9,13 +9,15 @@
 import Foundation
 
 /* 
- DeviceType provides the current device type.
+ DeviceType provides the current device type,
+ in relation to its window height in points.
  */
 public enum DeviceType: CGFloat {
-    case iPhone4s = 480.0
-    case iPhone5 = 568.0
-    case iPhone6 = 667.0
-    case iPhone6Plus = 736.0
+    case iPhone4s_previous = 480.0
+    case iPhone5_5s_5c_SE = 568.0
+    case iPhone6_6s_7_8 = 667.0
+    case iPhone6Plus_6sPlus_7Plus_8Plus = 736.0
+    case iPhoneX = 812.0
     case unknown = -1
     
     /**
