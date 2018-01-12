@@ -12,20 +12,33 @@ import Result
 public extension SignalProducer {
     
     /**
-         Transforms a `SignalProducer<Value, Error>` to `SignalProducer<Value, NewError>`
-         This is usually pretty useful when the `flatMap` operator is used and the outer
-         producer has `NoError` error type and the inner one a different type of error.
-         
-         - returns: A signal producer with the same value type but with `NewError` as the error type
+     Ignores errors.
+     This is usually useful when the `flatMap` operator is used and the outer
+     signal producer has `NoError` error type and the inner one a different type of error.
+
+     - returns: A signal producer with the same value type but with `NoError` as the error type
+     */
+    public func dropError() -> SignalProducer<Value, NoError> {
+        return flatMapError { _ in .empty }
+    }
+
+    /**
+     Transforms a `Signal<Value, Error>` to `Signal<Value, NewError>`.
+     This is usually useful when the `flatMap` operator is used and the outer
+     signal producer has another error type and the inner one a different type of error.
+
+     - returns: A signal producer with the same value type but with `NewError` as the error type
+     - note: For transforming NoError to another error you can use `promoteError`
+     - note: You can do this to avoid `.dropError().promoteError()` chaining
      */
     public func liftError<NewError>() -> SignalProducer<Value, NewError> {
-        return flatMapError { _ in SignalProducer<Value, NewError>.empty }
+        return flatMapError { _ in .empty }
     }
     
     /**
          Transforms the `SignalProducer<Value, Error>` to `SignalProducer<Result<Value, Error>, NoError>`.
          This is usually useful when the `flatMap` triggers different producers
-         which if failed shouldn't finish the whole result producer, stopping new producers
+         which if failed shouldn't finish the whole result producer, but we can't avoid stopping new producers
          from being triggered when a new value arrives at self.
      
          For example,
@@ -34,6 +47,14 @@ public extension SignalProducer {
      
          myProperty.producer.flatMap(.Latest) { clLocation -> SignalProducer<MyLocation, MyError> in
              return locationService.fetchLocation(clLocation)
+         }
+         ```
+         can turn into
+         ```
+         var myProperty: MutableProperty<CLLocation>
+
+         myProperty.producer.flatMap(.Latest) { clLocation -> SignalProducer<Result<MyLocation, MyError>, NoError> in
+         return locationService.fetchLocation(clLocation).toResultSignalProducer()
          }
          ```
          

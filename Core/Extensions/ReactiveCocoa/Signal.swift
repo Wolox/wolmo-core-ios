@@ -9,17 +9,44 @@
 import ReactiveSwift
 import Result
 
+// Can't extend ResultProtocol to EventProtocol.
+// Now Result-valued signals can de materialez and dematerialized.
+extension Result: EventProtocol {
+
+    public var event: Signal<Value, Error>.Event {
+        if let value = value {
+            return .value(value)
+        } else {
+            return .failed(error!)
+        }
+    }
+
+}
+
 public extension Signal {
-    
+
+    /**
+     Ignores errors.
+     This is usually useful when the `flatMap` operator is used and the outer
+     signal has `NoError` error type and the inner one a different type of error.
+
+     - returns: A signal with the same value type but with `NoError` as the error type
+     */
+    public func dropError() -> Signal<Value, NoError> {
+        return flatMapError { _ in .empty }
+    }
+
     /**
          Transforms a `Signal<Value, Error>` to `Signal<Value, NewError>`.
          This is usually useful when the `flatMap` operator is used and the outer
-         signal has `NoError` error type and the inner one a different type of error.
+         signal has another error type and the inner one a different type of error.
          
          - returns: A signal with the same value type but with `NewError` as the error type
+         - note: For transforming NoError to another error you can use `promoteError`
+         - note: You can do this to avoid `.dropError().promoteError()` chaining
      */
     public func liftError<NewError>() -> Signal<Value, NewError> {
-        return flatMapError { _ in SignalProducer<Value, NewError>.empty }
+        return flatMapError { _ in .empty }
     }
     
     /**
@@ -53,7 +80,7 @@ public extension Signal {
          - returns: A signal with value type T and the same error type.
      */
     public func filterType<T>() -> Signal<T, Error> {
-        return filter { $0 is T }.map { $0 as! T }  //swiftlint:disable:this force_cast
+        return filterMap { $0 as? T }
         //Can't restrict T to conform/inherit-from Value
     }
 
