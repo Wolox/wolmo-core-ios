@@ -10,7 +10,7 @@ import ReactiveSwift
 import Result
 
 // Can't extend ResultProtocol to EventProtocol.
-// Now Result-valued signals can de materialez and dematerialized.
+// Now Result-valued signals can de materialized and dematerialized.
 extension Result: EventProtocol {
 
     public var event: Signal<Value, Error>.Event {
@@ -40,7 +40,7 @@ public extension Signal {
          Transforms a `Signal<Value, Error>` to `Signal<Value, NewError>`.
          This is usually useful when the `flatMap` operator is used and the outer
          signal has another error type and the inner one a different type of error.
-         
+
          - returns: A signal with the same value type but with `NewError` as the error type
          - note: For transforming NoError to another error you can use `promoteError`
          - note: You can do this to avoid `.dropError().promoteError()` chaining
@@ -48,21 +48,21 @@ public extension Signal {
     public func liftError<NewError>() -> Signal<Value, NewError> {
         return flatMapError { _ in .empty }
     }
-    
+
     /**
         Transforms the `Signal<Value, Error>` to `Signal<Result<Value, Error>, NoError>`.
         This is usually useful when the `flatMap` triggers different signals
         which if failed shouldn't finish the whole result signal, stopping new signals
         from being triggered when a new value arrives at self.
-     
+
         ```
         var loginSignal: Signal<(), NoError>
-         
+
         loginSignal.flatMap(.Latest) { _ -> Signal<MyUser, MyError> in
             return authService.login()
         }
         ```
-     
+
         It may be considered similar to the `events` signal of an `Action` (with only next and failed).
     */
     public func toResultSignal() -> Signal<Result<Value, Error>, NoError> {
@@ -98,11 +98,11 @@ public extension Signal where Value: OptionalProtocol {
 }
 
 public extension Signal where Value: ResultProtocol {
-    
+
     /**
         Transforms a `Signal<ResultProtocol<Value2, Error2>, Error>` to `Signal<Value2, Error>`,
         ignoring all `Error2` events.
-     
+
         It may be considered similar to the `values` signal of an `Action`.
     */
     public func filterValues() -> Signal<Value.Value, Error> {
@@ -113,11 +113,11 @@ public extension Signal where Value: ResultProtocol {
             return false
         }.map { $0.value! }
     }
-    
+
     /**
          Transforms a `Signal<ResultProtocol<Value2, Error2>, Error>` to `Signal<Error2, Error>`,
          ignoring all `Value2` events.
-     
+
          It may be considered similar to the `errors` signal of an `Action`.
      */
     public func filterErrors() -> Signal<Value.Error, Error> {
@@ -128,5 +128,5 @@ public extension Signal where Value: ResultProtocol {
             return false
         }.map { $0.error! }
     }
-    
+
 }
