@@ -24,13 +24,52 @@ public class SignalProducerSpec: QuickSpec {
 
     override public func spec() {
         
+        describe("#dropError") {
+
+            context("When dropping an error") {
+
+                var producer: SignalProducer<(), NSError>!
+                var property: MutableProperty<String>!
+                var converted: SignalProducer<(), NoError>!
+
+                beforeEach {
+                    property = MutableProperty("")
+                    producer = property.producer.skip(first: 1).flatMap(.concat) { value -> SignalProducer<(), NSError> in
+                        if (value.isEmpty) {
+                            return SignalProducer(error: NSError(domain: "", code: 0, userInfo: [:]))
+                        } else {
+                            return SignalProducer(value: ())
+                        }
+                    }
+                    converted = producer.dropError()
+                }
+
+                it("should ignore the error and complete") { waitUntil { done in
+                    converted.collect().startWithValues {
+                        expect($0).to(beEmpty())
+                        done()
+                    }
+                    property.value = ""
+                }}
+
+                it("should not ignore a value") { waitUntil { done in
+                    converted.startWithValues {
+                        done()
+                    }
+                    property.value = "value"
+                }}
+
+            }
+
+        }
+
         describe("#liftError") {
-            
+
             context("When lifting an error") {
-                
+
                 var producer: SignalProducer<(), NSError>!
                 var property: MutableProperty<String> = MutableProperty("")
-                
+
                 beforeEach {
                     property = MutableProperty("")
                     producer = property.producer.skip(first: 1).flatMap(.concat) { value -> SignalProducer<(), NSError> in
@@ -41,28 +80,35 @@ public class SignalProducerSpec: QuickSpec {
                         }
                     }
                 }
-                
+
                 it("should ignore the error and complete") { waitUntil { done in
-                    let converted: SignalProducer<(), NoError> = producer.liftError()
-                    
-                    converted.collect().startWithValues {
-                        expect($0).to(beEmpty())
-                        done()
+                    let converted: SignalProducer<(), MyError> = producer.liftError()
+
+                    converted.collect().startWithResult {
+                        switch $0 {
+                        case .success(let value):
+                            expect(value).to(beEmpty())
+                            done()
+                        case .failure: break
+                        }
                     }
                     property.value = ""
                 }}
-                
+
                 it("should not ignore a value") { waitUntil { done in
-                    let converted: SignalProducer<(), NoError> = producer.liftError()
-                    
-                    converted.startWithValues {
-                        done()
+                    let converted: SignalProducer<(), MyError> = producer.liftError()
+
+                    converted.startWithResult {
+                        switch $0 {
+                        case .success: done()
+                        case .failure: break
+                        }
                     }
                     property.value = "value"
                 }}
-                
+
             }
-            
+
         }
         
         describe("#toResultSignalProducer") {

@@ -13,25 +13,29 @@ import enum Result.NoError
 import ReactiveSwift
 import Core
 
+enum MyError: Error {
+    case someError
+}
+
 public class SignalSpec: QuickSpec {
     
     override public func spec() {
         
-        describe("#liftError") {
-            
-            context("When lifting an error") {
+        describe("#dropError") {
+
+            context("When dropping an error") {
 
                 var signal: Signal<(), NSError>!
                 var observer: Signal<(), NSError>.Observer!
                 var converted: Signal<(), NoError>!
-                
+
                 beforeEach {
                     let (_signal, _observer) = Signal<(), NSError>.pipe()
                     signal = _signal
                     observer = _observer
-                    converted = signal.liftError()
+                    converted = signal.dropError()
                 }
-                
+
                 it("should ignore the error and complete") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0).to(beEmpty())
@@ -39,7 +43,7 @@ public class SignalSpec: QuickSpec {
                     }
                     observer.send(error: NSError(domain: "", code: 0, userInfo: [:]))
                 }}
-                
+
                 it("should not ignore a value") { waitUntil { done in
                     converted.collect().observeValues {
                         expect($0.count).to(equal(2))
@@ -49,9 +53,54 @@ public class SignalSpec: QuickSpec {
                     observer.send(value: ())
                     observer.sendCompleted()
                 }}
-                
+
             }
-            
+
+        }
+
+        describe("#liftError") {
+
+            context("When lifting an error") {
+
+                var signal: Signal<Int, NSError>!
+                var observer: Signal<Int, NSError>.Observer!
+                var converted: Signal<Int, MyError>!
+
+                beforeEach {
+                    let (_signal, _observer) = Signal<Int, NSError>.pipe()
+                    signal = _signal
+                    observer = _observer
+                    converted = signal.liftError()
+                }
+
+                it("should ignore the error and complete") { waitUntil { done in
+                    converted.collect().observeResult {
+                        switch $0 {
+                        case .success(let value):
+                            expect(value).to(beEmpty())
+                            done()
+                        case .failure: break
+                        }
+                    }
+                    observer.send(error: NSError(domain: "", code: 0, userInfo: [:]))
+                }}
+
+                it("should not ignore a value") { waitUntil { done in
+                    converted.collect().observeResult {
+                        switch $0 {
+                        case .success(let value):
+                            expect(value.count).to(equal(2))
+                            done()
+                        case .failure: break
+                        }
+                    }
+                    observer.send(value: 2)
+                    observer.send(value: 1)
+                    observer.sendCompleted()
+                }}
+
+            }
+
         }
         
         describe("#toResultSignal") {

@@ -67,6 +67,7 @@
 		CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */; };
 		CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8C1E607B28005D7E8F /* UIView.swift */; };
 		CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */; };
+		CE59AE1720129108004F99DC /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59AE1620129108004F99DC /* ResultSpec.swift */; };
 		CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0F01E82D1F9005C300E /* PathAppendable.swift */; };
 		CE983D471F913350004E8712 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE983D461F913350004E8712 /* Localizable.strings */; };
 		CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8ED251FE968410037ED3D /* AppDelegate.swift */; };
@@ -196,6 +197,7 @@
 		CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collapsable.swift; sourceTree = "<group>"; };
 		CE3A9B8C1E607B28005D7E8F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		CE59AE1620129108004F99DC /* ResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSpec.swift; sourceTree = "<group>"; };
 		CE80E0F01E82D1F9005C300E /* PathAppendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendable.swift; sourceTree = "<group>"; };
 		CE983D461F913350004E8712 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CEB8ED231FE968410037ED3D /* CoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -488,6 +490,7 @@
 			children = (
 				CEE9BFAE1E8986D400D0E65D /* SignalProducerSpec.swift */,
 				CEE9BFAF1E8986D400D0E65D /* SignalSpec.swift */,
+				CE59AE1620129108004F99DC /* ResultSpec.swift */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				CEE9BFC91E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift in Sources */,
 				CEE9BFBE1E8986D400D0E65D /* UIAlertControllerSpec.swift in Sources */,
 				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
+				CE59AE1720129108004F99DC /* ResultSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
 				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
 				CEE9BFB51E8986D400D0E65D /* CollectionSpec.swift in Sources */,

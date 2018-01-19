@@ -33,7 +33,7 @@ public extension Signal {
      - returns: A signal with the same value type but with `NoError` as the error type
      */
     public func dropError() -> Signal<Value, NoError> {
-        return flatMapError { _ in .empty }
+        return flatMapError { _ in SignalProducer<Value, NoError>.empty }
     }
 
     /**
@@ -46,7 +46,7 @@ public extension Signal {
          - note: You can do this to avoid `.dropError().promoteError()` chaining
      */
     public func liftError<NewError>() -> Signal<Value, NewError> {
-        return flatMapError { _ in .empty }
+        return flatMapError { _ in SignalProducer<Value, NewError>.empty }
     }
 
     /**
