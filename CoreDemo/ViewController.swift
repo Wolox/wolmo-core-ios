@@ -18,4 +18,9 @@ final internal class ViewController: UIViewController {
         view = _view
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        load(childViewController: _childController, into: _view.childContainerView)
+    }
+
 }
