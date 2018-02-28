@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Core
+import WolmoCore
 
 class ViewController: UIViewController {
 

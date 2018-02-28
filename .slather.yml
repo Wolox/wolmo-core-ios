@@ -1,20 +1,18 @@
-xcodeproj: ./Core.xcodeproj
-scheme: Core
+xcodeproj: ./WolmoCore.xcodeproj
+scheme: WolmoCore
 ignore:
-  - CoreTests/*
+  - WolmoCoreTests/*
   - Carthage/*
-  - CoreDemo/*
+  - WolmoCoreDemo/*
   - AnimationDemo/*
 # UI can't be tested
-  - Core/Utilities/Alerts/AlertViewPresenter.swift
-  - Core/Utilities/ProgressHUD/ProgressHUDDelegate.swift
-  - Core/Extensions/UIKit/UIButton.swift
-  - Core/Extensions/UIKit/UIView/Collapsable.swift
-  - Core/Extensions/UIKit/UIView/UIView.swift
-  - Core/Extensions/UIKit/UIView/Gradient.swift
-  - Core/Extensions/UIKit/UIViewController.swift
-  - Core/Extensions/Animations/*
-# UIControl can't be sent events programatically.
-  - Core/Utilities/ActionHandler.swift
+  - WolmoCore/Utilities/Alerts/AlertViewPresenter.swift
+  - WolmoCore/Utilities/ProgressHUD/ProgressHUDDelegate.swift
+  - WolmoCore/Extensions/UIKit/UIButton.swift
+  - WolmoCore/Extensions/UIKit/UIView/Collapsable.swift
+  - WolmoCore/Extensions/UIKit/UIView/UIView.swift
+  - WolmoCore/Extensions/UIKit/UIView/Gradient.swift
+  - WolmoCore/Extensions/UIKit/UIViewController.swift
+  - WolmoCore/Extensions/Animations/*
 # AV objects can't be tested.
-  - Core/Extensions/AVFoundation/*
+  - WolmoCore/Extensions/AVFoundation/*

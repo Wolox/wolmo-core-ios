@@ -56,7 +56,7 @@ app:
   envs:
   - opts:
       is_expand: false
-    BITRISE_PROJECT_PATH: Core.xcodeproj
+    BITRISE_PROJECT_PATH: WolmoCore.xcodeproj
   - opts:
       is_expand: false
-    BITRISE_SCHEME: Core
+    BITRISE_SCHEME: WolmoCore
