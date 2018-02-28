@@ -7,6 +7,8 @@
 
 WolMo - Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
 
+At Wolox, we complement this framework with [Wolmo - Reactive Core](https://github.com/Wolox/wolmo-reactive-core-ios).
+
 ## Table of Contents
 
   * [Installation](#installation)
@@ -32,9 +34,13 @@ You can install Carthage with Homebrew using the following command:
 brew update
 brew install carthage
 ```
-To download wolmo-core-iOS, add this to your Cartfile:
+To download wolmo-core-ios, add this to your Cartfile:
 ```
+<<<<<<< HEAD
 github "Wolox/wolmo-core-ios" ~> 4.1.0
+=======
+github "Wolox/wolmo-core-ios" ~> <insert version would like, for example, 3.0.0>
+>>>>>>> Delete RAC-related code
 ```
 
 ### Manually
@@ -49,33 +55,40 @@ The main difference between them is that `utilities` represent components that a
 ### Utilities
 Constitutes a component which is independent from another component.
 
-For example, [AlertViewPresenter](Core/Utilities/Alerts/AlertViewPresenter.swift) represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc...) which can adopt this behaviour may be an `AlertViewPresenter`.
+For example, [AlertViewPresenter](WolmoCore/Utilities/Alerts/AlertViewPresenter.swift) represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc...) which can adopt this behaviour may be an `AlertViewPresenter`.
 
 In this framework, we give a default implementation of `UIViewController` as an `AlertViewPresenter`. However, note that they are independent one from another.
 
-`Wolmo-core` provides the following utilities:
+`WolmoCore` provides the following utilities:
 
-1. [AlertViewPresenter](Core/Utilities/Alerts/AlertViewPresenter.swift): Abstracts the logic of presenting different type of alerts.
-2. [ActionHandler](Core/Utilities/ActionHandler.swift): Closure-based handlers for UIControlEvents (great for UIButtons).
-3. [AssociatedObject](Core/Utilities/AssociatedObject.swift): Setter and getter for associated objects. Works with objects and value types.
-4. [Identifiable](Core/Utilities/Identifiable.swift): Identifies a reusable view. Usually used with `UICollectionView` and `UITableView` for cells, headers or footers.
-5. [DeviceType](Core/Utilities/DeviceType.swift): Provides the current device type.
-6. [PathAppendable](Core/Utilities/PathAppendable.swift): Makes a component able to be appended to a URL or string.
+1. [AlertViewPresenter](WolmoCore/Utilities/Alerts/AlertViewPresenter.swift): Abstracts the logic of presenting different type of alerts.
+2. [AssociatedObject](WolmoCore/Utilities/AssociatedObject.swift): Setter and getter for associated objects. Works with objects and value types.
+3. [Identifiable](WolmoCore/Utilities/Identifiable.swift): Identifies a reusable view. Usually used with `UICollectionView` and `UITableView` for cells, headers or footers.
+4. [NibLoadable](WolmoCore/Utilities/NibLoadable.swift): Provides a way to load a resource from a nib, through Identifiable. Usually used to load a UIViewcontroller's view from a .xib.
+5. [DeviceType](WolmoCore/Utilities/DeviceType.swift): Provides the current device type.
+6. [PathAppendable](WolmoCore/Utilities/PathAppendable.swift): Makes a component able to be appended to a URL or string.
+and more...
 
 ### Extensions
 Extends the behaviour of a component (`class`, `struct`, `enum`, ...) by adding common functionality (functions, computed properties, initializers, ...).
 
 Extensions contain components which depends exclusively on other components.
 
-For example, [Collapsable](Core/Extensions/UIKit/UIView/Collapsable.swift) represents a collapsable element. This behaviour is an addition to a `UIView`; it would not make sense to have something which is not renderable as `Collapsable`. Furthermore, it doesn't make sense for `Collapsable` to exist per se; it is a behaviour added to any view which conforms to it.
+For example, [Collapsable](WolmoCore/Extensions/UIKit/UIView/Collapsable.swift) represents a collapsable element. This behaviour is an addition to a `UIView`; it would not make sense to have something which is not renderable as `Collapsable`. Furthermore, it doesn't make sense for `Collapsable` to exist per se; it is a behaviour added to any view which conforms to it.
 
-`Wolmo-core` provides the following extensions:
+`WolmoCore` provides the following extensions:
 
+<<<<<<< HEAD
 1. [ReactiveCocoa](Core/Extensions/ReactiveCocoa): Extensions for [Signal](Core/Extensions/ReactiveCocoa/Signal.swift) and [SignalProducer](Core/Extensions/ReactiveCocoa/SignalProducer.swift).
 2. [AVFoundation](Core/Extensions/AVFoundation): Extensions used for AVFoundation elements, such as [AVAsset](Core/Extensions/AVFoundation/AVAsset.swift) and [AVPlayerItem](Core/Extensions/AVFoundation/AVPlayerItem.swift).
 3. [UIKit](Core/Extensions/UIKit): Extensions for UIKit elements, such as [UIView](Core/Extensions/UIKit/UIView/UIView.swift) and [UIViewController](Core/Extensions/UIKit/UIViewController.swift).
 4. [Foundation](Core/Extensions/Foundation): Extensions for Foundation elements, such as [String](Core/Extensions/Foundation/String.swift), [Array](Core/Extensions/Foundation/Array.swift) and [Date](Core/Extensions/Foundation/Date.swift).
 5. [Animations](Core/Extensions/Animations): Extensions for `UIView` to animate it easily, sush as [SimpleAnimation](Core/Extensions/Animations/SimpleAnimation.swift), [MixedAnimation](Core/Extensions/Animations/MixedAnimation.swift) and [ChainedAnimation](Core/Extensions/Animations/ChainedAnimation.swift)
+=======
+1. [AVFoundation](WolmoCore/Extensions/AVFoundation): Extensions used for AVFoundation elements, such as [AVAsset](WolmoCore/Extensions/AVFoundation/AVAsset.swift) and [AVPlayerItem](WolmoCore/Extensions/AVFoundation/AVPlayerItem.swift).
+2. [UIKit](WolmoCore/Extensions/UIKit): Extensions for UIKit elements, such as [UIView](WolmoCore/Extensions/UIKit/UIView/UIView.swift) and [UIViewController](WolmoCore/Extensions/UIKit/UIViewController.swift).
+3. [Foundation](WolmoCore/Extensions/Foundation): Extensions for Foundation elements, such as [String](WolmoCore/Extensions/Foundation/String.swift), [Array](WolmoCore/Extensions/Foundation/Array.swift) and [Date](WolmoCore/Extensions/Foundation/Date.swift).
+>>>>>>> Delete RAC-related code
 
 ## Bootstrap
 ```
@@ -91,16 +104,16 @@ script/bootstrap
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Run tests (`./script/test`)
 6. Push your branch (`git push origin my-new-feature`)
-7. Create a new Pull Request
+7. Create a new Pull Request to the original repository
 
 ## About
 
-This project is maintained by [Daniela Riesgo](https://github.com/danielaRiesgo) and it is written by [Wolox](http://www.wolox.com.ar).
+This project is maintained by [Wolox](http://www.wolox.com.ar).
 
 ![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
 
 ## License
-**WolMo - Core iOS** is available under the MIT [license](LICENSE.txt).
+**WolMo - Core iOS** is available under the [MIT license](LICENSE.txt).
 
     Copyright (c) 2016 Francisco Depascuali <francisco.depascuali@wolox.com.ar>
 
