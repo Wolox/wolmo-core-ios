@@ -100,7 +100,7 @@ public class SimpleAnimation: AnimationType {
     // MARK: - Start
     
     public func startAnimation(completion: ((Bool) -> Void)? = .none) {
-        self.completion = completion!
+        self.completion = completion
         if animations.count > 0 {
             let animation = animations.remove(at: 0)
             recursiveAnimation(animation: animation, animations: animations)
