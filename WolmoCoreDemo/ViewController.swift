@@ -23,4 +23,9 @@ final internal class ViewController: UIViewController {
         load(childViewController: _childController, into: _view.childContainerView)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _childController.changeColor()
+    }
+
 }

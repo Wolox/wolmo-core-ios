@@ -153,6 +153,8 @@ public extension UIView {
         The gradient will always have the same direction in relation to the view's
             orientation at a certain time.
         The gradient will always acommodate to the view's change in size or orientation.
+
+        - warning: To avoid memory leak and crashes, you should set the gradient to .none before deallocating the view.
     */
     public var gradient: ViewGradient? {
         set {
@@ -171,27 +173,27 @@ public extension UIView {
     private func apply(gradient: ViewGradient) {
         let gradientLayer = gradient.layer
         gradientLayer.bounds = bounds
-        reactive.producer(forKeyPath: "bounds")
-            .take(duringLifetimeOf: self)
-            .take(duringLifetimeOf: gradientLayer)
-            .map { $0 as! CGRect }      //swiftlint:disable:this force_cast
-            .on(value: { [unowned gradientLayer] in gradientLayer.bounds = $0})
-            .start()
         layer.insertSublayer(gradientLayer, at: 0)
         setAssociatedObject(self, key: &ViewGradientKey, value: gradient as ViewGradient?)
+        let observer = observe(\.bounds) { object, _ in
+            gradientLayer.bounds = object.bounds
+        }
+        setAssociatedObject(self, key: &ViewGradientObserverKey, value: observer as NSKeyValueObservation?)
     }
     
     private func removeGradient() {
         if let gradient = getGradient() {
             gradient.layer.removeFromSuperlayer()
             setAssociatedObject(self, key: &ViewGradientKey, value: ViewGradient?.none)
+            setAssociatedObject(self, key: &ViewGradientObserverKey, value: NSKeyValueObservation?.none)
         }
     }
     
     private func getGradient() -> ViewGradient? {
         return getAssociatedObject(self, key: &ViewGradientKey)
     }
-    
+
 }
 
 private var ViewGradientKey: UInt8 = 1
+private var ViewGradientObserverKey: UInt8 = 2

@@ -17,4 +17,8 @@ final internal class ChildController: UIViewController {
         view = _view
     }
 
+    internal func changeColor() {
+        _view.centralView.backgroundColor = .brown
+    }
+
 }
