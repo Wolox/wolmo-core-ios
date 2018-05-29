@@ -154,7 +154,7 @@ public extension UIView {
             orientation at a certain time.
         The gradient will always acommodate to the view's change in size or orientation.
 
-        - warning: To avoid memory leak and crashes, you should set the gradient to .none before deallocating the view.
+        - warning: To avoid memory leak and crashes, you should set the `gradient` to .none before deallocating the view.
     */
     public var gradient: ViewGradient? {
         set {

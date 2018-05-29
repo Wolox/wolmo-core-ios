@@ -21,36 +21,44 @@ public extension UILabel {
      
      - warning: Setting this property may arise a runtime error if the font name returned by
      `UIFont.appFontName(for:)` is not valid.
+     - warning: To avoid memory leak and crashes, you should set the `fontTextStyle` to .none before deallocating the label.
      - seealso: UIFont.appFontName(for:).
      */
     public var fontTextStyle: UIFontTextStyle? {
         get {
-            return getAssociatedObject(self, key: &fontTextStyleKey)
+            return getStyle()
         }
 
         set {
-            if let disposable: Disposable = getAssociatedObject(self, key: &fontTextStyleDisposableKey) {
-                disposable.dispose()
-                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: Disposable?.none, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if fontTextStyle != nil {
+                removeOldStyle()
             }
-            setAssociatedObject(self, key: &fontTextStyleKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if let fontStyle = fontTextStyle {
-                font = UIFont.appFont(for: fontStyle)
-                let disposable = reactive.signal(forKeyPath: "font")
-                    .take(during: self.reactive.lifetime)
-                    .take(first: 1)
-                    .observeValues { [unowned self] _ in
-                        setAssociatedObject(self,
-                                            key: &fontTextStyleKey,
-                                            value: UIFontTextStyle?.none,
-                                            policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                }
-                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: disposable, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if let style = newValue {
+                applyNewStyle(style)
             }
         }
+    }
+
+    private func getStyle() -> UIFontTextStyle? {
+        return getAssociatedObject(self, key: &fontTextStyleKey)
+    }
+
+    private func removeOldStyle() {
+        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+        setAssociatedObject(self, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
+    }
+
+    private func applyNewStyle(_ style: UIFontTextStyle) {
+        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+        font = UIFont.appFont(for: style)
+        let observer = observe(\.font) { object, _ in
+            setAssociatedObject(object, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+            setAssociatedObject(object, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
+        }
+        setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)
     }
 
 }
 
 private var fontTextStyleKey: UInt8 = 0
-private var fontTextStyleDisposableKey: UInt8 = 1
+private var fontTextStyleObserverKey: UInt8 = 1
