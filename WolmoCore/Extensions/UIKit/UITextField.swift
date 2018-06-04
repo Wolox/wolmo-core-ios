@@ -41,33 +41,40 @@ public extension UITextField {
     */
     public var fontTextStyle: UIFontTextStyle? {
         get {
-            return getAssociatedObject(self, key: &fontTextStyleKey)
+            return getStyle()
         }
 
         set {
-            if let disposable: Disposable = getAssociatedObject(self, key: &fontTextStyleDisposableKey) {
-                disposable.dispose()
-                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: Disposable?.none, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if fontTextStyle != nil {
+                removeOldStyle()
             }
-            setAssociatedObject(self, key: &fontTextStyleKey, value: newValue, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if let fontStyle = fontTextStyle {
-                font = UIFont.appFont(for: fontStyle)
-                let disposable = reactive.signal(forKeyPath: "font")
-                    .take(during: self.reactive.lifetime)
-                    .take(first: 1)
-                    .observeValues { [unowned self] _ in
-                        setAssociatedObject(self,
-                                            key: &fontTextStyleKey,
-                                            value: UIFontTextStyle?.none,
-                                            policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                }
-                setAssociatedObject(self, key: &fontTextStyleDisposableKey, value: disposable, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if let style = newValue {
+                applyNewStyle(style)
             }
         }
+    }
+
+    private func getStyle() -> UIFontTextStyle? {
+        return getAssociatedObject(self, key: &fontTextStyleKey)
+    }
+
+    private func removeOldStyle() {
+        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+        setAssociatedObject(self, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
+    }
+
+    private func applyNewStyle(_ style: UIFontTextStyle) {
+        setAssociatedObject(self, key: &fontTextStyleKey, value: style)
+        font = UIFont.appFont(for: style)
+        let observer = observe(\.font) { object, _ in
+            setAssociatedObject(object, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+            setAssociatedObject(object, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
+        }
+        setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)
     }
 
 }
 
 private var nextTextFieldKey: UInt8 = 0
 private var fontTextStyleKey: UInt8 = 1
-private var fontTextStyleDisposableKey: UInt8 = 2
+private var fontTextStyleObserverKey: UInt8 = 2

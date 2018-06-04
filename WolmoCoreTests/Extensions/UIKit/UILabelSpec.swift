@@ -28,7 +28,7 @@ public class UILabelSpec: QuickSpec {
 
     override public func spec() {
 
-        beforeSuite {
+        beforeEach {
             UIFont.fontProvider = MyFontProvider()
         }
 

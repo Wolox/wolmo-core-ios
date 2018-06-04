@@ -11,6 +11,17 @@ import WolmoCore
 
 final internal class View: UIView, NibLoadable {
     
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.fontTextStyle = UIFontTextStyle.headline
+        }
+    }
+    @IBOutlet weak var bodyTextField: UITextField! {
+        didSet {
+            bodyTextField.fontTextStyle = UIFontTextStyle.body
+        }
+    }
+
     @IBOutlet weak var childContainerView: UIView!
     
 }

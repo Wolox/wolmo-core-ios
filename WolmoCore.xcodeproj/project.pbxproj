@@ -86,6 +86,8 @@
 		CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */; };
 		CE3A9BA11E607B28005D7E8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8C1E607B28005D7E8F /* UIView.swift */; };
 		CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */; };
+		CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */; };
+		CE6E9A1E20C5A1CE0068CC7A /* UIFontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E9A1D20C5A1CE0068CC7A /* UIFontSpec.swift */; };
 		CE74869E2047073D00636D98 /* WolmoCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE74869F2047089E00636D98 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B988B9661D24457D00824685 /* ReactiveCocoa.framework */; };
 		CE7486A02047089E00636D98 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1CE2B61E1C0B1E00A7F7CF /* ReactiveSwift.framework */; };
@@ -278,6 +280,8 @@
 		CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collapsable.swift; sourceTree = "<group>"; };
 		CE3A9B8C1E607B28005D7E8F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontProvider.swift; sourceTree = "<group>"; };
+		CE6E9A1D20C5A1CE0068CC7A /* UIFontSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontSpec.swift; sourceTree = "<group>"; };
 		CE7486A22047089E00636D98 /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
 		CE80E0F01E82D1F9005C300E /* PathAppendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathAppendable.swift; sourceTree = "<group>"; };
 		CE983D461F913350004E8712 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
+				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
 				CEB8ED271FE968410037ED3D /* ViewController.swift */,
 				CEB8ED571FE96ABC0037ED3D /* View.swift */,
 				CEB8ED511FE9688E0037ED3D /* View.xib */,
@@ -614,6 +619,7 @@
 				CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */,
 				CEE9BFB31E8986D400D0E65D /* UITextFieldSpec.swift */,
 				CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */,
+				CE6E9A1D20C5A1CE0068CC7A /* UIFontSpec.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -921,6 +927,7 @@
 				CEE9BFB81E8986D400D0E65D /* RawRepresentableSpec.swift in Sources */,
 				CEE9BFC91E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift in Sources */,
 				CEE9BFBE1E8986D400D0E65D /* UIAlertControllerSpec.swift in Sources */,
+				CE6E9A1E20C5A1CE0068CC7A /* UIFontSpec.swift in Sources */,
 				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
 				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
@@ -945,6 +952,7 @@
 				CEB8ED281FE968410037ED3D /* ViewController.swift in Sources */,
 				CEB8ED541FE968A30037ED3D /* ChildController.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
+				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
 				CEB8ED5A1FE96ACA0037ED3D /* ChildView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
