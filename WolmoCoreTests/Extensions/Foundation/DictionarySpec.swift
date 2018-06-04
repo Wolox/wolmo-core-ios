@@ -28,9 +28,10 @@ public class DictionarySpec: QuickSpec {
 
                 context("when the key's value's type is not T") {
 
-                    it("should raise a runtime error") {
-                        expect(_ = dict1.castedValue(forKey: 2, or: "two")).to(throwAssertion())
-                    }
+                    // Commenting til Nimble finds a solution for this problem: https://github.com/Quick/Nimble/issues/478
+//                    it("should raise a runtime error") {
+//                        expect(_ = dict1.castedValue(forKey: 2, or: "two")).to(throwAssertion())
+//                    }
 
                 }
 
