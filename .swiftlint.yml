@@ -1,8 +1,25 @@
 disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
-  - variable_name
+  - identifier_name
 excluded: # paths to ignore during linting. overridden by `included`.
   - Carthage
   - WolmoCoreTests
-line_length: 200
+line_length:
+  warning: 200
+  ignores_comments: true
 function_body_length: 20
+# identifier_name:
+#   min_length:
+#     error: 3
+#   excluded:
+#     # Less than minimum
+#     - id
+#     - iD
+#     - ID
+#     ## Indexes
+#     - i
+#     - j
+#     # Not camel case
+#     - URL
+# allowed_symbols:
+#   - "_"

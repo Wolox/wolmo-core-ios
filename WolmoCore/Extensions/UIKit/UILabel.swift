@@ -49,7 +49,7 @@ public extension UILabel {
     }
 
     private func applyNewStyle(_ style: UIFontTextStyle) {
-        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+        setAssociatedObject(self, key: &fontTextStyleKey, value: style)
         font = UIFont.appFont(for: style)
         let observer = observe(\.font) { object, _ in
             setAssociatedObject(object, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
