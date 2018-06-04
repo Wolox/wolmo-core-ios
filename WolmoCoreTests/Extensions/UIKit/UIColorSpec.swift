@@ -27,7 +27,6 @@ public class UIColorSpec: QuickSpec {
                     
                     it("should not be nil") {
                         let color = UIColor(hex: "#08BBF4")
-                        
                         expect(color).toNot(beNil())
                     }
                 }

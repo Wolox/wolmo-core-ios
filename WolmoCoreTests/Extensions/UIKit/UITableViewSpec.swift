@@ -12,7 +12,7 @@ import Nimble
 import WolmoCore
 
 public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDelegate {
-    
+
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -24,9 +24,21 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
-    
-    public func tableView(_ tableView: UITableView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UITableViewHeaderFooterView {
+
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return UITableViewHeaderFooterView()
+    }
+
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UITableViewHeaderFooterView()
+    }
+
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
     }
     
     override public func spec() {

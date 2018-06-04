@@ -26,7 +26,7 @@ public extension UIImage {
      
      */
     
-    public func resized(toSize: CGSize, maintainAspectRatio: Bool, useScreenScale: Bool = true, cornerRadius: CGFloat = 0.0) -> UIImage {
+    public func resized(toSize: CGSize, maintainAspectRatio: Bool, useScreenScale: Bool = true, cornerRadius: CGFloat = 0.0, insets: UIEdgeInsets = .zero) -> UIImage {
         let newSize = maintainAspectRatio ? size.resizedMaintainingRatio(wantedSize: toSize) : toSize
         let scale: CGFloat = useScreenScale ? 0.0 : 1.0
         let imageRect = CGRect(origin: CGPoint.zero, size: newSize)
@@ -36,30 +36,13 @@ public extension UIImage {
             let path = UIBezierPath(roundedRect: imageRect, cornerRadius: cornerRadius)
             path.addClip()
         }
-        draw(in: imageRect)
+        resizableImage(withCapInsets: capInsets).draw(in: imageRect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return newImage
     }
-    
-    /**
-     Returns a resized copy of the image. In case that the new size is smaller it will crop it, 
-        in case that it is bigger it will replicate it to fill the desired size, ignoring the points specified by capInsets.
-     
-     - parameter toSize: The wanted size of the new image.
-     - parameter capInsets: UIEdgeInsets specifies how many points in each direction to ignore when replicating the image.
-            See https://www.natashatherobot.com/ios-stretchable-button-uiedgeinsetsmake/ for some examples.
-    */
-    
-    public func resized(toSize: CGSize, withCapInsets capInsets: UIEdgeInsets) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(toSize, false, 0.0)
-        resizableImage(withCapInsets: capInsets).draw(in: CGRect(origin: CGPoint.zero, size: toSize))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return newImage
-    }
+
     
     /**
      Returns the aspect ratio of the image represented by a CGFloat. 
