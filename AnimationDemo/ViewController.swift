@@ -288,7 +288,7 @@ extension ViewController {
                                        y: view.frame.origin.y - view.frame.height / 2,
                                        width: view.frame.width * 2,
                                        height: view.frame.height * 2)
-            }) { _ in
+            }, completion: { _ in
                 UIView.animate(withDuration: 2.0) {
                     view.frame = CGRect(x: view.frame.origin.x - 50,
                                            y: view.frame.origin.y,
@@ -301,7 +301,7 @@ extension ViewController {
                                            width: view.frame.width / 2,
                                            height: view.frame.height / 2)
                 }
-            }
+            })
         }
 
         return (coreAnimation: .none, normalAnimation: animation)
