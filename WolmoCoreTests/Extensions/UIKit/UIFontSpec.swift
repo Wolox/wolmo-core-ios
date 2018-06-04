@@ -19,6 +19,19 @@ fileprivate class CustomFontProvider: UIFontProvider {
 
 }
 
+fileprivate class CustomFontProviderCopy: UIFontProvider {
+
+    func appFontName(for style: UIFontTextStyle) -> String {
+        switch style {
+        case .headline: return "Kefa"
+        case .body: return "Savoye LET"
+        case .title1: return "ask"
+        default: return UIFont.preferredFont(forTextStyle: style).fontName
+        }
+    }
+
+}
+
 fileprivate class CustomFontProvider2: UIFontProvider {
 
     func appFontName(for style: UIFontTextStyle) -> String {
@@ -140,6 +153,74 @@ public class UIFontSpec: QuickSpec {
 //                        it("should throw a runtime error") {
 //                            expect(UIFont.appFont(for: .title1)).to(throwAssertion())
 //                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        describe("==") {
+
+            context("when both are .none") {
+
+                it("should return true") {
+                    let prov1: UIFontProvider? = .none
+                    let prov2: UIFontProvider? = .none
+                    expect(prov1 == prov2).to(beTrue())
+                }
+
+            }
+
+            context("when first is .none") {
+
+                it("should return false") {
+                    let prov1: UIFontProvider? = .none
+                    let prov2: UIFontProvider? = CustomFontProvider2()
+                    expect(prov1 == prov2).to(beFalse())
+                }
+
+            }
+
+            context("when second is .none") {
+
+                it("should return false") {
+                    let prov1: UIFontProvider? = CustomFontProvider()
+                    let prov2: UIFontProvider? = .none
+                    expect(prov1 == prov2).to(beFalse())
+                }
+
+            }
+
+            context("when both have value") {
+
+                context("when they associate different fonts") {
+
+                    it("should return false") {
+                        let prov1: UIFontProvider? = CustomFontProvider()
+                        let prov2: UIFontProvider? = CustomFontProvider2()
+                        expect(prov1 == prov2).to(beFalse())
+                    }
+
+                }
+
+                context("when they associate same fonts") {
+
+                    it("should return false") {
+                        let prov1: UIFontProvider? = CustomFontProvider()
+                        let prov2: UIFontProvider? = CustomFontProviderCopy()
+                        expect(prov1 == prov2).to(beTrue())
+                    }
+
+                }
+
+                context("when they are exactly the same") {
+
+                    it("should return false") {
+                        let prov1: UIFontProvider? = CustomFontProvider()
+                        let prov2: UIFontProvider? = CustomFontProvider()
+                        expect(prov1 == prov2).to(beTrue())
                     }
 
                 }
