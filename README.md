@@ -36,11 +36,7 @@ brew install carthage
 ```
 To download wolmo-core-ios, add this to your Cartfile:
 ```
-<<<<<<< HEAD
 github "Wolox/wolmo-core-ios" ~> 4.1.0
-=======
-github "Wolox/wolmo-core-ios" ~> <insert version would like, for example, 3.0.0>
->>>>>>> Delete RAC-related code
 ```
 
 ### Manually
