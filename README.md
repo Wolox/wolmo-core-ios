@@ -9,6 +9,10 @@ WolMo - Core iOS is a framework which provides extensions and utilities for iOS 
 
 At Wolox, we complement this framework with [Wolmo - Reactive Core](https://github.com/Wolox/wolmo-reactive-core-ios).
 
+<img src="https://github.com/Wolox/wolmo-core-ios/tree/master/Screenshots/animationDemo.gif" width="600" height="450" /></a>
+<br><br/>
+
+
 ## Table of Contents
 
   * [Installation](#installation)
@@ -74,17 +78,14 @@ For example, [Collapsable](WolmoCore/Extensions/UIKit/UIView/Collapsable.swift) 
 
 `WolmoCore` provides the following extensions:
 
-<<<<<<< HEAD
-1. [ReactiveCocoa](Core/Extensions/ReactiveCocoa): Extensions for [Signal](Core/Extensions/ReactiveCocoa/Signal.swift) and [SignalProducer](Core/Extensions/ReactiveCocoa/SignalProducer.swift).
-2. [AVFoundation](Core/Extensions/AVFoundation): Extensions used for AVFoundation elements, such as [AVAsset](Core/Extensions/AVFoundation/AVAsset.swift) and [AVPlayerItem](Core/Extensions/AVFoundation/AVPlayerItem.swift).
-3. [UIKit](Core/Extensions/UIKit): Extensions for UIKit elements, such as [UIView](Core/Extensions/UIKit/UIView/UIView.swift) and [UIViewController](Core/Extensions/UIKit/UIViewController.swift).
-4. [Foundation](Core/Extensions/Foundation): Extensions for Foundation elements, such as [String](Core/Extensions/Foundation/String.swift), [Array](Core/Extensions/Foundation/Array.swift) and [Date](Core/Extensions/Foundation/Date.swift).
-5. [Animations](Core/Extensions/Animations): Extensions for `UIView` to animate it easily, sush as [SimpleAnimation](Core/Extensions/Animations/SimpleAnimation.swift), [MixedAnimation](Core/Extensions/Animations/MixedAnimation.swift) and [ChainedAnimation](Core/Extensions/Animations/ChainedAnimation.swift)
-=======
 1. [AVFoundation](WolmoCore/Extensions/AVFoundation): Extensions used for AVFoundation elements, such as [AVAsset](WolmoCore/Extensions/AVFoundation/AVAsset.swift) and [AVPlayerItem](WolmoCore/Extensions/AVFoundation/AVPlayerItem.swift).
 2. [UIKit](WolmoCore/Extensions/UIKit): Extensions for UIKit elements, such as [UIView](WolmoCore/Extensions/UIKit/UIView/UIView.swift) and [UIViewController](WolmoCore/Extensions/UIKit/UIViewController.swift).
 3. [Foundation](WolmoCore/Extensions/Foundation): Extensions for Foundation elements, such as [String](WolmoCore/Extensions/Foundation/String.swift), [Array](WolmoCore/Extensions/Foundation/Array.swift) and [Date](WolmoCore/Extensions/Foundation/Date.swift).
->>>>>>> Delete RAC-related code
+4. [Animations](WolmoCore/Extensions/Animations): Extensions for `UIView` to animate it easily, such as [SimpleAnimation](WolmoCore/Extensions/Animations/SimpleAnimation.swift), [MixedAnimation](WolmoCore/Extensions/Animations/MixedAnimation.swift) and [ChainedAnimation](WolmoCore/Extensions/Animations/ChainedAnimation.swift)
+
+You can check in the [AnimationDemo](AnimationDemo/ViewController.swift) the contrast between the normal way of doing animations and our way.
+You can see examples of simple animations and one complex animation.
+Moreover, you can check some cases which does not work as expected with our extensions so you don't run into those problems.
 
 ## Bootstrap
 ```
