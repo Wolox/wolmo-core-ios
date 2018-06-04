@@ -8,6 +8,8 @@ line_length:
   warning: 200
   ignores_comments: true
 function_body_length: 20
+# allowed_symbols not working: https://github.com/realm/SwiftLint/issues/1762
+# So disabling identifier_name rule
 # identifier_name:
 #   min_length:
 #     error: 3
@@ -21,5 +23,5 @@ function_body_length: 20
 #     - j
 #     # Not camel case
 #     - URL
-# allowed_symbols:
-#   - "_"
+#   allowed_symbols:
+#     - "_"
