@@ -615,10 +615,10 @@
 				CEE9BFB11E8986D400D0E65D /* UIAlertControllerSpec.swift */,
 				CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */,
 				CEE9BFB21E8986D400D0E65D /* UIColorSpec.swift */,
+				CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */,
 				B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */,
 				CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */,
 				CEE9BFB31E8986D400D0E65D /* UITextFieldSpec.swift */,
-				CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */,
 				CE6E9A1D20C5A1CE0068CC7A /* UIFontSpec.swift */,
 			);
 			path = UIKit;

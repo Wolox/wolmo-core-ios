@@ -7,7 +7,7 @@ ignore:
   - AnimationDemo/*
 # UI can't be tested
   - WolmoCore/Utilities/Alerts/AlertViewPresenter.swift
-  - WolmoCore/Utilities/ProgressHUD/ProgressHUDDelegate.swift
+  - WolmoCore/Utilities/DeviceType.swift
   - WolmoCore/Extensions/UIKit/UIButton.swift
   - WolmoCore/Extensions/UIKit/UIView/Collapsable.swift
   - WolmoCore/Extensions/UIKit/UIView/UIView.swift
