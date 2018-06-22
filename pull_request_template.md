@@ -1,30 +1,9 @@
 ## Summary ##
-**Trello card**: https://trello.com/b/THE_PROJECT_BOARD/THE_CARD
+**Issue**: GITHUB_ISSUE
 
 A brief description of the pull request
 
-## Test Plan ##
-
-  * Open the app
-  * Login with username 'test@gmail.com' password '123456'
-  * You should see a tost with spinner while logging in.
-  * The main tab bar view should appear after a successfull login.
-
 ## Screenshots ##
-
-### iPhone 4s
-
-Drag and drop screen shots
-
-### iPhone 5c/5/5s
-
-Drag and drop screen shots
-
-### iPhone 6
-
-Drag and drop screen shots
-
-### iPhone 6+
 
 Drag and drop screen shots
 
