@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import ReactiveSwift
-import ReactiveCocoa
 
 public extension UITextField {
     

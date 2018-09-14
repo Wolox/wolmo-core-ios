@@ -43,7 +43,6 @@ public extension UIImage {
         return newImage
     }
 
-    
     /**
      Returns the aspect ratio of the image represented by a CGFloat. 
         For example an image with a 4:3 ratio will give 1.333... as output.

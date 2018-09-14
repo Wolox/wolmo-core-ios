@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
-import ReactiveSwift
 
 public extension UILabel {
 

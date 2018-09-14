@@ -14,5 +14,3 @@ ignore:
   - WolmoCore/Extensions/UIKit/UIView/Gradient.swift
   - WolmoCore/Extensions/UIKit/UIViewController.swift
   - WolmoCore/Extensions/Animations/*
-# AV objects can't be tested.
-  - WolmoCore/Extensions/AVFoundation/*

@@ -10,7 +10,6 @@ import Foundation
 import Quick
 import Nimble
 import WolmoCore
-import ReactiveSwift
 
 public class NibLoadableSpec: QuickSpec {
     
@@ -68,7 +67,7 @@ public class NibLoadableSpec: QuickSpec {
             context("when using custom implementation") {
                 
                 it("should return the custom bundle") {
-                    expect(NibLoadableTableViewCustom.nibBundle).to(equal(Bundle(for: AnyDisposable.self)))
+                    expect(NibLoadableTableViewCustom.nibBundle).to(equal(Bundle(for: UIViewController.self)))
                 }
                 
             }

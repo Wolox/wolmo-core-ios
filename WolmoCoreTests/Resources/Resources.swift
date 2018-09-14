@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import WolmoCore
-import ReactiveSwift
 
 class NibLoadableCollectionCell: UICollectionViewCell, NibLoadable { }
 class NibLoadableCollectionView: UICollectionReusableView, NibLoadable { }
@@ -27,7 +26,7 @@ class NibLoadableTableViewCustom: UITableViewHeaderFooterView, NibLoadable {
     
     // Testing with a class that's outside of our framework, it could be any class from outside
     static var nibBundle: Bundle {
-        return Bundle(for: AnyDisposable.self)
+        return Bundle(for: UIViewController.self)
     }
     
 }
