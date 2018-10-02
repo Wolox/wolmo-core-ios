@@ -53,7 +53,10 @@ public extension UIImage {
     }
     
     /**
-     Returns an image painted with the selected color.
+     Returns an image painted with the selected color,
+     so that wherever the image is inserted, it will have that color (the original if color is .none).
+     - parameter color: UIColor by which to tint image, or nothing to copy the image as it is.
+     - seealso: withRenderingMode(.alwaysOriginal)
      */
     
     public func tintedWith(_ color: UIColor?) -> UIImage {
