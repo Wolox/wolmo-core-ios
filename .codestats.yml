@@ -5,7 +5,7 @@ config:
 metrics:
    slather:
      enabled: true
-     minimum: 85
+     minimum: 80
      upload_report: false
    swiftlint:
      enabled: true
