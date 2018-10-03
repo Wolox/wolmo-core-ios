@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CB88322216455D90073459D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB88321216455D90073459D /* UIImageView.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
@@ -178,6 +179,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CB88321216455D90073459D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 				CE3A9B891E607B28005D7E8F /* UIView */,
 				CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */,
 				CE228ADF1EF2FE1E00097B19 /* UIFont.swift */,
+				0CB88321216455D90073459D /* UIImageView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -824,6 +827,7 @@
 				CE3A9B931E607B28005D7E8F /* Bundle.swift in Sources */,
 				CE3A9B951E607B28005D7E8F /* URL.swift in Sources */,
 				CE3A9B971E607B28005D7E8F /* String.swift in Sources */,
+				0CB88322216455D90073459D /* UIImageView.swift in Sources */,
 				B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */,
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,

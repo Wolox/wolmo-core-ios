@@ -267,6 +267,27 @@ public class StringSpec: QuickSpec {
             }
         }
         
+        describe("#toImage(size:)") {
+            
+            context("When I want a specific size") {
+                
+                it("should return an image with the specified size") {
+                    let wantedSize = CGSize(width: 130, height: 50)
+                    let image = "\u{1F496}".toImage(size: wantedSize)
+                    expect(image!.size).to(equal(wantedSize))
+                }
+            }
+            
+            context("When I don't specify a size") {
+                
+                it("should return an image of 75x75") {
+                    let expectedSize = CGSize(width: 75, height: 75)
+                    let image = "\u{1F496}".toImage()
+                    expect(image!.size).to(equal(expectedSize))
+                }
+            }
+        }
+        
         describe("#isNotEmpty") {
             
             var string: String!
