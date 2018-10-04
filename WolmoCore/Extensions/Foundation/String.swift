@@ -158,30 +158,19 @@ public extension String {
     /**
      Returns UIImage drawing of the string,
      it's recomended for using emojis as images, but it can be used with any string.
-     - parameter size: CGSize of the returned image, if size is not specified it will be set to 75x75.
-     - parameter fontSize: CGFloat, size of the font to use on the represented string, if fontSize is not specified it will be set to the size that better fills the Image.
-     - parameter offx: CGFloat, used to adjust the X position of the string in the image, if offx is not specified the string will be centered on the X axis.
-     - parameter offy: CGFloat, used to adjust the Y position of the string in the image, if offy is not specified the string will be centered on the Y axis.
+     - parameter fontSize: CGFloat, size of the font to use on the represented string.
      */
     
-    func toImage(size: CGSize = CGSize(width: 75, height: 75), fontSize: CGFloat? = nil, offx: CGFloat = 0, offy: CGFloat = 0) -> UIImage? {
-        let size = size
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+    func toImage(fontSize: CGFloat) -> UIImage? {
+        let label = UILabel()
+        label.text = self
+        label.font = UIFont.systemFont(ofSize: fontSize)
+        label.sizeToFit()
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, 0)
         UIColor.clear.set()
-        var fontS: CGFloat
-        var offsetY: CGFloat
-        if let font = fontSize {
-            fontS = font
-            offsetY = (size.height - fontS)/2.15
-        } else {
-            fontS = size.width > size.height ? size.height * 0.85 : size.width * 0.85
-            offsetY = size.height > size.width ? (size.height - size.width)/2.25 : 0
-        }
-        let rect = CGRect(origin: CGPoint(x: 0 + offx, y: offsetY + offy) , size: size)
-        UIRectFill(rect)
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
-        (self as NSString).draw(in: rect, withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontS), NSAttributedStringKey.paragraphStyle: paragraph])
+        (self as NSString).draw(in: label.bounds, withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize), NSAttributedStringKey.paragraphStyle: paragraph])
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
