@@ -160,17 +160,26 @@ public extension String {
      it's recomended for using emojis as images, but it can be used with any string.
      - parameter fontSize: CGFloat, size of the font to use on the represented string.
      */
-    
     func toImage(fontSize: CGFloat) -> UIImage? {
+        let font = UIFont.systemFont(ofSize: fontSize)
+        return toImage(font: font)
+    }
+    
+    /**
+     Returns UIImage drawing of the string,
+     it's recomended for using emojis as images, but it can be used with any string.
+     - parameter font: UIFont to apply to the drawn string.
+     */
+    func toImage(font: UIFont) -> UIImage? {
         let label = UILabel()
         label.text = self
-        label.font = UIFont.systemFont(ofSize: fontSize)
+        label.font = font
         label.sizeToFit()
         UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, 0)
         UIColor.clear.set()
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
-        (self as NSString).draw(in: label.bounds, withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize), NSAttributedStringKey.paragraphStyle: paragraph])
+        self.draw(in: label.bounds, withAttributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.paragraphStyle: paragraph])
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
