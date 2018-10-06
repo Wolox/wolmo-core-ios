@@ -27,8 +27,8 @@ final class StringToImageView: UIView, NibLoadable {
         image2.draw(string: "%")
         image3.draw(string: "\u{1F47b}")
         wideImage1.draw(string: "\u{1F480}testing\u{1F480}", font: font!)
-        wideImage2.draw(string: "Wolox", font: font2!)
-        tallImage1.image = "\u{2714}".toImage(fontSize: 120)
+        wideImage2.image = "Wolox".toImage(font: font2!)?.tintedWith(.blue)
+        tallImage1.image = "\u{2714}".toImage(fontSize: 120)?.tintedWith(.green)
         tallImage2.draw(string: "100", fontSize: 120)
   }
 
