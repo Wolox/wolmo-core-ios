@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02AB4E21682BD2007DB327 /* StringToImageController.swift */; };
+		0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02AB4F21682BD2007DB327 /* StringToImageView.swift */; };
+		0C02AB5521682BD2007DB327 /* StringToImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C02AB5121682BD2007DB327 /* StringToImageView.xib */; };
 		0CB88322216455D90073459D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB88321216455D90073459D /* UIImageView.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -179,6 +182,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C02AB4E21682BD2007DB327 /* StringToImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageController.swift; sourceTree = "<group>"; };
+		0C02AB4F21682BD2007DB327 /* StringToImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageView.swift; sourceTree = "<group>"; };
+		0C02AB5121682BD2007DB327 /* StringToImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringToImageView.xib; sourceTree = "<group>"; };
 		0CB88321216455D90073459D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
@@ -327,6 +333,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C02AB4D21682B8A007DB327 /* StringToImage */ = {
+			isa = PBXGroup;
+			children = (
+				0C02AB4E21682BD2007DB327 /* StringToImageController.swift */,
+				0C02AB4F21682BD2007DB327 /* StringToImageView.swift */,
+				0C02AB5121682BD2007DB327 /* StringToImageView.xib */,
+			);
+			path = StringToImage;
+			sourceTree = "<group>";
+		};
 		46DB73722061412400D70FDD /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +524,7 @@
 		CEB8ED241FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0C02AB4D21682B8A007DB327 /* StringToImage */,
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
 				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
 				CEB8ED271FE968410037ED3D /* ViewController.swift */,
@@ -770,6 +787,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C02AB5521682BD2007DB327 /* StringToImageView.xib in Resources */,
 				CEB8ED521FE9688E0037ED3D /* View.xib in Resources */,
 				CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */,
 				CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */,
@@ -888,10 +906,12 @@
 			files = (
 				CEB8ED581FE96ABC0037ED3D /* View.swift in Sources */,
 				CEB8ED281FE968410037ED3D /* ViewController.swift in Sources */,
+				0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */,
 				CEB8ED541FE968A30037ED3D /* ChildController.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
 				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
 				CEB8ED5A1FE96ACA0037ED3D /* ChildView.swift in Sources */,
+				0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

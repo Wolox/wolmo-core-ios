@@ -21,7 +21,8 @@ final internal class View: UIView, NibLoadable {
             bodyTextField.fontTextStyle = UIFontTextStyle.body
         }
     }
-
+    @IBOutlet weak var stringsButton: UIButton!
+    
     @IBOutlet weak var childContainerView: UIView!
     
 }

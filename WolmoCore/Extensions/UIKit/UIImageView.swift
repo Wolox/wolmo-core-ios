@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UIImageView {
+public extension UIImageView {
     
     /**
      Sets de image of the view to a drawing of the given string,
@@ -37,4 +37,5 @@ extension UIImageView {
         contentMode = .scaleAspectFit
         image = string.toImage(font: font)
     }
+    
 }

@@ -21,11 +21,15 @@ final internal class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         load(childViewController: _childController, into: _view.childContainerView)
+        _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         _childController.changeColor()
     }
-
+    
+    @objc func buttonAction() {
+        present(StringToImageController(), animated: true, completion: .none)
+    }
 }
