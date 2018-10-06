@@ -51,6 +51,26 @@ public extension UIImage {
     public var aspectRatio: CGFloat {
         return size.width / size.height
     }
+    
+    /**
+     Returns an image painted with the selected color,
+     so that wherever the image is inserted, it will have that color (the original if color is .none).
+     - parameter color: UIColor by which to tint image, or nothing to copy the image as it is.
+     - seealso: withRenderingMode(.alwaysOriginal)
+     */
+    
+    public func tintedWith(_ color: UIColor?) -> UIImage {
+        if let color = color {
+            var newImage = withRenderingMode(.alwaysTemplate)
+            UIGraphicsBeginImageContextWithOptions(size, false, newImage.scale)
+            color.set()
+            newImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+            newImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return newImage.withRenderingMode(.alwaysOriginal)
+        }
+        return self.withRenderingMode(.alwaysOriginal)
+    }
 
 }
 
