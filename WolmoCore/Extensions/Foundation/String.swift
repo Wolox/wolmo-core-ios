@@ -161,8 +161,7 @@ public extension String {
      - parameter fontSize: CGFloat, size of the font to use on the represented string.
      */
     func toImage(fontSize: CGFloat) -> UIImage? {
-        let font = UIFont.systemFont(ofSize: fontSize)
-        return toImage(font: font)
+        return toImage(font: UIFont.systemFont(ofSize: fontSize))
     }
     
     /**
