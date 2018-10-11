@@ -14,17 +14,11 @@ public extension UIImageView {
      Sets de image of the view to a drawing of the given string,
      it's recomended for using emojis as images, but it can be used with any string.
      - parameter string: String, the text to draw in the image.
-     - parameter fontSize: CGFloat, size of the font to use on the represented string, if fontSize is not specified it will be set to the most convenient size.
+     - parameter fontSize: CGFloat, size of the font to use on the represented string, if fontSize is not specified it will be set to 50.
      */
-    func draw(string: String, fontSize: CGFloat? = nil) {
+    func draw(string: String, fontSize: CGFloat = 50) {
         contentMode = .scaleAspectFit
-        var fontS: CGFloat
-        if let unwrappedFontSize = fontSize {
-            fontS = unwrappedFontSize
-        } else {
-            fontS = frame.size.width > frame.size.height ? frame.size.height * 0.85 : frame.size.width * 0.85
-        }
-        image = string.toImage(fontSize: fontS)
+        image = string.toImage(fontSize: fontSize)
     }
     
     /**
