@@ -30,3 +30,14 @@ public func SimpleName<T>(of element: T) -> String {
     return SimpleName(ofType: type(of: element as Any))
     // Using as Any to get dynamic type for cases like protocol conforming types.
 }
+
+/**
+ Returns the concatenation of the given NSAttributedStrings
+ */
+
+public func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
+    let result = NSMutableAttributedString()
+    result.append(left)
+    result.append(right)
+    return result
+}
