@@ -135,7 +135,9 @@ public extension Bundle {
 fileprivate extension Bundle {
     
     fileprivate func get<T>(from key: String) -> T? {
-        return object(forInfoDictionaryKey: key) as? T
+        let optionalAny = object(forInfoDictionaryKey: key)
+        let optionalValue: T? = optionalAny.flatMap { $0 as? T }
+        return optionalValue
     }
     
 }

@@ -21,11 +21,16 @@ public extension UIViewController {
      - parameter into: The containerView into which the controller will be loaded.
      - parameter viewPositioning: Back or Front. Default: Front
      */
-    public func load(childViewController: UIViewController, into containerView: UIView, viewPositioning: ViewPositioning = .front) {
+    public func load(childViewController: UIViewController,
+                     into containerView: UIView,
+                     with insets: UIEdgeInsets = .zero,
+                     in viewPositioning: ViewPositioning = .front,
+                     layout: LayoutMode = .constraints,
+                     respectSafeArea: Bool = false) {
         childViewController.willMove(toParentViewController: self)
         addChildViewController(childViewController)
         childViewController.didMove(toParentViewController: self)
-        childViewController.view.add(into: containerView, in: viewPositioning)
+        childViewController.view.add(into: containerView, with: insets, in: viewPositioning, layout: layout, respectSafeArea: respectSafeArea)
     }
     
     /**

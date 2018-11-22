@@ -34,10 +34,27 @@ public func SimpleName<T>(of element: T) -> String {
 /**
  Returns the concatenation of the given NSAttributedStrings
  */
-
 public func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
     let result = NSMutableAttributedString()
     result.append(left)
     result.append(right)
     return result
+}
+
+/**
+    Convenience method to grab the main thread and perform closure
+
+    - Parameter closure: the closure to execute
+ 
+    For more information on why do we need to use this see:
+    https://medium.com/@johnsundell/reducing-flakiness-in-swift-tests-5942e5677394
+ */
+func performUIUpdate(using closure: @escaping () -> Void) {
+    // If we are already on the main thread, execute the closure directly
+    if Thread.isMainThread {
+        closure()
+    }
+    else {
+        DispatchQueue.main.async(execute: closure)
+    }
 }

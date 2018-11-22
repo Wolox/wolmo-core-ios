@@ -20,7 +20,10 @@ final internal class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        load(childViewController: _childController, into: _view.childContainerView)
+        load(childViewController: _childController,
+             into: _view.childContainerView,
+             with: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0),
+             respectSafeArea: true)
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
 

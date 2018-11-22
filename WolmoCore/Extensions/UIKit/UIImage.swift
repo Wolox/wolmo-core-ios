@@ -25,7 +25,6 @@ public extension UIImage {
      - parameter cornerRadius: The cornerRadius to be used. Any number lower or equal to zero will not add cornerRadius. Default: 0.0, no corner radius.
      
      */
-    
     public func resized(toSize: CGSize, maintainAspectRatio: Bool, useScreenScale: Bool = true, cornerRadius: CGFloat = 0.0, insets: UIEdgeInsets = .zero) -> UIImage {
         let newSize = maintainAspectRatio ? size.resizedMaintainingRatio(wantedSize: toSize) : toSize
         let scale: CGFloat = useScreenScale ? 0.0 : 1.0
@@ -47,7 +46,6 @@ public extension UIImage {
      Returns the aspect ratio of the image represented by a CGFloat. 
         For example an image with a 4:3 ratio will give 1.333... as output.
      */
-    
     public var aspectRatio: CGFloat {
         return size.width / size.height
     }
@@ -83,7 +81,6 @@ fileprivate extension CGSize {
      Note that the size of the resulting CGSize will be the smaller closest size to the one specified that maintains the aspect ratio of the original.
      
      */
-    
     fileprivate func resizedMaintainingRatio(wantedSize: CGSize) -> CGSize {
         let widthFactor = wantedSize.width / width
         let heightFactor = wantedSize.height / height
