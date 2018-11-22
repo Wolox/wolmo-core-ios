@@ -143,6 +143,21 @@ public class GeneralSpec: QuickSpec {
             
         }
         
+        describe("#+(left:, right:)") {
+            
+            context("when the arguments are of type NSAttributedString") {
+                
+                it("should return the concatenation of both strings") {
+                    let string1 = NSAttributedString(string: "wolox")
+                    let string2 = NSAttributedString(string: "test")
+                    let expectedResult = NSAttributedString(string: "woloxtest")
+                    expect(string1 + string2).to(equal(expectedResult))
+                }
+                
+            }
+            
+        }
+        
     }
     
 }
