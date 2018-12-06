@@ -458,6 +458,51 @@ public class StringSpec: QuickSpec {
             
         }
         
+        describe("#*(lhs:rhs:)") {
+            
+            var string: String!
+            var numberOfTimes: Int!
+            
+            context("when the string is empty") {
+                
+                beforeEach {
+                    string = ""
+                    numberOfTimes = 3
+                }
+                
+                it("should return an empty string") {
+                    expect(string * numberOfTimes).to(equal(""))
+                }
+                
+            }
+            
+            context("when the string is on the left side") {
+                
+                beforeEach {
+                    string = "something"
+                    numberOfTimes = 3
+                }
+                
+                it("should return the original string repeated three times") {
+                    expect(string * numberOfTimes).to(equal("somethingsomethingsomething"))
+                }
+                
+            }
+            
+            context("when the string is on the right side") {
+                
+                beforeEach {
+                    string = "something"
+                    numberOfTimes = 3
+                }
+                
+                it("should return the original string repeated three times") {
+                    expect(numberOfTimes * string).to(equal("somethingsomethingsomething"))
+                }
+                
+            }
+        }
+        
     }
     // swiftlint:enable function_body_length
 
