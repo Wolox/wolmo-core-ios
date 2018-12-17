@@ -15,6 +15,7 @@
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */; };
+		65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; };
@@ -195,6 +196,7 @@
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
 		6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
+		65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -365,6 +367,14 @@
 				CE1DDFDB209A646B007471A0 /* UIViewExtension.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		65A2F89F21C7E2EC001F7190 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		9D896AAE1CDE3EC5008B0E5F = {
@@ -586,6 +596,7 @@
 		CEE9BFB01E8986D400D0E65D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				65A2F89F21C7E2EC001F7190 /* UIView */,
 				CEE9BFB11E8986D400D0E65D /* UIAlertControllerSpec.swift */,
 				CE11868C1EA7A0E100105D6F /* UICollectionViewSpec.swift */,
 				CEE9BFB21E8986D400D0E65D /* UIColorSpec.swift */,
@@ -901,6 +912,7 @@
 				CEE9BFBF1E8986D400D0E65D /* UIColorSpec.swift in Sources */,
 				CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */,
 				CEE9BFB41E8986D400D0E65D /* ArraySpec.swift in Sources */,
+				65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */,
 				CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */,
 				B82058CD1EEF33950002D7D4 /* UIImageSpec.swift in Sources */,
 				CEE9BFB81E8986D400D0E65D /* RawRepresentableSpec.swift in Sources */,
