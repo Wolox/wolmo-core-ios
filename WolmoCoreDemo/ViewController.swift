@@ -24,7 +24,11 @@ final internal class ViewController: UIViewController {
              into: _view.childContainerView,
              with: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0),
              respectSafeArea: true)
+        
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        _view.tapLabel.addTapGestureRecognizer {
+            print("Label tapped!")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

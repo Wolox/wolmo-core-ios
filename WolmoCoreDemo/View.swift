@@ -25,4 +25,5 @@ final internal class View: UIView, NibLoadable {
     
     @IBOutlet weak var childContainerView: UIView!
     
+    @IBOutlet weak var tapLabel: UILabel!
 }
