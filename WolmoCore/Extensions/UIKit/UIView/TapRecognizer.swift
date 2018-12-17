@@ -32,8 +32,11 @@ public extension UIView {
         }
     }
     
-    // Here we create the tap gesture recognizer and store the closure
-    // the user passed to us in the associated object we declared above
+    /**
+     Adds a tap gesture recognizer that executes the closure when tapped
+     
+     - Parameter action: The closure that will execute when the view is tapped
+     */
     public func addTapGestureRecognizer(action: (() -> Void)?) {
         self.isUserInteractionEnabled = true
         self.tapGestureRecognizerAction = action
