@@ -20,17 +20,7 @@ public class TapRecognizerSpec: QuickSpec {
             
             var view: UIView!
             
-            context("when the view hasn't got a gesture recognizers") {
-                beforeEach {
-                    view = UIView()
-                }
-                
-                it("should not have any recognizer") {
-                    expect(view.gestureRecognizers).to(beNil())
-                }
-            }
-            
-            context("when addTapGestureRecognizer has been invoked") {
+            context("when addTapGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
                     view.addTapGestureRecognizer { /* No action */ }
