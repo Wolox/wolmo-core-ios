@@ -15,6 +15,8 @@
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */; };
+		65511FCF21CD530C0022CB18 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65511FCE21CD530C0022CB18 /* LongPressRecognizer.swift */; };
+		65511FD121CD56420022CB18 /* LongPressRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65511FD021CD56420022CB18 /* LongPressRecognizerSpec.swift */; };
 		65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
@@ -196,6 +198,8 @@
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
 		6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
+		65511FCE21CD530C0022CB18 /* LongPressRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressRecognizer.swift; sourceTree = "<group>"; };
+		65511FD021CD56420022CB18 /* LongPressRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressRecognizerSpec.swift; sourceTree = "<group>"; };
 		65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
@@ -369,10 +373,28 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		65A2F89F21C7E2EC001F7190 /* UIView */ = {
+		65511FD221CD56B40022CB18 /* GestureRecognizers */ = {
 			isa = PBXGroup;
 			children = (
 				65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */,
+				65511FD021CD56420022CB18 /* LongPressRecognizerSpec.swift */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		65511FD321CD56CE0022CB18 /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
+				65511FCE21CD530C0022CB18 /* LongPressRecognizer.swift */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		65A2F89F21C7E2EC001F7190 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				65511FD221CD56B40022CB18 /* GestureRecognizers */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -538,12 +560,12 @@
 		CE3A9B891E607B28005D7E8F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				65511FD321CD56CE0022CB18 /* GestureRecognizers */,
 				CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */,
 				CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */,
 				CE3A9B8C1E607B28005D7E8F /* Borders.swift */,
 				CE4F2CB72135ED9F007BB465 /* AddInto.swift */,
 				CE4F2CB92135EFF4007BB465 /* SafeLayout.swift */,
-				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -861,6 +883,7 @@
 				CE3A9B921E607B28005D7E8F /* Dictionary.swift in Sources */,
 				CE1DDFE1209A646B007471A0 /* MixedAnimation.swift in Sources */,
 				CE3A9B961E607B28005D7E8F /* RawRepresentable.swift in Sources */,
+				65511FCF21CD530C0022CB18 /* LongPressRecognizer.swift in Sources */,
 				CE1DDFDF209A646B007471A0 /* Animation.swift in Sources */,
 				CE1186921EA7A5FE00105D6F /* General.swift in Sources */,
 				CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */,
@@ -896,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65511FD121CD56420022CB18 /* LongPressRecognizerSpec.swift in Sources */,
 				CEE9BFBB1E8986D400D0E65D /* URLSpec.swift in Sources */,
 				CEE9BFC01E8986D400D0E65D /* UITextFieldSpec.swift in Sources */,
 				CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */,
