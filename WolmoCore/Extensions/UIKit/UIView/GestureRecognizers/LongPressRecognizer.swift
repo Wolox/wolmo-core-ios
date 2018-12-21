@@ -38,16 +38,16 @@ public extension UIView {
      - Parameter action: The closure that will execute when the view is long pressed
      */
     public func addLongPressGestureRecognizer(action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.longPressGestureRecognizerAction = action
+        isUserInteractionEnabled = true
+        longPressGestureRecognizerAction = action
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGesture))
-        self.addGestureRecognizer(longPressGestureRecognizer)
+        addGestureRecognizer(longPressGestureRecognizer)
     }
     
     // Every time the user long presses on the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleLongPressGesture(sender: UILongPressGestureRecognizer) {
-        if let action = self.longPressGestureRecognizerAction {
+        if let action = longPressGestureRecognizerAction {
             action?()
         } else {
             print("No action for the long-press gesture")
