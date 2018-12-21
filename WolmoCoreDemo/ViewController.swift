@@ -26,8 +26,12 @@ final internal class ViewController: UIViewController {
              respectSafeArea: true)
         
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        _view.tapLabel.addTapGestureRecognizer {
+        
+        _view.gestureLabel.addTapGestureRecognizer {
             print("Label tapped!")
+        }
+        _view.gestureLabel.addPinchGestureRecognizer {
+            print("Label pinched!")
         }
     }
 

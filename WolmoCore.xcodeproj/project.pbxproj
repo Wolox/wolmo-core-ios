@@ -15,6 +15,8 @@
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */; };
+		656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */; };
+		656EDB2421CD3DCF0025DDA0 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */; };
 		65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
@@ -196,6 +198,8 @@
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
 		6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
+		656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizer.swift; sourceTree = "<group>"; };
+		656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
 		65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
@@ -369,10 +373,28 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		65A2F89F21C7E2EC001F7190 /* UIView */ = {
+		656EDB2521CD42CC0025DDA0 /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
+				656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		656EDB2621CD431F0025DDA0 /* GestureRecognizers */ = {
 			isa = PBXGroup;
 			children = (
 				65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */,
+				656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		65A2F89F21C7E2EC001F7190 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				656EDB2621CD431F0025DDA0 /* GestureRecognizers */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -538,12 +560,12 @@
 		CE3A9B891E607B28005D7E8F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				656EDB2521CD42CC0025DDA0 /* GestureRecognizers */,
 				CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */,
 				CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */,
 				CE3A9B8C1E607B28005D7E8F /* Borders.swift */,
 				CE4F2CB72135ED9F007BB465 /* AddInto.swift */,
 				CE4F2CB92135EFF4007BB465 /* SafeLayout.swift */,
-				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -733,7 +755,7 @@
 				TargetAttributes = {
 					9D896AB71CDE3EC5008B0E5F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7XS5GQGS29;
+						DevelopmentTeam = ZC7XAH6SD9;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -878,6 +900,7 @@
 				CE3A9B931E607B28005D7E8F /* Bundle.swift in Sources */,
 				CE3A9B951E607B28005D7E8F /* URL.swift in Sources */,
 				CE3A9B971E607B28005D7E8F /* String.swift in Sources */,
+				656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */,
 				0CB88322216455D90073459D /* UIImageView.swift in Sources */,
 				B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */,
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
@@ -901,6 +924,7 @@
 				CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */,
 				CEE9BFB61E8986D400D0E65D /* DateSpec.swift in Sources */,
 				0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */,
+				656EDB2421CD3DCF0025DDA0 /* PinchRecognizerSpec.swift in Sources */,
 				CEE9BFC81E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift in Sources */,
 				CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */,
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
@@ -1113,7 +1137,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7XS5GQGS29;
+				DEVELOPMENT_TEAM = ZC7XAH6SD9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1140,7 +1164,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7XS5GQGS29;
+				DEVELOPMENT_TEAM = ZC7XAH6SD9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
