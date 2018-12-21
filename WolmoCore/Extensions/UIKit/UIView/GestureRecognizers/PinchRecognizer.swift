@@ -38,16 +38,16 @@ public extension UIView {
      - Parameter action: The closure that will execute when the view is pinched
      */
     public func addPinchGestureRecognizer(action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.pinchGestureRecognizerAction = action
+        isUserInteractionEnabled = true
+        pinchGestureRecognizerAction = action
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture))
-        self.addGestureRecognizer(pinchGestureRecognizer)
+        addGestureRecognizer(pinchGestureRecognizer)
     }
     
     // Every time the user pinches on the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handlePinchGesture(sender: UIPinchGestureRecognizer) {
-        if let action = self.pinchGestureRecognizerAction {
+        if let action = pinchGestureRecognizerAction {
             action?()
         } else {
             print("No action for the pinch gesture")
