@@ -33,6 +33,9 @@ final internal class ViewController: UIViewController {
         _view.gestureLabel.addLongPressGestureRecognizer {
             print("Label long pressed!")
         }
+        _view.gestureLabel.addPinchGestureRecognizer {
+            print("Label pinched!")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
