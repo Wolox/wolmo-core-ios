@@ -37,10 +37,11 @@ public extension UIView {
      
      - Parameter action: The closure that will execute when the edge of the view is panned
      */
-    public func addScreenEdgePanGestureRecognizer(action: (() -> Void)?) {
+    public func addScreenEdgePanGestureRecognizer(edges: UIRectEdge = .all, action: (() -> Void)?) {
         self.isUserInteractionEnabled = true
         self.screenEdgePanGestureRecognizerAction = action
         let screenEdgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenEdgePanGesture))
+        screenEdgePanGestureRecognizer.edges = edges
         self.addGestureRecognizer(screenEdgePanGestureRecognizer)
     }
     
