@@ -15,6 +15,8 @@
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */; };
+		65215B3921D3C0FC0099863F /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65215B3821D3C0FC0099863F /* SwipeRecognizer.swift */; };
+		65215B3B21D3C2080099863F /* SwipeRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65215B3A21D3C2080099863F /* SwipeRecognizerSpec.swift */; };
 		656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */; };
 		656EDB2421CD3DCF0025DDA0 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */; };
 		65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */; };
@@ -198,6 +200,8 @@
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
 		6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
+		65215B3821D3C0FC0099863F /* SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
+		65215B3A21D3C2080099863F /* SwipeRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizerSpec.swift; sourceTree = "<group>"; };
 		656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizer.swift; sourceTree = "<group>"; };
 		656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
 		65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 			children = (
 				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
 				656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */,
+				65215B3821D3C0FC0099863F /* SwipeRecognizer.swift */,
 			);
 			path = GestureRecognizers;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			children = (
 				65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */,
 				656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */,
+				65215B3A21D3C2080099863F /* SwipeRecognizerSpec.swift */,
 			);
 			path = GestureRecognizers;
 			sourceTree = "<group>";
@@ -903,6 +909,7 @@
 				656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */,
 				0CB88322216455D90073459D /* UIImageView.swift in Sources */,
 				B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */,
+				65215B3921D3C0FC0099863F /* SwipeRecognizer.swift in Sources */,
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,
 				CED934851E8456480017CF96 /* UICollectionView.swift in Sources */,
@@ -929,6 +936,7 @@
 				CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */,
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
+				65215B3B21D3C2080099863F /* SwipeRecognizerSpec.swift in Sources */,
 				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
 				CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */,
