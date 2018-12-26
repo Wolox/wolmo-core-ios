@@ -16,7 +16,7 @@ public extension UIView {
         static var rotationGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = (() -> Void)?
+    fileprivate typealias Action = ((UIRotationGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var rotationGestureRecognizerAction: Action? {
@@ -37,18 +37,18 @@ public extension UIView {
      
      - Parameter action: The closure that will execute when the view is rotated
      */
-    public func addRotationGestureRecognizer(action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.rotationGestureRecognizerAction = action
+    public func addRotationGestureRecognizer(action: ((UIRotationGestureRecognizer) -> Void)?) {
+        isUserInteractionEnabled = true
+        rotationGestureRecognizerAction = action
         let rotationGestureRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(handleRotationGesture))
-        self.addGestureRecognizer(rotationGestureRecognizer)
+        addGestureRecognizer(rotationGestureRecognizer)
     }
     
     // Every time the user rotates on the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleRotationGesture(sender: UIRotationGestureRecognizer) {
-        if let action = self.rotationGestureRecognizerAction {
-            action?()
+        if let action = rotationGestureRecognizerAction {
+            action?(sender)
         } else {
             print("No action for the rotation gesture")
         }

@@ -33,7 +33,7 @@ final internal class ViewController: UIViewController {
         _view.gestureLabel.addPinchGestureRecognizer {
             print("Label pinched!")
         }
-        _view.gestureLabel.addRotationGestureRecognizer {
+        _view.gestureLabel.addRotationGestureRecognizer { recognizer in
             print("Label rotated!")
         }
     }

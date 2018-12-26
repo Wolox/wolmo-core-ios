@@ -23,7 +23,9 @@ public class RotationRecognizerSpec: QuickSpec {
             context("when addRotationGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addRotationGestureRecognizer { /* No action */ }
+                    view.addRotationGestureRecognizer { recognizer in
+                        // No action
+                    }
                 }
                 
                 it("should have injected a UIRotationGestureRecognizer into the view") {
