@@ -16,7 +16,7 @@ public extension UIView {
         static var longPressGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = ((UILongPressGestureRecognizer?) -> Void)?
+    fileprivate typealias Action = ((UILongPressGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var longPressGestureRecognizerAction: Action? {
@@ -45,7 +45,7 @@ public extension UIView {
                                               numberOfTouchesRequired: Int = 1,
                                               minimumPressDuration: TimeInterval = 0.5,
                                               allowableMovement: CGFloat = 10,
-                                              action: ((UILongPressGestureRecognizer?) -> Void)?) {
+                                              action: ((UILongPressGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         longPressGestureRecognizerAction = action
         
