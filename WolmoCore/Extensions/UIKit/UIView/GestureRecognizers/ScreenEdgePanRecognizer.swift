@@ -16,7 +16,7 @@ public extension UIView {
         static var screenEdgePanGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = (() -> Void)?
+    fileprivate typealias Action = ((UIScreenEdgePanGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var screenEdgePanGestureRecognizerAction: Action? {
@@ -34,22 +34,22 @@ public extension UIView {
     
     /**
      Adds a screen-edge-pan gesture recognizer that executes the closure when panned on the edge
-     
+     - Parameter edges: The edges on which this gesture recognizes, relative to the current interface orientation. Default is all edges
      - Parameter action: The closure that will execute when the edge of the view is panned
      */
-    public func addScreenEdgePanGestureRecognizer(edges: UIRectEdge = .all, action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.screenEdgePanGestureRecognizerAction = action
+    public func addScreenEdgePanGestureRecognizer(edges: UIRectEdge = .all, action: ((UIScreenEdgePanGestureRecognizer) -> Void)?) {
+        isUserInteractionEnabled = true
+        screenEdgePanGestureRecognizerAction = action
         let screenEdgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenEdgePanGesture))
         screenEdgePanGestureRecognizer.edges = edges
-        self.addGestureRecognizer(screenEdgePanGestureRecognizer)
+        addGestureRecognizer(screenEdgePanGestureRecognizer)
     }
     
     // Every time the user pans on the edge of the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleScreenEdgePanGesture(sender: UIScreenEdgePanGestureRecognizer) {
-        if let action = self.screenEdgePanGestureRecognizerAction {
-            action?()
+        if let action = screenEdgePanGestureRecognizerAction {
+            action?(sender)
         } else {
             print("No action for the screen edge pan gesture")
         }
