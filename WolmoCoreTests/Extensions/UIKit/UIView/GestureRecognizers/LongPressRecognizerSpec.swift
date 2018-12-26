@@ -23,7 +23,9 @@ public class LongPressRecognizerSpec: QuickSpec {
             context("when addLongPressGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addLongPressGestureRecognizer { /* No action */ }
+                    view.addLongPressGestureRecognizer { recognizer in
+                        // No action
+                    }
                 }
                 
                 it("should have injected a UILongPressGestureRecognizer into the view") {
