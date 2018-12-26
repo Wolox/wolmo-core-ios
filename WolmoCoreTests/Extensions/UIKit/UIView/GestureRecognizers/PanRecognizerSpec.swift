@@ -23,7 +23,9 @@ public class PanRecognizerSpec: QuickSpec {
             context("when addPanGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addPanGestureRecognizer { /* No action */ }
+                    view.addPanGestureRecognizer { recognizer in
+                        //No action
+                    }
                 }
                 
                 it("should have injected a UIPanGestureRecognizer into the view") {

@@ -16,7 +16,7 @@ public extension UIView {
         static var panGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = (() -> Void)?
+    fileprivate typealias Action = ((UIPanGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var panGestureRecognizerAction: Action? {
@@ -35,24 +35,26 @@ public extension UIView {
     /**
      Adds a pan gesture recognizer that executes the closure when panned
      
+     - Parameter minimumNumberOfTouches: The minimum number of touches required to match. Default is 1
+     - Parameter maximumNumberOfTouches: The maximum number of touches that can be down. Default is Int.max
      - Parameter action: The closure that will execute when the view is panned
      */
-    public func addPanGestureRecognizer(action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.panGestureRecognizerAction = action
+    public func addPanGestureRecognizer(minimumNumberOfTouches: Int = 1,
+                                        maximumNumberOfTouches: Int = .max,
+                                        action: ((UIPanGestureRecognizer) -> Void)?) {
+        isUserInteractionEnabled = true
+        panGestureRecognizerAction = action
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
-        self.addGestureRecognizer(panGestureRecognizer)
+        addGestureRecognizer(panGestureRecognizer)
     }
     
     // Every time the user pans on the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handlePanGesture(sender: UIPanGestureRecognizer) {
-        if let action = self.panGestureRecognizerAction {
-            action?()
+        if let action = panGestureRecognizerAction {
+            action?(sender)
         } else {
             print("No action for the pan gesture")
         }
     }
-    
 }
-
