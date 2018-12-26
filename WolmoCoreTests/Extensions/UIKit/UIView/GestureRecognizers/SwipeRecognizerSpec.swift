@@ -23,7 +23,9 @@ public class SwipeRecognizerSpec: QuickSpec {
             context("when addSwipeGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addSwipeGestureRecognizer { /* No action */ }
+                    view.addSwipeGestureRecognizer { recognizer ->
+                        // No action
+                    }
                 }
                 
                 it("should have injected a UISwipeGestureRecognizer into the view") {
