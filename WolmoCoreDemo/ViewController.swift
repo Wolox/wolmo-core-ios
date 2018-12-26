@@ -33,6 +33,9 @@ final internal class ViewController: UIViewController {
         _view.gestureLabel.addPinchGestureRecognizer {
             print("Label pinched!")
         }
+        _view.gestureLabel.addPanGestureRecognizer {
+            print("Label panned!")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
