@@ -45,6 +45,8 @@ public extension UIView {
         isUserInteractionEnabled = true
         panGestureRecognizerAction = action
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        panGestureRecognizer.minimumNumberOfTouches = minimumNumberOfTouches
+        panGestureRecognizer.maximumNumberOfTouches = maximumNumberOfTouches
         addGestureRecognizer(panGestureRecognizer)
     }
     
