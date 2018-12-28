@@ -17,5 +17,4 @@ ignore:
   - WolmoCore/Extensions/UIKit/UIView/SafeLayout.swift
   - WolmoCore/Extensions/UIKit/UIView/GestureRecognizers/*
   - WolmoCore/Extensions/UIKit/UIViewController.swift
-  - WolmoCore/Extensions/UIKit/UIView/GestureRecognizers/*
   - WolmoCore/Extensions/Animations/*
