@@ -38,16 +38,16 @@ public extension UIView {
      - Parameter action: The closure that will execute when the view is tapped
      */
     public func addTapGestureRecognizer(action: (() -> Void)?) {
-        self.isUserInteractionEnabled = true
-        self.tapGestureRecognizerAction = action
+        isUserInteractionEnabled = true
+        tapGestureRecognizerAction = action
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
-        self.addGestureRecognizer(tapGestureRecognizer)
+        addGestureRecognizer(tapGestureRecognizer)
     }
     
     // Every time the user taps on the UIView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleTapGesture(sender: UITapGestureRecognizer) {
-        if let action = self.tapGestureRecognizerAction {
+        if let action = tapGestureRecognizerAction {
             action?()
         } else {
             print("No action for the tap gesture")

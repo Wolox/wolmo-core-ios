@@ -24,7 +24,7 @@ public class PanRecognizerSpec: QuickSpec {
                 beforeEach {
                     view = UIView()
                     view.addPanGestureRecognizer { recognizer in
-                        //No action
+                        // No action
                     }
                 }
                 

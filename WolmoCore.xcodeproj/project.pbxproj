@@ -14,12 +14,16 @@
 		0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */; };
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
-		6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */; };
-		65215B2D21D3AF0C0099863F /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65215B2C21D3AF0C0099863F /* PanRecognizer.swift */; };
-		65215B2F21D3AFD60099863F /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65215B2E21D3AFD60099863F /* PanRecognizerSpec.swift */; };
-		656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */; };
-		656EDB2421CD3DCF0025DDA0 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */; };
-		65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */; };
+		6571541E21D6880E00457969 /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571541921D6880D00457969 /* SwipeRecognizer.swift */; };
+		6571541F21D6880E00457969 /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571541A21D6880D00457969 /* PanRecognizer.swift */; };
+		6571542021D6880E00457969 /* TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571541B21D6880D00457969 /* TapRecognizer.swift */; };
+		6571542121D6880E00457969 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571541C21D6880D00457969 /* LongPressRecognizer.swift */; };
+		6571542221D6880E00457969 /* PinchRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571541D21D6880E00457969 /* PinchRecognizer.swift */; };
+		6571542921D6884100457969 /* TapRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571542421D6884100457969 /* TapRecognizerSpec.swift */; };
+		6571542A21D6884100457969 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571542521D6884100457969 /* PanRecognizerSpec.swift */; };
+		6571542B21D6884100457969 /* LongPressRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571542621D6884100457969 /* LongPressRecognizerSpec.swift */; };
+		6571542C21D6884100457969 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571542721D6884100457969 /* PinchRecognizerSpec.swift */; };
+		6571542D21D6884100457969 /* SwipeRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571542821D6884100457969 /* SwipeRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; };
@@ -199,12 +203,16 @@
 		0CB88321216455D90073459D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
-		6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
-		65215B2C21D3AF0C0099863F /* PanRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanRecognizer.swift; sourceTree = "<group>"; };
-		65215B2E21D3AFD60099863F /* PanRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanRecognizerSpec.swift; sourceTree = "<group>"; };
-		656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizer.swift; sourceTree = "<group>"; };
-		656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
-		65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
+		6571541921D6880D00457969 /* SwipeRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
+		6571541A21D6880D00457969 /* PanRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizer.swift; sourceTree = "<group>"; };
+		6571541B21D6880D00457969 /* TapRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapRecognizer.swift; sourceTree = "<group>"; };
+		6571541C21D6880D00457969 /* LongPressRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressRecognizer.swift; sourceTree = "<group>"; };
+		6571541D21D6880E00457969 /* PinchRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchRecognizer.swift; sourceTree = "<group>"; };
+		6571542421D6884100457969 /* TapRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapRecognizerSpec.swift; sourceTree = "<group>"; };
+		6571542521D6884100457969 /* PanRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizerSpec.swift; sourceTree = "<group>"; };
+		6571542621D6884100457969 /* LongPressRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressRecognizerSpec.swift; sourceTree = "<group>"; };
+		6571542721D6884100457969 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
+		6571542821D6884100457969 /* SwipeRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeRecognizerSpec.swift; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,22 +385,26 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		656EDB2521CD42CC0025DDA0 /* GestureRecognizers */ = {
+		6571541821D687B900457969 /* GestureRecognizers */ = {
 			isa = PBXGroup;
 			children = (
-				6508BE1A21C7CC3200622EE3 /* TapRecognizer.swift */,
-				656EDB2021CD3CBE0025DDA0 /* PinchRecognizer.swift */,
-				65215B2C21D3AF0C0099863F /* PanRecognizer.swift */,
+				6571541C21D6880D00457969 /* LongPressRecognizer.swift */,
+				6571541A21D6880D00457969 /* PanRecognizer.swift */,
+				6571541D21D6880E00457969 /* PinchRecognizer.swift */,
+				6571541921D6880D00457969 /* SwipeRecognizer.swift */,
+				6571541B21D6880D00457969 /* TapRecognizer.swift */,
 			);
 			path = GestureRecognizers;
 			sourceTree = "<group>";
 		};
-		656EDB2621CD431F0025DDA0 /* GestureRecognizers */ = {
+		6571542321D6881800457969 /* GestureRecognizers */ = {
 			isa = PBXGroup;
 			children = (
-				65A2F8A021C7E2FC001F7190 /* TapRecognizerSpec.swift */,
-				656EDB2321CD3DCF0025DDA0 /* PinchRecognizerSpec.swift */,
-				65215B2E21D3AFD60099863F /* PanRecognizerSpec.swift */,
+				6571542621D6884100457969 /* LongPressRecognizerSpec.swift */,
+				6571542521D6884100457969 /* PanRecognizerSpec.swift */,
+				6571542721D6884100457969 /* PinchRecognizerSpec.swift */,
+				6571542821D6884100457969 /* SwipeRecognizerSpec.swift */,
+				6571542421D6884100457969 /* TapRecognizerSpec.swift */,
 			);
 			path = GestureRecognizers;
 			sourceTree = "<group>";
@@ -400,9 +412,16 @@
 		65A2F89F21C7E2EC001F7190 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				656EDB2621CD431F0025DDA0 /* GestureRecognizers */,
+				6571542321D6881800457969 /* GestureRecognizers */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		65B61CAD21D517CF001A0DC7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		9D896AAE1CDE3EC5008B0E5F = {
@@ -415,6 +434,7 @@
 				9D896AB91CDE3EC5008B0E5F /* Products */,
 				9D896AF01CDE6504008B0E5F /* Frameworks */,
 				CE1DE003209A6540007471A0 /* AnimationDemo/Info.plist */,
+				65B61CAD21D517CF001A0DC7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -566,7 +586,7 @@
 		CE3A9B891E607B28005D7E8F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				656EDB2521CD42CC0025DDA0 /* GestureRecognizers */,
+				6571541821D687B900457969 /* GestureRecognizers */,
 				CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */,
 				CE3A9B8A1E607B28005D7E8F /* Collapsable.swift */,
 				CE3A9B8C1E607B28005D7E8F /* Borders.swift */,
@@ -885,6 +905,8 @@
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
 				CE3A9B941E607B28005D7E8F /* Timer.swift in Sources */,
 				CE1DDFE0209A646B007471A0 /* UIViewExtension.swift in Sources */,
+				6571542221D6880E00457969 /* PinchRecognizer.swift in Sources */,
+				6571542121D6880E00457969 /* LongPressRecognizer.swift in Sources */,
 				CE3A9B9D1E607B28005D7E8F /* UITableView.swift in Sources */,
 				CE3A9B921E607B28005D7E8F /* Dictionary.swift in Sources */,
 				CE1DDFE1209A646B007471A0 /* MixedAnimation.swift in Sources */,
@@ -892,22 +914,22 @@
 				CE1DDFDF209A646B007471A0 /* Animation.swift in Sources */,
 				CE1186921EA7A5FE00105D6F /* General.swift in Sources */,
 				CE3A9B9F1E607B28005D7E8F /* Collapsable.swift in Sources */,
-				6508BE1B21C7CC3200622EE3 /* TapRecognizer.swift in Sources */,
 				B988B97C1D244D6300824685 /* AlertViewPresenter.swift in Sources */,
 				CE4F2CB82135ED9F007BB465 /* AddInto.swift in Sources */,
-				65215B2D21D3AF0C0099863F /* PanRecognizer.swift in Sources */,
 				B988B9731D244BAE00824685 /* AssociatedObject.swift in Sources */,
+				6571541F21D6880E00457969 /* PanRecognizer.swift in Sources */,
 				CE3A9B9C1E607B28005D7E8F /* UIColor.swift in Sources */,
 				CE1DDFDE209A646B007471A0 /* SimpleAnimation.swift in Sources */,
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
 				CE4F2CBA2135EFF4007BB465 /* SafeLayout.swift in Sources */,
 				CE1DDFDD209A646B007471A0 /* ChainedAnimation.swift in Sources */,
+				6571542021D6880E00457969 /* TapRecognizer.swift in Sources */,
 				CE3A9B901E607B28005D7E8F /* Array.swift in Sources */,
 				CE3A9B931E607B28005D7E8F /* Bundle.swift in Sources */,
 				CE3A9B951E607B28005D7E8F /* URL.swift in Sources */,
+				6571541E21D6880E00457969 /* SwipeRecognizer.swift in Sources */,
 				CE3A9B971E607B28005D7E8F /* String.swift in Sources */,
-				656EDB2121CD3CBE0025DDA0 /* PinchRecognizer.swift in Sources */,
 				0CB88322216455D90073459D /* UIImageView.swift in Sources */,
 				B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */,
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
@@ -929,30 +951,32 @@
 				CEE9BFBB1E8986D400D0E65D /* URLSpec.swift in Sources */,
 				CEE9BFC01E8986D400D0E65D /* UITextFieldSpec.swift in Sources */,
 				CE11868B1EA7A0CD00105D6F /* UITableViewSpec.swift in Sources */,
+				6571542C21D6884100457969 /* PinchRecognizerSpec.swift in Sources */,
 				CEE9BFB61E8986D400D0E65D /* DateSpec.swift in Sources */,
 				0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */,
-				656EDB2421CD3DCF0025DDA0 /* PinchRecognizerSpec.swift in Sources */,
 				CEE9BFC81E8986DC00D0E65D /* ConfirmationAlertViewModelSpec.swift in Sources */,
 				CEE9BFCB1E8986DC00D0E65D /* IdentifiableSpec.swift in Sources */,
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
+				6571542921D6884100457969 /* TapRecognizerSpec.swift in Sources */,
+				6571542B21D6884100457969 /* LongPressRecognizerSpec.swift in Sources */,
 				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
 				CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */,
 				CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */,
 				CEE9BFBF1E8986D400D0E65D /* UIColorSpec.swift in Sources */,
 				CE1186AC1EA7F67800105D6F /* BundleSpec.swift in Sources */,
+				6571542A21D6884100457969 /* PanRecognizerSpec.swift in Sources */,
 				CEE9BFB41E8986D400D0E65D /* ArraySpec.swift in Sources */,
-				65A2F8A121C7E2FC001F7190 /* TapRecognizerSpec.swift in Sources */,
 				CE1186A01EA7CA7900105D6F /* NibLoadableSpec.swift in Sources */,
 				B82058CD1EEF33950002D7D4 /* UIImageSpec.swift in Sources */,
 				CEE9BFB81E8986D400D0E65D /* RawRepresentableSpec.swift in Sources */,
 				CEE9BFC91E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift in Sources */,
 				CEE9BFBE1E8986D400D0E65D /* UIAlertControllerSpec.swift in Sources */,
+				6571542D21D6884100457969 /* SwipeRecognizerSpec.swift in Sources */,
 				CE6E9A1E20C5A1CE0068CC7A /* UIFontSpec.swift in Sources */,
 				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
-				65215B2F21D3AFD60099863F /* PanRecognizerSpec.swift in Sources */,
 				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
 				CEE9BFB51E8986D400D0E65D /* CollectionSpec.swift in Sources */,
 			);

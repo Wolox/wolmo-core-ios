@@ -59,11 +59,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="pJn-dR-MNn" firstAttribute="trailing" secondItem="AdN-3F-kMZ" secondAttribute="trailing" constant="20" id="3oq-8w-zoN"/>
-                        <constraint firstItem="pJn-dR-MNn" firstAttribute="trailing" secondItem="nbm-4U-X48" secondAttribute="trailing" constant="54" id="7sN-ku-6Pj"/>
                         <constraint firstItem="80Y-qR-yHf" firstAttribute="centerY" secondItem="FcB-gh-c9K" secondAttribute="centerY" id="9Yq-cl-gnd"/>
-                        <constraint firstItem="nbm-4U-X48" firstAttribute="leading" secondItem="pJn-dR-MNn" secondAttribute="leading" constant="55" id="N4f-B3-9nK"/>
+                        <constraint firstItem="nbm-4U-X48" firstAttribute="leading" secondItem="pJn-dR-MNn" secondAttribute="leading" constant="55" id="JHs-nM-YGt"/>
                         <constraint firstItem="AdN-3F-kMZ" firstAttribute="top" secondItem="pJn-dR-MNn" secondAttribute="top" constant="20" id="Ph7-cO-Wwd"/>
-                        <constraint firstItem="nbm-4U-X48" firstAttribute="top" secondItem="80Y-qR-yHf" secondAttribute="bottom" constant="16" id="ZfJ-LQ-NXf"/>
+                        <constraint firstItem="nbm-4U-X48" firstAttribute="top" secondItem="80Y-qR-yHf" secondAttribute="bottom" constant="16" id="SkU-5x-JtQ"/>
+                        <constraint firstItem="pJn-dR-MNn" firstAttribute="trailing" secondItem="nbm-4U-X48" secondAttribute="trailing" constant="54" id="a2S-AO-4oi"/>
                         <constraint firstItem="80Y-qR-yHf" firstAttribute="centerX" secondItem="FcB-gh-c9K" secondAttribute="centerX" id="qXl-aD-5il"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="pJn-dR-MNn"/>
@@ -88,7 +88,7 @@
             <connections>
                 <outlet property="bodyTextField" destination="kxh-P1-rEG" id="woJ-tq-RSf"/>
                 <outlet property="childContainerView" destination="es8-Vb-lQa" id="4YL-cV-f3j"/>
-                <outlet property="gestureLabel" destination="nbm-4U-X48" id="TJ8-36-Pln"/>
+                <outlet property="gestureLabel" destination="nbm-4U-X48" id="Qa4-i8-wma"/>
                 <outlet property="stringsButton" destination="AdN-3F-kMZ" id="L0C-Ra-vpv"/>
                 <outlet property="titleLabel" destination="Nz0-Cq-KJs" id="dFG-iy-fGn"/>
             </connections>
