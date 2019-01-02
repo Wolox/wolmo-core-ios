@@ -39,6 +39,9 @@ final internal class ViewController: UIViewController {
         _view.gestureLabel.addRotationGestureRecognizer { recognizer in
             print("Label rotated!")
         }
+        _view.gestureLabel.addPanGestureRecognizer { recognizer in
+            print("Label panned!")
+        }
         _view.gestureLabel.addSwipeGestureRecognizer(direction: .left) { recognizer in
             print("Label swiped!")
         }
