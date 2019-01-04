@@ -27,10 +27,12 @@ final internal class ViewController: UIViewController {
         
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
+        // Screen gestures
         _view.addScreenEdgePanGestureRecognizer(edges: [.left, .right]) { recognizer in
             print("Edge panned!")
         }
         
+        // Label gestures
         _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { recognizer in
             print("Label tapped!")
         }
