@@ -35,8 +35,8 @@ public extension UIView {
     /**
      Adds a tap gesture recognizer that executes the closure when tapped
      
-     - Parameter numberOfTapsRequired:
-     - Parameter numberOfTouchesRequired: The number of taps required to match. Default is 1
+     - Parameter numberOfTapsRequired: The number of taps required to match. Default is 1
+     - Parameter numberOfTouchesRequired: The number of fingers required to match. Default is 1
      - Parameter action: The number of fingers required to match. Default is 1
      */
     public func addTapGestureRecognizer(numberOfTapsRequired: Int = 1,
