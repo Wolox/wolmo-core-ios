@@ -23,7 +23,9 @@ public class PinchRecognizerSpec: QuickSpec {
             context("when addPinchGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addPinchGestureRecognizer { /* No action */ }
+                    view.addPinchGestureRecognizer { recognizer in
+                        //No action
+                    }
                 }
                 
                 it("should have injected a UIPinchGestureRecognizer into the view") {

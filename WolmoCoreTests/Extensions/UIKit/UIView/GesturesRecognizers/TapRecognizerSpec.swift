@@ -23,7 +23,9 @@ public class TapRecognizerSpec: QuickSpec {
             context("when addTapGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addTapGestureRecognizer { /* No action */ }
+                    view.addTapGestureRecognizer { recognizer in
+                        // No action
+                    }
                 }
                 
                 it("should have injected a UITapGestureRecognizer into the view") {

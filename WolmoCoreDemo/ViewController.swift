@@ -31,13 +31,13 @@ final internal class ViewController: UIViewController {
             print("Edge panned!")
         }
         
-        _view.gestureLabel.addTapGestureRecognizer {
+        _view.gestureLabel.addTapGestureRecognizer { recognizer in
             print("Label tapped!")
         }
         _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { recognizer in
             print("Label long pressed!")
         }
-        _view.gestureLabel.addPinchGestureRecognizer {
+        _view.gestureLabel.addPinchGestureRecognizer { recognizer in
             print("Label pinched!")
         }
         _view.gestureLabel.addRotationGestureRecognizer { recognizer in

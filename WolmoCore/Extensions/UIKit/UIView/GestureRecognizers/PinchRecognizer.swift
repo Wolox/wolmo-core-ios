@@ -16,7 +16,7 @@ public extension UIView {
         static var pinchGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = (() -> Void)?
+    fileprivate typealias Action = ((UIPinchGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var pinchGestureRecognizerAction: Action? {
@@ -37,7 +37,7 @@ public extension UIView {
      
      - Parameter action: The closure that will execute when the view is pinched
      */
-    public func addPinchGestureRecognizer(action: (() -> Void)?) {
+    public func addPinchGestureRecognizer(action: ((UIPinchGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         pinchGestureRecognizerAction = action
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture))
@@ -48,7 +48,7 @@ public extension UIView {
     // which triggers the closure we stored
     @objc fileprivate func handlePinchGesture(sender: UIPinchGestureRecognizer) {
         if let action = pinchGestureRecognizerAction {
-            action?()
+            action?(sender)
         } else {
             print("No action for the pinch gesture")
         }

@@ -16,7 +16,7 @@ public extension UIView {
         static var tapGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
     }
     
-    fileprivate typealias Action = (() -> Void)?
+    fileprivate typealias Action = ((UITapGestureRecognizer) -> Void)?
     
     // Set our computed property type to a closure
     fileprivate var tapGestureRecognizerAction: Action? {
@@ -37,7 +37,7 @@ public extension UIView {
      
      - Parameter action: The closure that will execute when the view is tapped
      */
-    public func addTapGestureRecognizer(action: (() -> Void)?) {
+    public func addTapGestureRecognizer(action: ((UITapGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         tapGestureRecognizerAction = action
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
@@ -48,7 +48,7 @@ public extension UIView {
     // which triggers the closure we stored
     @objc fileprivate func handleTapGesture(sender: UITapGestureRecognizer) {
         if let action = tapGestureRecognizerAction {
-            action?()
+            action?(sender)
         } else {
             print("No action for the tap gesture")
         }
