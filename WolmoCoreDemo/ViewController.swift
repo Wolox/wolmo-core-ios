@@ -31,7 +31,7 @@ final internal class ViewController: UIViewController {
             print("Edge panned!")
         }
         
-        _view.gestureLabel.addTapGestureRecognizer { recognizer in
+        _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { recognizer in
             print("Label tapped!")
         }
         _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { recognizer in
