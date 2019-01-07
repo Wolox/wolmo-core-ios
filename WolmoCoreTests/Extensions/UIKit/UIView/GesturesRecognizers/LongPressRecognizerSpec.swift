@@ -14,6 +14,7 @@ import WolmoCore
 
 public class LongPressRecognizerSpec: QuickSpec {
     
+    
     override public func spec() {
         
         describe("#addLongPressGestureRecognizer(Action:)") {
