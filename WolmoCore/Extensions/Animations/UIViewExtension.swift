@@ -28,4 +28,15 @@ public extension UIView {
         return ChainedAnimation(view: self, loop: loop)
     }
     
+    public func shake(withDuration duration: TimeInterval = 0.05) {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = duration
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = CGPoint(x: center.x - 4, y: center.y)
+        animation.toValue = CGPoint(x: center.x + 4, y: center.y)
+        
+        layer.add(animation, forKey: "position")
+    }
+    
 }

@@ -95,13 +95,13 @@ script/bootstrap
 ```
 
 ## Contributing
-1. Fork it
-2. [Bootstrap](#bootstrap) using the forked repository (instead of `Wolox/wolmo-core-ios.git`, `your-user/wolmo-core-ios.git`)
+1. Clone it
+2. [Bootstrap](#bootstrap) the repository
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Run tests (`./script/test`)
 6. Push your branch (`git push origin my-new-feature`)
-7. Create a new Pull Request to the original repository
+7. Create a new Pull Request to the repository
 
 ## About
 
