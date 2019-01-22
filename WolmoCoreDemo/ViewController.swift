@@ -27,8 +27,8 @@ final internal class ViewController: UIViewController {
         
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
-        _view.gestureLabel.addTapGestureRecognizer {
-            self._view.gestureLabel.shake(withDuration: 0.05)
+        _view.gestureLabel.addTapGestureRecognizer { [weak self] in
+            self?._view.gestureLabel.shake(withDuration: 0.05)
             print("Label tapped!")
         }
         _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { recognizer in

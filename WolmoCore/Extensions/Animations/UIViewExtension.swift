@@ -33,8 +33,8 @@ public extension UIView {
         animation.duration = duration
         animation.repeatCount = 3
         animation.autoreverses = true
-        animation.fromValue = CGPoint(x: self.center.x - 4, y: self.center.y)
-        animation.toValue = CGPoint(x: self.center.x + 4, y: self.center.y)
+        animation.fromValue = CGPoint(x: center.x - 4, y: center.y)
+        animation.toValue = CGPoint(x: center.x + 4, y: center.y)
         
         self.layer.add(animation, forKey: "position")
     }
