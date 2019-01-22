@@ -33,8 +33,8 @@ final internal class ViewController: UIViewController {
         }
         
         // Label gestures
-        _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { recognizer in
-            self._view.gestureLabel.shake(withDuration: 0.05)
+        _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] recognizer in
+            self?._view.gestureLabel.shake(withDuration: 0.05)
             print("Label tapped!")
         }
         _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { recognizer in
