@@ -28,7 +28,7 @@ final internal class ViewController: UIViewController {
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         // Screen gestures
-        _view.addScreenEdgePanGestureRecognizer(edges: [.left, .right]) { recognizer in
+        _view.addScreenEdgePanGestureRecognizer(edge: .left) { recognizer in
             print("Edge panned!")
         }
         

@@ -23,7 +23,7 @@ public class ScreenEdgePanRecognizerSpec: QuickSpec {
             context("when addScreenEdgePanGestureRecognizer has been called") {
                 beforeEach {
                     view = UIView()
-                    view.addScreenEdgePanGestureRecognizer { recognizer in
+                    view.addScreenEdgePanGestureRecognizer(edge: .left) { recognizer in
                         // No action
                     }
                 }
