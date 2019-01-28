@@ -31,7 +31,7 @@ public struct ConfirmationAlertViewModel {
      - parameter confirmAction: The confirm button action.
      */
     public init(
-        title: String? = .none,
+        title: String? = "",
         message: String? = .none,
         dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ConfirmationAlertViewModel) -> Void = { _ in },

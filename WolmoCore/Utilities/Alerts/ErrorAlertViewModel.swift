@@ -27,7 +27,7 @@ public struct ErrorAlertViewModel {
      - parameter dismissAction: The dismiss button action.
      */
     public init(
-        title: String? = .none,
+        title: String? = "",
         message: String? = .none,
         dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ErrorAlertViewModel) -> Void = { _ in }) {
