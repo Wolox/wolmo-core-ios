@@ -34,7 +34,7 @@ public extension UIView {
     
     /**
      Adds a screen-edge-pan gesture recognizer that executes the closure when panned on the edge
-     - Parameter edges: The edge on which this gesture recognizes, relative to the current interface orientation. Default is left edge
+     - Parameter edge: The edge on which this gesture recognizes, relative to the current interface orientation.
      - Parameter action: The closure that will execute when the edge of the view is panned
      */
     public func addScreenEdgePanGestureRecognizer(edge: UIRectEdge, action: ((UIScreenEdgePanGestureRecognizer) -> Void)?) {
