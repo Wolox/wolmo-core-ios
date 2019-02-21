@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import WolmoCore
 
 // MARK: - Simple animations
 enum SimpleExample: Int {
@@ -72,7 +73,7 @@ extension ViewController {
     }
 
     @objc
-    private func segmentedControlValueChanged() {
+    public func segmentedControlValueChanged() {
         let newAnimationIndex = segmentedControl.selectedSegmentIndex
         for animation in SimpleExample.all {
             animationViews[animation.rawValue].isHidden = true

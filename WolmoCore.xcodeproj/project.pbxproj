@@ -134,10 +134,8 @@
 		CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */; };
 		CEECA02C209A7047001A7E37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE005209A66A9007471A0 /* ViewController.swift */; };
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
-		CEECA02E209A704F001A7E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE007209A66A9007471A0 /* LaunchScreen.storyboard */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
-		CEECA032209A705D001A7E37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE00C209A66A9007471A0 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,7 +259,6 @@
 		CE1DDFDB209A646B007471A0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CE1DDFDC209A646B007471A0 /* MixedAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedAnimation.swift; sourceTree = "<group>"; };
 		CE1DE002209A653F007471A0 /* AnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1DE003209A6540007471A0 /* AnimationDemo/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = AnimationDemo/Info.plist; path = "/Users/danielariesgo/Documents/iOS/Wolmo/Core/wolmo-core-ios/AnimationDemo/Info.plist"; sourceTree = "<absolute>"; };
 		CE1DE005209A66A9007471A0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE1DE006209A66A9007471A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1DE008209A66A9007471A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -438,7 +435,6 @@
 				CE1DE004209A66A9007471A0 /* AnimationDemo */,
 				9D896AB91CDE3EC5008B0E5F /* Products */,
 				9D896AF01CDE6504008B0E5F /* Frameworks */,
-				CE1DE003209A6540007471A0 /* AnimationDemo/Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -853,12 +849,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEECA032209A705D001A7E37 /* Info.plist in Resources */,
 				CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */,
 				CE1DDFF5209A653F007471A0 /* View.xib in Resources */,
 				CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */,
 				CE1DDFF7209A653F007471A0 /* Assets.xcassets in Resources */,
-				CEECA02E209A704F001A7E37 /* LaunchScreen.storyboard in Resources */,
 				CE1DDFF8209A653F007471A0 /* ChildView.xib in Resources */,
 				CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */,
 			);
