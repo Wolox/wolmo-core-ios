@@ -58,7 +58,7 @@ public extension UIView {
     public func isDraggable(returnToPosition: Bool = true, withDuration duration: TimeInterval = 0.5, onDragStarted: ((UIView) -> Void)?, onDragFinished: ((UIView) -> Void)?) {
         var origin: CGPoint = frame.origin
         
-        self.addPanGestureRecognizer { [weak self] recognizer in
+        addPanGestureRecognizer { [weak self] recognizer in
             let translation = recognizer.translation(in: self)
             guard let guardSelf = self else { return }
             switch recognizer.state {
@@ -72,7 +72,7 @@ public extension UIView {
                 onDragFinished?(guardSelf)
                 if returnToPosition {
                     UIView.animate(withDuration: duration, animations: {
-                        self?.frame.origin = origin
+                        guardSelf.frame.origin = origin
                     })
                 }
             default:
