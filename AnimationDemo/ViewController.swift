@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         draggableView.backgroundColor = UIColor.red
         draggableView.layer.masksToBounds = true
         draggableView.layer.cornerRadius = 23.5
+        
+        view.addScreenEdgePanGestureRecognizer(edge: .left) { recognizer in
+            self.present(TableViewController(), animated: true, completion: .none)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

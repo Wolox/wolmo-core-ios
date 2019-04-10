@@ -82,3 +82,36 @@ public extension UIView {
     }
     
 }
+
+public extension UITableView {
+    
+    /**
+     Adds a custom animation to the table that executes the closure when long pressed
+     
+     - Parameter duration: Time in seconds the animation will be executed for cell. Default is 1.75
+     - Parameter delay: Time in seconds the animation will be stopped between cells. Default is 0
+     - Parameter delayMultiplier: Number that the delay will be multiplier. Default is 0.01
+     - Parameter directionX: Direction in axis X that the cell come from the original positio. Default is 1
+     - Parameter directionY: Direction in axis Y that the cell come from the original positio. Default is 0
+     */
+    
+    func animateTable(duration: TimeInterval = 1.75, delay: Double? = 0, delayMultiplier: Double? = 0.01, directionX: Float? = 1, directionY: Float? = 0) {
+        self.reloadData()
+        
+        let cells = self.visibleCells
+        let tableHeight = self.bounds.size.height
+        let tableWidth = self.bounds.size.width
+        var delayCounter = delay!
+        
+        for cell in cells { cell.transform = CGAffineTransform(translationX: tableWidth * CGFloat(directionX!), y: tableHeight * CGFloat(directionY!)) }
+
+        for cell in cells {
+            UIView.animate(withDuration: duration, delay: delayCounter * delayMultiplier!, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            print(delayCounter * delayMultiplier!)
+            delayCounter += 1
+        }
+    }
+    
+}
