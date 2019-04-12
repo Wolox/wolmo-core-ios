@@ -103,13 +103,14 @@ public extension UITableView {
         let tableWidth = self.bounds.size.width
         var delayCounter = delay!
         
-        for cell in cells { cell.transform = CGAffineTransform(translationX: tableWidth * CGFloat(directionX!), y: tableHeight * CGFloat(directionY!)) }
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: tableWidth * CGFloat(directionX!), y: tableHeight * CGFloat(directionY!))
+        }
 
         for cell in cells {
             UIView.animate(withDuration: duration, delay: delayCounter * delayMultiplier!, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 cell.transform = CGAffineTransform.identity
             }, completion: nil)
-            print(delayCounter * delayMultiplier!)
             delayCounter += 1
         }
     }

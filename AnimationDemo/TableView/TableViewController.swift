@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.animateTable(delay: Double.random(in: 0 ... 10), delayMultiplier: Double.random(in: 0 ... 1), directionX: Float.random(in: -2 ..< 2), directionY: Float.random(in: -5 ..< 5))
+        tableView.animateTable(delay: Double.random(in: 0 ... 2), delayMultiplier: Double.random(in: 0 ... 0.5), directionX: Float.random(in: -2 ..< 2), directionY: Float.random(in: -5 ..< 5))
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

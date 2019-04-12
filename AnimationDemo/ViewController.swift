@@ -45,8 +45,8 @@ class ViewController: UIViewController {
         draggableView.layer.masksToBounds = true
         draggableView.layer.cornerRadius = 23.5
         
-        view.addScreenEdgePanGestureRecognizer(edge: .left) { recognizer in
-            self.present(TableViewController(), animated: true, completion: .none)
+        view.addScreenEdgePanGestureRecognizer(edge: .left) { [weak self] _ in
+            self?.present(TableViewController(), animated: true, completion: .none)
         }
     }
 
