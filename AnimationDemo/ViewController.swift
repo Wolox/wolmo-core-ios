@@ -64,6 +64,13 @@ extension ViewController {
         sendToBack(view: yellowView)
     }
 
+    /*
+     Uses a pan gesture recognizer:
+     - When the animation starts, rotates the view slighlty
+     - When the user is moving the view, updates the view so it follows the user movement
+     - When the interaction is finished: If the movement was bigger than the specified limit, it sends the view to the back
+     - Actual angle rotation: 0.2618
+    */
     @objc // swiftlint:disable:next function_body_length
     func dragView(gesture: UIPanGestureRecognizer) {
         let target = gesture.view!
@@ -77,12 +84,12 @@ extension ViewController {
             rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: UIViewAnimationCurve.easeInOut) {
                 target.transform = CGAffineTransform(rotationAngle: (CGFloat.pi * 15.0) / 180.0)
             }
+            print((CGFloat.pi * 15.0) / 180.0)
 
         case .changed:
             let translation = gesture.translation(in: self.view)
             let dx = translation.x - lastTranslation.x
             guard target.center.x + dx > halfWidthScreen && target.center.x + dx < screenWidth else { break }
-
             target.center = CGPoint(x: target.center.x + dx, y: target.center.y)
             lastTranslation = translation
             rotationAnimator.fractionComplete = (target.center.x - halfWidthScreen) / completeAnimationLimit
@@ -105,6 +112,9 @@ extension ViewController {
         }
     }
 
+    /*
+     Sends current view to the back, and brings the other view to the front
+     */
     @objc
     func tapView(gesture: UITapGestureRecognizer) {
         let target = gesture.view!
@@ -132,10 +142,6 @@ extension ViewController {
 
     func reset(view: UIView) {
         let halfWidthScreen = cardsContainerView.bounds.width / 2.0
-        //        UIView.animate(withDuration: 0.25) {
-        //            view.center = CGPoint(x: halfWidthScreen, y: view.center.y)
-        //            view.transform = CGAffineTransform.identity
-        //        }
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
@@ -143,16 +149,12 @@ extension ViewController {
             .startAnimation()
     }
 
+    /*
+     Creates a mixed animation, that sets the view in the middle of the container, make it bigger (scalling x 1)
+     and put in at the start of subviews array
+     */
     func bringToTop(view: UIView) {
         let halfWidthScreen = cardsContainerView.bounds.width / 2.0
-        //        UIView.animate(withDuration: 0.25) {
-        //            view.center = CGPoint(x: halfWidthScreen, y: view.center.y)
-        //            view.transform = CGAffineTransform.identity
-        //                .concatenating(CGAffineTransform(scaleX: 1, y: 1))
-        //            self.view.bringSubview(toFront: view)
-        //            view.alpha = 1
-        //        }
-
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
@@ -162,18 +164,12 @@ extension ViewController {
             .startAnimation()
     }
 
+    /*
+     Creates a mixed animation, that sets the view in the middle of the container, make it smaller (scalling x 0.9)
+     and put in at the end of subviews array and a little upper so it can be seen
+     */
     func sendToBack(view: UIView) {
         let halfWidthScreen = cardsContainerView.bounds.width / 2.0
-
-        UIView.animate(withDuration: 0.25) {
-            view.center = CGPoint(x: halfWidthScreen, y: view.center.y)
-            view.transform = CGAffineTransform.identity
-                .concatenating(CGAffineTransform(scaleX: 0.9, y: 0.9))
-                .concatenating(CGAffineTransform(translationX: 0, y: -30))
-            self.view.sendSubview(toBack: view)
-            view.alpha = 0.5
-        }
-
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
