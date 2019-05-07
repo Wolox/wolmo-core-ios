@@ -3,7 +3,7 @@
 //  AnimationDemo
 //
 //  Created by Argentino Ducret on 23/01/2018.
-//  Copyright © 2019 Wolox. All rights reserved.
+//  Copyright © 2018 Wolox. All rights reserved.
 //
 
 import UIKit
@@ -30,6 +30,7 @@ class AnimationsViewController: UIViewController {
 }
 
 // MARK - Configuration methods
+
 private extension AnimationsViewController {
     func setupSimpleAnimations() {
         for each in SimpleExample.all {
@@ -61,8 +62,8 @@ private extension AnimationsViewController {
     
     /**
      Gets the AnimationType and animation closure to execute.
-     - Each AnimationType has an `startAnimation(completion:)` that executes the specifies animations depending on it's type
-     - Every normalAnimation could be written as AnimationType, and vice versa
+     - Each AnimationType has an `startAnimation(completion:)` that executes the specified animations depending on it's type
+     - normalAnimation are example of animations without using WolmoCore Animations
      */
     @objc func segmentedControlValueChanged() {
         let newAnimationIndex = segmentedControl.selectedSegmentIndex

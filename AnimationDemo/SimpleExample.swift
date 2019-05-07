@@ -3,7 +3,7 @@
 //  AnimationDemo
 //
 //  Created by Argentino Ducret on 23/01/2018.
-//  Copyright © 2019 Wolox. All rights reserved.
+//  Copyright © 2018 Wolox. All rights reserved.
 //
 
 import Foundation

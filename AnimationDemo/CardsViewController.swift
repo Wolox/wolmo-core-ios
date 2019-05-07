@@ -3,7 +3,7 @@
 //  AnimationDemo
 //
 //  Created by Argentino Ducret on 23/01/2018.
-//  Copyright © 2019 Wolox. All rights reserved.
+//  Copyright © 2018 Wolox. All rights reserved.
 //
 
 import UIKit
@@ -37,7 +37,41 @@ private extension CardsViewController {
         sendToBack(view: yellowView)
     }
     
-    // MARK: - Animation methods
+    // MARK: - Helper methods
+    /** This methods are used to handle specific behaviour for the example.
+     If you need to use those animations, you would need to handle this methods
+     depending on the feature you want to address
+     */
+    
+    func getOtherView(view: UIView) -> UIView {
+        if view.isEqual(greenView) {
+            return yellowView
+        } else {
+            return greenView
+        }
+    }
+    
+    func changeGestureRecognizers(panView: UIView, tapView: UIView) {
+        panView.gestureRecognizers?.forEach { panView.removeGestureRecognizer($0) }
+        tapView.gestureRecognizers?.forEach { tapView.removeGestureRecognizer($0) }
+        
+        tapView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
+        panView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
+    }
+    
+    func reset(view: UIView) {
+        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        view
+            .mixedAnimation(withDuration: 0.25)
+            .action(positionX: halfWidthScreen, positionY: view.center.y)
+            .transformIdentity()
+            .startAnimation()
+    }
+}
+
+// MARK: - Animation methods
+
+private extension CardsViewController {
     
     /**
      Animate the view when the user is draging it to the right
@@ -150,37 +184,6 @@ private extension CardsViewController {
             .transform(translationX: 0, translationY: -30)
             .action(moveTo: .back)
             .action(alpha: 0.5)
-            .startAnimation()
-    }
-    
-    // MARK: - Helper methods
-    /** This methods are used to handle specific behaviour for the example.
-     If you need to use those animations, you would need to handle this methods
-     depending on the feature you want to address
-    */
-    
-    func getOtherView(view: UIView) -> UIView {
-        if view.isEqual(greenView) {
-            return yellowView
-        } else {
-            return greenView
-        }
-    }
-    
-    func changeGestureRecognizers(panView: UIView, tapView: UIView) {
-        panView.gestureRecognizers?.forEach { panView.removeGestureRecognizer($0) }
-        tapView.gestureRecognizers?.forEach { tapView.removeGestureRecognizer($0) }
-        
-        tapView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
-        panView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
-    }
-    
-    func reset(view: UIView) {
-        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
-        view
-            .mixedAnimation(withDuration: 0.25)
-            .action(positionX: halfWidthScreen, positionY: view.center.y)
-            .transformIdentity()
             .startAnimation()
     }
 }
