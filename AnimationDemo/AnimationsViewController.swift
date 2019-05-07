@@ -2,7 +2,7 @@
 //  AnimationsViewController.swift
 //  AnimationDemo
 //
-//  Created by Carolina Arcos on 5/7/19.
+//  Created by Argentino Ducret on 23/01/2018.
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
