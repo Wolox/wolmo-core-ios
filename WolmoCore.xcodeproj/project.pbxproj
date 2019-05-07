@@ -35,6 +35,8 @@
 		9D896AEE1CDE64FF008B0E5F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D896AEF1CDE64FF008B0E5F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AEA1CDE642F008B0E5F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
+		AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
+		AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4B1228221110070C01F /* SimpleExample.swift */; };
 		B82058CD1EEF33950002D7D4 /* UIImageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */; };
 		B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */; };
 		B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948191D3EA039003A082F /* AVFoundation.framework */; };
@@ -228,6 +230,8 @@
 		9D896AE91CDE642F008B0E5F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9D896AEA1CDE642F008B0E5F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		AECEB3A3227CD8280070C01F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
+		AECEB4B1228221110070C01F /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
 		B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageSpec.swift; sourceTree = "<group>"; };
 		B82058CE1EEF39230002D7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WolmoCoreTests/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -546,6 +550,8 @@
 				CE1DE00B209A66A9007471A0 /* AppDelegate.swift */,
 				CE1DE00C209A66A9007471A0 /* Info.plist */,
 				AECEB3A3227CD8280070C01F /* CardsViewController.swift */,
+				AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */,
+				AECEB4B1228221110070C01F /* SimpleExample.swift */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -995,6 +1001,8 @@
 				CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */,
 				CE8B49AE213882B5004558C9 /* ViewController+SimpleAnimations.swift in Sources */,
 				CEECA02C209A7047001A7E37 /* ViewController.swift in Sources */,
+				AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */,
+				AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

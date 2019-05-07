@@ -183,5 +183,4 @@ private extension CardsViewController {
             .transformIdentity()
             .startAnimation()
     }
-    
 }
