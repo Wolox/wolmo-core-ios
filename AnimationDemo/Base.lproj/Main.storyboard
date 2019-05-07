@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-81" y="113"/>
         </scene>
         <!--Cards View Controller-->
         <scene sceneID="Jlu-lN-MaA">
@@ -170,6 +170,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6f1-aZ-xd6"/>
                     </view>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="YNt-Mj-D3X" id="Qdf-fw-oNk"/>
+                        <outlet property="greenView" destination="RBa-vw-dDd" id="RcJ-mJ-bjy"/>
+                        <outlet property="yellowView" destination="bF5-HH-ibw" id="V42-WW-InQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1M-oB-IIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

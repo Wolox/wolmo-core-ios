@@ -29,11 +29,15 @@ class CardsViewController: UIViewController {
 }
 
 private extension CardsViewController {
+    // MARK: - Configuration methods
+    
     func setUpCardAnimation() {
         greenView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
         yellowView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
-//        sendToBack(view: yellowView)
+        sendToBack(view: yellowView)
     }
+    
+    // MARK: - Animation methods
     
     /**
      Animate the view when the user is draging it to the right
@@ -73,12 +77,12 @@ private extension CardsViewController {
             rotationAnimator.stopAnimation(true)
             
             if target.center.x >= swapViewsLimit {
-//                sendToBack(view: target)
-//                let otherView = getOtherView(view: target)
-//                bringToTop(view: otherView)
-//                changeGestureRecognizers(panView: target, tapView: otherView)
+                sendToBack(view: target)
+                let otherView = getOtherView(view: target)
+                bringToTop(view: otherView)
+                changeGestureRecognizers(panView: target, tapView: otherView)
             } else {
-//                reset(view: target)
+                reset(view: target)
             }
             
         default:
@@ -98,10 +102,86 @@ private extension CardsViewController {
      */
     @objc func tapView(gesture: UITapGestureRecognizer) {
         let target = gesture.view!
-//        bringToTop(view: target)
-//        let otherView = getOtherView(view: target)
-//        sendToBack(view: otherView)
-//        changeGestureRecognizers(panView: otherView, tapView: target)
+        bringToTop(view: target)
+        let otherView = getOtherView(view: target)
+        sendToBack(view: otherView)
+        changeGestureRecognizers(panView: otherView, tapView: target)
+    }
+    
+    /**
+     Uses a mixed animation to put the view at the start of subview's array.
+     
+     - Parameter view : view that is going to be send to top
+     
+     - Note: Is created a mix for the following transformations:
+        - Set the view in the middle of the container
+        - Make the view bigget (scalling x **)
+        - Set the view at the start of all subviews
+     */
+    func bringToTop(view: UIView) {
+        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        view
+            .mixedAnimation(withDuration: 0.25)
+            .action(positionX: halfWidthScreen, positionY: view.center.y)
+            .transform(scaleX: 1, scaleY: 1)
+            .action(moveTo: .front)
+            .action(alpha: 1)
+            .startAnimation()
+    }
+    
+    /**
+     Uses a mixed animation to put the view at the end of subview's array.
+     
+     - Parameter view: view that is going to be send to back
+     
+     - Note: Is created a mix of the following transformations:
+        - Set the view in the middle of the container
+        - Make the view smaller (scalling x ***)
+        - Set the view at the end of all subviews
+        - Move the view up (translate in Y position)
+     */
+    func sendToBack(view: UIView) {
+        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        view
+            .mixedAnimation(withDuration: 0.25)
+            .action(positionX: halfWidthScreen, positionY: view.center.y)
+            .transformIdentity()
+            .transform(scaleX: 0.9, scaleY: 0.9)
+            .transform(translationX: 0, translationY: -30)
+            .action(moveTo: .back)
+            .action(alpha: 0.5)
+            .startAnimation()
+    }
+    
+    // MARK: - Helper methods
+    /** This methods are used to handle specific behaviour for the example.
+     If you need to use those animations, you would need to handle this methods
+     depending on the feature you want to address
+    */
+    
+    func getOtherView(view: UIView) -> UIView {
+        if view.isEqual(greenView) {
+            return yellowView
+        } else {
+            return greenView
+        }
+    }
+    
+    func changeGestureRecognizers(panView: UIView, tapView: UIView) {
+        panView.gestureRecognizers?.forEach { panView.removeGestureRecognizer($0) }
+        tapView.gestureRecognizers?.forEach { tapView.removeGestureRecognizer($0) }
+        
+        tapView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
+        panView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
+    }
+    
+    func reset(view: UIView) {
+        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        view
+            .mixedAnimation(withDuration: 0.25)
+            .action(positionX: halfWidthScreen, positionY: view.center.y)
+            .transformIdentity()
+            .startAnimation()
     }
     
 }
