@@ -11,20 +11,38 @@ import UIKit
 
 public extension UIView {
     
-   public enum Position {
+    enum Position {
         case back
         case front
     }
     
-    public func simpleAnimation() -> SimpleAnimation {
+    /**
+     Creates a SimpleAnimation that allows you to add different actions and transformations to the view, executing each of them only when the previous one is finished in the order they were added.
+     
+     - Returns: SimpleAnimation for this view
+     
+     */
+    func simpleAnimation() -> SimpleAnimation {
         return SimpleAnimation(view: self)
     }
     
-    public func mixedAnimation(withDuration duration: TimeInterval) -> MixedAnimation {
+    /**
+     Creates a MixedAnimation that allows you to add different actions and transformations to the view, concatenating and executing first all transformations and when that is done, executes each action that was added.
+     
+     - Returns: MixedAnimation for this view
+     
+     */
+    func mixedAnimation(withDuration duration: TimeInterval) -> MixedAnimation {
         return MixedAnimation(view: self, duration: duration)
     }
     
-    public func chainedAnimation(loop: Bool = false) -> ChainedAnimation {
+    /**
+     Creates a ChainedAnimation that allows you to combine SimpleAnimations and MixedAnimations, and execute them in the order they were added.
+     
+     - Returns: ChainedAnimation for this view
+     
+     */
+    func chainedAnimation(loop: Bool = false) -> ChainedAnimation {
         return ChainedAnimation(view: self, loop: loop)
     }
     
@@ -33,6 +51,7 @@ public extension UIView {
      
      - Parameter duration: Time in seconds the animation will be executed. Default is 0.05
      - Parameter repeatShake: Number of times the view will change position. Default is 3
+     
      */
     
     public func shake(withDuration duration: TimeInterval = 0.05, repeatShake: Float = 3) {
@@ -53,6 +72,7 @@ public extension UIView {
      - Parameter duration: Time in seconds that it takes for the view to return to the original position. Default is 0.5
      - Parameter onDragStarted: The closure that will execute when the view is held
      - Parameter onDragFinished: The closure that will execute when the view is released
+     
      */
     
     public func isDraggable(returnToPosition: Bool = true, withDuration duration: TimeInterval = 0.5, onDragStarted: ((UIView) -> Void)?, onDragFinished: ((UIView) -> Void)?) {
