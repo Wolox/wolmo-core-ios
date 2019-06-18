@@ -21,7 +21,7 @@ public protocol UIFontProvider: class {
 
      - seealso: `UIFont.preferredFont(forTextStyle:)`.
      */
-    func appFontName(for style: UIFontTextStyle) -> String
+    func appFontName(for style: UIFont.TextStyle) -> String
 
 }
 
@@ -29,7 +29,7 @@ public func == (lhs: UIFontProvider?, rhs: UIFontProvider?) -> Bool {
     switch (lhs, rhs) {
     case (.none, .none): return true
     case (.some(let lhs), .some(let rhs)):
-        var styles: [UIFontTextStyle] = [.title1, .title2, .title3,
+        var styles: [UIFont.TextStyle] = [.title1, .title2, .title3,
                                          .headline, .subheadline, .body, .callout,
                                          .footnote, .caption1, .caption2]
         if #available(iOS 11.0, *) {
@@ -48,7 +48,7 @@ public func == (lhs: UIFontProvider?, rhs: UIFontProvider?) -> Bool {
 
 public extension UIFontProvider {
 
-    public func appFontName(for style: UIFontTextStyle) -> String {
+    public func appFontName(for style: UIFont.TextStyle) -> String {
         return UIFont.preferredFont(forTextStyle: style).fontName
     }
 
@@ -82,7 +82,7 @@ public extension UIFont {
         property is not a valid one (because it doesn't exist or it isn't added in the bundle).
      - seealso: UIFont.fontProvider and UIFont.preferredFont(forTextStyle:)
     */
-    public static func appFont(for style: UIFontTextStyle) -> UIFont {
+    public static func appFont(for style: UIFont.TextStyle) -> UIFont {
         let defaultFont = UIFont.preferredFont(forTextStyle: style)
         let provider = fontProvider ?? DefaultFontProvider()
         let fontName = provider.appFontName(for: style)

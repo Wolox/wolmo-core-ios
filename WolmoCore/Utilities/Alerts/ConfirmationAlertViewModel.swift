@@ -13,8 +13,8 @@ import Foundation
  */
 public struct ConfirmationAlertViewModel {
     
-    public let title: String
-    public let message: String
+    public let title: String?
+    public let message: String?
     public let dismissButtonTitle: String
     public let confirmButtonTitle: String
     public let dismissAction: (ConfirmationAlertViewModel) -> Void
@@ -22,9 +22,6 @@ public struct ConfirmationAlertViewModel {
     
     /**
      Initialize a new ConfirmationAlertViewModel with the provided parameters.
-     
-     Is not necessary to provide all parameters. In most cases, its only
-     needed `title`, `message` and `confirmAtion`.
      
      - parameter title: The alert title.
      - parameter message: The alert message.
@@ -34,8 +31,8 @@ public struct ConfirmationAlertViewModel {
      - parameter confirmAction: The confirm button action.
      */
     public init(
-        title: String,
-        message: String,
+        title: String? = "",
+        message: String? = .none,
         dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ConfirmationAlertViewModel) -> Void = { _ in },
         confirmButtonTitle: String = DefaultConfirmButtonTitleKey.localized(),

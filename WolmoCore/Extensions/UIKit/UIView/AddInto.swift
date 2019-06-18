@@ -58,7 +58,7 @@ public extension UIView {
         }
 
         if case viewPositioning = ViewPositioning.back {
-            containerView.sendSubview(toBack: self)
+            containerView.sendSubviewToBack(self)
         }
     }
 

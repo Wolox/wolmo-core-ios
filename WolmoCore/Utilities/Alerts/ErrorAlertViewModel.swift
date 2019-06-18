@@ -13,8 +13,8 @@ import Foundation
  */
 public struct ErrorAlertViewModel {
     
-    public let title: String
-    public let message: String
+    public let title: String?
+    public let message: String?
     public let dismissButtonTitle: String
     public let dismissAction: (ErrorAlertViewModel) -> Void
     
@@ -27,8 +27,8 @@ public struct ErrorAlertViewModel {
      - parameter dismissAction: The dismiss button action.
      */
     public init(
-        title: String,
-        message: String,
+        title: String? = "",
+        message: String? = .none,
         dismissButtonTitle: String = DefaultDismissButtonTitleKey.localized(),
         dismissAction: @escaping (ErrorAlertViewModel) -> Void = { _ in }) {
         self.title = title

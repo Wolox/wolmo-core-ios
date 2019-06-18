@@ -40,7 +40,7 @@ public extension UIView {
      - Parameter action: The closure that will execute when the view is swiped
      */
     public func addSwipeGestureRecognizer(numberOfTouchesRequired: Int = 1,
-                                          direction: UISwipeGestureRecognizerDirection = .right,
+                                          direction: UISwipeGestureRecognizer.Direction = .right,
                                           action: ((UISwipeGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         swipeGestureRecognizerAction = action

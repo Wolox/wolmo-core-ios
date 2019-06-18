@@ -8,7 +8,7 @@
 
 fileprivate class CustomFontProvider: UIFontProvider {
 
-    func appFontName(for style: UIFontTextStyle) -> String {
+    func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
         case .headline: return "Kefa"
         case .body: return "Savoye LET"
@@ -21,7 +21,7 @@ fileprivate class CustomFontProvider: UIFontProvider {
 
 fileprivate class CustomFontProviderCopy: UIFontProvider {
 
-    func appFontName(for style: UIFontTextStyle) -> String {
+    func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
         case .headline: return "Kefa"
         case .body: return "Savoye LET"
@@ -34,7 +34,7 @@ fileprivate class CustomFontProviderCopy: UIFontProvider {
 
 fileprivate class CustomFontProvider2: UIFontProvider {
 
-    func appFontName(for style: UIFontTextStyle) -> String {
+    func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
         case .headline: return "Savoye LET"
         case .body: return "Kefa"

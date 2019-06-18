@@ -14,10 +14,10 @@ import WolmoCore
 
 fileprivate class MyFontProvider: UIFontProvider {
 
-    func appFontName(for style: UIFontTextStyle) -> String {
+    func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
-        case UIFontTextStyle.headline: return "Helvetica-Bold"
-        case UIFontTextStyle.title1: return "jwdbf"
+        case UIFont.TextStyle.headline: return "Helvetica-Bold"
+        case UIFont.TextStyle.title1: return "jwdbf"
         default: return "Helvetica"
         }
     }
@@ -95,7 +95,7 @@ public class UITextFieldSpec: QuickSpec {
                     }
 
                     it("should return that style") {
-                        expect(textField.fontTextStyle).to(equal(UIFontTextStyle.body))
+                        expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.body))
                     }
                     
                 }
@@ -148,7 +148,7 @@ public class UITextFieldSpec: QuickSpec {
                         }
 
                         it("should change the fontTextStyle") {
-                            expect(textField.fontTextStyle).to(equal(UIFontTextStyle.headline))
+                            expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.headline))
                         }
 
                         it("should change the font as specified in appFontName(for:)") {
@@ -165,7 +165,7 @@ public class UITextFieldSpec: QuickSpec {
                         }
 
                         it("should change the fontTextStyle") {
-                            expect(textField.fontTextStyle).to(equal(UIFontTextStyle.body))
+                            expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.body))
                         }
 
                         it("should change the font as specified in appFontName(for:)") {
@@ -192,7 +192,7 @@ public class UITextFieldSpec: QuickSpec {
                         }
 
                         it("should return the new textStyle") {
-                            expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title2))
+                            expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.title2))
                         }
 
                     }
@@ -206,7 +206,7 @@ public class UITextFieldSpec: QuickSpec {
                         }
 
                         it("should return the new textStyle") {
-                            expect(textField.fontTextStyle).to(equal(UIFontTextStyle.title2))
+                            expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.title2))
                         }
                         
                     }

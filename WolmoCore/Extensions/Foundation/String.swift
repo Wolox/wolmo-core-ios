@@ -52,7 +52,7 @@ public extension String {
      
      - seealso: NSMutableAttributedString.addAttributes(_:range:)
     */
-    public func format(withAttributes attrs: [String: [NSAttributedStringKey: Any]]) -> NSAttributedString {
+    public func format(withAttributes attrs: [String: [NSAttributedString.Key: Any]]) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let nSStringWithFormat = self as NSString
         for (substring, attributes) in attrs {
@@ -178,7 +178,7 @@ public extension String {
         UIColor.clear.set()
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
-        self.draw(in: label.bounds, withAttributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.paragraphStyle: paragraph])
+        self.draw(in: label.bounds, withAttributes: [NSAttributedString.Key.font: font, NSAttributedString.Key.paragraphStyle: paragraph])
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image

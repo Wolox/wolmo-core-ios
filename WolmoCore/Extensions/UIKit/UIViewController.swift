@@ -27,9 +27,9 @@ public extension UIViewController {
                      in viewPositioning: ViewPositioning = .front,
                      layout: LayoutMode = .constraints,
                      respectSafeArea: Bool = false) {
-        childViewController.willMove(toParentViewController: self)
-        addChildViewController(childViewController)
-        childViewController.didMove(toParentViewController: self)
+        childViewController.willMove(toParent: self)
+        addChild(childViewController)
+        childViewController.didMove(toParent: self)
         childViewController.view.add(into: containerView, with: insets, in: viewPositioning, layout: layout, respectSafeArea: respectSafeArea)
     }
     
@@ -38,14 +38,14 @@ public extension UIViewController {
      */
     public func unloadFromParentViewController() {
         view.removeFromSuperview()
-        removeFromParentViewController()
+        removeFromParent()
     }
     
     /**
      Unloads all childViewController and their view from self.
      */
     public func unloadChildViewControllers() {
-        for childController in self.childViewControllers {
+        for childController in self.children {
             childController.unloadFromParentViewController()
         }
     }

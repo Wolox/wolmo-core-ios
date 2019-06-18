@@ -88,9 +88,9 @@ public class SimpleAnimation: AnimationType {
         let action = {
             switch position {
             case .back:
-                self.view.superview?.sendSubview(toBack: self.view)
+                self.view.superview?.sendSubviewToBack(self.view)
             case .front:
-                self.view.superview?.bringSubview(toFront: self.view)
+                self.view.superview?.bringSubviewToFront(self.view)
             }
         }
         animations.append(.action(action, duration: duration))

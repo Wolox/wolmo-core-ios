@@ -28,7 +28,7 @@ public extension UICollectionView {
      */
     public func register<T: UICollectionReusableView>(header headerType: T.Type) where T: NibLoadable {
         register(headerType.nib,
-                 forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                  withReuseIdentifier: headerType.identifier)
     }
     
@@ -40,7 +40,7 @@ public extension UICollectionView {
      */
     func register<T: UICollectionReusableView>(footer footerType: T.Type) where T: NibLoadable {
         register(footerType.nib,
-                 forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                  withReuseIdentifier: footerType.identifier)
     }
     
@@ -62,7 +62,7 @@ public extension UICollectionView {
          - parameter headerType: A collection reusable header view to take the identifier from.
      */
     public func dequeue<T: UICollectionReusableView>(header headerType: T.Type, for indexPath: IndexPath) -> T? {
-        return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader,
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                 withReuseIdentifier: headerType.identifier,
                                                 for: indexPath) as? T
     }
@@ -74,7 +74,7 @@ public extension UICollectionView {
          - parameter footerType: AA collection reusable footer view to take the identifier from.
      */
     public func dequeue<T: UICollectionReusableView>(footer footerType: T.Type, for indexPath: IndexPath) -> T? {
-        return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter,
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,
                                                 withReuseIdentifier: footerType.identifier,
                                                 for: indexPath) as? T
     }

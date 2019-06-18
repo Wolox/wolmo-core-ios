@@ -37,7 +37,7 @@ public extension UITextField {
         `UIFont.appFontName(for:)` is not valid.
      - seealso: UIFont.appFontName(for:).
     */
-    public var fontTextStyle: UIFontTextStyle? {
+    public var fontTextStyle: UIFont.TextStyle? {
         get {
             return getStyle()
         }
@@ -52,20 +52,20 @@ public extension UITextField {
         }
     }
 
-    private func getStyle() -> UIFontTextStyle? {
+    private func getStyle() -> UIFont.TextStyle? {
         return getAssociatedObject(self, key: &fontTextStyleKey)
     }
 
     private func removeOldStyle() {
-        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+        setAssociatedObject(self, key: &fontTextStyleKey, value: UIFont.TextStyle?.none)
         setAssociatedObject(self, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
     }
 
-    private func applyNewStyle(_ style: UIFontTextStyle) {
+    private func applyNewStyle(_ style: UIFont.TextStyle) {
         setAssociatedObject(self, key: &fontTextStyleKey, value: style)
         font = UIFont.appFont(for: style)
         let observer = observe(\.font) { object, _ in
-            setAssociatedObject(object, key: &fontTextStyleKey, value: UIFontTextStyle?.none)
+            setAssociatedObject(object, key: &fontTextStyleKey, value: UIFont.TextStyle?.none)
             setAssociatedObject(object, key: &fontTextStyleObserverKey, value: NSKeyValueObservation?.none)
         }
         setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)

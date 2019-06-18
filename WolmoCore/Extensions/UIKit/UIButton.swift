@@ -22,10 +22,10 @@ public extension UIButton {
         By default, Normal.
      
      */
-    public func setUnderlined(title: String, style: NSUnderlineStyle = .styleSingle, color: UIColor? = .none, forState state: UIControlState = .normal) {
-        var attributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.underlineStyle: style.rawValue as AnyObject]
+    public func setUnderlined(title: String, style: NSUnderlineStyle = NSUnderlineStyle.single, color: UIColor? = .none, forState state: UIControl.State = .normal) {
+        var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.underlineStyle: style.rawValue as AnyObject]
         if let colorAttr = color {
-            attributes[NSAttributedStringKey.underlineColor] = colorAttr
+            attributes[NSAttributedString.Key.underlineColor] = colorAttr
         }
         let underlinedText = NSAttributedString(string: title, attributes: attributes)
         setAttributedTitle(underlinedText, for: state)
