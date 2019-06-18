@@ -145,7 +145,7 @@ private extension AnimationsViewController {
     /**
      Creates a normal animation of a chain of transformations, adding each one after the previous one is completed
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has none AnimationType and one normal animation
      
@@ -185,7 +185,7 @@ private extension AnimationsViewController {
     /**
      Creates 2 different mixed animations and set them in a single chained animation that executes one after the previous one is completed, and repeats them in a loop
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a ChainedAnimation and none normal animation
      
@@ -211,7 +211,7 @@ private extension AnimationsViewController {
     /**
      Creates a SimpleAnimation and a MixedAnimation and sets them in a single chained animation that executes one after the previous one is completed, without repeating them
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a ChainedAnimation and none normal animation
      */
@@ -234,7 +234,7 @@ private extension AnimationsViewController {
     /**
      Creates a MixedAnimation that scals the view and and a normal animation
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a ChainedAnimation and a normal animation
      */
@@ -259,7 +259,7 @@ private extension AnimationsViewController {
     /**
      Creates a SimpleAnimation that adds some transformation to the view
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a SimpleAnimation and none normal animation
      */
@@ -278,7 +278,7 @@ private extension AnimationsViewController {
     /**
      Creates four MixedAnimations and sets them in a single ChainedAnimation that executes one after the previous one is completed, repeating them
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a SimpleAnimation and none normal animation
      */
@@ -306,7 +306,7 @@ private extension AnimationsViewController {
     /**
      Creates a MixedAnimation that rotates and scales the view
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a MixedAnimation and none normal animation
 
@@ -322,7 +322,7 @@ private extension AnimationsViewController {
     /**
      Creates four MixedAnimations and sets them in a single ChainedAnimation that executes one after the previous one is completed, repeating them
      
-     - Parameter view: view to be animates
+     - Parameter view: view to be animated
      
      - Returns: tuple that has a SimpleAnimation and none normal animation
 

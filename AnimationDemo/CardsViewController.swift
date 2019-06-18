@@ -96,7 +96,6 @@ private extension CardsViewController {
             rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: UIViewAnimationCurve.easeInOut) {
                 target.transform = CGAffineTransform(rotationAngle: (CGFloat.pi * 15.0) / 180.0)
             }
-            print((CGFloat.pi * 15.0) / 180.0)
             
         case .changed:
             let translation = gesture.translation(in: self.view)
@@ -158,8 +157,8 @@ private extension CardsViewController {
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
             .transform(scaleX: 1, scaleY: 1)
-            .action(moveTo: .front)
             .action(alpha: 1)
+            .action(moveTo: .front)
             .startAnimation()
     }
     
