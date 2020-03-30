@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0714723723D76F8000D9C819 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714723623D76F8000D9C819 /* Constraints.swift */; };
+		0714723923D7754500D9C819 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714723823D7754500D9C819 /* Accessibility.swift */; };
+		0714723B23D7770B00D9C819 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714723A23D7770B00D9C819 /* UIStackView.swift */; };
 		0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02AB4E21682BD2007DB327 /* StringToImageController.swift */; };
 		0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02AB4F21682BD2007DB327 /* StringToImageView.swift */; };
 		0C02AB5521682BD2007DB327 /* StringToImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C02AB5121682BD2007DB327 /* StringToImageView.xib */; };
@@ -200,6 +203,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0714723623D76F8000D9C819 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		0714723823D7754500D9C819 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
+		0714723A23D7770B00D9C819 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		0C02AB4E21682BD2007DB327 /* StringToImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageController.swift; sourceTree = "<group>"; };
 		0C02AB4F21682BD2007DB327 /* StringToImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageView.swift; sourceTree = "<group>"; };
 		0C02AB5121682BD2007DB327 /* StringToImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringToImageView.xib; sourceTree = "<group>"; };
@@ -580,6 +586,7 @@
 				CE3A9B881E607B28005D7E8F /* UITextField.swift */,
 				CE3A9B891E607B28005D7E8F /* UIView */,
 				CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */,
+				0714723A23D7770B00D9C819 /* UIStackView.swift */,
 				CE228ADF1EF2FE1E00097B19 /* UIFont.swift */,
 				0CB88321216455D90073459D /* UIImageView.swift */,
 			);
@@ -595,6 +602,8 @@
 				CE3A9B8C1E607B28005D7E8F /* Borders.swift */,
 				CE4F2CB72135ED9F007BB465 /* AddInto.swift */,
 				CE4F2CB92135EFF4007BB465 /* SafeLayout.swift */,
+				0714723623D76F8000D9C819 /* Constraints.swift */,
+				0714723823D7754500D9C819 /* Accessibility.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -902,6 +911,7 @@
 				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
+				0714723723D76F8000D9C819 /* Constraints.swift in Sources */,
 				CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */,
 				B9F63CC21D5CE7FA00D09C1D /* Identifiable.swift in Sources */,
 				CE3A9B9E1E607B28005D7E8F /* UITextField.swift in Sources */,
@@ -926,6 +936,7 @@
 				CE1DDFDE209A646B007471A0 /* SimpleAnimation.swift in Sources */,
 				653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */,
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
+				0714723923D7754500D9C819 /* Accessibility.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
 				CE4F2CBA2135EFF4007BB465 /* SafeLayout.swift in Sources */,
 				CE1DDFDD209A646B007471A0 /* ChainedAnimation.swift in Sources */,
@@ -943,6 +954,7 @@
 				B988B9811D24621000824685 /* DeviceType.swift in Sources */,
 				B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */,
 				CE3A9BA11E607B28005D7E8F /* Borders.swift in Sources */,
+				0714723B23D7770B00D9C819 /* UIStackView.swift in Sources */,
 				CE3A9B9B1E607B28005D7E8F /* UIButton.swift in Sources */,
 				CE0DA7D11FD847D600D0B1E3 /* Gradient.swift in Sources */,
 			);

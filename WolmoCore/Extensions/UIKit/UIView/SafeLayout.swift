@@ -25,14 +25,13 @@ public extension UIView {
                 let safeGuide = UILayoutGuide()
                 safeGuide.identifier = id
                 addLayoutGuide(safeGuide)
-
                 NSLayoutConstraint.activate([
                     safeGuide.leadingAnchor.constraint(equalTo: leadingAnchor),
                     safeGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
                     safeGuide.topAnchor.constraint(equalTo: topAnchor),
                     safeGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
                 ])
-
+                
                 return safeGuide
             }
         }

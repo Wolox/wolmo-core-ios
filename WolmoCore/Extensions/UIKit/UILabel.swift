@@ -10,6 +10,13 @@ import Foundation
 
 public extension UILabel {
 
+    convenience init(text: String, font: UIFont, numberOfLines: Int = 1) {
+        self.init(frame: .zero)
+        self.text = text
+        self.font = font
+        self.numberOfLines = numberOfLines
+    }
+    
     /**
      fontTextStyle is intended to be used instead of setting the font style by taking advantage of
      `UIFont.preferredFont(forTextStyle:)` to manage your apps fonts.
