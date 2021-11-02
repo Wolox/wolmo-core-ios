@@ -9,14 +9,13 @@
 import UIKit
 
 public extension UICollectionView {
-    
     /**
          Registers a cell to be used by a UICollectionView.
          
          - parameter cellType: A nibloadable collection view cell type
                 to take the identifier and nib from.
      */
-    public func register<T: UICollectionViewCell>(cell cellType: T.Type) where T: NibLoadable {
+    func register<T: UICollectionViewCell>(cell cellType: T.Type) where T: NibLoadable {
         register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
     }
     
@@ -26,7 +25,7 @@ public extension UICollectionView {
          - parameter headerType: A nibloadable reusable view type
                 to take the identifier and nib from.
      */
-    public func register<T: UICollectionReusableView>(header headerType: T.Type) where T: NibLoadable {
+    func register<T: UICollectionReusableView>(header headerType: T.Type) where T: NibLoadable {
         register(headerType.nib,
                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                  withReuseIdentifier: headerType.identifier)
@@ -51,7 +50,7 @@ public extension UICollectionView {
          - parameter cellType: A collection cell to take the identifier from.
          - parameter indexPath: IndexPath where to add the cell to the collection view.
      */
-    public func dequeue<T: UICollectionViewCell>(cell cellType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UICollectionViewCell>(cell cellType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableCell(withReuseIdentifier: cellType.identifier, for: indexPath) as? T
     }
     
@@ -61,7 +60,7 @@ public extension UICollectionView {
      
          - parameter headerType: A collection reusable header view to take the identifier from.
      */
-    public func dequeue<T: UICollectionReusableView>(header headerType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UICollectionReusableView>(header headerType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                 withReuseIdentifier: headerType.identifier,
                                                 for: indexPath) as? T
@@ -73,10 +72,9 @@ public extension UICollectionView {
      
          - parameter footerType: AA collection reusable footer view to take the identifier from.
      */
-    public func dequeue<T: UICollectionReusableView>(footer footerType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UICollectionReusableView>(footer footerType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,
                                                 withReuseIdentifier: footerType.identifier,
                                                 for: indexPath) as? T
     }
-    
 }

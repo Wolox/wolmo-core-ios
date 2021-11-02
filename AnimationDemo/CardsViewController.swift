@@ -96,7 +96,6 @@ private extension CardsViewController {
             rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: UIViewAnimationCurve.easeInOut) {
                 target.transform = CGAffineTransform(rotationAngle: (CGFloat.pi * 15.0) / 180.0)
             }
-            
         case .changed:
             let translation = gesture.translation(in: self.view)
             let dx = translation.x - lastTranslation.x
@@ -104,7 +103,6 @@ private extension CardsViewController {
             target.center = CGPoint(x: target.center.x + dx, y: target.center.y)
             lastTranslation = translation
             rotationAnimator.fractionComplete = (target.center.x - halfWidthScreen) / completeAnimationLimit
-            
         case .ended:
             lastTranslation = CGPoint.zero
             rotationAnimator.stopAnimation(true)
@@ -117,7 +115,6 @@ private extension CardsViewController {
             } else {
                 reset(view: target)
             }
-            
         default:
             break
         }

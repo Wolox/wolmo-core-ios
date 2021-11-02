@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIView {
-    
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {
@@ -20,15 +19,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var swipeGestureRecognizerAction: Action? {
+        get {
+            let swipeGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.swipeGestureRecognizer) as? Action
+            return swipeGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.swipeGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let swipeGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.swipeGestureRecognizer) as? Action
-            return swipeGestureRecognizerActionInstance
         }
     }
     
@@ -39,9 +38,9 @@ public extension UIView {
      - Parameter direction: The desired direction of the swipe. Multiple directions may be specified if they will result in the same behavior (for example, UITableView swipe delete). Default is right
      - Parameter action: The closure that will execute when the view is swiped
      */
-    public func addSwipeGestureRecognizer(numberOfTouchesRequired: Int = 1,
-                                          direction: UISwipeGestureRecognizer.Direction = .right,
-                                          action: ((UISwipeGestureRecognizer) -> Void)?) {
+    func addSwipeGestureRecognizer(numberOfTouchesRequired: Int = 1,
+                                   direction: UISwipeGestureRecognizer.Direction = .right,
+                                   action: ((UISwipeGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         swipeGestureRecognizerAction = action
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))

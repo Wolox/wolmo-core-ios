@@ -9,7 +9,6 @@
 import Foundation
 
 public extension Bundle {
-    
     /**
      Loads a nib from the bundle.
      
@@ -19,7 +18,7 @@ public extension Bundle {
      - warning: This may through an ObjC NSException if there is no
         nib with that name in that bundle.
      */
-    public func loadNib<NibType, T: RawRepresentable>(named nibName: T) -> NibType? where T.RawValue == String {
+    func loadNib<NibType, T: RawRepresentable>(named nibName: T) -> NibType? where T.RawValue == String {
         return loadNibNamed(nibName.rawValue, owner: self, options: .none)?[0] as? NibType
     }
     
@@ -32,7 +31,7 @@ public extension Bundle {
                 list (Info.plist) as Any or .none if the key doesn't exist.
      - seealso: object(forInfoDictionaryKey:) and String(describing:)
     */
-    public subscript(key: String) -> Any? {
+    subscript(key: String) -> Any? {
         return get(from: key)
     }
     
@@ -45,7 +44,7 @@ public extension Bundle {
             or .none if the key doesn't exist or if the value is not a string or if it's an empty string.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getString(from key: String) -> String? {
+    func getString(from key: String) -> String? {
         let string: String? = get(from: key)
         return (string?.isEmpty ?? true) ? .none : string
     }
@@ -59,7 +58,7 @@ public extension Bundle {
             or .none if the key doesn't exist or if the value is not an integer.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getInt(from key: String) -> Int? {
+    func getInt(from key: String) -> Int? {
         return get(from: key)
     }
     
@@ -72,7 +71,7 @@ public extension Bundle {
             or .none if the key doesn't exist or if the value is not not a real number.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getFloat(from key: String) -> Float? {
+    func getFloat(from key: String) -> Float? {
         return get(from: key)
     }
     
@@ -85,7 +84,7 @@ public extension Bundle {
             or .none if the key doesn't exist or if the value is not a date.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getDate(from key: String) -> Date? {
+    func getDate(from key: String) -> Date? {
         return get(from: key)
     }
     
@@ -98,7 +97,7 @@ public extension Bundle {
             or .none if the key doesn't exist or if the value is not data.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getData(from key: String) -> Data? {
+    func getData(from key: String) -> Data? {
         return get(from: key)
     }
     
@@ -112,7 +111,7 @@ public extension Bundle {
             of type T.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getArray<T>(from key: String) -> [T]? {
+    func getArray<T>(from key: String) -> [T]? {
         return get(from: key)
     }
     
@@ -126,24 +125,20 @@ public extension Bundle {
             keys of type K and values of type V.
      - seealso: object(forInfoDictionaryKey:)
      */
-    public func getDictionary<V>(from key: String) -> [String: V]? {
+    func getDictionary<V>(from key: String) -> [String: V]? {
         return get(from: key)
     }
-    
 }
 
 fileprivate extension Bundle {
-    
-    fileprivate func get<T>(from key: String) -> T? {
+    func get<T>(from key: String) -> T? {
         let optionalAny = object(forInfoDictionaryKey: key)
         let optionalValue: T? = optionalAny.flatMap { $0 as? T }
         return optionalValue
     }
-    
 }
 
 extension String: RawRepresentable {
-    
     public init?(rawValue: String) {
         self = rawValue
     }
@@ -151,5 +146,4 @@ extension String: RawRepresentable {
     public var rawValue: String {
         return self
     }
-    
 }

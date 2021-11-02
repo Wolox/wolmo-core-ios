@@ -24,34 +24,13 @@ final internal class ViewController: UIViewController {
              into: _view.childContainerView,
              with: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0),
              respectSafeArea: true)
-        
         _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
-        // Screen gestures
-        _view.addScreenEdgePanGestureRecognizer(edge: .left) { recognizer in
-            print("Edge panned!")
-        }
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         
-        // Label gestures
-        _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] recognizer in
-            self?._view.gestureLabel.shake(withDuration: 0.05)
-            print("Label tapped!")
-        }
-        _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { recognizer in
-            print("Label long pressed!")
-        }
-        _view.gestureLabel.addPinchGestureRecognizer { recognizer in
-            print("Label pinched!")
-        }
-        _view.gestureLabel.addRotationGestureRecognizer { recognizer in
-            print("Label rotated!")
-        }
-        _view.gestureLabel.addPanGestureRecognizer { recognizer in
-            print("Label panned!")
-        }
-        _view.gestureLabel.addSwipeGestureRecognizer(direction: .left) { recognizer in
-            print("Label swiped!")
-        }
+        setupScreenGestures()
+        setupLabelGestures()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,5 +40,33 @@ final internal class ViewController: UIViewController {
     
     @objc func buttonAction() {
         present(StringToImageController(), animated: true, completion: .none)
+    }
+    
+    private func setupScreenGestures() {
+        _view.addScreenEdgePanGestureRecognizer(edge: .left) { _ in
+            print("Edge panned!")
+        }
+    }
+    
+    private func setupLabelGestures() {
+        _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] _ in
+            self?._view.gestureLabel.shake(withDuration: 0.05)
+            print("Label tapped!")
+        }
+        _view.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { _ in
+            print("Label long pressed!")
+        }
+        _view.gestureLabel.addPinchGestureRecognizer { _ in
+            print("Label pinched!")
+        }
+        _view.gestureLabel.addRotationGestureRecognizer { _ in
+            print("Label rotated!")
+        }
+        _view.gestureLabel.addPanGestureRecognizer { _ in
+            print("Label panned!")
+        }
+        _view.gestureLabel.addSwipeGestureRecognizer(direction: .left) { _ in
+            print("Label swiped!")
+        }
     }
 }

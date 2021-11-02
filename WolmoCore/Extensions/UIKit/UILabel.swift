@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UILabel {
-
     /**
      fontTextStyle is intended to be used instead of setting the font style by taking advantage of
      `UIFont.preferredFont(forTextStyle:)` to manage your apps fonts.
@@ -22,7 +21,7 @@ public extension UILabel {
      - warning: To avoid memory leak and crashes, you should set the `fontTextStyle` to .none before deallocating the label.
      - seealso: UIFont.appFontName(for:).
      */
-    public var fontTextStyle: UIFont.TextStyle? {
+    var fontTextStyle: UIFont.TextStyle? {
         get {
             return getStyle()
         }
