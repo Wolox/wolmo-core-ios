@@ -806,10 +806,9 @@
 			};
 			buildConfigurationList = 9D896AB21CDE3EC5008B0E5F /* Build configuration list for PBXProject "WolmoCore" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
