@@ -10,13 +10,11 @@ import Foundation
 import WolmoCore
 
 class CustomFontProvider: UIFontProvider {
-
-    func appFontName(for style: UIFontTextStyle) -> String {
+    func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
         case .headline: return "Kefa"
         case .body: return "Savoye LET"
         default: return UIFont.preferredFont(forTextStyle: style).fontName
         }
     }
-
 }

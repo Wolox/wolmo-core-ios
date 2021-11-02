@@ -10,12 +10,11 @@ import UIKit
 import WolmoCore
 
 final internal class View: UIView, NibLoadable {
-    
     let borderViewProperties = BorderViewProperties(thickness: 4, color: .red, rounded: true)
     
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.fontTextStyle = UIFontTextStyle.headline
+            titleLabel.fontTextStyle = .headline
         }
     }
     @IBOutlet weak var roundBordersLabel: UILabel! {
@@ -25,9 +24,10 @@ final internal class View: UIView, NibLoadable {
     }
     @IBOutlet weak var bodyTextField: UITextField! {
         didSet {
-            bodyTextField.fontTextStyle = UIFontTextStyle.body
+            bodyTextField.fontTextStyle = .body
         }
     }
+    
     @IBOutlet weak var stringsButton: UIButton!
     
     @IBOutlet weak var childContainerView: UIView!
