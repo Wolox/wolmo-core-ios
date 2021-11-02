@@ -40,8 +40,8 @@ public extension UIView {
      - Parameter action: The closure that will execute when the view is panned
      */
     func addPanGestureRecognizer(minimumNumberOfTouches: Int = 1,
-                                        maximumNumberOfTouches: Int = .max,
-                                        action: ((UIPanGestureRecognizer) -> Void)?) {
+                                 maximumNumberOfTouches: Int = .max,
+                                 action: ((UIPanGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         panGestureRecognizerAction = action
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))

@@ -8,9 +8,7 @@
 
 import Foundation
 
-// Needs to be a class or it won't work.
-// TODO: Check why. Maybe for the `setAssociatedObject`? You can check using UILabelSpec.
-public protocol UIFontProvider: class {
+public protocol UIFontProvider: AnyObject {
     /**
      Returns a valid font name associated with the font text style specified.
      By default, returns the font name of the font returned by

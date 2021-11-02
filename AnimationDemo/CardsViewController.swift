@@ -93,7 +93,7 @@ private extension CardsViewController {
         
         switch gesture.state {
         case .began:
-            rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: UIViewAnimationCurve.easeInOut) {
+            rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: .easeInOut) {
                 target.transform = CGAffineTransform(rotationAngle: (CGFloat.pi * 15.0) / 180.0)
             }
         case .changed:
@@ -114,6 +114,7 @@ private extension CardsViewController {
                 changeGestureRecognizers(panView: target, tapView: otherView)
             } else {
                 reset(view: target)
+                
             }
         default:
             break
