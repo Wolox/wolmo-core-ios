@@ -74,7 +74,6 @@
 		CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		CE1DDFF5209A653F007471A0 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED511FE9688E0037ED3D /* View.xib */; };
 		CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */; };
-		CE1DDFF7209A653F007471A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2C1FE968410037ED3D /* Assets.xcassets */; };
 		CE1DDFF8209A653F007471A0 /* ChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED551FE968B40037ED3D /* ChildView.xib */; };
 		CE1DDFFE209A653F007471A0 /* WolmoCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE228ADF1EF2FE1E00097B19 /* UIFont.swift */; };
@@ -857,7 +856,6 @@
 				CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */,
 				CE1DDFF5209A653F007471A0 /* View.xib in Resources */,
 				CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */,
-				CE1DDFF7209A653F007471A0 /* Assets.xcassets in Resources */,
 				CE1DDFF8209A653F007471A0 /* ChildView.xib in Resources */,
 				CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */,
 			);

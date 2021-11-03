@@ -10,16 +10,13 @@ import UIKit
 import WolmoCore
 
 class CardsViewController: UIViewController {
-    
     // MARK: - Properties
-    
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var cardsContainerView: UIView!
     
     var rotationAnimator: UIViewPropertyAnimator!
     var lastTranslation = CGPoint.zero
-    
     var animationViews: [UIView] = []
     
     override func viewDidLoad() {
@@ -30,7 +27,6 @@ class CardsViewController: UIViewController {
 
 private extension CardsViewController {
     // MARK: - Configuration methods
-    
     func setUpCardAnimation() {
         greenView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
         yellowView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
@@ -70,9 +66,7 @@ private extension CardsViewController {
 }
 
 // MARK: - Animation methods
-
 private extension CardsViewController {
-    
     /**
      Animate the view when the user is draging it to the right
      
@@ -114,7 +108,6 @@ private extension CardsViewController {
                 changeGestureRecognizers(panView: target, tapView: otherView)
             } else {
                 reset(view: target)
-                
             }
         default:
             break
