@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,10 +30,6 @@
 		653DCB9D21DE7B5F00C1C332 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
-		9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; };
-		9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AEA1CDE642F008B0E5F /* Quick.framework */; };
-		9D896AEE1CDE64FF008B0E5F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AE91CDE642F008B0E5F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9D896AEF1CDE64FF008B0E5F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D896AEA1CDE642F008B0E5F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
 		AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
 		AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4B1228221110070C01F /* SimpleExample.swift */; };
@@ -136,6 +132,10 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
+		EB14E3C927333E990091F4EC /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB14E3C827333E990091F4EC /* Nimble.xcframework */; };
+		EB14E3CB27333EA20091F4EC /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB14E3CA27333EA20091F4EC /* Quick.xcframework */; };
+		EB14E3CC27333EA80091F4EC /* Quick.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB14E3CA27333EA20091F4EC /* Quick.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB14E3CD27333EAC0091F4EC /* Nimble.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB14E3C827333E990091F4EC /* Nimble.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,8 +169,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9D896AEE1CDE64FF008B0E5F /* Nimble.framework in CopyFiles */,
-				9D896AEF1CDE64FF008B0E5F /* Quick.framework in CopyFiles */,
+				EB14E3CD27333EAC0091F4EC /* Nimble.xcframework in CopyFiles */,
+				EB14E3CC27333EA80091F4EC /* Quick.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +224,6 @@
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896AC91CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D896AE91CDE642F008B0E5F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		9D896AEA1CDE642F008B0E5F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		AECEB3A3227CD8280070C01F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		AECEB4B1228221110070C01F /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
@@ -321,6 +319,8 @@
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
+		EB14E3C827333E990091F4EC /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
+		EB14E3CA27333EA20091F4EC /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,8 +338,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D896AEB1CDE642F008B0E5F /* Nimble.framework in Frameworks */,
-				9D896AEC1CDE642F008B0E5F /* Quick.framework in Frameworks */,
+				EB14E3CB27333EA20091F4EC /* Quick.xcframework in Frameworks */,
+				EB14E3C927333E990091F4EC /* Nimble.xcframework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,11 +487,11 @@
 		9D896AF01CDE6504008B0E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB14E3CA27333EA20091F4EC /* Quick.xcframework */,
+				EB14E3C827333E990091F4EC /* Nimble.xcframework */,
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
-				9D896AE91CDE642F008B0E5F /* Nimble.framework */,
-				9D896AEA1CDE642F008B0E5F /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1168,7 +1168,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1195,7 +1196,12 @@
 				INFOPLIST_FILE = WolmoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1222,7 +1228,12 @@
 				INFOPLIST_FILE = WolmoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1234,32 +1245,50 @@
 		9D896AD01CDE3EC5008B0E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Nimble.xcframework/ios-arm64_i386_x86_64-simulator",
+					"$(PROJECT_DIR)/Carthage/Build/Quick.xcframework/ios-arm64_i386_x86_64-simulator",
 				);
 				INFOPLIST_FILE = WolmoCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		9D896AD11CDE3EC5008B0E5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7XS5GQGS29;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Nimble.xcframework/ios-arm64_i386_x86_64-simulator",
+					"$(PROJECT_DIR)/Carthage/Build/Quick.xcframework/ios-arm64_i386_x86_64-simulator",
 				);
 				INFOPLIST_FILE = WolmoCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -1281,7 +1310,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1308,7 +1340,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1334,7 +1369,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1361,7 +1399,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

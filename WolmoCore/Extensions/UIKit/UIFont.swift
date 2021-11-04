@@ -58,7 +58,6 @@ public extension UIFont {
         get {
             return getAssociatedObject(self, key: &fontProviderKey)
         }
-
         set {
             setAssociatedObject(self, key: &fontProviderKey, value: newValue)
         }

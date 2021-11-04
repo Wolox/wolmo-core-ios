@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class TapRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addTapGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addTapGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class TapRecognizerSpec: QuickSpec {
                         // No action
                     }
                 }
-                
                 it("should have injected a UITapGestureRecognizer into the view") {
                     let tapRecognizer = view.gestureRecognizers?.first as? UITapGestureRecognizer
                     expect(tapRecognizer).toNot(beNil())
