@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */; };
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
+		469D149012A8E9580797A7FC /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC13EF31E3AE8D68F8FD45E /* Pods_WolmoCore_WolmoCoreTests.framework */; };
 		653DCB8921DE7B5200C1C332 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */; };
 		653DCB8A21DE7B5200C1C332 /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */; };
 		653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8421DE7B5200C1C332 /* RotationRecognizer.swift */; };
@@ -28,6 +29,7 @@
 		653DCB9B21DE7B5F00C1C332 /* SwipeRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9421DE7B5F00C1C332 /* SwipeRecognizerSpec.swift */; };
 		653DCB9C21DE7B5F00C1C332 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */; };
 		653DCB9D21DE7B5F00C1C332 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */; };
+		7C1E553485E30067E2B83933 /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A45F27E094F90C3E463E42 /* Pods_AnimationDemo.framework */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
@@ -132,10 +134,8 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
-		EB14E3C927333E990091F4EC /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB14E3C827333E990091F4EC /* Nimble.xcframework */; };
-		EB14E3CB27333EA20091F4EC /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB14E3CA27333EA20091F4EC /* Quick.xcframework */; };
-		EB14E3CC27333EA80091F4EC /* Quick.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB14E3CA27333EA20091F4EC /* Quick.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EB14E3CD27333EAC0091F4EC /* Nimble.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB14E3C827333E990091F4EC /* Nimble.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8252BCBF3B689D6682FA0DB /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07490B93F972CB4E250BA0C /* Pods_WolmoCoreDemo.framework */; };
+		FA90C4E70C1533561A6408FF /* Pods_WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A87C4E8786C49CB209D8CFB9 /* Pods_WolmoCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,8 +169,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB14E3CD27333EAC0091F4EC /* Nimble.xcframework in CopyFiles */,
-				EB14E3CC27333EA80091F4EC /* Quick.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +203,8 @@
 		0CB88321216455D90073459D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
+		38A45F27E094F90C3E463E42 /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5737FDFA6C45F31599DBAEC3 /* Pods-WolmoCoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemo.release.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemo/Pods-WolmoCoreDemo.release.xcconfig"; sourceTree = "<group>"; };
 		653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressRecognizer.swift; sourceTree = "<group>"; };
 		653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizer.swift; sourceTree = "<group>"; };
 		653DCB8421DE7B5200C1C332 /* RotationRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationRecognizer.swift; sourceTree = "<group>"; };
@@ -219,11 +219,17 @@
 		653DCB9421DE7B5F00C1C332 /* SwipeRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeRecognizerSpec.swift; sourceTree = "<group>"; };
 		653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
 		653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizerSpec.swift; sourceTree = "<group>"; };
+		6724CD147590133F93D7C63A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8010745D6B79F6867180FFB2 /* Pods-WolmoCoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemo/Pods-WolmoCoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		993DEA7B61C9AEFB89042B7B /* Pods-WolmoCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.release.xcconfig"; sourceTree = "<group>"; };
+		9989EC423D765CA170AAE3FF /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896AC91CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F10044D4FE61B13B714541E /* Pods-WolmoCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.debug.xcconfig"; sourceTree = "<group>"; };
+		A87C4E8786C49CB209D8CFB9 /* Pods_WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECEB3A3227CD8280070C01F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		AECEB4B1228221110070C01F /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 		B988B9791D244D6300824685 /* ErrorAlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModel.swift; sourceTree = "<group>"; };
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		C07490B93F972CB4E250BA0C /* Pods_WolmoCoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		CE1186881EA79EFF00105D6F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSpec.swift; sourceTree = "<group>"; };
@@ -321,6 +328,9 @@
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
 		EB14E3C827333E990091F4EC /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
 		EB14E3CA27333EA20091F4EC /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
+		FBC63301666467F8CABB09EB /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDE4976BAEFCD3C7F4E094DE /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FFC13EF31E3AE8D68F8FD45E /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +341,7 @@
 				B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */,
 				B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */,
 				B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */,
+				FA90C4E70C1533561A6408FF /* Pods_WolmoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +349,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB14E3CB27333EA20091F4EC /* Quick.xcframework in Frameworks */,
-				EB14E3C927333E990091F4EC /* Nimble.xcframework in Frameworks */,
 				9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */,
+				469D149012A8E9580797A7FC /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +362,7 @@
 				CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */,
 				CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */,
 				CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */,
+				7C1E553485E30067E2B83933 /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +374,7 @@
 				CE7486A6204708B300636D98 /* Foundation.framework in Frameworks */,
 				CE7486A4204708AC00636D98 /* UIKit.framework in Frameworks */,
 				CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */,
+				E8252BCBF3B689D6682FA0DB /* Pods_WolmoCoreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +448,7 @@
 				CE1DE004209A66A9007471A0 /* AnimationDemo */,
 				9D896AB91CDE3EC5008B0E5F /* Products */,
 				9D896AF01CDE6504008B0E5F /* Frameworks */,
+				F2466964F330DF31136CB34B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -492,6 +505,10 @@
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
+				38A45F27E094F90C3E463E42 /* Pods_AnimationDemo.framework */,
+				A87C4E8786C49CB209D8CFB9 /* Pods_WolmoCore.framework */,
+				FFC13EF31E3AE8D68F8FD45E /* Pods_WolmoCore_WolmoCoreTests.framework */,
+				C07490B93F972CB4E250BA0C /* Pods_WolmoCoreDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -681,6 +698,22 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		F2466964F330DF31136CB34B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9989EC423D765CA170AAE3FF /* Pods-AnimationDemo.debug.xcconfig */,
+				FDE4976BAEFCD3C7F4E094DE /* Pods-AnimationDemo.release.xcconfig */,
+				9F10044D4FE61B13B714541E /* Pods-WolmoCore.debug.xcconfig */,
+				993DEA7B61C9AEFB89042B7B /* Pods-WolmoCore.release.xcconfig */,
+				6724CD147590133F93D7C63A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */,
+				FBC63301666467F8CABB09EB /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */,
+				8010745D6B79F6867180FFB2 /* Pods-WolmoCoreDemo.debug.xcconfig */,
+				5737FDFA6C45F31599DBAEC3 /* Pods-WolmoCoreDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -699,6 +732,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D896ACC1CDE3EC5008B0E5F /* Build configuration list for PBXNativeTarget "WolmoCore" */;
 			buildPhases = (
+				FD24400404BAE5F497191429 /* [CP] Check Pods Manifest.lock */,
 				9D896AB31CDE3EC5008B0E5F /* Sources */,
 				9D896AB41CDE3EC5008B0E5F /* Frameworks */,
 				9D896AB51CDE3EC5008B0E5F /* Headers */,
@@ -718,10 +752,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D896ACF1CDE3EC5008B0E5F /* Build configuration list for PBXNativeTarget "WolmoCoreTests" */;
 			buildPhases = (
+				C2D8A7DF842A4500113B56A0 /* [CP] Check Pods Manifest.lock */,
 				9D896ABE1CDE3EC5008B0E5F /* Sources */,
 				9D896ABF1CDE3EC5008B0E5F /* Frameworks */,
 				9D896AC01CDE3EC5008B0E5F /* Resources */,
 				9D896AED1CDE64F6008B0E5F /* CopyFiles */,
+				04B20961614995409080C965 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -737,6 +773,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1DDFFF209A653F007471A0 /* Build configuration list for PBXNativeTarget "AnimationDemo" */;
 			buildPhases = (
+				30B7BADE1265F92F827C3862 /* [CP] Check Pods Manifest.lock */,
 				CE1DDFE5209A653F007471A0 /* Sources */,
 				CE1DDFEB209A653F007471A0 /* Frameworks */,
 				CE1DDFF4209A653F007471A0 /* Resources */,
@@ -756,6 +793,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEB8ED481FE968420037ED3D /* Build configuration list for PBXNativeTarget "WolmoCoreDemo" */;
 			buildPhases = (
+				A7D5E348969F96EB0318B84B /* [CP] Check Pods Manifest.lock */,
 				CEB8ED1F1FE968410037ED3D /* Sources */,
 				CEB8ED201FE968410037ED3D /* Frameworks */,
 				CEB8ED211FE968410037ED3D /* Resources */,
@@ -876,6 +914,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04B20961614995409080C965 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B7BADE1265F92F827C3862 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D896AD31CDE5E64008B0E5F /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -888,7 +968,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		A7D5E348969F96EB0318B84B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WolmoCoreDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D8A7DF842A4500113B56A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WolmoCore-WolmoCoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD24400404BAE5F497191429 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WolmoCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1168,8 +1314,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1180,6 +1325,7 @@
 		};
 		9D896ACD1CDE3EC5008B0E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F10044D4FE61B13B714541E /* Pods-WolmoCore.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1196,12 +1342,7 @@
 				INFOPLIST_FILE = WolmoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1213,6 +1354,7 @@
 		};
 		9D896ACE1CDE3EC5008B0E5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993DEA7B61C9AEFB89042B7B /* Pods-WolmoCore.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1228,12 +1370,7 @@
 				INFOPLIST_FILE = WolmoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1244,6 +1381,7 @@
 		};
 		9D896AD01CDE3EC5008B0E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6724CD147590133F93D7C63A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7XS5GQGS29;
@@ -1254,12 +1392,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Quick.xcframework/ios-arm64_i386_x86_64-simulator",
 				);
 				INFOPLIST_FILE = WolmoCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1269,6 +1402,7 @@
 		};
 		9D896AD11CDE3EC5008B0E5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC63301666467F8CABB09EB /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7XS5GQGS29;
@@ -1279,12 +1413,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Quick.xcframework/ios-arm64_i386_x86_64-simulator",
 				);
 				INFOPLIST_FILE = WolmoCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1294,6 +1423,7 @@
 		};
 		CE1DE000209A653F007471A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9989EC423D765CA170AAE3FF /* Pods-AnimationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1310,10 +1440,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1324,6 +1451,7 @@
 		};
 		CE1DE001209A653F007471A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE4976BAEFCD3C7F4E094DE /* Pods-AnimationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1340,10 +1468,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1353,6 +1478,7 @@
 		};
 		CEB8ED491FE968420037ED3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8010745D6B79F6867180FFB2 /* Pods-WolmoCoreDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1369,10 +1495,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1383,6 +1506,7 @@
 		};
 		CEB8ED4A1FE968420037ED3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5737FDFA6C45F31599DBAEC3 /* Pods-WolmoCoreDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1399,10 +1523,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
