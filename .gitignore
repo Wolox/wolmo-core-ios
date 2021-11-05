@@ -26,6 +26,9 @@ Thumbs.db
 .carthage_cache.yml
 Carthage/
 
+# Pods
+Pods/
+
 .swiftlint-report.json
 
 # Fastlane
