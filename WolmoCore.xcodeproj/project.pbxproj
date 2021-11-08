@@ -14,7 +14,6 @@
 		0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */; };
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
-		469D149012A8E9580797A7FC /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC13EF31E3AE8D68F8FD45E /* Pods_WolmoCore_WolmoCoreTests.framework */; };
 		653DCB8921DE7B5200C1C332 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */; };
 		653DCB8A21DE7B5200C1C332 /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */; };
 		653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8421DE7B5200C1C332 /* RotationRecognizer.swift */; };
@@ -350,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */,
-				469D149012A8E9580797A7FC /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,7 +708,6 @@
 				8010745D6B79F6867180FFB2 /* Pods-WolmoCoreDemo.debug.xcconfig */,
 				5737FDFA6C45F31599DBAEC3 /* Pods-WolmoCoreDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
