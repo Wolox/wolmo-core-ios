@@ -28,7 +28,6 @@
 		653DCB9B21DE7B5F00C1C332 /* SwipeRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9421DE7B5F00C1C332 /* SwipeRecognizerSpec.swift */; };
 		653DCB9C21DE7B5F00C1C332 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */; };
 		653DCB9D21DE7B5F00C1C332 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */; };
-		7C1E553485E30067E2B83933 /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A45F27E094F90C3E463E42 /* Pods_AnimationDemo.framework */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
@@ -133,7 +132,6 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
-		E8252BCBF3B689D6682FA0DB /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07490B93F972CB4E250BA0C /* Pods_WolmoCoreDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,7 +356,6 @@
 				CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */,
 				CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */,
 				CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */,
-				7C1E553485E30067E2B83933 /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +367,6 @@
 				CE7486A6204708B300636D98 /* Foundation.framework in Frameworks */,
 				CE7486A4204708AC00636D98 /* UIKit.framework in Frameworks */,
 				CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */,
-				E8252BCBF3B689D6682FA0DB /* Pods_WolmoCoreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
