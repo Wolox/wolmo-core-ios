@@ -14,6 +14,7 @@
 		0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */; };
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
+		62815DC49C2418EA5ED7D109 /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0173769EE88C5CF29345C /* Pods_AnimationDemo.framework */; };
 		653DCB8921DE7B5200C1C332 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */; };
 		653DCB8A21DE7B5200C1C332 /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */; };
 		653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8421DE7B5200C1C332 /* RotationRecognizer.swift */; };
@@ -28,6 +29,7 @@
 		653DCB9B21DE7B5F00C1C332 /* SwipeRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9421DE7B5F00C1C332 /* SwipeRecognizerSpec.swift */; };
 		653DCB9C21DE7B5F00C1C332 /* PinchRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */; };
 		653DCB9D21DE7B5F00C1C332 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */; };
+		711BE6F9B32F1EF89C8EE207 /* Pods_WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB14E3D0273AE8BC0091F4EC /* Pods_WolmoCore.framework */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
@@ -132,6 +134,8 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
+		E9129CDC161042341FEAE8A7 /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034A9618FC4BC6FF5732EADE /* Pods_WolmoCoreDemo.framework */; };
+		EC76C1DD7F5601526630D835 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A04BEB63427DDB75AB6A0 /* Pods_WolmoCore_WolmoCoreTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +197,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01B0173769EE88C5CF29345C /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		034A9618FC4BC6FF5732EADE /* Pods_WolmoCoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C02AB4E21682BD2007DB327 /* StringToImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageController.swift; sourceTree = "<group>"; };
 		0C02AB4F21682BD2007DB327 /* StringToImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageView.swift; sourceTree = "<group>"; };
 		0C02AB5121682BD2007DB327 /* StringToImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringToImageView.xib; sourceTree = "<group>"; };
@@ -319,6 +325,9 @@
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
+		E37A04BEB63427DDB75AB6A0 /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB14E3CE273AE7D20091F4EC /* Pods_WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB14E3D0273AE8BC0091F4EC /* Pods_WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC63301666467F8CABB09EB /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDE4976BAEFCD3C7F4E094DE /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,6 +340,7 @@
 				B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */,
 				B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */,
 				B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */,
+				711BE6F9B32F1EF89C8EE207 /* Pods_WolmoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */,
+				EC76C1DD7F5601526630D835 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +361,7 @@
 				CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */,
 				CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */,
 				CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */,
+				62815DC49C2418EA5ED7D109 /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +373,7 @@
 				CE7486A6204708B300636D98 /* Foundation.framework in Frameworks */,
 				CE7486A4204708AC00636D98 /* UIKit.framework in Frameworks */,
 				CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */,
+				E9129CDC161042341FEAE8A7 /* Pods_WolmoCoreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,9 +499,14 @@
 		9D896AF01CDE6504008B0E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB14E3D0273AE8BC0091F4EC /* Pods_WolmoCore.framework */,
+				EB14E3CE273AE7D20091F4EC /* Pods_WolmoCore.framework */,
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
+				01B0173769EE88C5CF29345C /* Pods_AnimationDemo.framework */,
+				E37A04BEB63427DDB75AB6A0 /* Pods_WolmoCore_WolmoCoreTests.framework */,
+				034A9618FC4BC6FF5732EADE /* Pods_WolmoCoreDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
