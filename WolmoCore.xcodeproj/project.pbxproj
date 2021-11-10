@@ -13,8 +13,6 @@
 		0CB88322216455D90073459D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB88321216455D90073459D /* UIImageView.swift */; };
 		0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */; };
 		0CB8BAB6216F835E00C8D6C1 /* ComparableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */; };
-		10FD550353A832F7F42F2237 /* Pods_WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12F409F1498A9FE925380B /* Pods_WolmoCore.framework */; };
-		2C020FD5F28953C64C437B95 /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994A43B46365C22B340730D6 /* Pods_AnimationDemo.framework */; };
 		2D9229821F5D9BF5004F9A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82058CE1EEF39230002D7D4 /* Assets.xcassets */; };
 		653DCB8921DE7B5200C1C332 /* LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */; };
 		653DCB8A21DE7B5200C1C332 /* PanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */; };
@@ -32,7 +30,6 @@
 		653DCB9D21DE7B5F00C1C332 /* PanRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
-		A99F222E0E04201C637DCEC9 /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC07E022C30C9543B4848B2C /* Pods_WolmoCoreDemo.framework */; };
 		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
 		AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
 		AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4B1228221110070C01F /* SimpleExample.swift */; };
@@ -135,7 +132,6 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
-		DBAC3CF5E0B3A219AF9AAF19 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D00BA7CEE68F653E4275AA /* Pods_WolmoCore_WolmoCoreTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,7 +203,6 @@
 		2A55DE58900914074BE9A62B /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F88749CFD664EA718B114EB /* Pods-WolmoCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.debug.xcconfig"; sourceTree = "<group>"; };
 		56060EB1799376D7E9993B8A /* Pods-WolmoCoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemo.release.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemo/Pods-WolmoCoreDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5B12F409F1498A9FE925380B /* Pods_WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressRecognizer.swift; sourceTree = "<group>"; };
 		653DCB8321DE7B5200C1C332 /* PanRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizer.swift; sourceTree = "<group>"; };
 		653DCB8421DE7B5200C1C332 /* RotationRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationRecognizer.swift; sourceTree = "<group>"; };
@@ -223,8 +218,6 @@
 		653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
 		653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizerSpec.swift; sourceTree = "<group>"; };
 		7D95EF7D5456FC884594B3DA /* Pods-WolmoCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.release.xcconfig"; sourceTree = "<group>"; };
-		994A43B46365C22B340730D6 /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99D00BA7CEE68F653E4275AA /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WolmoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WolmoCore.h; sourceTree = "<group>"; };
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -246,7 +239,6 @@
 		B988B9801D24621000824685 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		B9E797FC27B02FFFCC30A7C8 /* Pods-WolmoCoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemo/Pods-WolmoCoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B9F63CC11D5CE7FA00D09C1D /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		CC07E022C30C9543B4848B2C /* Pods_WolmoCoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0DA7D01FD847D600D0B1E3 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		CE1186881EA79EFF00105D6F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CE11868A1EA7A0CD00105D6F /* UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSpec.swift; sourceTree = "<group>"; };
@@ -339,7 +331,6 @@
 				B959481E1D3EA060003A082F /* Foundation.framework in Frameworks */,
 				B959481C1D3EA051003A082F /* UIKit.framework in Frameworks */,
 				B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */,
-				10FD550353A832F7F42F2237 /* Pods_WolmoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D896AC31CDE3EC5008B0E5F /* WolmoCore.framework in Frameworks */,
-				DBAC3CF5E0B3A219AF9AAF19 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +350,6 @@
 				CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */,
 				CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */,
 				CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */,
-				2C020FD5F28953C64C437B95 /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +361,6 @@
 				CE7486A6204708B300636D98 /* Foundation.framework in Frameworks */,
 				CE7486A4204708AC00636D98 /* UIKit.framework in Frameworks */,
 				CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */,
-				A99F222E0E04201C637DCEC9 /* Pods_WolmoCoreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +489,6 @@
 				B959481D1D3EA060003A082F /* Foundation.framework */,
 				B959481B1D3EA051003A082F /* UIKit.framework */,
 				B95948191D3EA039003A082F /* AVFoundation.framework */,
-				994A43B46365C22B340730D6 /* Pods_AnimationDemo.framework */,
-				5B12F409F1498A9FE925380B /* Pods_WolmoCore.framework */,
-				99D00BA7CEE68F653E4275AA /* Pods_WolmoCore_WolmoCoreTests.framework */,
-				CC07E022C30C9543B4848B2C /* Pods_WolmoCoreDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
