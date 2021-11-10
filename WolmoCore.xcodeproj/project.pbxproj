@@ -133,7 +133,7 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
-		D03B5018273C52D400D64B87 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
 /* End PBXBuildFile section */
@@ -200,7 +200,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D03B5018273C52D400D64B87 /* BuildFile in Embed Frameworks */,
+				D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +459,6 @@
 				94628C1652D625F68DB62450 /* Pods-WolmoCoreDemo.debug.xcconfig */,
 				854BAA130C1EC368743CEFE8 /* Pods-WolmoCoreDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1350,6 +1349,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Pods";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1378,6 +1381,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Pods";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(OTHER_LDFLAGS)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ar.com.wolox.WolmoCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
