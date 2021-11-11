@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class PinchRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addPinchGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addPinchGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class PinchRecognizerSpec: QuickSpec {
                         //No action
                     }
                 }
-                
                 it("should have injected a UIPinchGestureRecognizer into the view") {
                     let pinchRecognizer = view.gestureRecognizers?.first as? UIPinchGestureRecognizer
                     expect(pinchRecognizer).toNot(beNil())

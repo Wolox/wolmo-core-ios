@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
@@ -21,7 +20,6 @@ private class AssociatableObjectClassMock {
 }
 
 private struct AssociatableObjectStructMock {
-    
     let x: Int
     
     init(x: Int = 4) {
@@ -32,11 +30,8 @@ private struct AssociatableObjectStructMock {
 private var key: Int = 0
 
 public class AssociatedObjectSpec: QuickSpec {
-    
     override public func spec() {
-        
         var associatableObject: AssociatableObjectClassMock! // It has to be an AnyObject (AKA: class)
-        
         var classToAssociate: AssociatableObjectClassMock!
         var structToAssociate: AssociatableObjectStructMock!
         
@@ -52,39 +47,30 @@ public class AssociatedObjectSpec: QuickSpec {
         }
         
         describe("setAssociatedObject") {
-            
             context("When the value to associate the object to is a class") {
-                
                 it("should set an associated object") {
                     setAssociatedObject(associatableObject, key: &key, value: classToAssociate)
                     let associated: AssociatableObjectClassMock = getAssociatedObject(associatableObject, key: &key)!
                     expect(associated.x).to(equal(classToAssociate.x))
                 }
             }
-            
             context("When the value to associate the object to is a struct") {
-                
                 it("should set an associated object") {
                     setAssociatedObject(associatableObject, key: &key, value: structToAssociate)
                     let associated: AssociatableObjectStructMock = getAssociatedObject(associatableObject, key: &key)!
                     expect(associated.x).to(equal(structToAssociate.x))
                 }
             }
-            
         }
         
         describe("#getAssociatedObject") {
-            
             context("When there is no associated value") {
-                
                 it("should return nil") {
                     let value: Int? = getAssociatedObject(associatableObject, key: &key)
                     expect(value).to(beNil())
                 }
             }
-            
             context("when there is an associated value") {
-                
                 beforeEach {
                     setAssociatedObject(associatableObject, key: &key, value: classToAssociate)
                 }
@@ -93,9 +79,7 @@ public class AssociatedObjectSpec: QuickSpec {
                     let a: AssociatableObjectClassMock = getAssociatedObject(associatableObject, key: &key)!
                     expect(a.x).to(equal(classToAssociate.x))
                 }
-                
                 context("when there is a new associated value") {
-                    
                     var newObjectToAssociate: AssociatableObjectClassMock!
                     
                     beforeEach {
@@ -108,9 +92,7 @@ public class AssociatedObjectSpec: QuickSpec {
                         expect(a.x).to(equal(newObjectToAssociate.x))
                     }
                 }
-                
             }
-            
         }
     }
 }

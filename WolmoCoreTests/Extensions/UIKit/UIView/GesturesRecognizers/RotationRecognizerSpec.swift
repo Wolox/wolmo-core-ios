@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class RotationRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addRotationGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addRotationGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class RotationRecognizerSpec: QuickSpec {
                         // No action
                     }
                 }
-                
                 it("should have injected a UIRotationGestureRecognizer into the view") {
                     let rotationRecognizer = view.gestureRecognizers?.first as? UIRotationGestureRecognizer
                     expect(rotationRecognizer).toNot(beNil())

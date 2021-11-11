@@ -38,7 +38,6 @@ public class UIImageSpec: QuickSpec {
                         expect(resizedImage.size).to(equal(wantedSize))
                     }
                 }
-                
                 context("And has a different aspect ratio") {
                     context("And the user wants to maintain the original aspect ratio") {
                         it("should return an image with the same aspect ratio and a size close to the wanted one") {
@@ -48,7 +47,6 @@ public class UIImageSpec: QuickSpec {
                             expect(self.hasMatchingWidth(sizeOne: resizedImage.size, sizeTwo: wantedSize)).to(beTrue())
                         }
                     }
-                    
                     context("And the user wants to stretch the image to match the wanted size") {
                         it("should return an image with a size equal to the wanted one") {
                             let wantedSize = CGSize(width: 250, height: 346)
@@ -58,7 +56,6 @@ public class UIImageSpec: QuickSpec {
                     }
                 }
             }
-            
             context("When the wanted size is smaller") {
                 context("And has the same aspect ratio") {
                     it("should return a resized image with a size equal to the wanted size, thus having the same aspect ratio") {
@@ -68,7 +65,6 @@ public class UIImageSpec: QuickSpec {
                         expect(resizedImage.size).to(equal(wantedSize))
                     }
                 }
-                
                 context("And has a different aspect ratio") {
                     context("And the user wants to maintain the original aspect ratio") {
                         it("should return an image with the same aspect ratio and a size close to the wanted one matching the wanted width") {
@@ -85,7 +81,6 @@ public class UIImageSpec: QuickSpec {
                             expect(self.hasMatchingHeight(sizeOne: resizedImage.size, sizeTwo: wantedSize)).to(beTrue())
                         }
                     }
-                    
                     context("And the user wants to stretch the image to match the wanted size") {
                         it("should return an image with a size equal to the wanted one") {
                             let wantedSize = CGSize(width: 15, height: 29)

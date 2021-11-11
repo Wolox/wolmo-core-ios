@@ -25,7 +25,6 @@ public extension UILabel {
         get {
             return getStyle()
         }
-
         set {
             if fontTextStyle != nil {
                 removeOldStyle()
@@ -54,7 +53,6 @@ public extension UILabel {
         }
         setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)
     }
-
 }
 
 private var fontTextStyleKey: UInt8 = 0
