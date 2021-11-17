@@ -110,7 +110,7 @@ script/bootstrap
 
 This project is maintained by [Wolox](http://www.wolox.com.ar).
 
-![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
+<img height="100px" src="https://user-images.githubusercontent.com/11547820/142273110-5fb5be3f-e215-41af-844d-343a6134d80c.png"/>
 
 ## License
 **WolMo - Core iOS** is available under the [MIT license](LICENSE.txt).
