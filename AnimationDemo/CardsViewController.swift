@@ -11,9 +11,31 @@ import WolmoCore
 
 class CardsViewController: UIViewController {
     // MARK: - Properties
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var gamaControllerView: UIView! {
+        didSet {
+            gamaControllerView.addShadow(radius: 8,
+                                         opacity: 0.1,
+                                         cornerRadius: 14)
+        }
+    }
+    
+    @IBOutlet weak var swiftView: UIView! {
+        didSet {
+            swiftView.addShadow(radius: 8,
+                                opacity: 0.1,
+                                cornerRadius: 14)
+        }
+    }
+    
     @IBOutlet weak var cardsContainerView: UIView!
+    
+    @IBOutlet weak var animationButton: UIButton! {
+        didSet {
+            animationButton.addShadow(radius: 4,
+                                opacity: 0.2,
+                                cornerRadius: 4)
+        }
+    }
     
     var rotationAnimator: UIViewPropertyAnimator!
     var lastTranslation = CGPoint.zero
@@ -28,9 +50,9 @@ class CardsViewController: UIViewController {
 private extension CardsViewController {
     // MARK: - Configuration methods
     func setUpCardAnimation() {
-        greenView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
-        yellowView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
-        sendToBack(view: yellowView)
+        swiftView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
+        gamaControllerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
+        sendToBack(view: gamaControllerView)
     }
     
     // MARK: - Helper methods
@@ -40,10 +62,10 @@ private extension CardsViewController {
      */
     
     func getOtherView(view: UIView) -> UIView {
-        if view.isEqual(greenView) {
-            return yellowView
+        if view.isEqual(swiftView) {
+            return gamaControllerView
         } else {
-            return greenView
+            return swiftView
         }
     }
     
