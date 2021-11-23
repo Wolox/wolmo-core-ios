@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import Nimble
 import Quick
 import WolmoCore

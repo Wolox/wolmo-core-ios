@@ -21,13 +21,12 @@ public let DefaultWeekDateFormatter: DateFormatter = {
 }(DateFormatter())
 
 public extension Date {
-    
     /**
      Returns a Date with right now's time and date.
      
      - seealso: Date.init()
     */
-    public static func now() -> Date {
+    static func now() -> Date {
         return Date()
     }
     
@@ -40,7 +39,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the hours, between 0 - 24.
      */
-    public func hours(using calendar: Calendar = .current) -> Int {
+    func hours(using calendar: Calendar = .current) -> Int {
        return calendar.component(.hour, from: self)
     }
     
@@ -53,7 +52,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the minutes, between 0 - 60.
      */
-    public func minutes(using calendar: Calendar = .current) -> Int {
+    func minutes(using calendar: Calendar = .current) -> Int {
         return calendar.component(.minute, from: self)
     }
     
@@ -66,7 +65,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the seconds, between 0 - 60.
      */
-    public func seconds(using calendar: Calendar = .current) -> Int {
+    func seconds(using calendar: Calendar = .current) -> Int {
         return calendar.component(.second, from: self)
     }
     
@@ -79,7 +78,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the day of month.
      */
-    public func day(using calendar: Calendar = .current) -> Int {
+    func day(using calendar: Calendar = .current) -> Int {
         return calendar.component(.day, from: self)
     }
     
@@ -92,7 +91,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the month.
      */
-    public func month(using calendar: Calendar = .current) -> Int {
+    func month(using calendar: Calendar = .current) -> Int {
         return calendar.component(.month, from: self)
     }
     
@@ -105,7 +104,7 @@ public extension Date {
      - seealso: Calendar().component()
      - returns: An Int value representing the year.
      */
-    public func year(using calendar: Calendar = .current) -> Int {
+    func year(using calendar: Calendar = .current) -> Int {
         return calendar.component(.year, from: self)
     }
     
@@ -121,7 +120,7 @@ public extension Date {
      retrieve both components at the same time.
      - returns: The requested date components.
      */
-    public func components(_ units: Set<Calendar.Component>, using calendar: Calendar = .current) -> DateComponents {
+    func components(_ units: Set<Calendar.Component>, using calendar: Calendar = .current) -> DateComponents {
         return calendar.dateComponents(units, from: self)
     }
     
@@ -132,7 +131,7 @@ public extension Date {
      - parameter dateFormatter: The formatter used for initializing the date.
             By default, formatter which uses format "yyyy-MM-dd" and US locale.
      */
-    public init?(dateString: String, dateFormatter: DateFormatter = DefaultDateFormatter) {
+    init?(dateString: String, dateFormatter: DateFormatter = DefaultDateFormatter) {
         guard let date = dateFormatter.date(from: dateString) else {
             return nil
         }
@@ -146,7 +145,7 @@ public extension Date {
      - parameter dateString: The date string representation.
      - parameter formatString: The format string used for initializing the date.
      */
-    public init?(dateString: String, formatString: String) {
+    init?(dateString: String, formatString: String) {
         let formatter = DateFormatter()
         formatter.dateFormat = formatString
         self.init(dateString: dateString, dateFormatter: formatter)
@@ -157,7 +156,7 @@ public extension Date {
      
      - seealso: init(dateString: String)
      */
-    public init?(day: Int, month: Int, year: Int) {
+    init?(day: Int, month: Int, year: Int) {
         let yearString = String(format: "%.4d", year)
         let monthString = String(format: "%.2d", month)
         let dayString = String(format: "%.2d", day)
@@ -169,7 +168,7 @@ public extension Date {
      
      - parameter dateFormatter: The dateFormatter to use.
      */
-    public func getWeekDay(withFormat dateFormatter: DateFormatter = DefaultWeekDateFormatter) -> String {
+    func getWeekDay(withFormat dateFormatter: DateFormatter = DefaultWeekDateFormatter) -> String {
         return dateFormatter.string(from: self)
     }
     
@@ -178,7 +177,7 @@ public extension Date {
      
      - seealso: dateByAddingTimeInterval()
      */
-    public func adding(days: Int) -> Date {
+    func adding(days: Int) -> Date {
         let secondsInDays = Double(days) * 60 * 60 * 24
         return addingTimeInterval(secondsInDays)
     }
@@ -188,7 +187,7 @@ public extension Date {
      
      - seealso: dateByAddingTimeInterval()
      */
-    public func adding(hours: Int) -> Date {
+    func adding(hours: Int) -> Date {
         let secondsInHours: TimeInterval = Double(hours) * 60 * 60
         return addingTimeInterval(secondsInHours)
     }
@@ -197,14 +196,14 @@ public extension Date {
      Returns a the string representation of self with the format specified in the dateFormatter.
      By default, uses a formatter with format "yyyy-MM-dd" and US locale.
      */
-    public func toString(accordingTo dateFormatter: DateFormatter = DefaultDateFormatter) -> String {
+    func toString(accordingTo dateFormatter: DateFormatter = DefaultDateFormatter) -> String {
         return dateFormatter.string(from: self)
     }
     
     /**
      Returns a the string representation of self with the format specified.
      */
-    public func toString(with format: String) -> String {
+    func toString(with format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return toString(accordingTo: formatter)
@@ -216,10 +215,9 @@ public extension Date {
      
      - seealso: Dateformatter.setLocalizedDateFormatFromTemplate
      */
-    public func toString(withLocalized formatToLocalize: String) -> String {
+    func toString(withLocalized formatToLocalize: String) -> String {
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate(formatToLocalize)
         return toString(accordingTo: formatter)
     }
-    
 }

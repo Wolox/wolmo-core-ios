@@ -11,7 +11,6 @@ import UIKit
  Properties a BorderView has.
  */
 public struct BorderViewProperties {
-    
     public let thickness: Float
     public let color: UIColor
     public let roundedCorners: Bool
@@ -52,7 +51,6 @@ public enum BorderPosition {
     -warning: You are not suppose to change or use constraints with this view, that was already handled for you.
  */
 public class BorderView: UIView {
-
     public let position: BorderPosition
 
     internal convenience init(position: BorderPosition) {
@@ -71,17 +69,15 @@ public class BorderView: UIView {
     required public init(coder: NSCoder) {
         fatalError("You shouldn't create a BorderView this way.")
     }
-
 }
 
 fileprivate extension UIView {
-    
-    fileprivate enum Direction {
+    enum Direction {
         case horizontal
         case vertical
     }
     
-    fileprivate func addBorderView(from border: BorderViewProperties, position: BorderPosition) -> BorderView {
+    func addBorderView(from border: BorderViewProperties, position: BorderPosition) -> BorderView {
         let borderView = BorderView(position: position)
         borderView.backgroundColor = border.color
         addSubview(borderView)
@@ -90,11 +86,9 @@ fileprivate extension UIView {
         anchor.constraint(equalToConstant: CGFloat(border.thickness)).isActive = true
         return borderView
     }
-
 }
 
 public extension UIView {
-
     /**
      Adds a border to the top of the view, inside the view's bounds.
      
@@ -110,9 +104,9 @@ public extension UIView {
              We strongly recommend to work with constraints as a better practice than frames.
      */
     @discardableResult
-    public func add(top border: BorderViewProperties,
-                    withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
+    func add(top border: BorderViewProperties,
+             withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
         let borderView: BorderView
         
         switch layout {
@@ -154,9 +148,9 @@ public extension UIView {
              We strongly recommend to work with constraints as a better practice than frames.
      */
     @discardableResult
-    public func add(bottom border: BorderViewProperties,
-                    withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
+    func add(bottom border: BorderViewProperties,
+             withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
         let borderView: BorderView
         
         switch layout {
@@ -198,9 +192,9 @@ public extension UIView {
              We strongly recommend to work with constraints as a better practice than frames.
      */
     @discardableResult
-    public func add(left border: BorderViewProperties,
-                    withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
+    func add(left border: BorderViewProperties,
+             withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
         let borderView: BorderView
         
         switch layout {
@@ -242,9 +236,10 @@ public extension UIView {
              We strongly recommend to work with constraints as a better practice than frames.
      */
     @discardableResult
-    public func add(right border: BorderViewProperties,
-                    withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
+    func add(right border: BorderViewProperties,
+             withTopOffset top: CGFloat = 0,
+             bottomOffset bottom: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
         let borderView: BorderView
         
         switch layout {
@@ -275,7 +270,7 @@ public extension UIView {
         Removes the border view from self, only if
         the border was a child view to self.
     */
-    public func remove(border: BorderView) {
+    func remove(border: BorderView) {
         if border.superview == self {
             border.removeFromSuperview()
         }
@@ -309,5 +304,4 @@ public extension UIView {
             }
         }
     }
-
 }

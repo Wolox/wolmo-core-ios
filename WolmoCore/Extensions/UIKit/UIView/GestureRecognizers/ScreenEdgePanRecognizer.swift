@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIView {
-    
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {
@@ -20,15 +19,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var screenEdgePanGestureRecognizerAction: Action? {
+        get {
+            let screenEdgePanGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.screenEdgePanGestureRecognizer) as? Action
+            return screenEdgePanGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.screenEdgePanGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let screenEdgePanGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.screenEdgePanGestureRecognizer) as? Action
-            return screenEdgePanGestureRecognizerActionInstance
         }
     }
     
@@ -37,7 +36,7 @@ public extension UIView {
      - Parameter edge: The edge on which this gesture recognizes, relative to the current interface orientation.
      - Parameter action: The closure that will execute when the edge of the view is panned
      */
-    public func addScreenEdgePanGestureRecognizer(edge: UIRectEdge, action: ((UIScreenEdgePanGestureRecognizer) -> Void)?) {
+    func addScreenEdgePanGestureRecognizer(edge: UIRectEdge, action: ((UIScreenEdgePanGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         screenEdgePanGestureRecognizerAction = action
         let screenEdgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenEdgePanGesture))
@@ -54,5 +53,4 @@ public extension UIView {
             print("No action for the screen edge pan gesture")
         }
     }
-    
 }

@@ -42,7 +42,6 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
     }
     
     override public func spec() {
-        
         var tableView: UITableView!
         
         beforeEach {
@@ -53,49 +52,35 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
         }
         
         describe("#register(cell:) and #dequeue(cell:for:)") {
-            
             context("when dequeing an already registered cell") {
-                
                 it("should return the loaded cell") {
                     tableView.register(cell: NibLoadableTableCell.self)
                     let cell = tableView.dequeue(cell: NibLoadableTableCell.self, for: IndexPath(row: 0, section: 0))
                     expect(cell).toNot(beNil())
                 }
-                
             }
-            
             context("when dequeing a not before registered cell") {
-                
                 it("should return .none") {
                     expect(tableView.dequeue(cell: NibLoadableTableCell.self, for: IndexPath(row: 0, section: 0)))
                         .to(raiseException(named: "NSInternalInconsistencyException"))
                 }
-                
             }
-            
         }
         
         describe("#register(cell:) and #dequeue(cell:)") {
-            
             context("when dequeing an already registered cell") {
-                
                 it("should return the loaded cell") {
                     tableView.register(cell: NibLoadableTableCell.self)
                     let cell = tableView.dequeue(cell: NibLoadableTableCell.self)
                     expect(cell).toNot(beNil())
                 }
-                
             }
-            
             context("when dequeing a not before registered cell") {
-                
                 it("should return .none") {
                     let cell = tableView.dequeue(cell: NibLoadableTableCell.self)
                     expect(cell).to(beNil())
                 }
-                
             }
-            
         }
         
         //Test failing because of `dequeueReusableHeaderFooterView(withIdentifier: headerType.identifier)` always returns nil.
@@ -173,7 +158,5 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
             
         }
         */
-        
     }
-    
 }

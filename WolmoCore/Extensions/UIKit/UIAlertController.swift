@@ -9,14 +9,13 @@
 import UIKit
 
 public extension UIAlertController {
-    
     /**
      Builds a UIAlertController from a ConfirmationAlertViewModel
      
      - parameter alertViewModel: Models a ConfirmationAlertViewModel
      - seealso: ConfirmationAlertViewModel
     */
-    public convenience init(alertViewModel: ConfirmationAlertViewModel) {
+    convenience init(alertViewModel: ConfirmationAlertViewModel) {
         self.init(title: alertViewModel.title,
                   message: alertViewModel.message,
                   preferredStyle: .alert)
@@ -39,7 +38,7 @@ public extension UIAlertController {
      - parameter alertViewModel: Models an ErrorAlertViewModel
      - seealso: ErrorAlertViewModel
      */
-    public convenience init(alertViewModel: ErrorAlertViewModel) {
+    convenience init(alertViewModel: ErrorAlertViewModel) {
         self.init(title: alertViewModel.title,
                   message: alertViewModel.message,
                   preferredStyle: .alert)
@@ -48,7 +47,5 @@ public extension UIAlertController {
             alertViewModel.dismissAction(alertViewModel)
         }
         addAction(dismissAction)
-        
     }
-    
 }
