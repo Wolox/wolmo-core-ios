@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class LongPressRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addLongPressGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addLongPressGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class LongPressRecognizerSpec: QuickSpec {
                         // No action
                     }
                 }
-                
                 it("should have injected a UILongPressGestureRecognizer into the view") {
                     let longPressRecognizer = view.gestureRecognizers?.first as? UILongPressGestureRecognizer
                     expect(longPressRecognizer).toNot(beNil())

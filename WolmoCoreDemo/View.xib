@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,16 +55,24 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Round borders  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-9Z-2sJ">
+                            <rect key="frame" x="122" y="274" width="131" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="pJn-dR-MNn" firstAttribute="trailing" secondItem="AdN-3F-kMZ" secondAttribute="trailing" constant="20" id="3oq-8w-zoN"/>
                         <constraint firstItem="80Y-qR-yHf" firstAttribute="centerY" secondItem="FcB-gh-c9K" secondAttribute="centerY" id="9Yq-cl-gnd"/>
                         <constraint firstItem="nbm-4U-X48" firstAttribute="leading" secondItem="pJn-dR-MNn" secondAttribute="leading" constant="55" id="JHs-nM-YGt"/>
+                        <constraint firstItem="QhB-9Z-2sJ" firstAttribute="top" secondItem="nbm-4U-X48" secondAttribute="bottom" constant="20" id="OxF-dX-XhJ"/>
                         <constraint firstItem="AdN-3F-kMZ" firstAttribute="top" secondItem="pJn-dR-MNn" secondAttribute="top" constant="20" id="Ph7-cO-Wwd"/>
                         <constraint firstItem="nbm-4U-X48" firstAttribute="top" secondItem="80Y-qR-yHf" secondAttribute="bottom" constant="16" id="SkU-5x-JtQ"/>
                         <constraint firstItem="pJn-dR-MNn" firstAttribute="trailing" secondItem="nbm-4U-X48" secondAttribute="trailing" constant="54" id="a2S-AO-4oi"/>
                         <constraint firstItem="80Y-qR-yHf" firstAttribute="centerX" secondItem="FcB-gh-c9K" secondAttribute="centerX" id="qXl-aD-5il"/>
+                        <constraint firstItem="QhB-9Z-2sJ" firstAttribute="centerX" secondItem="FcB-gh-c9K" secondAttribute="centerX" id="zZQ-6f-bDC"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="pJn-dR-MNn"/>
                 </view>
@@ -89,6 +97,7 @@
                 <outlet property="bodyTextField" destination="kxh-P1-rEG" id="woJ-tq-RSf"/>
                 <outlet property="childContainerView" destination="es8-Vb-lQa" id="4YL-cV-f3j"/>
                 <outlet property="gestureLabel" destination="nbm-4U-X48" id="Qa4-i8-wma"/>
+                <outlet property="roundBordersLabel" destination="QhB-9Z-2sJ" id="tL5-0m-5uI"/>
                 <outlet property="stringsButton" destination="AdN-3F-kMZ" id="L0C-Ra-vpv"/>
                 <outlet property="titleLabel" destination="Nz0-Cq-KJs" id="dFG-iy-fGn"/>
             </connections>

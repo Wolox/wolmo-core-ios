@@ -7,13 +7,11 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 fileprivate class MyFontProvider: UIFontProvider {
-
     func appFontName(for style: UIFont.TextStyle) -> String {
         switch style {
         case UIFont.TextStyle.headline: return "Helvetica-Bold"
@@ -21,29 +19,22 @@ fileprivate class MyFontProvider: UIFontProvider {
         default: return "Helvetica"
         }
     }
-    
 }
 
 public class UITextFieldSpec: QuickSpec {
-    
     override public func spec() {
-
         beforeEach {
             UIFont.fontProvider = MyFontProvider()
         }
 
         describe("#nextTextField") {
-            
             context("When there isn't next textfield associated") {
-            
                 it("should be nil") {
                     let textField = UITextField()
                     expect(textField.nextTextField).to(beNil())
                 }
             }
-            
             context("When there is a next textfield associated") {
-                
                 var textField: UITextField!
                 var nextTextField: UITextField!
                 
@@ -59,7 +50,6 @@ public class UITextFieldSpec: QuickSpec {
                 }
                 
                 context("When the next textField is changed") {
-                    
                     var otherTextField: UITextField!
                     
                     beforeEach {
@@ -71,25 +61,19 @@ public class UITextFieldSpec: QuickSpec {
                         expect(textField.nextTextField).toNot(beNil())
                         expect(textField.nextTextField!).to(equal(otherTextField))
                     }
-
                 }
-
             }
-            
         }
 
         describe("#fontTextStyle") {
-
             var textField: UITextField!
-
+            
             beforeEach {
                 textField = UITextField()
             }
 
             describe("get") {
-
                 context("When a style was set") {
-
                     beforeEach {
                         textField.fontTextStyle = .body
                     }
@@ -97,32 +81,22 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return that style") {
                         expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.body))
                     }
-                    
                 }
-
                 context("When no style was set") {
-
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
-
                 context("When a style was set but then font property was changed") {
-
                     beforeEach {
                         textField.fontTextStyle = .body
                         textField.font = UIFont.systemFont(ofSize: 30)
                     }
-
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
-
                 context("When a font was set after setting various styles") {
-
                     beforeEach {
                         textField.fontTextStyle = .body
                         textField.fontTextStyle = .headline
@@ -132,17 +106,12 @@ public class UITextFieldSpec: QuickSpec {
                     it("should return .none") {
                         expect(textField.fontTextStyle).to(beNil())
                     }
-                    
                 }
-
             }
 
             describe("set") {
-
                 context("When a style is set") {
-
                     context("that has a custom font name") {
-
                         beforeEach {
                             textField.fontTextStyle = .headline
                         }
@@ -150,16 +119,12 @@ public class UITextFieldSpec: QuickSpec {
                         it("should change the fontTextStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.headline))
                         }
-
                         it("should change the font as specified in appFontName(for:)") {
                             expect(textField.font?.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .headline).pointSize))
                             expect(textField.font?.fontName).to(equal("Helvetica-Bold"))
                         }
-
                     }
-
                     context("that has the base font") {
-
                         beforeEach {
                             textField.fontTextStyle = .body
                         }
@@ -167,25 +132,17 @@ public class UITextFieldSpec: QuickSpec {
                         it("should change the fontTextStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.body))
                         }
-
                         it("should change the font as specified in appFontName(for:)") {
                             expect(textField.font?.pointSize).to(equal(UIFont.preferredFont(forTextStyle: .body).pointSize))
                             expect(textField.font?.fontName).to(equal("Helvetica"))
                         }
-
                     }
-
                     context("that is associated with an invalid font name") {
-
-                        // Commenting til Nimble finds a solution for this problem: https://github.com/Quick/Nimble/issues/478
-//                        it("should throw a runtime error") {
-//                            expect(textField.fontTextStyle = .title1).to(throwAssertion())
-//                        }
-
+                        it("should throw a runtime error") {
+                            expect(textField.fontTextStyle = .title1).to(throwAssertion())
+                        }
                     }
-
                     context("When a style is set after another one") {
-
                         beforeEach {
                             textField.fontTextStyle = .body
                             textField.fontTextStyle = .title2
@@ -194,11 +151,8 @@ public class UITextFieldSpec: QuickSpec {
                         it("should return the new textStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.title2))
                         }
-
                     }
-
                     context("When a style is set after font property was changed") {
-
                         beforeEach {
                             textField.fontTextStyle = .body
                             textField.font = UIFont.systemFont(ofSize: 30)
@@ -208,15 +162,9 @@ public class UITextFieldSpec: QuickSpec {
                         it("should return the new textStyle") {
                             expect(textField.fontTextStyle).to(equal(UIFont.TextStyle.title2))
                         }
-                        
                     }
-                    
                 }
-
             }
-
         }
-
     }
-
 }

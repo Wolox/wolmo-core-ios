@@ -10,16 +10,13 @@ import UIKit
 import WolmoCore
 
 class CardsViewController: UIViewController {
-    
     // MARK: - Properties
-    
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var cardsContainerView: UIView!
     
     var rotationAnimator: UIViewPropertyAnimator!
     var lastTranslation = CGPoint.zero
-    
     var animationViews: [UIView] = []
     
     override func viewDidLoad() {
@@ -30,7 +27,6 @@ class CardsViewController: UIViewController {
 
 private extension CardsViewController {
     // MARK: - Configuration methods
-    
     func setUpCardAnimation() {
         greenView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
         yellowView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
@@ -70,9 +66,7 @@ private extension CardsViewController {
 }
 
 // MARK: - Animation methods
-
 private extension CardsViewController {
-    
     /**
      Animate the view when the user is draging it to the right
      
@@ -93,10 +87,9 @@ private extension CardsViewController {
         
         switch gesture.state {
         case .began:
-            rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: UIViewAnimationCurve.easeInOut) {
+            rotationAnimator = UIViewPropertyAnimator(duration: 4, curve: .easeInOut) {
                 target.transform = CGAffineTransform(rotationAngle: (CGFloat.pi * 15.0) / 180.0)
             }
-            
         case .changed:
             let translation = gesture.translation(in: self.view)
             let dx = translation.x - lastTranslation.x
@@ -104,7 +97,6 @@ private extension CardsViewController {
             target.center = CGPoint(x: target.center.x + dx, y: target.center.y)
             lastTranslation = translation
             rotationAnimator.fractionComplete = (target.center.x - halfWidthScreen) / completeAnimationLimit
-            
         case .ended:
             lastTranslation = CGPoint.zero
             rotationAnimator.stopAnimation(true)
@@ -117,7 +109,6 @@ private extension CardsViewController {
             } else {
                 reset(view: target)
             }
-            
         default:
             break
         }

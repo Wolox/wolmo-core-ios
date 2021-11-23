@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class DictionarySpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("castedValue(forKey:or:)") {
-
             var dict1: [Int: Any]!
 
             beforeEach {
@@ -25,38 +21,24 @@ public class DictionarySpec: QuickSpec {
             }
 
             context("when the key is already in the dictionary") {
-
                 context("when the key's value's type is not T") {
-
-                    // Commenting til Nimble finds a solution for this problem: https://github.com/Quick/Nimble/issues/478
-//                    it("should raise a runtime error") {
-//                        expect(_ = dict1.castedValue(forKey: 2, or: "two")).to(throwAssertion())
-//                    }
-
+                    it("should raise a runtime error") {
+                        expect(_ = dict1.castedValue(forKey: 2, or: "two")).to(throwAssertion())
+                    }
                 }
-
                 context("when the key's value's type is T") {
-
                     it("should return the key's value") {
                         let value = dict1.castedValue(forKey: 1, or: "uno")
                         expect(value).to(equal("one"))
                     }
-
                 }
-
             }
-
             context("when the key is not in the dictionary") {
-                
                 it("should return the default value") {
                     let value = dict1.castedValue(forKey: 5, or: ["español": "cinco"])
                     expect(value).to(equal(["español": "cinco"]))
                 }
-                
             }
-
         }
-        
     }
-
 }

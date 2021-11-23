@@ -10,9 +10,7 @@ import UIKit
 import WolmoCore
 
 class AnimationsViewController: UIViewController {
-    
     // MARK: - Properties
-    
     @IBOutlet weak var draggableView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -29,8 +27,7 @@ class AnimationsViewController: UIViewController {
     }
 }
 
-// MARK - Configuration methods
-
+// MARK: - Configuration methods
 private extension AnimationsViewController {
     func setupSimpleAnimations() {
         for each in SimpleExample.all {

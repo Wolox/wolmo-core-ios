@@ -38,7 +38,6 @@ public func / (baseURL: URL, pathComponent: PathAppendable) -> URL {
     by representing itself with a string to be appended to the path.
  */
 public protocol PathAppendable {
-    
     /**
          String represention of the path that represents the component.
      
@@ -50,12 +49,10 @@ public protocol PathAppendable {
          - see also: `String(describing: Subject)` init.
     */
     func toPath() -> String
-    
 }
 
 public extension PathAppendable {
-    
-    public func toPath() -> String {
+    func toPath() -> String {
         return String(describing: self)
     }
     

@@ -9,7 +9,6 @@
 import Foundation
 
 public extension String {
-    
     /**
      Returns a localized representation of the string.
      
@@ -18,7 +17,7 @@ public extension String {
      
      -seealso: NSLocalizedString.
      */
-    public func localized(withArguments arguments: CVarArg..., bundle: Bundle = Bundle.main) -> String {
+    func localized(withArguments arguments: CVarArg..., bundle: Bundle = Bundle.main) -> String {
         let localized = NSLocalizedString(self, tableName: .none, bundle: bundle, value: "", comment: "")
         if arguments.isNotEmpty {
             // Can't call .format(with:): https://stackoverflow.com/a/24024724
@@ -37,7 +36,7 @@ public extension String {
      
      -seealso: String.init(format:arguments:)
      */
-    public func format(with arguments: CVarArg...) -> String {
+    func format(with arguments: CVarArg...) -> String {
         return String(format: self, arguments: arguments)
     }
 
@@ -52,7 +51,7 @@ public extension String {
      
      - seealso: NSMutableAttributedString.addAttributes(_:range:)
     */
-    public func format(withAttributes attrs: [String: [NSAttributedString.Key: Any]]) -> NSAttributedString {
+    func format(withAttributes attrs: [String: [NSAttributedString.Key: Any]]) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let nSStringWithFormat = self as NSString
         for (substring, attributes) in attrs {
@@ -64,14 +63,14 @@ public extension String {
     /**
      Builds an NSURL from a string.
      */
-    public var url: URL? {
+    var url: URL? {
         return URL(string: self)
     }
     
     /**
      Checks if the string has spaces or not.
      */
-    public var hasSpaces: Bool {
+    var hasSpaces: Bool {
         let whitespace = CharacterSet.whitespaces
         let range = rangeOfCharacter(from: whitespace)
         return range != .none
@@ -80,7 +79,7 @@ public extension String {
     /**
      Checks if a string is a valid email or not.
     */
-    public func isValidEmail() -> Bool {
+    func isValidEmail() -> Bool {
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
@@ -90,7 +89,7 @@ public extension String {
     /*
      Returns a copy of the string without its leading and trailing whitespace and newlines.
      */
-    public var trimmed: String {
+    var trimmed: String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
@@ -103,21 +102,21 @@ public extension String {
      - parameter range: The range of the string to search.
      - seealso: stringByReplacingOccurrencesOfString().
      */
-    public func replacing(_ target: String, with replacement: String, options: NSString.CompareOptions = .literal, range: Range<Index>? = .none) -> String {
+    func replacing(_ target: String, with replacement: String, options: NSString.CompareOptions = .literal, range: Range<Index>? = .none) -> String {
         return replacingOccurrences(of: target, with: replacement, options: .literal, range: range)
     }
     
     /**
      Returns a new string without whitespaces.
      */
-    public var withoutWhiteSpaces: String {
+    var withoutWhiteSpaces: String {
         return replacing(" ", with: "")
     }
     
     /**
      Returns true if the string is not empty, false if not.
     */
-    public var isNotEmpty: Bool {
+    var isNotEmpty: Bool {
         return !isEmpty
     }
     
@@ -131,7 +130,7 @@ public extension String {
      The comparison is both case sensitive and Unicode safe.
      - seealso: hasSuffix.
     */
-    public func remove(suffix: String) -> String {
+    func remove(suffix: String) -> String {
         if hasSuffix(suffix) {
             return String(self.dropLast(suffix.count))
         }
@@ -148,7 +147,7 @@ public extension String {
      The comparison is both case sensitive and Unicode safe.
      - seealso: hasPrefix.
      */
-    public func remove(prefix: String) -> String {
+    func remove(prefix: String) -> String {
         if hasPrefix(prefix) {
             return String(self.dropFirst(prefix.count))
         }
@@ -190,7 +189,7 @@ public extension String {
      - parameter lhs: string to repeat.
      - parameter rhs: number of times to repeat string.
      */
-    public static func * (lhs: String, rhs: Int) -> String {
+    static func * (lhs: String, rhs: Int) -> String {
         return String(repeating: lhs, count: rhs)
     }
     
@@ -200,7 +199,7 @@ public extension String {
      - parameter lhs: number of times to repeat string.
      - parameter rhs: string to repeat.
      */
-    public static func * (lhs: Int, rhs: String) -> String {
+    static func * (lhs: Int, rhs: String) -> String {
         return String(repeating: rhs, count: lhs)
     }
     

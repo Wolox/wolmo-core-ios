@@ -26,7 +26,6 @@ public enum ViewPositioning {
 }
 
 public extension UIView {
-
     /**
      Loads the view into the specified containerView.
 
@@ -40,11 +39,11 @@ public extension UIView {
      We strongly recommend to work with constraints as a better practice than frames.
      Also, this function matches left inset to leading and right to trailing of the view.
      */
-    public func add(into containerView: UIView,
-                    with insets: UIEdgeInsets = .zero,
-                    in viewPositioning: ViewPositioning = .front,
-                    layout: LayoutMode = .constraints,
-                    respectSafeArea: Bool = false) {
+    func add(into containerView: UIView,
+             with insets: UIEdgeInsets = .zero,
+             in viewPositioning: ViewPositioning = .front,
+             layout: LayoutMode = .constraints,
+             respectSafeArea: Bool = false) {
 
         switch layout {
         case .constraints:
@@ -97,5 +96,4 @@ public extension UIView {
             return CGRect(x: x, y: y, width: width, height: height)
         }
     }
-
 }

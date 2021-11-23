@@ -9,7 +9,6 @@
 import UIKit
 
 public extension UIViewController {
-    
     /**
      Loads the childViewController into the specified containerView.
      
@@ -21,22 +20,26 @@ public extension UIViewController {
      - parameter into: The containerView into which the controller will be loaded.
      - parameter viewPositioning: Back or Front. Default: Front
      */
-    public func load(childViewController: UIViewController,
-                     into containerView: UIView,
-                     with insets: UIEdgeInsets = .zero,
-                     in viewPositioning: ViewPositioning = .front,
-                     layout: LayoutMode = .constraints,
-                     respectSafeArea: Bool = false) {
+    func load(childViewController: UIViewController,
+              into containerView: UIView,
+              with insets: UIEdgeInsets = .zero,
+              in viewPositioning: ViewPositioning = .front,
+              layout: LayoutMode = .constraints,
+              respectSafeArea: Bool = false) {
         childViewController.willMove(toParent: self)
         addChild(childViewController)
         childViewController.didMove(toParent: self)
-        childViewController.view.add(into: containerView, with: insets, in: viewPositioning, layout: layout, respectSafeArea: respectSafeArea)
+        childViewController.view.add(into: containerView,
+                                     with: insets,
+                                     in: viewPositioning,
+                                     layout: layout,
+                                     respectSafeArea: respectSafeArea)
     }
     
     /**
      Unloads a childViewController and its view from its parentViewController.
      */
-    public func unloadFromParentViewController() {
+    func unloadFromParentViewController() {
         view.removeFromSuperview()
         removeFromParent()
     }
@@ -44,7 +47,7 @@ public extension UIViewController {
     /**
      Unloads all childViewController and their view from self.
      */
-    public func unloadChildViewControllers() {
+    func unloadChildViewControllers() {
         for childController in self.children {
             childController.unloadFromParentViewController()
         }
@@ -55,14 +58,13 @@ public extension UIViewController {
 // MARK: - Navigation Bar
 
 public extension UIViewController {
-
     /**
      Configures the navigation bar to have a particular image as back button.
      - parameter image: The image of the back button.
      - warning: This function must be called when self is inside a navigation controller. 
             If not it will arise a runtime fatal error.
      */
-    public func setNavigationBarBackButton(_ image: UIImage) {
+    func setNavigationBarBackButton(_ image: UIImage) {
         guard let navigationController = navigationController else { fatalError("There is no navigation controller.") }
         
         navigationController.navigationBar.topItem?.title = ""
@@ -77,7 +79,7 @@ public extension UIViewController {
      - warning: This function must be called when self is inside a navigation controller. 
             If not it will arise a runtime fatal error.
      */
-    public func setNavigationBarColor(_ color: UIColor) {
+    func setNavigationBarColor(_ color: UIColor) {
         guard let navigationController = navigationController else { fatalError("There is no navigation controller.") }
         
         navigationController.navigationBar.barTintColor = color
@@ -90,7 +92,7 @@ public extension UIViewController {
      - warning: This function must be called when self is inside a navigation controller.
             If not it will arise a runtime fatal error.
      */
-    public func setNavigationBarTintColor(_ color: UIColor) {
+    func setNavigationBarTintColor(_ color: UIColor) {
         guard let navigationController = navigationController else { fatalError("There is no navigation controller.") }
         
         navigationController.navigationBar.tintColor = color
@@ -102,7 +104,7 @@ public extension UIViewController {
      - warning: This function must be called when self is inside a navigation controller.
             If not it will arise a runtime fatal error.
      */
-    public func setNavigationBarStyle(_ style: UIBarStyle) {
+    func setNavigationBarStyle(_ style: UIBarStyle) {
         guard let navigationController = navigationController else { fatalError("There is no navigation controller.") }
         
         navigationController.navigationBar.barStyle = style
@@ -112,7 +114,7 @@ public extension UIViewController {
      Sets a collection of buttons as the navigation bar left buttons.
      - parameter buttons: the Array of buttons to use.
      */
-    public func setNavigationLeftButtons(_ buttons: [UIBarButtonItem]) {
+    func setNavigationLeftButtons(_ buttons: [UIBarButtonItem]) {
         navigationItem.leftBarButtonItems = buttons
     }
     
@@ -120,7 +122,7 @@ public extension UIViewController {
      Sets a collection of buttons as the navigation bar right buttons.
      - parameter buttons: the Array of buttons to use.
      */
-    public func setNavigationRightButtons(_ buttons: [UIBarButtonItem]) {
+    func setNavigationRightButtons(_ buttons: [UIBarButtonItem]) {
         navigationItem.rightBarButtonItems = buttons
     }
 
@@ -130,7 +132,7 @@ public extension UIViewController {
      - parameter font: the font to use for the label.
      - parameter color: the color of the text.
      */
-    public func setNavigationBarTitle(_ title: String, font: UIFont, color: UIColor) {
+    func setNavigationBarTitle(_ title: String, font: UIFont, color: UIColor) {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .clear
         label.font = font
@@ -145,7 +147,7 @@ public extension UIViewController {
      Adds an ImageView with the image passed as the titleView of the navigation bar.
      - parameter image: The image to set as title.
      */
-    public func setNavigationBarTitleImage(_ image: UIImage) {
+    func setNavigationBarTitleImage(_ image: UIImage) {
         navigationItem.titleView = UIImageView(image: image)
     }
     
