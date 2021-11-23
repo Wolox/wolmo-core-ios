@@ -9,12 +9,10 @@
 import Foundation
 
 public extension Collection {
-    
     /**
      Returns true if the collection is not empty, false if not.
      */
-    public var isNotEmpty: Bool {
+    var isNotEmpty: Bool {
         return !isEmpty
     }
-
 }

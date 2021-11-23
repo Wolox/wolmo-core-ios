@@ -9,7 +9,6 @@
 import Foundation
 
 public extension Array {
-    
     /**
      Groups elements by the criteria provided.
      
@@ -17,7 +16,7 @@ public extension Array {
      
      - returns: Dictionary with elements grouped by their corresponding keys.
      */
-    public func group<K>(by keyForElement: (Element) -> K) -> [K: [Element]] {
+    func group<K>(by keyForElement: (Element) -> K) -> [K: [Element]] {
         return Dictionary(grouping: self, by: keyForElement)
     }
     
@@ -28,7 +27,7 @@ public extension Array {
      O(count) if self does not wrap a bridged NSArray; otherwise the efficiency is unspecified.
      - seealso: append().
     */
-    public func appending(_ element: Element) -> [Element] {
+    func appending(_ element: Element) -> [Element] {
         var result = self
         result.append(element)
         return result
@@ -47,8 +46,7 @@ public extension Array {
      - returns: The Element or nil if the array doesn't contain an element in 
         that index
      */
-    public func get(_ index: Int) -> Element? {
+    func get(_ index: Int) -> Element? {
         return indices ~= index ? self[index] : .none
     }
-    
 }

@@ -9,14 +9,13 @@
 import Foundation
 
 public extension UITextField {
-    
     /**
      nextTextField is intended to be used in a form, so that the delegate uses it, for example, in the textFieldShouldReturn method.
      
      - warning: Avoid setting nextTextField in the didSet hook of an outlet.
                 Override awakeFromNib() of the containing view in that case.
      */
-    public var nextTextField: UITextField? {
+    var nextTextField: UITextField? {
         get {
             return getAssociatedObject(self, key: &nextTextFieldKey)
         }
@@ -37,7 +36,7 @@ public extension UITextField {
         `UIFont.appFontName(for:)` is not valid.
      - seealso: UIFont.appFontName(for:).
     */
-    public var fontTextStyle: UIFont.TextStyle? {
+    var fontTextStyle: UIFont.TextStyle? {
         get {
             return getStyle()
         }
@@ -70,7 +69,6 @@ public extension UITextField {
         }
         setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)
     }
-
 }
 
 private var nextTextFieldKey: UInt8 = 0

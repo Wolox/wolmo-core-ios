@@ -15,25 +15,19 @@ import UIKit
  except for NibLoadable components, it uses the nibname.
  */
 public protocol Identifiable {
-    
     static var identifier: String { get }
-    
 }
 
 public extension Identifiable {
-    
-    public static var identifier: String {
+    static var identifier: String {
         return SimpleName(ofType: self)
     }
-    
 }
 
 public extension Identifiable where Self: NibLoadable {
-    
-    public static var identifier: String {
+    static var identifier: String {
         return nibName
     }
-    
 }
 
 extension UITableViewCell: Identifiable { }

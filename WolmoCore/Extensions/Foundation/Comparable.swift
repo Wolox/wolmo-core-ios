@@ -14,7 +14,7 @@ public extension Comparable {
      - parameter min: minimum value of the interval to use.
      - parameter max: maximum value of the interval to use.
      */
-    public func clamp(min: Self, max: Self) -> Self {
+    func clamp(min: Self, max: Self) -> Self {
         if self < min { return min }
         if self > max { return max }
         return self

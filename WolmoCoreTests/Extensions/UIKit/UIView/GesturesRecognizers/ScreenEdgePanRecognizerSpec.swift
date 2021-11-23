@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class ScreenEdgePanRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addScreenEdgePanGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addScreenEdgePanGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class ScreenEdgePanRecognizerSpec: QuickSpec {
                         // No action
                     }
                 }
-                
                 it("should have injected a UIScreenEdgePanGestureRecognizer into the view") {
                     let screenEdgePanRecognizer = view.gestureRecognizers?.first as? UIScreenEdgePanGestureRecognizer
                     expect(screenEdgePanRecognizer).toNot(beNil())
