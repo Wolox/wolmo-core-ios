@@ -9,13 +9,12 @@
 import Foundation
 
 public extension RawRepresentable where RawValue == Int {
-    
     /**
      Returns a sequence that contains all the possible rawValues of self.
      
      - parameter startingAt: The value from which to start.
      */
-    public static func allValues(startingAt value: Self) -> AnySequence<Self> {
+    static func allValues(startingAt value: Self) -> AnySequence<Self> {
         let generator = RawRepresentableGenerator(startingAt: value) { Self(rawValue: ($0.rawValue + 1)) }
         return AnySequence { generator }
     }
@@ -27,14 +26,13 @@ public extension RawRepresentable where RawValue == Int {
      
      - Complexity: O(N) where N = #values - startingAt.
      */
-    public static func count(startingAt value: Self) -> Int {
+    static func count(startingAt value: Self) -> Int {
         var count = 0
         for _ in allValues(startingAt: value) {
             count += 1
         }
         return count
     }
-    
 }
 
 /**
@@ -68,5 +66,4 @@ public struct RawRepresentableGenerator<RawValue, Representable: RawRepresentabl
             return .none
         }
     }
-    
 }
