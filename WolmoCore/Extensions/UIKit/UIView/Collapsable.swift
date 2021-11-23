@@ -12,7 +12,6 @@ import Foundation
  Represents a collapsable element.
  */
 public protocol Collapsable {
-    
     /**
      Collapse self.
      
@@ -28,14 +27,12 @@ public protocol Collapsable {
      - Parameter animationDuration: The animationDuration of the collapse.
      */
     func uncollapse(animated: Bool, animationDuration: TimeInterval)
-    
 }
 
 /**
  Represents a vertical collapsable view, which when collapsed not only isn't shown but isn't considered in vertical layout.
  */
 extension Collapsable where Self: UIView {
-    
     /**
      Collapse a view by adding/modifying constraint height. It works also if they view already has a constraint.
      
@@ -98,11 +95,9 @@ extension Collapsable where Self: UIView {
 private var CollapsableHeightConstraintKey: UInt8 = 0
 
 fileprivate extension UIView {
-    
-    fileprivate var previousHeightConstraint: NSLayoutConstraint? {
+    var previousHeightConstraint: NSLayoutConstraint? {
         return constraints.first(where: { (constraint) -> Bool in
             constraint.firstAttribute == .height
         })
     }
-    
 }

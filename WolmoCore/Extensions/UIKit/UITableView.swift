@@ -9,14 +9,13 @@
 import UIKit
 
 public extension UITableView {
-    
     /**
          Registers a cell to be used by a UITableView.
          
          - parameter cellType: A nibloadable table view cell type
                 to take the identifier and nib from.
      */
-    public func register<T: UITableViewCell>(cell cellType: T.Type) where T: NibLoadable {
+    func register<T: UITableViewCell>(cell cellType: T.Type) where T: NibLoadable {
         register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
     }
     
@@ -45,7 +44,7 @@ public extension UITableView {
          
          - parameter cellType: A table view cell to take the identifier from.
      */
-    public func dequeue<T: UITableViewCell>(cell cellType: T.Type) -> T? {
+    func dequeue<T: UITableViewCell>(cell cellType: T.Type) -> T? {
         return dequeueReusableCell(withIdentifier: cellType.identifier) as? T
     }
     
@@ -56,7 +55,7 @@ public extension UITableView {
          - parameter cellType: A table view cell to take the identifier from.
          - parameter indexPath: IndexPath where to add the cell to the table view.
      */
-    public func dequeue<T: UITableViewCell>(cell cellType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UITableViewCell>(cell cellType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableCell(withIdentifier: cellType.identifier, for: indexPath) as? T
     }
     
@@ -65,7 +64,7 @@ public extension UITableView {
          
          - parameter headerType: A table view header view to take the identifier from.
      */
-    public func dequeue<T: UITableViewHeaderFooterView>(header headerType: T.Type) -> T? {
+    func dequeue<T: UITableViewHeaderFooterView>(header headerType: T.Type) -> T? {
         return dequeueReusableHeaderFooterView(withIdentifier: headerType.identifier) as? T
     }
     
@@ -74,8 +73,7 @@ public extension UITableView {
          
          - parameter footerType: A table view footer view to take the identifier from.
      */
-    public func dequeue<T: UITableViewHeaderFooterView>(footer footerType: T.Type) -> T? {
+    func dequeue<T: UITableViewHeaderFooterView>(footer footerType: T.Type) -> T? {
         return dequeueReusableHeaderFooterView(withIdentifier: footerType.identifier) as? T
     }
-    
 }

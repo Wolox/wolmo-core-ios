@@ -20,15 +20,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var panGestureRecognizerAction: Action? {
+        get {
+            let panGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.panGestureRecognizer) as? Action
+            return panGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.panGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let panGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.panGestureRecognizer) as? Action
-            return panGestureRecognizerActionInstance
         }
     }
     
@@ -39,9 +39,9 @@ public extension UIView {
      - Parameter maximumNumberOfTouches: The maximum number of touches that can be down. Default is Int.max
      - Parameter action: The closure that will execute when the view is panned
      */
-    public func addPanGestureRecognizer(minimumNumberOfTouches: Int = 1,
-                                        maximumNumberOfTouches: Int = .max,
-                                        action: ((UIPanGestureRecognizer) -> Void)?) {
+    func addPanGestureRecognizer(minimumNumberOfTouches: Int = 1,
+                                 maximumNumberOfTouches: Int = .max,
+                                 action: ((UIPanGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         panGestureRecognizerAction = action
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))

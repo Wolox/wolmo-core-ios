@@ -9,7 +9,6 @@
 import UIKit
 
 public extension UIImage {
-    
     /**
      Returns a resized copy of the image, with cornerRadius if used.
      
@@ -25,7 +24,7 @@ public extension UIImage {
      - parameter cornerRadius: The cornerRadius to be used. Any number lower or equal to zero will not add cornerRadius. Default: 0.0, no corner radius.
      
      */
-    public func resized(toSize: CGSize, maintainAspectRatio: Bool, useScreenScale: Bool = true, cornerRadius: CGFloat = 0.0, insets: UIEdgeInsets = .zero) -> UIImage {
+    func resized(toSize: CGSize, maintainAspectRatio: Bool, useScreenScale: Bool = true, cornerRadius: CGFloat = 0.0, insets: UIEdgeInsets = .zero) -> UIImage {
         let newSize = maintainAspectRatio ? size.resizedMaintainingRatio(wantedSize: toSize) : toSize
         let scale: CGFloat = useScreenScale ? 0.0 : 1.0
         let imageRect = CGRect(origin: CGPoint.zero, size: newSize)
@@ -46,7 +45,7 @@ public extension UIImage {
      Returns the aspect ratio of the image represented by a CGFloat. 
         For example an image with a 4:3 ratio will give 1.333... as output.
      */
-    public var aspectRatio: CGFloat {
+    var aspectRatio: CGFloat {
         return size.width / size.height
     }
     
@@ -57,7 +56,7 @@ public extension UIImage {
      - seealso: withRenderingMode(.alwaysOriginal)
      */
     
-    public func tintedWith(_ color: UIColor?) -> UIImage {
+    func tintedWith(_ color: UIColor?) -> UIImage {
         if let color = color {
             var newImage = withRenderingMode(.alwaysTemplate)
             UIGraphicsBeginImageContextWithOptions(size, false, newImage.scale)
@@ -69,11 +68,9 @@ public extension UIImage {
         }
         return self.withRenderingMode(.alwaysOriginal)
     }
-
 }
 
 fileprivate extension CGSize {
-
     /**
      Returns a resized copy of the size maintaining it's aspect ratio.
      
@@ -81,12 +78,11 @@ fileprivate extension CGSize {
      Note that the size of the resulting CGSize will be the smaller closest size to the one specified that maintains the aspect ratio of the original.
      
      */
-    fileprivate func resizedMaintainingRatio(wantedSize: CGSize) -> CGSize {
+    func resizedMaintainingRatio(wantedSize: CGSize) -> CGSize {
         let widthFactor = wantedSize.width / width
         let heightFactor = wantedSize.height / height
         let resizeFactor = min(heightFactor, widthFactor)
         
         return CGSize(width: width * resizeFactor, height: height * resizeFactor)
     }
-    
 }
