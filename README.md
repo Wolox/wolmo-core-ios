@@ -1,11 +1,15 @@
-## WolMo - Core iOS
 [![Build Status](https://app.bitrise.io/app/d026a7fe0c9dc2f4/status.svg?token=9MLbGXfHBhZKaL4KXXmpHQ&branch=master)](https://app.bitrise.io/app/d026a7fe0c9dc2f4)
-[![Codestats](http://codestats.wolox.com.ar/organizations/wolox/projects/wolmo-core-ios/badge)](http://codestats.wolox.com.ar/organizations/wolox/projects/wolmo-core-ios/badge)
-[![GitHub release](https://img.shields.io/github/release/Wolox/wolmo-core-ios.svg)](https://github.com/Wolox/wolmo-core-ios/releases)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+![Swift 5](https://img.shields.io/badge/Swift-5-orange?logo=swift)
+[![codecov](https://codecov.io/gh/Wolox/wolmo-core-ios/branch/master/graph/badge.svg?token=NwIrvzjHHP)](https://codecov.io/gh/Wolox/wolmo-core-ios)
 
-WolMo - Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
+<p align="center">
+  <img height="140px" width="400px" src="https://cloud.githubusercontent.com/assets/4109119/25450281/cac5979e-2a94-11e7-9176-8e323df5dab8.png"/>
+</p>
+
+# WOLMO
+
+WOLMO Core iOS is a framework which provides extensions and utilities for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
 
 At Wolox, we complement this framework with [Wolmo - Reactive Core](https://github.com/Wolox/wolmo-reactive-core-ios).
 
@@ -107,7 +111,7 @@ script/bootstrap
 
 This project is maintained by [Wolox](http://www.wolox.com.ar).
 
-![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
+<img height="100px" src="https://user-images.githubusercontent.com/11547820/142273110-5fb5be3f-e215-41af-844d-343a6134d80c.png"/>
 
 ## License
 **WolMo - Core iOS** is available under the [MIT license](LICENSE.txt).
