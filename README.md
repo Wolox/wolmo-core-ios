@@ -1,6 +1,6 @@
 [![Build Status](https://app.bitrise.io/app/d026a7fe0c9dc2f4/status.svg?token=9MLbGXfHBhZKaL4KXXmpHQ&branch=master)](https://app.bitrise.io/app/d026a7fe0c9dc2f4)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
-![Swift 4.1](https://img.shields.io/badge/Swift-5-orange?logo=swift)
+![Swift 5](https://img.shields.io/badge/Swift-5-orange?logo=swift)
 [![codecov](https://codecov.io/gh/Wolox/wolmo-core-ios/branch/master/graph/badge.svg?token=NwIrvzjHHP)](https://codecov.io/gh/Wolox/wolmo-core-ios)
 
 <p align="center">
