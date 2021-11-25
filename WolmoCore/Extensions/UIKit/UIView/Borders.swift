@@ -20,6 +20,13 @@ public struct BorderViewProperties {
         self.color = color
         self.roundedCorners = rounded
     }
+    
+    func clipToBoundsBordersIfNeeded(borderView: inout BorderView) {
+        if self.roundedCorners {
+            borderView.layer.cornerRadius = CGFloat(self.thickness / 2)
+            borderView.clipsToBounds = true
+        }
+    }
 }
 
 /**
@@ -105,9 +112,10 @@ public extension UIView {
      */
     @discardableResult
     func add(top border: BorderViewProperties,
-             withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
+             withLeftOffset left: CGFloat = 0,
+             rightOffset right: CGFloat = 0,
              layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -116,19 +124,13 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            let frame = CGRect(x: left,
-                               y: 0,
-                               width: bounds.width - left - right,
-                               height: CGFloat(border.thickness))
-            borderView = BorderView(frame: frame, position: .top)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = setBorderFrame(border: border,
+                                        firstOffset: left,
+                                        secondOffset: right,
+                                        position: .top)
         }
         
-        if border.roundedCorners {
-            borderView.layer.cornerRadius = CGFloat(border.thickness/2)
-            borderView.clipsToBounds = true
-        }
+        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
         
         return borderView
     }
@@ -151,7 +153,7 @@ public extension UIView {
     func add(bottom border: BorderViewProperties,
              withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
              layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -160,19 +162,13 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            let frame = CGRect(x: left,
-                               y: bounds.height - CGFloat(border.thickness),
-                               width: bounds.width - left - right,
-                               height: CGFloat(border.thickness))
-            borderView = BorderView(frame: frame, position: .bottom)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = setBorderFrame(border: border,
+                                        firstOffset: left,
+                                        secondOffset: right,
+                                        position: .bottom)
         }
         
-        if border.roundedCorners {
-            borderView.layer.cornerRadius = CGFloat(border.thickness/2)
-            borderView.clipsToBounds = true
-        }
+        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
         
         return borderView
     }
@@ -193,9 +189,10 @@ public extension UIView {
      */
     @discardableResult
     func add(left border: BorderViewProperties,
-             withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
+             withTopOffset top: CGFloat = 0,
+             bottomOffset bottom: CGFloat = 0,
              layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -204,19 +201,13 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            let frame = CGRect(x: 0,
-                               y: top,
-                               width: CGFloat(border.thickness),
-                               height: bounds.height - top - bottom)
-            borderView = BorderView(frame: frame, position: .left)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = setBorderFrame(border: border,
+                                        firstOffset: top,
+                                        secondOffset: bottom,
+                                        position: .left)
         }
         
-        if border.roundedCorners {
-            borderView.layer.cornerRadius = CGFloat(border.thickness/2)
-            borderView.clipsToBounds = true
-        }
+        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
         
         return borderView
     }
@@ -240,7 +231,7 @@ public extension UIView {
              withTopOffset top: CGFloat = 0,
              bottomOffset bottom: CGFloat = 0,
              layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -249,19 +240,40 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            let frame = CGRect(x: bounds.width - CGFloat(border.thickness),
-                               y: top,
-                               width: CGFloat(border.thickness),
-                               height: bounds.height - top - bottom)
-            borderView = BorderView(frame: frame, position: .right)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = setBorderFrame(border: border,
+                                        firstOffset: top,
+                                        secondOffset: bottom,
+                                        position: .right)
         }
         
-        if border.roundedCorners {
-            borderView.layer.cornerRadius = CGFloat(border.thickness/2)
-            borderView.clipsToBounds = true
+        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
+        
+        return borderView
+    }
+    
+    private func setBorderFrame(border: BorderViewProperties,
+                                firstOffset: CGFloat,
+                                secondOffset: CGFloat,
+                                position: BorderPosition) -> BorderView {
+        var frame: CGRect
+        let thickness = CGFloat(border.thickness)
+        
+        switch position {
+        case .top, .bottom:
+            frame = CGRect(x: firstOffset,
+                           y: position == .top ? 0 : bounds.height - thickness,
+                           width: bounds.width - firstOffset - secondOffset,
+                           height: thickness)
+        case .left, .right:
+            frame = CGRect(x: position == .left ? 0 : bounds.width - thickness,
+                           y: firstOffset,
+                           width: thickness,
+                           height: bounds.height - firstOffset - secondOffset)
         }
+        
+        let borderView = BorderView(frame: frame, position: position)
+        borderView.backgroundColor = border.color
+        addSubview(borderView)
         
         return borderView
     }
