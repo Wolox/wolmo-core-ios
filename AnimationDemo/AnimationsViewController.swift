@@ -42,19 +42,19 @@ private extension AnimationsViewController {
             }
         }
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
+        segmentedControl.addShadow(opacity: 0.2)
     }
     
     func configureDraggableView() {
-        draggableView.isDraggable(returnToPosition: true,
-                                  onDragStarted: { view in
-                                    view.backgroundColor = UIColor.blue
-        },
-                                  onDragFinished: { view in
-                                    view.backgroundColor = UIColor.red
-        })
-        draggableView.backgroundColor = UIColor.red
+        draggableView.isDraggable(returnToPosition: true) { view in
+            view.backgroundColor = .init(hex: "ffce37")
+        } onDragFinished: { view in
+            view.backgroundColor = .init(hex: "fe942f")
+        }
+
+        draggableView.backgroundColor = .init(hex: "fe942f")
         draggableView.layer.masksToBounds = true
-        draggableView.layer.cornerRadius = 23.5
+        draggableView.addShadow(cornerRadius: 12)
     }
     
     /**
@@ -90,7 +90,7 @@ private extension AnimationsViewController {
     }
     
     func resetView(_ view: UIView) {
-        view.backgroundColor = .red
+        view.backgroundColor = .init(hex: "fe942f")
         view.alpha = 1
         view.translatesAutoresizingMaskIntoConstraints = false
         view.center = containerView.center
@@ -101,7 +101,7 @@ private extension AnimationsViewController {
     
     func createNewRedView() -> UIView {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .init(hex: "fe942f")
         view.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(view)
         NSLayoutConstraint.activate([

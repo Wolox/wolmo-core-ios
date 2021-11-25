@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="Qxs-Sv-4RH" customClass="CardsViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HFI-WT-jyZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNt-Mj-D3X" userLabel="Card View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBa-vw-dDd">
                                         <rect key="frame" x="56.5" y="100" width="262.5" height="150"/>
@@ -71,7 +71,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAj-BP-kDX">
-                                <rect key="frame" x="229" y="581" width="130" height="50"/>
+                                <rect key="frame" x="229" y="601" width="130" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="bGR-hp-3vO"/>
@@ -116,13 +116,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-Z1-eST" userLabel="Control View">
-                                <rect key="frame" x="0.0" y="427" width="375" height="120"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vh6-49-Pd5" userLabel="Card View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a2O-NY-z9m">
-                                        <rect key="frame" x="20" y="10" width="335" height="101"/>
+                                        <rect key="frame" x="16" y="586" width="343" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="IVT-6T-Jcn"/>
+                                            <constraint firstAttribute="height" constant="40" id="IVT-6T-Jcn"/>
                                         </constraints>
                                         <segments>
                                             <segment title="First"/>
@@ -130,57 +131,31 @@
                                         </segments>
                                     </segmentedControl>
                                 </subviews>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.47843137254901957" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a2O-NY-z9m" secondAttribute="trailing" constant="16" id="6G2-6m-dRS"/>
+                                    <constraint firstItem="a2O-NY-z9m" firstAttribute="leading" secondItem="Vh6-49-Pd5" secondAttribute="leading" constant="16" id="b83-fg-SqT"/>
+                                    <constraint firstAttribute="bottom" secondItem="a2O-NY-z9m" secondAttribute="bottom" constant="21" id="fnU-Xp-1xm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-hb-GXb">
+                                <rect key="frame" x="335" y="16" width="24" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="a2O-NY-z9m" firstAttribute="leading" secondItem="eKo-Z1-eST" secondAttribute="leading" constant="20" id="8O3-Zd-P7h"/>
-                                    <constraint firstAttribute="trailing" secondItem="a2O-NY-z9m" secondAttribute="trailing" constant="20" id="WvH-bE-bA6"/>
-                                    <constraint firstAttribute="bottom" secondItem="a2O-NY-z9m" secondAttribute="bottom" constant="10" id="squ-vX-mPE"/>
-                                    <constraint firstItem="a2O-NY-z9m" firstAttribute="top" secondItem="eKo-Z1-eST" secondAttribute="top" constant="10" id="zGH-go-u7L"/>
+                                    <constraint firstAttribute="width" constant="24" id="KOX-oI-Vyy"/>
+                                    <constraint firstAttribute="height" constant="24" id="bjR-S0-7sh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vh6-49-Pd5" userLabel="Card View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="427"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-hb-GXb">
-                                        <rect key="frame" x="162.5" y="50" width="50" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="KOX-oI-Vyy"/>
-                                            <constraint firstAttribute="height" constant="50" id="bjR-S0-7sh"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.81568627450980391" green="0.88235294117647056" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="dXL-hb-GXb" firstAttribute="top" secondItem="Vh6-49-Pd5" secondAttribute="top" constant="50" id="FTL-D0-Wr4"/>
-                                    <constraint firstItem="dXL-hb-GXb" firstAttribute="centerX" secondItem="Vh6-49-Pd5" secondAttribute="centerX" id="iZz-VX-CJn"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEt-fL-fNL">
-                                <rect key="frame" x="229" y="577" width="130" height="50"/>
-                                <color key="backgroundColor" red="0.81568627450980391" green="0.88235294117647056" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="6mu-WT-gkE"/>
-                                    <constraint firstAttribute="height" constant="50" id="EUY-G7-R2W"/>
-                                </constraints>
-                                <state key="normal" title="Cards Animations"/>
-                                <connections>
-                                    <segue destination="Qxs-Sv-4RH" kind="show" id="Xl0-k1-cxJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BYu-71-nt9"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BYu-71-nt9" firstAttribute="trailing" secondItem="Vh6-49-Pd5" secondAttribute="trailing" id="3hi-gw-sDp"/>
-                            <constraint firstItem="eKo-Z1-eST" firstAttribute="top" secondItem="Vh6-49-Pd5" secondAttribute="bottom" id="6Bf-5S-yZQ"/>
-                            <constraint firstItem="eKo-Z1-eST" firstAttribute="leading" secondItem="BYu-71-nt9" secondAttribute="leading" id="BTD-cO-4JI"/>
+                            <constraint firstItem="BYu-71-nt9" firstAttribute="trailing" secondItem="dXL-hb-GXb" secondAttribute="trailing" constant="16" id="7g9-Xb-zDA"/>
                             <constraint firstItem="Vh6-49-Pd5" firstAttribute="leading" secondItem="BYu-71-nt9" secondAttribute="leading" id="Dx7-Xf-a3I"/>
-                            <constraint firstItem="BYu-71-nt9" firstAttribute="bottom" secondItem="pEt-fL-fNL" secondAttribute="bottom" constant="20" id="E2x-c5-rSG"/>
+                            <constraint firstItem="Vh6-49-Pd5" firstAttribute="bottom" secondItem="BYu-71-nt9" secondAttribute="bottom" id="Rmh-nI-6oj"/>
                             <constraint firstItem="Vh6-49-Pd5" firstAttribute="top" secondItem="BYu-71-nt9" secondAttribute="top" id="Y8r-do-PfC"/>
-                            <constraint firstItem="BYu-71-nt9" firstAttribute="bottom" secondItem="eKo-Z1-eST" secondAttribute="bottom" constant="100" id="YaB-db-zM4"/>
-                            <constraint firstItem="BYu-71-nt9" firstAttribute="trailing" secondItem="pEt-fL-fNL" secondAttribute="trailing" constant="16" id="l0l-vL-cvJ"/>
-                            <constraint firstItem="BYu-71-nt9" firstAttribute="trailing" secondItem="eKo-Z1-eST" secondAttribute="trailing" id="vF6-dK-ICj"/>
+                            <constraint firstItem="dXL-hb-GXb" firstAttribute="top" secondItem="BYu-71-nt9" secondAttribute="top" constant="16" id="jOK-f2-RUf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -191,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNT-uU-giu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="134"/>
+            <point key="canvasLocation" x="1773.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>

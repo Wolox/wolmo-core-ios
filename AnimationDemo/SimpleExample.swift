@@ -31,23 +31,23 @@ enum SimpleExample: Int {
     var name: String {
         switch self {
         case .simple:
-            return "Improved - Action and Transform - Simple"
+            return "1"
         case .chain:
-            return "Normal"
+            return "2"
         case .chained:
-            return "Improved - Action and Transform - Chain of Mixed - Loop"
+            return "3"
         case .chainedDifferentTypes:
-            return "Improved - Action and Transform - Chain of Simple and Mixed - Not loop"
+            return "4"
         case .transformRotateAndScale:
-            return "FAULTY - Normal and Improved - Action and Transform - Mixed"
+            return "5"
         case .transformTranslateAndScaleSimple:
-            return "FAULTY - Improved - Transform - Simple"
+            return "6"
         case .transformTranslateAndScaleMixed:
-            return "FAULTY - Improved - Transform - Chain of Mixed - Loop"
+            return "7"
         case .transformRotateAndActionScale:
-            return "Improved - Transform - Mixed"
+            return "8"
         case .transformScaleAndActionTranslate:
-            return "Improved - Action and Transform - Chain of Mixed - Loop"
+            return "9"
         }
     }
 }
