@@ -139,10 +139,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-hb-GXb">
-                                <rect key="frame" x="327" y="16" width="32" height="32"/>
+                                <rect key="frame" x="319" y="16" width="40" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdd-n5-Wdr">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -152,8 +152,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Bdd-n5-Wdr" secondAttribute="trailing" id="6Lm-8j-PZl"/>
                                     <constraint firstItem="Bdd-n5-Wdr" firstAttribute="leading" secondItem="dXL-hb-GXb" secondAttribute="leading" id="EOg-eV-mQw"/>
-                                    <constraint firstAttribute="width" constant="32" id="KOX-oI-Vyy"/>
-                                    <constraint firstAttribute="height" constant="32" id="bjR-S0-7sh"/>
+                                    <constraint firstAttribute="width" constant="40" id="KOX-oI-Vyy"/>
+                                    <constraint firstAttribute="height" constant="40" id="bjR-S0-7sh"/>
                                     <constraint firstAttribute="bottom" secondItem="Bdd-n5-Wdr" secondAttribute="bottom" id="eZv-cR-Pnq"/>
                                     <constraint firstItem="Bdd-n5-Wdr" firstAttribute="top" secondItem="dXL-hb-GXb" secondAttribute="top" id="vRh-Pq-gZC"/>
                                 </constraints>

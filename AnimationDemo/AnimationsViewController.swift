@@ -33,7 +33,6 @@ private extension AnimationsViewController {
         for each in SimpleExample.all {
             let view = createNewRedView()
             animationViews.append(view)
-            view.isHidden = true
 
             if each.rawValue < segmentedControl.numberOfSegments {
                 segmentedControl.setTitle(each.name, forSegmentAt: each.rawValue)
@@ -54,7 +53,7 @@ private extension AnimationsViewController {
 
         draggableView.backgroundColor = .init(hex: "fe942f")
         draggableView.layer.masksToBounds = true
-        draggableView.addShadow(cornerRadius: 4)
+        draggableView.addShadow(cornerRadius: 20)
     }
     
     /**
