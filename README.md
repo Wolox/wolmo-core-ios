@@ -13,9 +13,7 @@ WOLMO Core iOS is a framework which provides extensions and utilities for iOS co
 
 At Wolox, we complement this framework with [Wolmo - Reactive Core](https://github.com/Wolox/wolmo-reactive-core-ios).
 
-<img src="https://github.com/Wolox/wolmo-core-ios/blob/master/Screenshots/animationDemo.gif"></a>
-<br><br/>
-
+https://user-images.githubusercontent.com/11547820/143459033-ce77e296-1b0b-424d-814c-2c10f47c499a.mov
 
 ## Table of Contents
 
