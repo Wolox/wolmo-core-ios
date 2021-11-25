@@ -47,14 +47,14 @@ private extension AnimationsViewController {
     
     func configureDraggableView() {
         draggableView.isDraggable(returnToPosition: true) { view in
-            view.backgroundColor = .init(hex: "ffce37")
+            view.backgroundColor = .init(hex: "121416")
         } onDragFinished: { view in
             view.backgroundColor = .init(hex: "fe942f")
         }
 
         draggableView.backgroundColor = .init(hex: "fe942f")
         draggableView.layer.masksToBounds = true
-        draggableView.addShadow(cornerRadius: 12)
+        draggableView.addShadow(cornerRadius: 4)
     }
     
     /**

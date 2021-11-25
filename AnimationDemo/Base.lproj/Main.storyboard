@@ -139,11 +139,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-hb-GXb">
-                                <rect key="frame" x="335" y="16" width="24" height="24"/>
+                                <rect key="frame" x="327" y="16" width="32" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdd-n5-Wdr">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="KOX-oI-Vyy"/>
-                                    <constraint firstAttribute="height" constant="24" id="bjR-S0-7sh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bdd-n5-Wdr" secondAttribute="trailing" id="6Lm-8j-PZl"/>
+                                    <constraint firstItem="Bdd-n5-Wdr" firstAttribute="leading" secondItem="dXL-hb-GXb" secondAttribute="leading" id="EOg-eV-mQw"/>
+                                    <constraint firstAttribute="width" constant="32" id="KOX-oI-Vyy"/>
+                                    <constraint firstAttribute="height" constant="32" id="bjR-S0-7sh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bdd-n5-Wdr" secondAttribute="bottom" id="eZv-cR-Pnq"/>
+                                    <constraint firstItem="Bdd-n5-Wdr" firstAttribute="top" secondItem="dXL-hb-GXb" secondAttribute="top" id="vRh-Pq-gZC"/>
                                 </constraints>
                             </view>
                         </subviews>
