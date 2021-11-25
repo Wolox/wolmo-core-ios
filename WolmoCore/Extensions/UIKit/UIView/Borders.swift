@@ -20,6 +20,13 @@ public struct BorderViewProperties {
         self.color = color
         self.roundedCorners = rounded
     }
+    
+    func clipToBoundsBordersIfNeeded(borderView: inout BorderView) {
+        if self.roundedCorners {
+            borderView.layer.cornerRadius = CGFloat(self.thickness / 2)
+            borderView.clipsToBounds = true
+        }
+    }
 }
 
 /**
