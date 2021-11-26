@@ -46,12 +46,12 @@ private extension AnimationsViewController {
     
     func configureDraggableView() {
         draggableView.isDraggable(returnToPosition: true) { view in
-            view.backgroundColor = .init(hex: "121416")
+            view.backgroundColor = .init(named: "EerieBlack")
         } onDragFinished: { view in
-            view.backgroundColor = .init(hex: "fe942f")
+            view.backgroundColor = .init(named: "deepSaffron")
         }
 
-        draggableView.backgroundColor = .init(hex: "fe942f")
+        draggableView.backgroundColor = .init(named: "deepSaffron")
         draggableView.layer.masksToBounds = true
         draggableView.addShadow(cornerRadius: 20)
     }
@@ -89,7 +89,7 @@ private extension AnimationsViewController {
     }
     
     func resetView(_ view: UIView) {
-        view.backgroundColor = .init(hex: "fe942f")
+        view.backgroundColor = .init(named: "deepSaffron")
         view.alpha = 1
         view.translatesAutoresizingMaskIntoConstraints = false
         view.center = containerView.center
@@ -100,7 +100,7 @@ private extension AnimationsViewController {
     
     func createNewRedView() -> UIView {
         let view = UIView()
-        view.backgroundColor = .init(hex: "fe942f")
+        view.backgroundColor = .init(named: "deepSaffron")
         view.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(view)
         NSLayoutConstraint.activate([
