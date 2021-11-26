@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-final internal class View: UIView, NibLoadable {
+final internal class View: NibView {
     let borderViewProperties = BorderViewProperties(thickness: 4, color: .red, rounded: true)
     
     @IBOutlet weak var titleLabel: UILabel! {
@@ -29,6 +29,7 @@ final internal class View: UIView, NibLoadable {
     }
     
     @IBOutlet weak var stringsButton: UIButton!
+    @IBOutlet weak var bordersGradientButton: UIButton!
     
     @IBOutlet weak var childContainerView: UIView!
     
