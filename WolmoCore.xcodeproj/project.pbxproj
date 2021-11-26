@@ -71,7 +71,6 @@
 		CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		CE1DDFF5209A653F007471A0 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED511FE9688E0037ED3D /* View.xib */; };
 		CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */; };
-		CE1DDFF8209A653F007471A0 /* ChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED551FE968B40037ED3D /* ChildView.xib */; };
 		CE1DDFFE209A653F007471A0 /* WolmoCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE228ADF1EF2FE1E00097B19 /* UIFont.swift */; };
 		CE3A9B901E607B28005D7E8F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B781E607B28005D7E8F /* Array.swift */; };
@@ -105,10 +104,7 @@
 		CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2C1FE968410037ED3D /* Assets.xcassets */; };
 		CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */; };
 		CEB8ED521FE9688E0037ED3D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED511FE9688E0037ED3D /* View.xib */; };
-		CEB8ED541FE968A30037ED3D /* ChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8ED531FE968A30037ED3D /* ChildController.swift */; };
-		CEB8ED561FE968B40037ED3D /* ChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED551FE968B40037ED3D /* ChildView.xib */; };
 		CEB8ED581FE96ABC0037ED3D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8ED571FE96ABC0037ED3D /* View.swift */; };
-		CEB8ED5A1FE96ACA0037ED3D /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8ED591FE96ACA0037ED3D /* ChildView.swift */; };
 		CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
 		CED934851E8456480017CF96 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED934841E8456480017CF96 /* UICollectionView.swift */; };
 		CEE9BFB41E8986D400D0E65D /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFA51E8986D400D0E65D /* ArraySpec.swift */; };
@@ -134,7 +130,11 @@
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
 		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D096134A2750063A005E42EC /* BorderGradientView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09613492750063A005E42EC /* BorderGradientView.xib */; };
+		D096134C27500951005E42EC /* BorderGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134B27500951005E42EC /* BorderGradientView.swift */; };
+		D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134D27500C10005E42EC /* BorderGradientViewController.swift */; };
 		D096135027500D3E005E42EC /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134F27500D3E005E42EC /* NibView.swift */; };
+		D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
@@ -325,10 +325,7 @@
 		CEB8ED2F1FE968410037ED3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB8ED311FE968410037ED3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB8ED511FE9688E0037ED3D /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
-		CEB8ED531FE968A30037ED3D /* ChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildController.swift; sourceTree = "<group>"; };
-		CEB8ED551FE968B40037ED3D /* ChildView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildView.xib; sourceTree = "<group>"; };
 		CEB8ED571FE96ABC0037ED3D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		CEB8ED591FE96ACA0037ED3D /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
 		CED934841E8456480017CF96 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		CEE9BFA51E8986D400D0E65D /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		CEE9BFA61E8986D400D0E65D /* CollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSpec.swift; sourceTree = "<group>"; };
@@ -349,8 +346,12 @@
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
+		D09613492750063A005E42EC /* BorderGradientView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderGradientView.xib; sourceTree = "<group>"; };
+		D096134B27500951005E42EC /* BorderGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientView.swift; sourceTree = "<group>"; };
+		D096134D27500C10005E42EC /* BorderGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewController.swift; sourceTree = "<group>"; };
 		D096134F27500D3E005E42EC /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewControllerTest.swift; sourceTree = "<group>"; };
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -667,15 +668,11 @@
 		CEB8ED241FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D0563B7E27513647006622C0 /* PrincipalView */,
 				0C02AB4D21682B8A007DB327 /* StringToImage */,
+				D0961347275005E0005E42EC /* UIKit */,
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
 				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
-				CEB8ED271FE968410037ED3D /* ViewController.swift */,
-				CEB8ED571FE96ABC0037ED3D /* View.swift */,
-				CEB8ED511FE9688E0037ED3D /* View.xib */,
-				CEB8ED531FE968A30037ED3D /* ChildController.swift */,
-				CEB8ED591FE96ACA0037ED3D /* ChildView.swift */,
-				CEB8ED551FE968B40037ED3D /* ChildView.xib */,
 				CEB8ED2C1FE968410037ED3D /* Assets.xcassets */,
 				CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */,
 				CEB8ED311FE968410037ED3D /* Info.plist */,
@@ -745,6 +742,50 @@
 				CEE9BFC41E8986DC00D0E65D /* ErrorAlertViewModelSpec.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		D0563B7E27513647006622C0 /* PrincipalView */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8ED271FE968410037ED3D /* ViewController.swift */,
+				CEB8ED571FE96ABC0037ED3D /* View.swift */,
+				CEB8ED511FE9688E0037ED3D /* View.xib */,
+			);
+			path = PrincipalView;
+			sourceTree = "<group>";
+		};
+		D0961347275005E0005E42EC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D0961348275005F0005E42EC /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D0961348275005F0005E42EC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D09613492750063A005E42EC /* BorderGradientView.xib */,
+				D096134B27500951005E42EC /* BorderGradientView.swift */,
+				D096134D27500C10005E42EC /* BorderGradientViewController.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		D096135627502FA7005E42EC /* WolmoCoreDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D096135E27503090005E42EC /* UIKit */,
+			);
+			path = WolmoCoreDemoTests;
+			sourceTree = "<group>";
+		};
+		D096135E27503090005E42EC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -955,7 +996,6 @@
 				CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */,
 				CE1DDFF5209A653F007471A0 /* View.xib in Resources */,
 				CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */,
-				CE1DDFF8209A653F007471A0 /* ChildView.xib in Resources */,
 				CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,7 +1008,7 @@
 				CEB8ED521FE9688E0037ED3D /* View.xib in Resources */,
 				CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */,
 				CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */,
-				CEB8ED561FE968B40037ED3D /* ChildView.xib in Resources */,
+				D096134A2750063A005E42EC /* BorderGradientView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1259,11 +1299,11 @@
 			files = (
 				CEB8ED581FE96ABC0037ED3D /* View.swift in Sources */,
 				CEB8ED281FE968410037ED3D /* ViewController.swift in Sources */,
+				D096134C27500951005E42EC /* BorderGradientView.swift in Sources */,
 				0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */,
-				CEB8ED541FE968A30037ED3D /* ChildController.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
+				D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */,
 				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
-				CEB8ED5A1FE96ACA0037ED3D /* ChildView.swift in Sources */,
 				0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1272,7 +1312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D096135827502FA7005E42EC /* BordersExtensionViewControllerTest.swift in Sources */,
+				D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

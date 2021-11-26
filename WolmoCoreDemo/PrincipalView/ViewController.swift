@@ -10,21 +10,17 @@ import UIKit
 import WolmoCore
 
 final internal class ViewController: UIViewController {
+    // MARK: - Private properties
+    private lazy var _view = View()
 
-    private lazy var _view: View = View.loadFromNib()!
-    private lazy var _childController = ChildController()
-
+    // MARK: - Lifecycle methods
     override func loadView() {
         view = _view
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        load(childViewController: _childController,
-             into: _view.childContainerView,
-             with: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0),
-             respectSafeArea: true)
-        _view.stringsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        setupButtons()
         
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
@@ -35,20 +31,37 @@ final internal class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        _childController.changeColor()
+    }
+}
+
+private extension ViewController {
+    func setupButtons() {
+        _view.stringsButton.addTarget(self,
+                                      action: #selector(onTapStringsButton),
+                                      for: .touchUpInside)
+        
+        _view.bordersGradientButton.addTarget(self,
+                                              action: #selector(onTapBordersGradientButton),
+                                              for: .touchUpInside)
     }
     
-    @objc func buttonAction() {
-        present(StringToImageController(), animated: true, completion: .none)
+    @objc func onTapStringsButton() {
+        present(StringToImageController(),
+                animated: true)
     }
     
-    private func setupScreenGestures() {
+    @objc func onTapBordersGradientButton() {
+        present(BorderGradientViewController(),
+                animated: true)
+    }
+    
+    func setupScreenGestures() {
         _view.addScreenEdgePanGestureRecognizer(edge: .left) { _ in
             print("Edge panned!")
         }
     }
     
-    private func setupLabelGestures() {
+    func setupLabelGestures() {
         _view.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] _ in
             self?._view.gestureLabel.shake(withDuration: 0.05)
             print("Label tapped!")
