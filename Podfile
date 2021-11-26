@@ -34,3 +34,10 @@ target 'WolmoCoreDemo' do
   # Pods for WolmoCoreDemo
 
 end
+
+target 'WolmoCoreDemoTests' do
+  use_frameworks!
+
+  pod 'SnapshotTesting', '~> 1.9.0'
+
+end
