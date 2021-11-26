@@ -71,11 +71,11 @@ final class BorderGradientView: NibView {
             let viewGradient = ViewGradient(colors: gradientColors, direction: .topToBottom)
             bottomRightView.gradient = viewGradient
             
-            let borderViewProperties = BorderViewProperties(thickness: 2,
+            let borderViewProperties = BorderViewProperties(thickness: 4,
                                                             color: .init(hex: "121416")!,
                                                             rounded: false)
             bottomRightView.addBorders(properties: borderViewProperties,
-                                  positions: [.top, .right, .bottom, .left])
+                                  positions: [.left])
             
             bottomRightView.clipsToBounds = true
         }
