@@ -1,20 +1,24 @@
 PODS:
   - Nimble (9.2.1)
   - Quick (4.0.0)
+  - SnapshotTesting (1.9.0)
 
 DEPENDENCIES:
   - Nimble
   - Quick
+  - SnapshotTesting (~> 1.9.0)
 
 SPEC REPOS:
   trunk:
     - Nimble
     - Quick
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
 
-PODFILE CHECKSUM: f648008d99e95f017dd7acc990d2ee8ed7086e22
+PODFILE CHECKSUM: 72ce1062c754b9d381e31be820b94d164ed23c0b
 
 COCOAPODS: 1.10.2

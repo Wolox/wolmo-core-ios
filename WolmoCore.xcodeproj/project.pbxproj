@@ -136,6 +136,7 @@
 		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
+		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9D896AB71CDE3EC5008B0E5F;
 			remoteInfo = WolmoCore;
+		};
+		D096135927502FA7005E42EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D896AAF1CDE3EC5008B0E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB8ED221FE968410037ED3D;
+			remoteInfo = WolmoCoreDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -215,6 +223,7 @@
 		0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
 		0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableSpec.swift; sourceTree = "<group>"; };
 		2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE13900E1762B639B227C5C /* Pods-WolmoCoreDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemoTests/Pods-WolmoCoreDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		54F20C1B0D3F5F817CA6AB24 /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		57814D97DEECFC178EAED391 /* Pods-WolmoCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.release.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.release.xcconfig"; sourceTree = "<group>"; };
 		653DCB8221DE7B5200C1C332 /* LongPressRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressRecognizer.swift; sourceTree = "<group>"; };
@@ -231,6 +240,7 @@
 		653DCB9421DE7B5F00C1C332 /* SwipeRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeRecognizerSpec.swift; sourceTree = "<group>"; };
 		653DCB9521DE7B5F00C1C332 /* PinchRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchRecognizerSpec.swift; sourceTree = "<group>"; };
 		653DCB9621DE7B5F00C1C332 /* PanRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanRecognizerSpec.swift; sourceTree = "<group>"; };
+		68AB4437C6C1724B2768A316 /* Pods-WolmoCoreDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemoTests/Pods-WolmoCoreDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76B104A9471669466AC325CD /* Pods-WolmoCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore/Pods-WolmoCore.debug.xcconfig"; sourceTree = "<group>"; };
 		76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		854BAA130C1EC368743CEFE8 /* Pods-WolmoCoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCoreDemo.release.xcconfig"; path = "Target Support Files/Pods-WolmoCoreDemo/Pods-WolmoCoreDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +251,7 @@
 		9D896ABD1CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896AC91CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECEB3A3227CD8280070C01F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		AECEB4B1228221110070C01F /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
@@ -337,6 +348,7 @@
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
+		D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -383,6 +395,14 @@
 				CE7486A4204708AC00636D98 /* UIKit.framework in Frameworks */,
 				CEB8ED5D1FE96B580037ED3D /* WolmoCore.framework in Frameworks */,
 				D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096135227502FA7005E42EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +478,8 @@
 				54F20C1B0D3F5F817CA6AB24 /* Pods-WolmoCore-WolmoCoreTests.release.xcconfig */,
 				94628C1652D625F68DB62450 /* Pods-WolmoCoreDemo.debug.xcconfig */,
 				854BAA130C1EC368743CEFE8 /* Pods-WolmoCoreDemo.release.xcconfig */,
+				68AB4437C6C1724B2768A316 /* Pods-WolmoCoreDemoTests.debug.xcconfig */,
+				3BE13900E1762B639B227C5C /* Pods-WolmoCoreDemoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -469,6 +491,7 @@
 				9D896AC61CDE3EC5008B0E5F /* WolmoCoreTests */,
 				CEB8ED241FE968410037ED3D /* WolmoCoreDemo */,
 				CE1DE004209A66A9007471A0 /* AnimationDemo */,
+				D096135627502FA7005E42EC /* WolmoCoreDemoTests */,
 				9D896AB91CDE3EC5008B0E5F /* Products */,
 				9D896AF01CDE6504008B0E5F /* Frameworks */,
 				807AFBFB91AEA06AFD3A25A5 /* Pods */,
@@ -482,6 +505,7 @@
 				9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */,
 				CEB8ED231FE968410037ED3D /* WolmoCoreDemo.app */,
 				CE1DE002209A653F007471A0 /* AnimationDemo.app */,
+				D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,6 +554,7 @@
 				85FF6E3123DD08D6F396BB2A /* Pods_WolmoCore.framework */,
 				D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */,
 				2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */,
+				AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -815,13 +840,33 @@
 			productReference = CEB8ED231FE968410037ED3D /* WolmoCoreDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D096135427502FA7005E42EC /* WolmoCoreDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D096135B27502FA7005E42EC /* Build configuration list for PBXNativeTarget "WolmoCoreDemoTests" */;
+			buildPhases = (
+				264619D3E1CE200F121ECD23 /* [CP] Check Pods Manifest.lock */,
+				D096135127502FA7005E42EC /* Sources */,
+				D096135227502FA7005E42EC /* Frameworks */,
+				D096135327502FA7005E42EC /* Resources */,
+				3F88BDC49EF163C738D36974 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D096135A27502FA7005E42EC /* PBXTargetDependency */,
+			);
+			name = WolmoCoreDemoTests;
+			productName = WolmoCoreDemoTests;
+			productReference = D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9D896AAF1CDE3EC5008B0E5F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = Wolox;
 				TargetAttributes = {
@@ -847,6 +892,12 @@
 						LastSwiftMigration = 1300;
 						ProvisioningStyle = Automatic;
 					};
+					D096135427502FA7005E42EC = {
+						CreatedOnToolsVersion = 13.0;
+						DevelopmentTeam = 7XS5GQGS29;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CEB8ED221FE968410037ED3D;
+					};
 				};
 			};
 			buildConfigurationList = 9D896AB21CDE3EC5008B0E5F /* Build configuration list for PBXProject "WolmoCore" */;
@@ -866,6 +917,7 @@
 				9D896AC11CDE3EC5008B0E5F /* WolmoCoreTests */,
 				CEB8ED221FE968410037ED3D /* WolmoCoreDemo */,
 				CE1DDFE2209A653F007471A0 /* AnimationDemo */,
+				D096135427502FA7005E42EC /* WolmoCoreDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -917,9 +969,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D096135327502FA7005E42EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		264619D3E1CE200F121ECD23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WolmoCoreDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2893EDF91214F620D923E11F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,6 +1021,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F88BDC49EF163C738D36974 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WolmoCoreDemoTests/Pods-WolmoCoreDemoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapshotTesting.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WolmoCoreDemoTests/Pods-WolmoCoreDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C19CA51E0C63FB95674146B /* [CP] Check Pods Manifest.lock */ = {
@@ -1165,6 +1264,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D096135127502FA7005E42EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096135827502FA7005E42EC /* BordersExtensionViewControllerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1182,6 +1289,11 @@
 			isa = PBXTargetDependency;
 			target = 9D896AB71CDE3EC5008B0E5F /* WolmoCore */;
 			targetProxy = CE74869B2047067D00636D98 /* PBXContainerItemProxy */;
+		};
+		D096135A27502FA7005E42EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB8ED221FE968410037ED3D /* WolmoCoreDemo */;
+			targetProxy = D096135927502FA7005E42EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1545,6 +1657,64 @@
 			};
 			name = Release;
 		};
+		D096135C27502FA7005E42EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68AB4437C6C1724B2768A316 /* Pods-WolmoCoreDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WolmoCoreDemo.app/WolmoCoreDemo";
+			};
+			name = Debug;
+		};
+		D096135D27502FA7005E42EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE13900E1762B639B227C5C /* Pods-WolmoCoreDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XS5GQGS29;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WolmoCoreDemo.app/WolmoCoreDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1589,6 +1759,15 @@
 			buildConfigurations = (
 				CEB8ED491FE968420037ED3D /* Debug */,
 				CEB8ED4A1FE968420037ED3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D096135B27502FA7005E42EC /* Build configuration list for PBXNativeTarget "WolmoCoreDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096135C27502FA7005E42EC /* Debug */,
+				D096135D27502FA7005E42EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
