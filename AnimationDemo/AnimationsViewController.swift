@@ -33,7 +33,6 @@ private extension AnimationsViewController {
         for each in SimpleExample.all {
             let view = createNewRedView()
             animationViews.append(view)
-            view.isHidden = true
 
             if each.rawValue < segmentedControl.numberOfSegments {
                 segmentedControl.setTitle(each.name, forSegmentAt: each.rawValue)
@@ -42,19 +41,19 @@ private extension AnimationsViewController {
             }
         }
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
+        segmentedControl.addShadow(opacity: 0.2)
     }
     
     func configureDraggableView() {
-        draggableView.isDraggable(returnToPosition: true,
-                                  onDragStarted: { view in
-                                    view.backgroundColor = UIColor.blue
-        },
-                                  onDragFinished: { view in
-                                    view.backgroundColor = UIColor.red
-        })
-        draggableView.backgroundColor = UIColor.red
+        draggableView.isDraggable(returnToPosition: true) { view in
+            view.backgroundColor = .init(named: "EerieBlack")
+        } onDragFinished: { view in
+            view.backgroundColor = .init(named: "deepSaffron")
+        }
+
+        draggableView.backgroundColor = .init(named: "deepSaffron")
         draggableView.layer.masksToBounds = true
-        draggableView.layer.cornerRadius = 23.5
+        draggableView.addShadow(cornerRadius: 20)
     }
     
     /**
@@ -90,7 +89,7 @@ private extension AnimationsViewController {
     }
     
     func resetView(_ view: UIView) {
-        view.backgroundColor = .red
+        view.backgroundColor = .init(named: "deepSaffron")
         view.alpha = 1
         view.translatesAutoresizingMaskIntoConstraints = false
         view.center = containerView.center
@@ -101,7 +100,7 @@ private extension AnimationsViewController {
     
     func createNewRedView() -> UIView {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .init(named: "deepSaffron")
         view.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(view)
         NSLayoutConstraint.activate([

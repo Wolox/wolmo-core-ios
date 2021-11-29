@@ -305,3 +305,17 @@ public extension UIView {
         }
     }
 }
+
+public extension UIView {
+    func addShadow(color: CGColor = UIColor.black.cgColor, size: CGSize = CGSize(width: 0, height: 2),
+                   radius: CGFloat = 2.5, opacity: Float = 0.2, cornerRadius: CGFloat = 5) {
+        self.layer.shadowColor = color
+        self.layer.shadowOffset = size
+        self.layer.shadowRadius = radius
+        self.layer.shadowOpacity = opacity
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = false
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
+}
