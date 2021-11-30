@@ -1,4 +1,5 @@
 [![Build Status](https://app.bitrise.io/app/d026a7fe0c9dc2f4/status.svg?token=9MLbGXfHBhZKaL4KXXmpHQ&branch=master)](https://app.bitrise.io/app/d026a7fe0c9dc2f4)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/WolmoCore)](https://github.com/CocoaPods/CocoaPods)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 ![Swift 5](https://img.shields.io/badge/Swift-5-orange?logo=swift)
 [![codecov](https://codecov.io/gh/Wolox/wolmo-core-ios/branch/master/graph/badge.svg?token=NwIrvzjHHP)](https://codecov.io/gh/Wolox/wolmo-core-ios)
@@ -22,6 +23,7 @@ https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-
 ## Table of Contents
 
   * [Installation](#installation)
+    * [CocoaPods](#cocoapods)
     * [Carthage](#carthage)
     * [Manually](#manually)
   * [Usage](#usage)
@@ -33,6 +35,14 @@ https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-
   * [License](#license)
 
 ## Installation
+
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. To use Wolmo Core in your project, update CocoaPods to version 1.10.2 or newer, and add this line to your `Podfile`.
+
+```
+pod 'WolmoCore'
+```
 
 ### Carthage
 
