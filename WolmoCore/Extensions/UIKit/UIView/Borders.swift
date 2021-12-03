@@ -20,13 +20,6 @@ public struct BorderViewProperties {
         self.color = color
         self.roundedCorners = rounded
     }
-    
-    func clipToBoundsBordersIfNeeded(borderView: inout BorderView) {
-        if self.roundedCorners {
-            borderView.layer.cornerRadius = CGFloat(self.thickness / 2)
-            borderView.clipsToBounds = true
-        }
-    }
 }
 
 /**
@@ -75,6 +68,13 @@ public class BorderView: UIView {
 
     required public init(coder: NSCoder) {
         fatalError("You shouldn't create a BorderView this way.")
+    }
+    
+     func clipToBoundsBordersIfNeeded(border: BorderViewProperties) {
+        if border.roundedCorners {
+            self.layer.cornerRadius = CGFloat(border.thickness / 2)
+            self.clipsToBounds = true
+        }
     }
 }
 
@@ -130,7 +130,7 @@ public extension UIView {
                                         position: .top)
         }
         
-        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
@@ -168,7 +168,7 @@ public extension UIView {
                                         position: .bottom)
         }
         
-        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
@@ -207,7 +207,7 @@ public extension UIView {
                                         position: .left)
         }
         
-        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
@@ -246,7 +246,7 @@ public extension UIView {
                                         position: .right)
         }
         
-        border.clipToBoundsBordersIfNeeded(borderView: &borderView)
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
