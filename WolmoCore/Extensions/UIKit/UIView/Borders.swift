@@ -124,10 +124,10 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            borderView = setBorderFrame(border: border,
-                                        firstOffset: left,
-                                        secondOffset: right,
-                                        position: .top)
+            borderView = createBorderView(border: border,
+                                          firstOffset: left,
+                                          secondOffset: right,
+                                          position: .top)
         }
         
         borderView.clipToBoundsBordersIfNeeded(border: border)
@@ -162,10 +162,10 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            borderView = setBorderFrame(border: border,
-                                        firstOffset: left,
-                                        secondOffset: right,
-                                        position: .bottom)
+            borderView = createBorderView(border: border,
+                                          firstOffset: left,
+                                          secondOffset: right,
+                                          position: .bottom)
         }
         
         borderView.clipToBoundsBordersIfNeeded(border: border)
@@ -201,10 +201,10 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            borderView = setBorderFrame(border: border,
-                                        firstOffset: top,
-                                        secondOffset: bottom,
-                                        position: .left)
+            borderView = createBorderView(border: border,
+                                          firstOffset: top,
+                                          secondOffset: bottom,
+                                          position: .left)
         }
         
         borderView.clipToBoundsBordersIfNeeded(border: border)
@@ -240,10 +240,10 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            borderView = setBorderFrame(border: border,
-                                        firstOffset: top,
-                                        secondOffset: bottom,
-                                        position: .right)
+            borderView = createBorderView(border: border,
+                                          firstOffset: top,
+                                          secondOffset: bottom,
+                                          position: .right)
         }
         
         borderView.clipToBoundsBordersIfNeeded(border: border)
@@ -251,10 +251,10 @@ public extension UIView {
         return borderView
     }
     
-    private func setBorderFrame(border: BorderViewProperties,
-                                firstOffset: CGFloat,
-                                secondOffset: CGFloat,
-                                position: BorderPosition) -> BorderView {
+    private func createBorderView(border: BorderViewProperties,
+                                  firstOffset: CGFloat,
+                                  secondOffset: CGFloat,
+                                  position: BorderPosition) -> BorderView {
         var frame: CGRect
         let thickness = CGFloat(border.thickness)
         
