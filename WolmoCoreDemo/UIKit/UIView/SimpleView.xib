@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleView" customModule="WolmoCoreDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="cardView" destination="UZU-5s-jla" id="3lL-Vt-bem"/>
+                <outlet property="image" destination="ibK-OT-R4I" id="mF9-j8-SMn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" ambiguous="YES" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZU-5s-jla">
+                    <rect key="frame" x="32" y="16" width="310" height="120"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ibK-OT-R4I">
+                            <rect key="frame" x="139" y="45" width="32" height="29.5"/>
+                            <color key="tintColor" name="EerieBlack"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="9ER-Gj-lZt"/>
+                                <constraint firstAttribute="width" constant="32" id="zP6-GH-YLQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ibK-OT-R4I" firstAttribute="centerX" secondItem="UZU-5s-jla" secondAttribute="centerX" id="6w7-tJ-A9K"/>
+                        <constraint firstAttribute="height" constant="120" id="a0h-fV-qSc"/>
+                        <constraint firstItem="ibK-OT-R4I" firstAttribute="centerY" secondItem="UZU-5s-jla" secondAttribute="centerY" id="ndB-ui-oqg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="UZU-5s-jla" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="5yM-BW-gCe"/>
+                <constraint firstItem="UZU-5s-jla" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="9cb-rs-0vl"/>
+                <constraint firstAttribute="bottom" secondItem="UZU-5s-jla" secondAttribute="bottom" constant="16" id="QzI-bW-y5V"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UZU-5s-jla" secondAttribute="trailing" constant="32" id="xXG-Ts-DeJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="2.8985507246376816" y="-122.54464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="01.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="EerieBlack">
+            <color red="0.071000002324581146" green="0.078000001609325409" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

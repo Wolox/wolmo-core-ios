@@ -129,6 +129,7 @@
 		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
 		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
 		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
+		D0108960276F6B5400668EDB /* ScrollStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D010895F276F6B5400668EDB /* ScrollStackViewController.swift */; };
 		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D096134A2750063A005E42EC /* BorderGradientView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09613492750063A005E42EC /* BorderGradientView.xib */; };
 		D096134C27500951005E42EC /* BorderGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134B27500951005E42EC /* BorderGradientView.swift */; };
@@ -346,6 +347,7 @@
 		CEE9BFCD1E8986F700D0E65D /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		CEEC517D1EE5ECD300BC41FE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpec.swift; sourceTree = "<group>"; };
+		D010895F276F6B5400668EDB /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
 		D09613492750063A005E42EC /* BorderGradientView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderGradientView.xib; sourceTree = "<group>"; };
 		D096134B27500951005E42EC /* BorderGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientView.swift; sourceTree = "<group>"; };
 		D096134D27500C10005E42EC /* BorderGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewController.swift; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				D096134F27500D3E005E42EC /* NibView.swift */,
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
 				CE1186911EA7A5FE00105D6F /* General.swift */,
+				D010895F276F6B5400668EDB /* ScrollStackViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1220,6 +1223,7 @@
 				653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */,
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
+				D0108960276F6B5400668EDB /* ScrollStackViewController.swift in Sources */,
 				CE4F2CBA2135EFF4007BB465 /* SafeLayout.swift in Sources */,
 				CE1DDFDD209A646B007471A0 /* ChainedAnimation.swift in Sources */,
 				CE3A9B901E607B28005D7E8F /* Array.swift in Sources */,
