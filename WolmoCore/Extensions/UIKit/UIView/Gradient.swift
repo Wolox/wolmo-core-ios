@@ -122,7 +122,10 @@ public struct ViewGradient {
     */
     public init(colors: [UIColor], direction: GradientDirection) {
         let locations = calculateLocations(for: colors.count)
-        let gradientColors = colors.enumerated().map { (index, color) in GradientColor(color: color, location: locations[index].floatValue)! }
+        let gradientColors = colors.enumerated().map { (index, color) in
+            GradientColor(color: color, location: locations[index].floatValue)!
+        }
+        
         self.init(colors: gradientColors, direction: direction)
     }
 }
