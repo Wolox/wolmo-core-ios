@@ -133,8 +133,6 @@
 		D0108962276F70A500668EDB /* SimpleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0108961276F70A500668EDB /* SimpleView.xib */; };
 		D0108964276F72AE00668EDB /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0108963276F72AE00668EDB /* SimpleView.swift */; };
 		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D096134A2750063A005E42EC /* BorderGradientView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09613492750063A005E42EC /* BorderGradientView.xib */; };
-		D096134C27500951005E42EC /* BorderGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134B27500951005E42EC /* BorderGradientView.swift */; };
 		D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134D27500C10005E42EC /* BorderGradientViewController.swift */; };
 		D096135027500D3E005E42EC /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134F27500D3E005E42EC /* NibView.swift */; };
 		D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */; };
@@ -352,8 +350,6 @@
 		D010895F276F6B5400668EDB /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
 		D0108961276F70A500668EDB /* SimpleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleView.xib; sourceTree = "<group>"; };
 		D0108963276F72AE00668EDB /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
-		D09613492750063A005E42EC /* BorderGradientView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderGradientView.xib; sourceTree = "<group>"; };
-		D096134B27500951005E42EC /* BorderGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientView.swift; sourceTree = "<group>"; };
 		D096134D27500C10005E42EC /* BorderGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewController.swift; sourceTree = "<group>"; };
 		D096134F27500D3E005E42EC /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -772,8 +768,6 @@
 		D0961348275005F0005E42EC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				D09613492750063A005E42EC /* BorderGradientView.xib */,
-				D096134B27500951005E42EC /* BorderGradientView.swift */,
 				D096134D27500C10005E42EC /* BorderGradientViewController.swift */,
 				D0108961276F70A500668EDB /* SimpleView.xib */,
 				D0108963276F72AE00668EDB /* SimpleView.swift */,
@@ -1018,7 +1012,6 @@
 				CEB8ED521FE9688E0037ED3D /* View.xib in Resources */,
 				CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */,
 				CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */,
-				D096134A2750063A005E42EC /* BorderGradientView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1311,7 +1304,6 @@
 				CEB8ED581FE96ABC0037ED3D /* View.swift in Sources */,
 				D0108964276F72AE00668EDB /* SimpleView.swift in Sources */,
 				CEB8ED281FE968410037ED3D /* ViewController.swift in Sources */,
-				D096134C27500951005E42EC /* BorderGradientView.swift in Sources */,
 				0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
 				D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */,
