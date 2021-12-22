@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrincipalView" customModule="WolmoCoreDemo">
             <connections>
+                <outlet property="animationsButton" destination="nLc-RL-apd" id="wxd-E4-kWo"/>
                 <outlet property="bodyTextField" destination="kxh-P1-rEG" id="da2-md-4PB"/>
                 <outlet property="bordersGradientButton" destination="JAd-cU-MHJ" id="JjO-7b-Jct"/>
                 <outlet property="gestureLabel" destination="nbm-4U-X48" id="34x-DZ-Ot8"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-1j-qHf">
-                    <rect key="frame" x="55.5" y="206" width="264" height="255.5"/>
+                    <rect key="frame" x="55.5" y="156" width="264" height="355.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-3F-kMZ">
                             <rect key="frame" x="95" y="0.0" width="74" height="30"/>
@@ -34,25 +35,33 @@
                             <rect key="frame" x="52.5" y="50" width="159" height="30"/>
                             <state key="normal" title="Boders &amp; Gradients 🌈"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-RL-apd" userLabel="Animations">
+                            <rect key="frame" x="81" y="100" width="102" height="30"/>
+                            <state key="normal" title="Animations 🚀"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-ls-1Hi" userLabel="GestureRecognizer">
+                            <rect key="frame" x="52" y="150" width="160" height="30"/>
+                            <state key="normal" title="Gesture Recognizer 📱"/>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-Cq-KJs">
-                            <rect key="frame" x="77.5" y="100" width="109.5" height="20.5"/>
+                            <rect key="frame" x="77.5" y="200" width="109.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Body Style" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-P1-rEG">
-                            <rect key="frame" x="83" y="140.5" width="98" height="34"/>
+                            <rect key="frame" x="83" y="240.5" width="98" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Round borders  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-9Z-2sJ">
-                            <rect key="frame" x="67" y="194.5" width="130" height="20.5"/>
+                            <rect key="frame" x="67" y="294.5" width="130" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try different gestures on this label!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbm-4U-X48">
-                            <rect key="frame" x="0.0" y="235" width="264" height="20.5"/>
+                            <rect key="frame" x="0.0" y="335" width="264" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

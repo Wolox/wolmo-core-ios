@@ -43,6 +43,10 @@ private extension PrincipalViewController {
         _view.bordersGradientButton.addTarget(self,
                                               action: #selector(onTapBordersGradientButton),
                                               for: .touchUpInside)
+        
+        _view.animationsButton.addTarget(self,
+                                         action: #selector(onTapAnimationsButton),
+                                         for: .touchUpInside)
     }
     
     @objc func onTapStringsButton() {
@@ -52,6 +56,11 @@ private extension PrincipalViewController {
     
     @objc func onTapBordersGradientButton() {
         present(BorderGradientViewController(),
+                animated: true)
+    }
+    
+    @objc func onTapAnimationsButton() {
+        present(AnimationsViewController(),
                 animated: true)
     }
     
