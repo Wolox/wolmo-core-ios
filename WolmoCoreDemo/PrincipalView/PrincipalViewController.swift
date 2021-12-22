@@ -9,9 +9,9 @@
 import UIKit
 import WolmoCore
 
-final internal class ViewController: UIViewController {
+final internal class PrincipalViewController: UIViewController {
     // MARK: - Private properties
-    private lazy var _view = View()
+    private lazy var _view = PrincipalView()
 
     // MARK: - Lifecycle methods
     override func loadView() {
@@ -34,7 +34,7 @@ final internal class ViewController: UIViewController {
     }
 }
 
-private extension ViewController {
+private extension PrincipalViewController {
     func setupButtons() {
         _view.stringsButton.addTarget(self,
                                       action: #selector(onTapStringsButton),

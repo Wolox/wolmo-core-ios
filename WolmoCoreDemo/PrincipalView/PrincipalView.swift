@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-final internal class View: NibView {
+final internal class PrincipalView: NibView {
     let borderViewProperties = BorderViewProperties(thickness: 4, color: .red, rounded: true)
     
     @IBOutlet weak var titleLabel: UILabel! {

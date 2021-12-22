@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIFont.fontProvider = CustomFontProvider()
 
         window = UIWindow()
-        let controller = ViewController()
+        let controller = PrincipalViewController()
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
         return true
