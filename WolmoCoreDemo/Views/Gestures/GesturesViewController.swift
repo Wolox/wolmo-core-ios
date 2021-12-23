@@ -1,5 +1,5 @@
 //
-//  CardsViewController.swift
+//  GesturesViewController.swift
 //  AnimationDemo
 //
 //  Created by Argentino Ducret on 23/01/2018.
@@ -9,50 +9,37 @@
 import UIKit
 import WolmoCore
 
-class CardsViewController: UIViewController {
+final class GesturesViewController: UIViewController {
     // MARK: - Properties
-    @IBOutlet weak var gamaControllerView: UIView! {
-        didSet {
-            gamaControllerView.addShadow(radius: 8,
-                                         opacity: 0.1,
-                                         cornerRadius: 14)
-        }
-    }
+    private let gesturesView = GesturesView()
+    private var rotationAnimator: UIViewPropertyAnimator!
+    private var lastTranslation = CGPoint.zero
+    private var animationViews: [UIView] = []
     
-    @IBOutlet weak var swiftView: UIView! {
-        didSet {
-            swiftView.addShadow(radius: 8,
-                                opacity: 0.1,
-                                cornerRadius: 14)
-        }
-    }
-    
-    @IBOutlet weak var cardsContainerView: UIView!
-    
-    @IBOutlet weak var animationButton: UIButton! {
-        didSet {
-            animationButton.addShadow(radius: 4,
-                                opacity: 0.2,
-                                cornerRadius: 4)
-        }
-    }
-    
-    var rotationAnimator: UIViewPropertyAnimator!
-    var lastTranslation = CGPoint.zero
-    var animationViews: [UIView] = []
-    
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpCardAnimation()
+        setupScreenGestures()
+        setupLabelGestures()
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = gesturesView
     }
 }
 
-private extension CardsViewController {
+private extension GesturesViewController {
     // MARK: - Configuration methods
     func setUpCardAnimation() {
+        guard let swiftView = gesturesView.swiftView,
+        let gameControllerView = gesturesView.gameControllerView else { return }
+        
         swiftView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragView)))
-        gamaControllerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
-        sendToBack(view: gamaControllerView)
+        gameControllerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapView)))
+        sendToBack(view: gameControllerView)
     }
     
     // MARK: - Helper methods
@@ -62,10 +49,10 @@ private extension CardsViewController {
      */
     
     func getOtherView(view: UIView) -> UIView {
-        if view.isEqual(swiftView) {
-            return gamaControllerView
+        if view.isEqual(gesturesView.swiftView) {
+            return gesturesView.gameControllerView
         } else {
-            return swiftView
+            return gesturesView.swiftView
         }
     }
     
@@ -78,7 +65,7 @@ private extension CardsViewController {
     }
     
     func reset(view: UIView) {
-        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        let halfWidthScreen = gesturesView.cardsContainerView.bounds.width / 2.0
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
@@ -88,7 +75,7 @@ private extension CardsViewController {
 }
 
 // MARK: - Animation methods
-private extension CardsViewController {
+private extension GesturesViewController {
     /**
      Animate the view when the user is draging it to the right
      
@@ -102,8 +89,8 @@ private extension CardsViewController {
      */
     @objc func dragView(gesture: UIPanGestureRecognizer) {
         let target = gesture.view!
-        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
-        let screenWidth = cardsContainerView.bounds.width
+        let halfWidthScreen = gesturesView.cardsContainerView.bounds.width / 2.0
+        let screenWidth = gesturesView.cardsContainerView.bounds.width
         let completeAnimationLimit = screenWidth - 50
         let swapViewsLimit = halfWidthScreen + 75
         
@@ -165,7 +152,7 @@ private extension CardsViewController {
         - Set the view at the start of all subviews
      */
     func bringToTop(view: UIView) {
-        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        let halfWidthScreen = gesturesView.cardsContainerView.bounds.width / 2.0
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
@@ -187,7 +174,7 @@ private extension CardsViewController {
         - Move the view up (translate in Y position)
      */
     func sendToBack(view: UIView) {
-        let halfWidthScreen = cardsContainerView.bounds.width / 2.0
+        let halfWidthScreen = gesturesView.cardsContainerView.bounds.width / 2.0
         view
             .mixedAnimation(withDuration: 0.25)
             .action(positionX: halfWidthScreen, positionY: view.center.y)
@@ -197,5 +184,35 @@ private extension CardsViewController {
             .action(moveTo: .back)
             .action(alpha: 0.5)
             .startAnimation()
+    }
+}
+
+extension GesturesViewController {
+    func setupScreenGestures() {
+        gesturesView.addScreenEdgePanGestureRecognizer(edge: .left) { _ in
+            print("Edge panned!")
+        }
+    }
+    
+    func setupLabelGestures() {
+        gesturesView.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] _ in
+            self?.gesturesView.gestureLabel.shake(withDuration: 0.05)
+            print("Label tapped!")
+        }
+        gesturesView.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { _ in
+            print("Label long pressed!")
+        }
+        gesturesView.gestureLabel.addPinchGestureRecognizer { _ in
+            print("Label pinched!")
+        }
+        gesturesView.gestureLabel.addRotationGestureRecognizer { _ in
+            print("Label rotated!")
+        }
+        gesturesView.gestureLabel.addPanGestureRecognizer { _ in
+            print("Label panned!")
+        }
+        gesturesView.gestureLabel.addSwipeGestureRecognizer(direction: .left) { _ in
+            print("Label swiped!")
+        }
     }
 }
