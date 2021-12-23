@@ -31,9 +31,6 @@
 		73C795E589E8184F77A26DAF /* Pods_WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF6E3123DD08D6F396BB2A /* Pods_WolmoCore.framework */; };
 		9D896ABC1CDE3EC5008B0E5F /* WolmoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A549A3C9C1F808C30A1D9573 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */; };
-		AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* CardsViewController.swift */; };
-		AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
-		AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4B1228221110070C01F /* SimpleExample.swift */; };
 		B82058CD1EEF33950002D7D4 /* UIImageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82058CC1EEF33950002D7D4 /* UIImageSpec.swift */; };
 		B8CF9A8C1EE9EF6E0063F951 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */; };
 		B959481A1D3EA039003A082F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948191D3EA039003A082F /* AVFoundation.framework */; };
@@ -65,13 +62,6 @@
 		CE1DDFDF209A646B007471A0 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DDFDA209A646B007471A0 /* Animation.swift */; };
 		CE1DDFE0209A646B007471A0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DDFDB209A646B007471A0 /* UIViewExtension.swift */; };
 		CE1DDFE1209A646B007471A0 /* MixedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DDFDC209A646B007471A0 /* MixedAnimation.swift */; };
-		CE1DDFEC209A653F007471A0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95948191D3EA039003A082F /* AVFoundation.framework */; };
-		CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481D1D3EA060003A082F /* Foundation.framework */; };
-		CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959481B1D3EA051003A082F /* UIKit.framework */; };
-		CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; };
-		CE1DDFF5209A653F007471A0 /* PrincipalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED511FE9688E0037ED3D /* PrincipalView.xib */; };
-		CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */; };
-		CE1DDFFE209A653F007471A0 /* WolmoCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE228AE01EF2FE1E00097B19 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE228ADF1EF2FE1E00097B19 /* UIFont.swift */; };
 		CE3A9B901E607B28005D7E8F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B781E607B28005D7E8F /* Array.swift */; };
 		CE3A9B911E607B28005D7E8F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A9B791E607B28005D7E8F /* Date.swift */; };
@@ -126,9 +116,6 @@
 		CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9BFCD1E8986F700D0E65D /* Collection.swift */; };
 		CEEC517E1EE5ECD300BC41FE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC517D1EE5ECD300BC41FE /* UILabel.swift */; };
 		CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC517F1EE5EE3400BC41FE /* UILabelSpec.swift */; };
-		CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE006209A66A9007471A0 /* Assets.xcassets */; };
-		CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1DE009209A66A9007471A0 /* Main.storyboard */; };
-		CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DE00B209A66A9007471A0 /* AppDelegate.swift */; };
 		D0108960276F6B5400668EDB /* ScrollStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D010895F276F6B5400668EDB /* ScrollStackViewController.swift */; };
 		D0108962276F70A500668EDB /* SimpleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0108961276F70A500668EDB /* SimpleView.xib */; };
 		D0108964276F72AE00668EDB /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0108963276F72AE00668EDB /* SimpleView.swift */; };
@@ -136,19 +123,18 @@
 		D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134D27500C10005E42EC /* BorderGradientViewController.swift */; };
 		D096135027500D3E005E42EC /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134F27500D3E005E42EC /* NibView.swift */; };
 		D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */; };
+		D0FD9AB62773A79F008F240F /* AnimationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FD9AB52773A79F008F240F /* AnimationsView.xib */; };
+		D0FD9AB82773A91A008F240F /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9AB72773A91A008F240F /* AnimationsView.swift */; };
+		D0FD9AB92773A9EF008F240F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
+		D0FD9ABA2773AA4D008F240F /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4B1228221110070C01F /* SimpleExample.swift */; };
+		D0FD9ABC2773B554008F240F /* GesturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB3A3227CD8280070C01F /* GesturesViewController.swift */; };
+		D0FD9ABE2773B607008F240F /* GesturesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FD9ABD2773B606008F240F /* GesturesView.xib */; };
+		D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9ABF2773B750008F240F /* GesturesView.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
-		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE1DDFE4209A653F007471A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9D896AAF1CDE3EC5008B0E5F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D896AB71CDE3EC5008B0E5F;
-			remoteInfo = WolmoCore;
-		};
 		CE7486992047067700636D98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9D896AAF1CDE3EC5008B0E5F /* Project object */;
@@ -180,17 +166,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE1DDFF9209A653F007471A0 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CE1DDFFE209A653F007471A0 /* WolmoCore.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE74869D2047072100636D98 /* Copy Frameworks */ = {
@@ -254,7 +229,7 @@
 		9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D896AC91CDE3EC5008B0E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCoreDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AECEB3A3227CD8280070C01F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		AECEB3A3227CD8280070C01F /* GesturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesViewController.swift; sourceTree = "<group>"; };
 		AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		AECEB4B1228221110070C01F /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
 		B75A076CE82D33C4BF82235C /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -290,12 +265,6 @@
 		CE1DDFDA209A646B007471A0 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		CE1DDFDB209A646B007471A0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CE1DDFDC209A646B007471A0 /* MixedAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedAnimation.swift; sourceTree = "<group>"; };
-		CE1DE002209A653F007471A0 /* AnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1DE006209A66A9007471A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE1DE008209A66A9007471A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE1DE00A209A66A9007471A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE1DE00B209A66A9007471A0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE1DE00C209A66A9007471A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE228ADF1EF2FE1E00097B19 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CE3A9B781E607B28005D7E8F /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CE3A9B791E607B28005D7E8F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -354,6 +323,10 @@
 		D096134F27500D3E005E42EC /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewControllerTest.swift; sourceTree = "<group>"; };
+		D0FD9AB52773A79F008F240F /* AnimationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationsView.xib; sourceTree = "<group>"; };
+		D0FD9AB72773A91A008F240F /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
+		D0FD9ABD2773B606008F240F /* GesturesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GesturesView.xib; sourceTree = "<group>"; };
+		D0FD9ABF2773B750008F240F /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -376,18 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A549A3C9C1F808C30A1D9573 /* Pods_WolmoCore_WolmoCoreTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE1DDFEB209A653F007471A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE1DDFEC209A653F007471A0 /* AVFoundation.framework in Frameworks */,
-				CE1DDFED209A653F007471A0 /* Foundation.framework in Frameworks */,
-				CE1DDFEE209A653F007471A0 /* UIKit.framework in Frameworks */,
-				CE1DDFF3209A653F007471A0 /* WolmoCore.framework in Frameworks */,
-				EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +456,6 @@
 				9D896ABA1CDE3EC5008B0E5F /* WolmoCore */,
 				9D896AC61CDE3EC5008B0E5F /* WolmoCoreTests */,
 				CEB8ED241FE968410037ED3D /* WolmoCoreDemo */,
-				CE1DE004209A66A9007471A0 /* AnimationDemo */,
 				D096135627502FA7005E42EC /* WolmoCoreDemoTests */,
 				9D896AB91CDE3EC5008B0E5F /* Products */,
 				9D896AF01CDE6504008B0E5F /* Frameworks */,
@@ -509,7 +469,6 @@
 				9D896AB81CDE3EC5008B0E5F /* WolmoCore.framework */,
 				9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */,
 				CEB8ED231FE968410037ED3D /* WolmoCoreDemo.app */,
-				CE1DE002209A653F007471A0 /* AnimationDemo.app */,
 				D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */,
 			);
 			name = Products;
@@ -604,21 +563,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CE1DE004209A66A9007471A0 /* AnimationDemo */ = {
-			isa = PBXGroup;
-			children = (
-				CE1DE006209A66A9007471A0 /* Assets.xcassets */,
-				CE1DE007209A66A9007471A0 /* LaunchScreen.storyboard */,
-				CE1DE009209A66A9007471A0 /* Main.storyboard */,
-				CE1DE00B209A66A9007471A0 /* AppDelegate.swift */,
-				CE1DE00C209A66A9007471A0 /* Info.plist */,
-				AECEB3A3227CD8280070C01F /* CardsViewController.swift */,
-				AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */,
-				AECEB4B1228221110070C01F /* SimpleExample.swift */,
-			);
-			path = AnimationDemo;
-			sourceTree = "<group>";
-		};
 		CE3A9B771E607B28005D7E8F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,9 +615,7 @@
 		CEB8ED241FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D0563B7E27513647006622C0 /* PrincipalView */,
-				0C02AB4D21682B8A007DB327 /* StringToImage */,
-				D0961347275005E0005E42EC /* UIKit */,
+				D0FD9AB32773A6CA008F240F /* Views */,
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
 				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
 				CEB8ED2C1FE968410037ED3D /* Assets.xcassets */,
@@ -757,22 +699,14 @@
 			path = PrincipalView;
 			sourceTree = "<group>";
 		};
-		D0961347275005E0005E42EC /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				D0961348275005F0005E42EC /* UIView */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		D0961348275005F0005E42EC /* UIView */ = {
+		D0961348275005F0005E42EC /* BorderGradient */ = {
 			isa = PBXGroup;
 			children = (
 				D096134D27500C10005E42EC /* BorderGradientViewController.swift */,
 				D0108961276F70A500668EDB /* SimpleView.xib */,
 				D0108963276F72AE00668EDB /* SimpleView.swift */,
 			);
-			path = UIView;
+			path = BorderGradient;
 			sourceTree = "<group>";
 		};
 		D096135627502FA7005E42EC /* WolmoCoreDemoTests */ = {
@@ -789,6 +723,39 @@
 				D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D0FD9AB32773A6CA008F240F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0563B7E27513647006622C0 /* PrincipalView */,
+				0C02AB4D21682B8A007DB327 /* StringToImage */,
+				D0961348275005F0005E42EC /* BorderGradient */,
+				D0FD9AB42773A710008F240F /* Animations */,
+				D0FD9ABB2773B52A008F240F /* Gestures */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0FD9AB42773A710008F240F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */,
+				D0FD9AB52773A79F008F240F /* AnimationsView.xib */,
+				D0FD9AB72773A91A008F240F /* AnimationsView.swift */,
+				AECEB4B1228221110070C01F /* SimpleExample.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D0FD9ABB2773B52A008F240F /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				AECEB3A3227CD8280070C01F /* GesturesViewController.swift */,
+				D0FD9ABD2773B606008F240F /* GesturesView.xib */,
+				D0FD9ABF2773B750008F240F /* GesturesView.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -846,26 +813,6 @@
 			productName = WolmoCoreTests;
 			productReference = 9D896AC21CDE3EC5008B0E5F /* WolmoCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CE1DDFE2209A653F007471A0 /* AnimationDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CE1DDFFF209A653F007471A0 /* Build configuration list for PBXNativeTarget "AnimationDemo" */;
-			buildPhases = (
-				AC48DE17469C0BF6BD52F287 /* [CP] Check Pods Manifest.lock */,
-				CE1DDFE5209A653F007471A0 /* Sources */,
-				CE1DDFEB209A653F007471A0 /* Frameworks */,
-				CE1DDFF4209A653F007471A0 /* Resources */,
-				CE1DDFF9209A653F007471A0 /* Copy Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CE1DDFE3209A653F007471A0 /* PBXTargetDependency */,
-			);
-			name = AnimationDemo;
-			productName = WolmoCoreDemo;
-			productReference = CE1DE002209A653F007471A0 /* AnimationDemo.app */;
-			productType = "com.apple.product-type.application";
 		};
 		CEB8ED221FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXNativeTarget;
@@ -928,11 +875,6 @@
 						DevelopmentTeam = 7XS5GQGS29;
 						LastSwiftMigration = 1020;
 					};
-					CE1DDFE2209A653F007471A0 = {
-						DevelopmentTeam = 7XS5GQGS29;
-						LastSwiftMigration = 1300;
-						ProvisioningStyle = Automatic;
-					};
 					CEB8ED221FE968410037ED3D = {
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = 7XS5GQGS29;
@@ -963,7 +905,6 @@
 				9D896AB71CDE3EC5008B0E5F /* WolmoCore */,
 				9D896AC11CDE3EC5008B0E5F /* WolmoCoreTests */,
 				CEB8ED221FE968410037ED3D /* WolmoCoreDemo */,
-				CE1DDFE2209A653F007471A0 /* AnimationDemo */,
 				D096135427502FA7005E42EC /* WolmoCoreDemoTests */,
 			);
 		};
@@ -992,26 +933,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1DDFF4209A653F007471A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEECA02F209A7053001A7E37 /* Main.storyboard in Resources */,
-				CE1DDFF5209A653F007471A0 /* PrincipalView.xib in Resources */,
-				CE1DDFF6209A653F007471A0 /* LaunchScreen.storyboard in Resources */,
-				CEECA02D209A704B001A7E37 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CEB8ED211FE968410037ED3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D0108962276F70A500668EDB /* SimpleView.xib in Resources */,
+				D0FD9AB62773A79F008F240F /* AnimationsView.xib in Resources */,
 				0C02AB5521682BD2007DB327 /* StringToImageView.xib in Resources */,
 				CEB8ED521FE9688E0037ED3D /* PrincipalView.xib in Resources */,
 				CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */,
 				CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */,
+				D0FD9ABE2773B607008F240F /* GesturesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,28 +1097,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		AC48DE17469C0BF6BD52F287 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnimationDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1286,29 +1196,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1DDFE5209A653F007471A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AECEB3A4227CD8280070C01F /* CardsViewController.swift in Sources */,
-				CEECA031209A7059001A7E37 /* AppDelegate.swift in Sources */,
-				AECEB4B2228221110070C01F /* SimpleExample.swift in Sources */,
-				AECEB4B02281F79C0070C01F /* AnimationsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CEB8ED1F1FE968410037ED3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CEB8ED581FE96ABC0037ED3D /* PrincipalView.swift in Sources */,
 				D0108964276F72AE00668EDB /* SimpleView.swift in Sources */,
+				D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */,
+				D0FD9ABA2773AA4D008F240F /* SimpleExample.swift in Sources */,
 				CEB8ED281FE968410037ED3D /* PrincipalViewController.swift in Sources */,
 				0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
 				D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */,
 				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
+				D0FD9ABC2773B554008F240F /* GesturesViewController.swift in Sources */,
+				D0FD9AB82773A91A008F240F /* AnimationsView.swift in Sources */,
 				0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */,
+				D0FD9AB92773A9EF008F240F /* AnimationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,11 +1227,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE1DDFE3209A653F007471A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9D896AB71CDE3EC5008B0E5F /* WolmoCore */;
-			targetProxy = CE1DDFE4209A653F007471A0 /* PBXContainerItemProxy */;
-		};
 		CE74869A2047067700636D98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9D896AB71CDE3EC5008B0E5F /* WolmoCore */;
@@ -1346,22 +1245,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE1DE007209A66A9007471A0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE1DE008209A66A9007471A0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CE1DE009209A66A9007471A0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE1DE00A209A66A9007471A0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEB8ED2E1FE968410037ED3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1595,61 +1478,6 @@
 			};
 			name = Release;
 		};
-		CE1DE000209A653F007471A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7XS5GQGS29;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CE1DE001209A653F007471A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75A076CE82D33C4BF82235C /* Pods-AnimationDemo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7XS5GQGS29;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.AnimationDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		CEB8ED491FE968420037ED3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94628C1652D625F68DB62450 /* Pods-WolmoCoreDemo.debug.xcconfig */;
@@ -1789,15 +1617,6 @@
 			buildConfigurations = (
 				9D896AD01CDE3EC5008B0E5F /* Debug */,
 				9D896AD11CDE3EC5008B0E5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CE1DDFFF209A653F007471A0 /* Build configuration list for PBXNativeTarget "AnimationDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE1DE000209A653F007471A0 /* Debug */,
-				CE1DE001209A653F007471A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
