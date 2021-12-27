@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-/// Concatenate different affine transformations in one single transformation
+/**
+ Concatenate different affine transformations in one single transformation.
+ */
 public class MixedAnimation: AnimationType {
     fileprivate let duration: TimeInterval
     fileprivate let view: UIView

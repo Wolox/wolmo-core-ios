@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ Concatenate different animations.
+ */
 public class SimpleAnimation: AnimationType {
     fileprivate let view: UIView
     fileprivate var animations: [AnimationContent] = []

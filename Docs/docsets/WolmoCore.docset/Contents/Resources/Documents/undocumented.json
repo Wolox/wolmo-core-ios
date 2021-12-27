@@ -15,6 +15,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Animations/SimpleAnimation.swift",
+      "line": 12,
+      "symbol": "SimpleAnimation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Foundation/String.swift",
       "line": 92,
       "symbol": "String.trimmed",
