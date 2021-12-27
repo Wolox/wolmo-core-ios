@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIButton {
-    /*
+    /**
      Sets the button's title underlined with style and for state specified.
      
      - parameter title: Title for the button.
@@ -30,7 +30,7 @@ public extension UIButton {
         setAttributedTitle(underlinedText, for: state)
     }
 
-    /* 
+    /**
      Sets the button's title and image with the specified spacing and arrangement.
     
      - parameter title: Title for the button.

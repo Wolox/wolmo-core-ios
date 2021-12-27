@@ -86,7 +86,7 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
     
-    /*
+    /**
      Returns a copy of the string without its leading and trailing whitespace and newlines.
      */
     var trimmed: String {
