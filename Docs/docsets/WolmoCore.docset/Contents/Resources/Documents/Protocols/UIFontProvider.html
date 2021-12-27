@@ -17,7 +17,7 @@
     <a title="UIFontProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (93% documented)</p>
+        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -289,7 +289,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Declares and object that provides font names associated with specific font text styles.</p>
 
           </section>
           <section class="section task-group-section">
@@ -314,16 +314,19 @@
                         <p>Returns a valid font name associated with the font text style specified.
 By default, returns the font name of the font returned by
 <code>UIFont.preferredFont(forTextStyle:)</code>.</p>
-<div class="aside aside-seealso">
-    <p class="aside-title">Seealso</p>
-    <p><code>UIFont.preferredFont(forTextStyle:)</code>.</p>
-
-</div>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        
+                        <p>Returns a valid font name associated with the font text style specified.
+By default, returns the font name of the font returned by
+<code>UIFont.preferredFont(forTextStyle:)</code>.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="https://developer.apple.com/documentation/uikit/uifont/1619030-preferredfont">UIFont.preferredFont(forTextStyle:)</a>.</p>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -332,25 +335,6 @@ By default, returns the font name of the font returned by
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">appFontName</span><span class="p">(</span><span class="k">for</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIFont</span><span class="o">.</span><span class="kt">TextStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>style</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A UIFontTextStyle.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>

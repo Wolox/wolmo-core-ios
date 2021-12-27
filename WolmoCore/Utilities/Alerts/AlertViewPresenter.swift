@@ -13,8 +13,10 @@ import Foundation
  */
 public protocol AlertViewPresenter {
 
+    /// Presents a new alert. The alert's information is stored in the ErrorAlertViewModel passed by parameter.
     func presentAlert(_ alertViewModel: ErrorAlertViewModel, completion: (() -> Void)?)
     
+    /// Presents a new alert. The alert's information is stored in the ConfirmationAlertViewModel passed by parameter.
     func presentAlert(_ alertViewModel: ConfirmationAlertViewModel, completion: (() -> Void)?)
     
 }

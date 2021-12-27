@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
+/// See [CGAffineTransform](https://developer.apple.com/documentation/coregraphics/cgaffinetransform).
 public typealias Transform = CGAffineTransform
+/// A Void method.
 public typealias Action = () -> Void
 
 /**
