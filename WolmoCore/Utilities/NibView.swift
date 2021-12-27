@@ -23,6 +23,9 @@ open class NibView: UIView {
         xibSetup()
     }
     
+    /**
+     - warning: Initializing an object with data from an unarchiver has not been implemented.
+     */
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -30,7 +30,7 @@ public protocol AnimationType {
 public enum AnimationContent {
     /// A Void method.
     case action(Action, duration: TimeInterval)
-    /// See `CGAffineTransform`.
+    /// See [CGAffineTransform](https://developer.apple.com/documentation/coregraphics/cgaffinetransform).
     case transform(Transform, duration: TimeInterval)
 }
 
