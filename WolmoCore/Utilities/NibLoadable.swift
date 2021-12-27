@@ -8,7 +8,7 @@
 
 import Foundation
 
-/*
+/**
  Represents an object which is loaded from a nib.
  */
 public protocol NibLoadable {
@@ -38,6 +38,7 @@ public extension NibLoadable {
         return Bundle.main
     }
     
+    /// The specified component's Nib.
     static var nib: UINib {
         return UINib(nibName: nibName, bundle: nibBundle)
     }

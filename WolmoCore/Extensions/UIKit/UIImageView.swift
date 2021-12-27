@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIImageView {
-    
     /**
      Sets de image of the view to a drawing of the given string,
      it's recomended for using emojis as images, but it can be used with any string.
@@ -31,5 +30,4 @@ public extension UIImageView {
         contentMode = .scaleAspectFit
         image = string.toImage(font: font)
     }
-    
 }

@@ -1,0 +1,327 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Animations/Animation.swift",
+      "line": 12,
+      "symbol": "Transform",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Animations/Animation.swift",
+      "line": 13,
+      "symbol": "Action",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Animations/SimpleAnimation.swift",
+      "line": 12,
+      "symbol": "SimpleAnimation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Foundation/String.swift",
+      "line": 92,
+      "symbol": "String.trimmed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIButton.swift",
+      "line": 24,
+      "symbol": "UIButton.setUnderlined(title:style:color:forState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIButton.swift",
+      "line": 44,
+      "symbol": "UIButton.setTitle(title:image:spacing:imageOnRight:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIFont.swift",
+      "line": 11,
+      "symbol": "UIFontProvider",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIFont.swift",
+      "line": 24,
+      "symbol": "==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIFont.swift",
+      "line": 45,
+      "symbol": "UIFontProvider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/AddInto.swift",
+      "line": 15,
+      "symbol": "LayoutMode.constraints",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/AddInto.swift",
+      "line": 16,
+      "symbol": "LayoutMode.frame",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/AddInto.swift",
+      "line": 23,
+      "symbol": "ViewPositioning.back",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/AddInto.swift",
+      "line": 24,
+      "symbol": "ViewPositioning.front",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 14,
+      "symbol": "BorderViewProperties.thickness",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 15,
+      "symbol": "BorderViewProperties.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 16,
+      "symbol": "BorderViewProperties.roundedCorners",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 18,
+      "symbol": "BorderViewProperties.init(thickness:color:rounded:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 29,
+      "symbol": "BorderPosition.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 30,
+      "symbol": "BorderPosition.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 31,
+      "symbol": "BorderPosition.left",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 32,
+      "symbol": "BorderPosition.right",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 54,
+      "symbol": "BorderView.position",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 56,
+      "symbol": "BorderView.init(position:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 60,
+      "symbol": "BorderView.init(frame:position:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 65,
+      "symbol": "BorderView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 69,
+      "symbol": "BorderView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Borders.swift",
+      "line": 73,
+      "symbol": "BorderView.clipToBoundsBordersIfNeeded(border:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Gradient.swift",
+      "line": 67,
+      "symbol": "GradientColor.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Gradient.swift",
+      "line": 70,
+      "symbol": "GradientColor.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Gradient.swift",
+      "line": 98,
+      "symbol": "ViewGradient.direction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Gradient.swift",
+      "line": 100,
+      "symbol": "ViewGradient.colors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/AlertViewPresenter.swift",
+      "line": 16,
+      "symbol": "AlertViewPresenter.presentAlert(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/AlertViewPresenter.swift",
+      "line": 18,
+      "symbol": "AlertViewPresenter.presentAlert(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 16,
+      "symbol": "ConfirmationAlertViewModel.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 17,
+      "symbol": "ConfirmationAlertViewModel.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 18,
+      "symbol": "ConfirmationAlertViewModel.dismissButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 19,
+      "symbol": "ConfirmationAlertViewModel.confirmButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 20,
+      "symbol": "ConfirmationAlertViewModel.dismissAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/Alerts/ConfirmationAlertViewModel.swift",
+      "line": 21,
+      "symbol": "ConfirmationAlertViewModel.confirmAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 16,
+      "symbol": "DeviceType.iPhone4s_previous",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 17,
+      "symbol": "DeviceType.iPhone5_5s_5c_SE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 18,
+      "symbol": "DeviceType.iPhone6_6s_7_8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 19,
+      "symbol": "DeviceType.iPhone6Plus_6sPlus_7Plus_8Plus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 20,
+      "symbol": "DeviceType.iPhoneX",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
+      "line": 21,
+      "symbol": "DeviceType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/NibView.swift",
+      "line": 26,
+      "symbol": "NibView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios"
+}

@@ -8,10 +8,16 @@
 
 import UIKit
 
+/**
+ Represents a UIView loaded from a Xib file.
+ */
 open class NibView: UIView {
     private var view: UIView?
 
     // MARK: - Initializers
+    /**
+     Default initializer for the view with the specified frame.
+     */
     public override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
@@ -21,7 +27,7 @@ open class NibView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// Setups view from .xib file
+    /// Sets up view from .xib file
     private func xibSetup() {
         backgroundColor = .clear
         let view = loadNib()

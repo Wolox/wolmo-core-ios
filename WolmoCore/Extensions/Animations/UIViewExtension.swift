@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 public extension UIView {
+    /// Positions where a view may be placed, relative to a superview.
     enum Position {
+        /// Position behind the superview.
         case back
+        /// Position in front of the superview.
         case front
     }
     

@@ -12,13 +12,21 @@ import Foundation
  Represents the posible directions of a gradient in a view.
  */
 public enum GradientDirection {
+    /// Sets the gradient's direction from left to right.
     case leftToRight
+    /// Sets the gradient's direction from right to left.
     case rightToLeft
+    /// Sets the gradient's direction from top to bottom.
     case topToBottom
+    /// Sets the gradient's direction from bottom to top.
     case bottomToTop
+    /// Sets the gradient's direction from top left to bottom right.
     case topLeftToBottomRight
+    /// Sets the gradient's direction from bottom right to top left.
     case bottomRightToTopLeft
+    /// Sets the gradient's direction from top right to bottom left.
     case topRightToBottomLeft
+    /// Sets the gradient's direction from bottom left to top right.
     case bottomLeftToTopRight
 }
 

@@ -11,7 +11,6 @@ import UIKit
 /**
  Indicates the way in which the layout is set.
  */
-
 public enum LayoutMode {
     case constraints
     case frame

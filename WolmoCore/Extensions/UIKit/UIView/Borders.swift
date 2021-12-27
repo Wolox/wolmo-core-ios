@@ -319,8 +319,26 @@ public extension UIView {
 }
 
 public extension UIView {
-    func addShadow(color: CGColor = UIColor.black.cgColor, size: CGSize = CGSize(width: 0, height: 2),
-                   radius: CGFloat = 2.5, opacity: Float = 0.2, cornerRadius: CGFloat = 5) {
+    /**
+     Adds a drop shadow to the selected view.
+     
+     - parameter color: the color of the shadow.
+     
+     - parameter size: horizontal and vertical size of the shadow.
+     
+     - parameter radius: the overall extension of the shadow from the center of the view.
+     
+     - parameter cornerRadius: how rounded the corners of the shadow are.
+     
+     - note: If you decide to use constraints to determine the size, self's frame doesn't need to be final.
+     Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
+     We strongly recommend to work with constraints as a better practice than frames.
+     */
+    func addShadow(color: CGColor = UIColor.black.cgColor,
+                   size: CGSize = CGSize(width: 0, height: 2),
+                   radius: CGFloat = 2.5,
+                   opacity: Float = 0.2,
+                   cornerRadius: CGFloat = 5) {
         self.layer.shadowColor = color
         self.layer.shadowOffset = size
         self.layer.shadowRadius = radius

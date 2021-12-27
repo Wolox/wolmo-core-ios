@@ -8,12 +8,18 @@
 
 import UIKit
 
+/**
+ UIViewController that allows loading, stacking and removing different ViewControllers in a single view.
+ */
 open class ScrollStackViewController: UIViewController {
     // MARK: - Private Properties
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
 
     // MARK: - Lifecycle methods
+    /**
+     This override sets the NavigationBar to be shown in the view, and shows no Buttons on the right side it.
+     */
     open override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
@@ -21,6 +27,11 @@ open class ScrollStackViewController: UIViewController {
         setupView()
     }
 
+    /**
+     Method for loading the view sections into the parent view.
+     
+     Override this method and use the `add(_:)` functions to load UIViews and UIViewControllers with their corresponding views.
+     */
     open func addChildrenViewControllers() {
         // Override this function with the view sections
     }
@@ -54,16 +65,25 @@ extension ScrollStackViewController {
         ])
     }
 
+    /**
+     Loads and displays a UIViewController (and it's corresponding view) into the current ViewController.
+     */
     open func add(_ child: UIViewController) {
         addChild(child)
         stackView.addArrangedSubview(child.view)
         child.didMove(toParent: self)
     }
     
+    /**
+     Loads and displays a UIView into the current ViewController.
+     */
     open func add(_ child: UIView) {
         stackView.addArrangedSubview(child)
     }
     
+    /**
+     Removes a UIViewController's view from the current ViewController.
+     */
     open func remove(_ child: UIViewController) {
         stackView.removeArrangedSubview(child.view)
         child.view.removeFromSuperview()

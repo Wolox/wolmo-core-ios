@@ -8,7 +8,7 @@
 
 import Foundation
 
-/* 
+/**
  DeviceType provides the current device type,
  in relation to its window height in points.
  */

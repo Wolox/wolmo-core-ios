@@ -202,5 +202,4 @@ public extension String {
     static func * (lhs: Int, rhs: String) -> String {
         return String(repeating: rhs, count: lhs)
     }
-    
 }

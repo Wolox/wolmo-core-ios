@@ -8,6 +8,12 @@
 
 import Foundation
 
+/** Defines a global default DateFormatter with the following characteristics:
+ 
+ - Gregorian calendar
+ - `yyyy-MM-dd` date format
+ - US date locale
+*/
 public let DefaultDateFormatter: DateFormatter = {
     $0.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     $0.dateFormat = "yyyy-MM-dd"
@@ -15,6 +21,7 @@ public let DefaultDateFormatter: DateFormatter = {
     return $0
 }(DateFormatter())
 
+/// Defines a global default week DateFormatter that displays the full name of the days of the week.
 public let DefaultWeekDateFormatter: DateFormatter = {
     $0.setLocalizedDateFormatFromTemplate("EEEE")
     return $0
