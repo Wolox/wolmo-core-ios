@@ -64,7 +64,7 @@ github "Wolox/wolmo-core-ios" ~> 4.1.0
 
 ## Usage
 
-The framework is divided into 2 sections: [Utilities](#utilities) and [Extensions](#extensions).
+The framework is divided into 2 sections: Utilities and Extensions.
 
 The main difference between them is that `utilities` represent components that are independent of the existance of another component. On the other hand, `extensions` represent extra functionality for other existent components. Extensions exist only because the components they rely on exists.
 
