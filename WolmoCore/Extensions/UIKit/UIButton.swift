@@ -39,7 +39,7 @@ public extension UIButton {
      - parameter imageOnRight: Boolean indicating whether the the image should be to the
             right of the text or to the left. By default, false (to the left).
      
-     - seealso: CGAffineTransform(scaleX:y:)
+     - seealso: `CGAffineTransform(scaleX:y:)`
     **/
     func setTitle(title: String, image: UIImage, spacing: CGFloat = 0, imageOnRight: Bool = false) {
         setTitle(title, for: .normal)

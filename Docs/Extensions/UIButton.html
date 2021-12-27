@@ -17,7 +17,7 @@
     <a title="UIButton Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (84% documented)</p>
+        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (85% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -307,7 +307,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets the button&rsquo;s title underlined with style and for state specified.</p>
 
                       </div>
                       <div class="declaration">
@@ -317,6 +317,64 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setUnderlined</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span> <span class="o">=</span> <span class="kt">NSUnderlineStyle</span><span class="o">.</span><span class="n">single</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">,</span> <span class="n">forState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">UIControl</span><span class="o">.</span><span class="kt">State</span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Title for the button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSUnderlineStyle with which the title is underlined.
+By default, StyleSingle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIColor for the underline, or None if the color
+should be the same as the foreground&rsquo;s. By default, None.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forState</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIControlState for which to set the title.
+By default, Normal.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -334,7 +392,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets the button&rsquo;s title and image with the specified spacing and arrangement.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><code>CGAffineTransform(scaleX:y:)</code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -344,6 +407,62 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTitle</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">imageOnRight</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Title for the button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image for the button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>spacing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Spacing between the title and the button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageOnRight</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Boolean indicating whether the the image should be to the
+   right of the text or to the left. By default, false (to the left).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

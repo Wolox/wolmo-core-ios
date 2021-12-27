@@ -15,27 +15,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/Foundation/String.swift",
-      "line": 92,
-      "symbol": "String.trimmed",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIButton.swift",
-      "line": 24,
-      "symbol": "UIButton.setUnderlined(title:style:color:forState:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIButton.swift",
-      "line": 44,
-      "symbol": "UIButton.setTitle(title:image:spacing:imageOnRight:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIFont.swift",
       "line": 11,
       "symbol": "UIFontProvider",
