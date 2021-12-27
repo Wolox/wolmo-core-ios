@@ -146,48 +146,6 @@
       "symbol": "ConfirmationAlertViewModel.confirmAction",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 16,
-      "symbol": "DeviceType.iPhone4s_previous",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 17,
-      "symbol": "DeviceType.iPhone5_5s_5c_SE",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 18,
-      "symbol": "DeviceType.iPhone6_6s_7_8",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 19,
-      "symbol": "DeviceType.iPhone6Plus_6sPlus_7Plus_8Plus",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 20,
-      "symbol": "DeviceType.iPhoneX",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Utilities/DeviceType.swift",
-      "line": 21,
-      "symbol": "DeviceType.unknown",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios"
