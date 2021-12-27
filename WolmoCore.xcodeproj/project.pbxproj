@@ -138,6 +138,7 @@
 		D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
+		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -356,6 +357,7 @@
 		D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewControllerTest.swift; sourceTree = "<group>"; };
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -632,6 +634,7 @@
 				CE3A9B7C1E607B28005D7E8F /* Timer.swift */,
 				CE3A9B7D1E607B28005D7E8F /* URL.swift */,
 				0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */,
+				EBD98936277A313100235095 /* NSAttributedString.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1241,6 +1244,7 @@
 				B988B97E1D244D6300824685 /* ErrorAlertViewModel.swift in Sources */,
 				D096135027500D3E005E42EC /* NibView.swift in Sources */,
 				CE3A9BA11E607B28005D7E8F /* Borders.swift in Sources */,
+				EBD98937277A313100235095 /* NSAttributedString.swift in Sources */,
 				CE3A9B9B1E607B28005D7E8F /* UIButton.swift in Sources */,
 				CE0DA7D11FD847D600D0B1E3 /* Gradient.swift in Sources */,
 			);

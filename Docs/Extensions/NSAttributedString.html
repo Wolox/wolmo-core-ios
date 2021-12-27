@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GradientDirection Enumeration Reference</title>
+    <title>NSAttributedString Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/GradientDirection" class="dashAnchor"></a>
-    <a title="GradientDirection Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Extension/NSAttributedString" class="dashAnchor"></a>
+    <a title="NSAttributedString Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">WolmoCore Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        GradientDirection Enumeration Reference
+        NSAttributedString Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -284,16 +284,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>GradientDirection</h1>
+            <h1>NSAttributedString</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GradientDirection</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">NSAttributedString</span></code></pre>
 
                 </div>
               </div>
-            <p>Represents the posible directions of a gradient in a view.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -301,9 +300,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO11leftToRightyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/leftToRight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO11leftToRightyA2CmF">leftToRight</a>
+                    <a name="/s:So18NSAttributedStringC9WolmoCoreE6append11superscript14percentageSizeABSS_SftF"></a>
+                    <a name="//apple_ref/swift/Method/append(superscript:percentageSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSAttributedStringC9WolmoCoreE6append11superscript14percentageSizeABSS_SftF">append(superscript:<wbr>percentageSize:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -311,16 +310,52 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from left to right.</p>
+                        <p>Returns a <code>NSAttributedString</code> formatted as a superscript.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="https://developer.apple.com/documentation/foundation/nsattributedstring">NSAttributedString</a></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">leftToRight</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">superscript</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">percentageSize</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>superscript</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the <code>String</code> to be formatted as a superscript.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>percentageSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the size percentage of the resulting superscript in relation to the font&rsquo;s <a href="https://developer.apple.com/documentation/uikit/uifont/1619031-pointsize">pointSize</a>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -328,9 +363,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO11rightToLeftyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/rightToLeft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO11rightToLeftyA2CmF">rightToLeft</a>
+                    <a name="/s:So18NSAttributedStringC9WolmoCoreE6append9subscript14percentageSizeABSS_SftF"></a>
+                    <a name="//apple_ref/swift/Method/append(subscript:percentageSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSAttributedStringC9WolmoCoreE6append9subscript14percentageSizeABSS_SftF">append(subscript:<wbr>percentageSize:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -338,178 +373,52 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from right to left.</p>
+                        <p>Returns a <code>NSAttributedString</code> formatted as a subscript.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <p><a href="https://developer.apple.com/documentation/foundation/nsattributedstring">NSAttributedString</a></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rightToLeft</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="kd">subscript</span> <span class="nv">subscriptString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">percentageSize</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO11topToBottomyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/topToBottom" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO11topToBottomyA2CmF">topToBottom</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from top to bottom.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">topToBottom</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO11bottomToTopyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/bottomToTop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO11bottomToTopyA2CmF">bottomToTop</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from bottom to top.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bottomToTop</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO20topLeftToBottomRightyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/topLeftToBottomRight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO20topLeftToBottomRightyA2CmF">topLeftToBottomRight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from top left to bottom right.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">topLeftToBottomRight</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO20bottomRightToTopLeftyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/bottomRightToTopLeft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO20bottomRightToTopLeftyA2CmF">bottomRightToTopLeft</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from bottom right to top left.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bottomRightToTopLeft</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO20topRightToBottomLeftyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/topRightToBottomLeft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO20topRightToBottomLeftyA2CmF">topRightToBottomLeft</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from top right to bottom left.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">topRightToBottomLeft</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9WolmoCore17GradientDirectionO20bottomLeftToTopRightyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/bottomLeftToTopRight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9WolmoCore17GradientDirectionO20bottomLeftToTopRightyA2CmF">bottomLeftToTopRight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the gradient&rsquo;s direction from bottom left to top right.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bottomLeftToTopRight</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subscript</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the <code>String</code> to be formatted as a subscript.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>percentageSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the size percentage of the resulting subscript in relation to the font&rsquo;s <a href="https://developer.apple.com/documentation/uikit/uifont/1619031-pointsize">pointSize</a>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
