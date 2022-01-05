@@ -16,7 +16,7 @@
  
  - note: It uses the objc runtime through objc_setAssociatedObject, but wraps the value if it is a struct.
  - warning: Using associated objects should be avoided, as they are used in runtime and not in compile time, and could lead to performance issues.
- - seealso: objc_setAssociatedObject.
+ - seealso: [objc_setAssociatedObject](https://developer.apple.com/documentation/objectivec/1418509-objc_setassociatedobject).
  */
 public func setAssociatedObject<T>(_ object: AnyObject, key: UnsafeRawPointer, value: T?, policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN) {
     guard let value = value else {
@@ -34,7 +34,7 @@ public func setAssociatedObject<T>(_ object: AnyObject, key: UnsafeRawPointer, v
  - returns: The value associated with the key key for object.
  - note: It uses the objc runtime through objc_setAssociatedObject, but wraps the object if it is a struct.
  - warning: Using associated objects should be avoided, as they are used in runtime and not in compile time, and could lead to performance issues.
- - seealso: objc_getAssociatedObject.
+ - seealso: [objc_getAssociatedObject](https://developer.apple.com/documentation/objectivec/1418865-objc_getassociatedobject).
  */
 public func getAssociatedObject<T>(_ object: AnyObject, key: UnsafeRawPointer) -> T? {
     if let value = objc_getAssociatedObject(object, key) as? T {

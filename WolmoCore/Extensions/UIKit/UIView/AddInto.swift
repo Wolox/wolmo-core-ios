@@ -11,9 +11,10 @@ import UIKit
 /**
  Indicates the way in which the layout is set.
  */
-
 public enum LayoutMode {
+    /// Sets the layout mode to be based on constraints.
     case constraints
+    /// Sets the layout mode to be based on the frame.
     case frame
 }
 
@@ -21,7 +22,9 @@ public enum LayoutMode {
  Represents the possible positions where you can add a view into another.
  */
 public enum ViewPositioning {
+    /// Positions the view behind another view.
     case back
+    /// Positions the view in front of another view.
     case front
 }
 

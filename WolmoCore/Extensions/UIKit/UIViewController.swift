@@ -56,7 +56,6 @@ public extension UIViewController {
 }
 
 // MARK: - Navigation Bar
-
 public extension UIViewController {
     /**
      Configures the navigation bar to have a particular image as back button.
@@ -150,5 +149,4 @@ public extension UIViewController {
     func setNavigationBarTitleImage(_ image: UIImage) {
         navigationItem.titleView = UIImageView(image: image)
     }
-    
 }

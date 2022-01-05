@@ -12,13 +12,21 @@ import Foundation
  Represents the posible directions of a gradient in a view.
  */
 public enum GradientDirection {
+    /// Sets the gradient's direction from left to right.
     case leftToRight
+    /// Sets the gradient's direction from right to left.
     case rightToLeft
+    /// Sets the gradient's direction from top to bottom.
     case topToBottom
+    /// Sets the gradient's direction from bottom to top.
     case bottomToTop
+    /// Sets the gradient's direction from top left to bottom right.
     case topLeftToBottomRight
+    /// Sets the gradient's direction from bottom right to top left.
     case bottomRightToTopLeft
+    /// Sets the gradient's direction from top right to bottom left.
     case topRightToBottomLeft
+    /// Sets the gradient's direction from bottom left to top right.
     case bottomLeftToTopRight
 }
 
@@ -55,10 +63,12 @@ fileprivate extension GradientDirection {
      It has a UIColor and a location which indicates where that color should be placed in the gradient.
  */
 public struct GradientColor {
-    // Color to use in gradient.
+    /// Color to use in gradient.
     public let color: UIColor
-    // Location where to place color inside the gradient.
-    // Number between 0 and 1 (inclusive).
+    /**
+     Location where to place color inside the gradient.
+     Number between 0 and 1 (inclusive).
+     */
     public let location: Float
 
     /**
@@ -86,9 +96,9 @@ public struct GradientColor {
     - note: There can only be one gradient at a time in a view.
  */
 public struct ViewGradient {
-    // Direction of the gradient.
+    /// Direction of the gradient.
     public let direction: GradientDirection
-    // GradientColors involved in the order involved.
+    /// GradientColors involved in the order involved.
     public let colors: [GradientColor]
     
     fileprivate let layer: CAGradientLayer

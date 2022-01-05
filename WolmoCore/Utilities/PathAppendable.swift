@@ -46,7 +46,7 @@ public protocol PathAppendable {
          or implement the `CustomStringConvertible` protocol and override
          the `description` property.
          
-         - see also: `String(describing: Subject)` init.
+         - seealso: `String(describing: Subject)` init.
     */
     func toPath() -> String
 }

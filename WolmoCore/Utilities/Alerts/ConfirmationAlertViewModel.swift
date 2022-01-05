@@ -13,11 +13,17 @@ import Foundation
  */
 public struct ConfirmationAlertViewModel {
     
+    /// The alert title.
     public let title: String?
+    /// The alert message.
     public let message: String?
+    /// The dismiss button title.
     public let dismissButtonTitle: String
+    /// The confirm button title.
     public let confirmButtonTitle: String
+    /// The dismiss button action.
     public let dismissAction: (ConfirmationAlertViewModel) -> Void
+    /// The confirm button action.
     public let confirmAction: (ConfirmationAlertViewModel) -> Void
     
     /**

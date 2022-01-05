@@ -15,7 +15,7 @@ public extension String {
      - parameter bundle: Bundle were to search for localization.
      - parameter arguments: Formatting arguments.
      
-     -seealso: NSLocalizedString.
+     - seealso: `NSLocalizedString.
      */
     func localized(withArguments arguments: CVarArg..., bundle: Bundle = Bundle.main) -> String {
         let localized = NSLocalizedString(self, tableName: .none, bundle: bundle, value: "", comment: "")
@@ -34,7 +34,7 @@ public extension String {
      
      - parameter arguments: Formatting arguments.
      
-     -seealso: String.init(format:arguments:)
+     - seealso: `String.init(format:arguments:)`.
      */
     func format(with arguments: CVarArg...) -> String {
         return String(format: self, arguments: arguments)
@@ -86,7 +86,7 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
     
-    /*
+    /**
      Returns a copy of the string without its leading and trailing whitespace and newlines.
      */
     var trimmed: String {
@@ -202,5 +202,4 @@ public extension String {
     static func * (lhs: Int, rhs: String) -> String {
         return String(repeating: rhs, count: lhs)
     }
-    
 }

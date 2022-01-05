@@ -11,10 +11,14 @@ import UIKit
  Properties a BorderView has.
  */
 public struct BorderViewProperties {
+    /// The thickness of the BorderView.
     public let thickness: Float
+    /// The color of the BorderView.
     public let color: UIColor
+    /// Boolean value indicating whether the border will have rounded corners or not.
     public let roundedCorners: Bool
     
+    /// Default initializer for BorderViewProperties.
     public init(thickness: Float, color: UIColor, rounded: Bool = false) {
         self.thickness = thickness
         self.color = color
@@ -26,9 +30,13 @@ public struct BorderViewProperties {
     Positions where a BorderView may appear.
  */
 public enum BorderPosition {
+    /// The BorderView is positioned on top of its parent.
     case top
+    /// The BorderView is positioned on the bottom of its parent.
     case bottom
+    /// The BorderView is positioned to the left of its parent.
     case left
+    /// The BorderView is positioned to the right of its parent.
     case right
 
     fileprivate var direction: UIView.Direction {
@@ -48,28 +56,57 @@ public enum BorderPosition {
     functions. But the only changes you are expected to do with it are:
         hide or show it,
         change its color, its alpha or other properties.
-    -warning: You are not suppose to change or use constraints with this view, that was already handled for you.
+    - warning: You are not supposed to change or use constraints with this view, that has already been handled for you.
  */
 public class BorderView: UIView {
+    /**
+     Positions where a BorderView may appear.
+
+     - seealso: `BorderPosition`.
+     */
     public let position: BorderPosition
 
+    /**
+     Initializer for `BorderView`, without specifying a frame.
+     
+     - parameter position: the position of the BorderView.
+     */
     internal convenience init(position: BorderPosition) {
         self.init(frame: .zero, position: position)
     }
 
+    /**
+     Initializer for `BorderView`.
+     
+     - parameter position: the position of the BorderView.
+     - parameter frame: the desired frame of the BorderView.
+     */
     internal init(frame: CGRect, position: BorderPosition) {
         self.position = position
         super.init(frame: frame)
     }
 
+    /**
+     This override throws a `fatalError` when trying to create a BorderView while only specifying a frame.
+     */
     override public init(frame: CGRect) {
         fatalError("You shouldn't create a BorderView this way.")
     }
 
+    /**
+     This override throws a `fatalError` when trying to create a BorderView while only specifying a `NSCoder`.
+     
+      - warning: Initializing an object with data from an unarchiver has not been implemented.
+     */
     required public init(coder: NSCoder) {
         fatalError("You shouldn't create a BorderView this way.")
     }
     
+    /**
+     If the BorderView has the rounded corners properties, this method sets `ClipsToBounds` to true.
+     
+     - parameter border: the properties of the BorderView. For more details see `BorderViewProperties`.
+     */
      func clipToBoundsBordersIfNeeded(border: BorderViewProperties) {
         if border.roundedCorners {
             self.layer.cornerRadius = CGFloat(border.thickness / 2)
@@ -319,8 +356,26 @@ public extension UIView {
 }
 
 public extension UIView {
-    func addShadow(color: CGColor = UIColor.black.cgColor, size: CGSize = CGSize(width: 0, height: 2),
-                   radius: CGFloat = 2.5, opacity: Float = 0.2, cornerRadius: CGFloat = 5) {
+    /**
+     Adds a drop shadow to the selected view.
+     
+     - parameter color: the color of the shadow.
+     
+     - parameter size: horizontal and vertical size of the shadow.
+     
+     - parameter radius: the overall extension of the shadow from the center of the view.
+     
+     - parameter cornerRadius: how rounded the corners of the shadow are.
+     
+     - note: If you decide to use constraints to determine the size, self's frame doesn't need to be final.
+     Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
+     We strongly recommend to work with constraints as a better practice than frames.
+     */
+    func addShadow(color: CGColor = UIColor.black.cgColor,
+                   size: CGSize = CGSize(width: 0, height: 2),
+                   radius: CGFloat = 2.5,
+                   opacity: Float = 0.2,
+                   cornerRadius: CGFloat = 5) {
         self.layer.shadowColor = color
         self.layer.shadowOffset = size
         self.layer.shadowRadius = radius

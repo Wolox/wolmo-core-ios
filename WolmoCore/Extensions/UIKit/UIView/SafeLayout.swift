@@ -37,6 +37,7 @@ public extension UIView {
         }
     }
 
+    /// Indicates wether this functionality is available (iOS 11.0 or newer).
     var safeLayoutInsets: UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return safeAreaInsets
