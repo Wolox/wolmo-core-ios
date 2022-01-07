@@ -10,7 +10,7 @@ import Foundation
 
 public extension NSAttributedString {
     /**
-     Returns a `NSAttributedString` formatted as a superscript.
+     Appends a `String` formatted as a superscript to a `NSAttributedString`and returns a new `NSAttributedString`.
      
      - parameter superscript: the `String` to be formatted as a superscript.
      - parameter percentageSize: the size percentage of the resulting superscript in relation to the font's [pointSize](https://developer.apple.com/documentation/uikit/uifont/1619031-pointsize).
@@ -20,6 +20,9 @@ public extension NSAttributedString {
     func append(superscript: String, percentageSize: Float = 0.4) -> NSAttributedString {
         guard percentageSize > 0 && percentageSize < 1 else {
             fatalError("Size of superscript must be a percentage (0,1)")
+        }
+        guard self.length != .zero else {
+            fatalError("Attributed string to append superscript to must not be empty")
         }
         let font: UIFont = self.attribute(
             NSAttributedString.Key.font,
@@ -39,7 +42,7 @@ public extension NSAttributedString {
     }
     
     /**
-     Returns a `NSAttributedString` formatted as a subscript.
+     Appends a `String` formatted as a subscript to a `NSAttributedString`and returns a new `NSAttributedString`.
      
      - parameter subscript: the `String` to be formatted as a subscript.
      - parameter percentageSize: the size percentage of the resulting subscript in relation to the font's [pointSize](https://developer.apple.com/documentation/uikit/uifont/1619031-pointsize).
@@ -49,6 +52,9 @@ public extension NSAttributedString {
     func append(subscript subscriptString: String, percentageSize: Float = 0.4) -> NSAttributedString {
         guard percentageSize > 0 && percentageSize < 1 else {
             fatalError("Size of subscript must be a percentage (0,1)")
+        }
+        guard self.length != .zero else {
+            fatalError("Attributed string to append subscript to must not be empty")
         }
         let font: UIFont = self.attribute(
             NSAttributedString.Key.font,
