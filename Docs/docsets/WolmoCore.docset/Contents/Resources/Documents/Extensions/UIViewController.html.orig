@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UIViewController Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UIViewController" class="dashAnchor"></a>
+    <a title="UIViewController Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">WolmoCore Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        UIViewController Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BorderView.html">BorderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChainedAnimation.html">ChainedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MixedAnimation.html">MixedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NibView.html">NibView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScrollStackViewController.html">ScrollStackViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SimpleAnimation.html">SimpleAnimation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9WolmoCore20DefaultDateFormatterSo06NSDateE0Cvp">DefaultDateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9WolmoCore24DefaultWeekDateFormatterSo06NSDateF0Cvp">DefaultWeekDateFormatter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AnimationContent.html">AnimationContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BorderPosition.html">BorderPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceType.html">DeviceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GradientDirection.html">GradientDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LayoutMode.html">LayoutMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ViewPositioning.html">ViewPositioning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Comparable.html">Comparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Si">Int</a>
+              </li>
+              <li class="nav-group-task">
+<<<<<<< HEAD
+                <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+=======
+>>>>>>> master
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Timer.html">Timer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIAlertController.html">UIAlertController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UICollectionReusableView">UICollectionReusableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UITableViewHeaderFooterView">UITableViewHeaderFooterView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Su">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1poiySo18NSAttributedStringCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1doiy10Foundation3URLVAE_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1doiyS2S_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore2eeoiySbAA14UIFontProvider_pSg_ADtF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore10SimpleName2ofSSx_tlF">SimpleName(of:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore10SimpleName6ofTypeSSypXp_tF">SimpleName(ofType:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore19getAssociatedObject_3keyxSgyXl_SVtlF">getAssociatedObject(_:key:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore15performUIUpdate5usingyyyc_tF">performUIUpdate(using:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore19setAssociatedObject_3key5value6policyyyXl_SVxSgSo22objc_AssociationPolicyVtlF">setAssociatedObject(_:key:value:policy:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AlertViewPresenter.html">AlertViewPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AnimationType.html">AnimationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Collapsable.html">Collapsable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Identifiable.html">Identifiable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NibLoadable.html">NibLoadable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathAppendable.html">PathAppendable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UIFontProvider.html">UIFontProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BorderViewProperties.html">BorderViewProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GradientColor.html">GradientColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RawRepresentableGenerator.html">RawRepresentableGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ViewGradient.html">ViewGradient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9WolmoCore6Actiona">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9WolmoCore9Transforma">Transform</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UIViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIViewController</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AlertViewPresenter.html">AlertViewPresenter</a></span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE4load09childViewB04into4with2in6layout15respectSafeAreayAB_So0A0CSo12UIEdgeInsetsVAC0G11PositioningOAC10LayoutModeOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/load(childViewController:into:with:in:layout:respectSafeArea:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE4load09childViewB04into4with2in6layout15respectSafeAreayAB_So0A0CSo12UIEdgeInsetsVAC0G11PositioningOAC10LayoutModeOSbtF">load(childViewController:<wbr>into:<wbr>with:<wbr>in:<wbr>layout:<wbr>respectSafeArea:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads the childViewController into the specified containerView.</p>
+
+<p>It can be done after self&rsquo;s view is initialized, as it uses constraints to determine the childViewController size.
+Take into account that self will retain the childViewController, so if for any other reason the childViewController is retained in another place, this would
+lead to a memory leak. In that case, one should call unloadViewController().</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="nv">childViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+          <span class="n">into</span> <span class="nv">containerView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span>
+          <span class="n">with</span> <span class="nv">insets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span>
+          <span class="k">in</span> <span class="nv">viewPositioning</span><span class="p">:</span> <span class="kt"><a href="../Enums/ViewPositioning.html">ViewPositioning</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">front</span><span class="p">,</span>
+          <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">,</span>
+          <span class="nv">respectSafeArea</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>childViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The controller to load.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>into</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The containerView into which the controller will be loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewPositioning</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Back or Front. Default: Front</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE020unloadFromParentViewB0yyF"></a>
+                    <a name="//apple_ref/swift/Method/unloadFromParentViewController()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE020unloadFromParentViewB0yyF">unloadFromParentViewController()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unloads a childViewController and its view from its parentViewController.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unloadFromParentViewController</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE26unloadChildViewControllersyyF"></a>
+                    <a name="//apple_ref/swift/Method/unloadChildViewControllers()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE26unloadChildViewControllersyyF">unloadChildViewControllers()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unloads all childViewController and their view from self.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unloadChildViewControllers</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Navigation%20Bar"></a>
+                <a name="//apple_ref/swift/Section/Navigation Bar" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Navigation%20Bar"></a>
+                  <h3 class="section-name"><span>Navigation Bar</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE26setNavigationBarBackButtonyySo7UIImageCF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarBackButton(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE26setNavigationBarBackButtonyySo7UIImageCF">setNavigationBarBackButton(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the navigation bar to have a particular image as back button.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This function must be called when self is inside a navigation controller. 
+   If not it will arise a runtime fatal error.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarBackButton</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image of the back button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarColoryySo7UIColorCF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarColor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarColoryySo7UIColorCF">setNavigationBarColor(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the navigation bar color.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This function must be called when self is inside a navigation controller. 
+   If not it will arise a runtime fatal error.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new color of the navigation bar. 
+   This represents the navigation bar background color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE25setNavigationBarTintColoryySo7UIColorCF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarTintColor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE25setNavigationBarTintColoryySo7UIColorCF">setNavigationBarTintColor(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the navigation bar tint color.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This function must be called when self is inside a navigation controller.
+   If not it will arise a runtime fatal error.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarTintColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new tint color of the navigation bar. 
+   This represents the color of the left and right button items.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarStyleyySo05UIBarH0VF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarStyle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarStyleyySo05UIBarH0VF">setNavigationBarStyle(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the navigation bar style.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This function must be called when self is inside a navigation controller.
+   If not it will arise a runtime fatal error.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarStyle</span><span class="p">(</span><span class="n">_</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarStyle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new style of the navigation bar.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE24setNavigationLeftButtonsyySaySo15UIBarButtonItemCGF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationLeftButtons(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE24setNavigationLeftButtonsyySaySo15UIBarButtonItemCGF">setNavigationLeftButtons(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a collection of buttons as the navigation bar left buttons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationLeftButtons</span><span class="p">(</span><span class="n">_</span> <span class="nv">buttons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIBarButtonItem</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buttons</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the Array of buttons to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE25setNavigationRightButtonsyySaySo15UIBarButtonItemCGF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationRightButtons(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE25setNavigationRightButtonsyySaySo15UIBarButtonItemCGF">setNavigationRightButtons(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a collection of buttons as the navigation bar right buttons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationRightButtons</span><span class="p">(</span><span class="n">_</span> <span class="nv">buttons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIBarButtonItem</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buttons</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the Array of buttons to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarTitle_4font5colorySS_So6UIFontCSo7UIColorCtF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarTitle(_:font:color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE21setNavigationBarTitle_4font5colorySS_So6UIFontCSo7UIColorCtF">setNavigationBarTitle(_:<wbr>font:<wbr>color:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds and configures a label to use as title of the navigation bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarTitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the string of the label.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the font to use for the label.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the color of the text.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE26setNavigationBarTitleImageyySo7UIImageCF"></a>
+                    <a name="//apple_ref/swift/Method/setNavigationBarTitleImage(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE26setNavigationBarTitleImageyySo7UIImageCF">setNavigationBarTitleImage(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an ImageView with the image passed as the titleView of the navigation bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setNavigationBarTitleImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to set as title.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE12presentAlert_10completionyAC05ErrorF9ViewModelV_yycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/presentAlert(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE12presentAlert_10completionyAC05ErrorF9ViewModelV_yycSgtF">presentAlert(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a new alert. The alert&rsquo;s information is stored in the ErrorAlertViewModel passed by parameter.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The closure is fired <em>when</em> the alert is shown, it is not related to the dismiss/confirmation.
+Dismiss and confirmation callbacks can be set on the <code><a href="../Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a></code>.
+
+</div><div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">presentAlert</span><span class="p">(</span><span class="n">_</span> <span class="nv">alertViewModel</span><span class="p">:</span> <span class="kt"><a href="../Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alertViewModel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ErrorAlertViewModel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure that fires when the alert is shown.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC9WolmoCoreE12presentAlert_10completionyAC012ConfirmationF9ViewModelV_yycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/presentAlert(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC9WolmoCoreE12presentAlert_10completionyAC012ConfirmationF9ViewModelV_yycSgtF">presentAlert(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a new alert. The alert&rsquo;s information is stored in the ConfirmationAlertViewModel passed by parameter.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The closure is fired <em>when</em> the alert is shown, it is not related to the dismiss/confirmation.
+Dismiss and confirmation callbacks can be set on the <code><a href="../Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a></code>.
+
+</div><div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a></code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">presentAlert</span><span class="p">(</span><span class="n">_</span> <span class="nv">alertViewModel</span><span class="p">:</span> <span class="kt"><a href="../Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alertViewModel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ConfirmationAlertViewModel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure that fires when the alert is shown.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+<<<<<<< HEAD
+          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-01-07)</p>
+=======
+          <p>&copy; 2021 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2021-12-27)</p>
+>>>>>>> master
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

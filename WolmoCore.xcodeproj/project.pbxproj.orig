@@ -131,8 +131,12 @@
 		D0FD9ABE2773B607008F240F /* GesturesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FD9ABD2773B606008F240F /* GesturesView.xib */; };
 		D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9ABF2773B750008F240F /* GesturesView.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
+<<<<<<< HEAD
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
+		EB59DF9C02A739515EC3F55D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FE1C4ABB73D7715E34015B /* Pods_AnimationDemo.framework */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
+=======
+>>>>>>> master
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
 /* End PBXBuildFile section */
 
