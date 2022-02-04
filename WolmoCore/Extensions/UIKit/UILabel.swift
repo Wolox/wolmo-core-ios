@@ -9,14 +9,6 @@
 import Foundation
 
 public extension UILabel {
-
-    convenience init(text: String, font: UIFont, numberOfLines: Int = 1) {
-        self.init(frame: .zero)
-        self.text = text
-        self.font = font
-        self.numberOfLines = numberOfLines
-    }
-    
     /**
      fontTextStyle is intended to be used instead of setting the font style by taking advantage of
      `UIFont.preferredFont(forTextStyle:)` to manage your apps fonts.
@@ -29,11 +21,10 @@ public extension UILabel {
      - warning: To avoid memory leak and crashes, you should set the `fontTextStyle` to .none before deallocating the label.
      - seealso: UIFont.appFontName(for:).
      */
-    public var fontTextStyle: UIFont.TextStyle? {
+    var fontTextStyle: UIFont.TextStyle? {
         get {
             return getStyle()
         }
-
         set {
             if fontTextStyle != nil {
                 removeOldStyle()
@@ -42,6 +33,13 @@ public extension UILabel {
                 applyNewStyle(style)
             }
         }
+    }
+    
+    convenience init(text: String, font: UIFont, numberOfLines: Int = 1) {
+        self.init(frame: .zero)
+        self.text = text
+        self.font = font
+        self.numberOfLines = numberOfLines
     }
 
     private func getStyle() -> UIFont.TextStyle? {
@@ -62,7 +60,6 @@ public extension UILabel {
         }
         setAssociatedObject(self, key: &fontTextStyleObserverKey, value: observer as NSKeyValueObservation?)
     }
-
 }
 
 private var fontTextStyleKey: UInt8 = 0

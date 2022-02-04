@@ -7,17 +7,13 @@
 //
 
 import Foundation
-
 import Quick
 import Nimble
 import WolmoCore
 
 public class PanRecognizerSpec: QuickSpec {
-    
     override public func spec() {
-        
         describe("#addPanGestureRecognizer(Action:)") {
-            
             var view: UIView!
             
             context("when addPanGestureRecognizer has been called") {
@@ -27,7 +23,6 @@ public class PanRecognizerSpec: QuickSpec {
                         // No action
                     }
                 }
-                
                 it("should have injected a UIPanGestureRecognizer into the view") {
                     let panRecognizer = view.gestureRecognizers?.first as? UIPanGestureRecognizer
                     expect(panRecognizer).toNot(beNil())

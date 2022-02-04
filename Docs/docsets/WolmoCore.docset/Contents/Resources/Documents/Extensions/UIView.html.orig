@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UIView Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UIView" class="dashAnchor"></a>
+    <a title="UIView Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">WolmoCore Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        UIView Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BorderView.html">BorderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChainedAnimation.html">ChainedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MixedAnimation.html">MixedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NibView.html">NibView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScrollStackViewController.html">ScrollStackViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SimpleAnimation.html">SimpleAnimation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9WolmoCore20DefaultDateFormatterSo06NSDateE0Cvp">DefaultDateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9WolmoCore24DefaultWeekDateFormatterSo06NSDateF0Cvp">DefaultWeekDateFormatter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AnimationContent.html">AnimationContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BorderPosition.html">BorderPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceType.html">DeviceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GradientDirection.html">GradientDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LayoutMode.html">LayoutMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ViewPositioning.html">ViewPositioning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Comparable.html">Comparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Si">Int</a>
+              </li>
+              <li class="nav-group-task">
+<<<<<<< HEAD
+                <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+=======
+>>>>>>> master
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Timer.html">Timer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIAlertController.html">UIAlertController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UICollectionReusableView">UICollectionReusableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)UITableViewHeaderFooterView">UITableViewHeaderFooterView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Su">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1poiySo18NSAttributedStringCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1doiy10Foundation3URLVAE_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore1doiyS2S_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore2eeoiySbAA14UIFontProvider_pSg_ADtF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore10SimpleName2ofSSx_tlF">SimpleName(of:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore10SimpleName6ofTypeSSypXp_tF">SimpleName(ofType:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore19getAssociatedObject_3keyxSgyXl_SVtlF">getAssociatedObject(_:key:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore15performUIUpdate5usingyyyc_tF">performUIUpdate(using:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9WolmoCore19setAssociatedObject_3key5value6policyyyXl_SVxSgSo22objc_AssociationPolicyVtlF">setAssociatedObject(_:key:value:policy:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AlertViewPresenter.html">AlertViewPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AnimationType.html">AnimationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Collapsable.html">Collapsable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Identifiable.html">Identifiable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NibLoadable.html">NibLoadable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathAppendable.html">PathAppendable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UIFontProvider.html">UIFontProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BorderViewProperties.html">BorderViewProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GradientColor.html">GradientColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RawRepresentableGenerator.html">RawRepresentableGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ViewGradient.html">ViewGradient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9WolmoCore6Actiona">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9WolmoCore9Transforma">Transform</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UIView</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE8PositionO"></a>
+                    <a name="//apple_ref/swift/Enum/Position" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE8PositionO">Position</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Positions where a view may be placed, relative to a superview.</p>
+
+                        <a href="../Extensions/UIView/Position.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Position</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE15simpleAnimationAC06SimpleE0CyF"></a>
+                    <a name="//apple_ref/swift/Method/simpleAnimation()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE15simpleAnimationAC06SimpleE0CyF">simpleAnimation()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a SimpleAnimation that allows you to add different actions and transformations to the view, executing each of them only when the previous one is finished in the order they were added.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">simpleAnimation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SimpleAnimation.html">SimpleAnimation</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SimpleAnimation for this view</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE14mixedAnimation12withDurationAC05MixedE0CSd_tF"></a>
+                    <a name="//apple_ref/swift/Method/mixedAnimation(withDuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE14mixedAnimation12withDurationAC05MixedE0CSd_tF">mixedAnimation(withDuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a MixedAnimation that allows you to add different actions and transformations to the view, concatenating and executing first all transformations and when that is done, executes each action that was added.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mixedAnimation</span><span class="p">(</span><span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MixedAnimation.html">MixedAnimation</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>MixedAnimation for this view</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE16chainedAnimation4loopAC07ChainedE0CSb_tF"></a>
+                    <a name="//apple_ref/swift/Method/chainedAnimation(loop:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE16chainedAnimation4loopAC07ChainedE0CSb_tF">chainedAnimation(loop:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a ChainedAnimation that allows you to combine SimpleAnimations and MixedAnimations, and execute them in the order they were added.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">chainedAnimation</span><span class="p">(</span><span class="nv">loop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ChainedAnimation.html">ChainedAnimation</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>ChainedAnimation for this view</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE5shake12withDuration11repeatShakeySd_SftF"></a>
+                    <a name="//apple_ref/swift/Method/shake(withDuration:repeatShake:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE5shake12withDuration11repeatShakeySd_SftF">shake(withDuration:<wbr>repeatShake:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a shake animation that executes the closure when long pressed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">shake</span><span class="p">(</span><span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="nv">repeatShake</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time in seconds the animation will be executed. Default is 0.05</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>repeatShake</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of times the view will change position. Default is 3</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE11isDraggable16returnToPosition12withDuration13onDragStarted0kL8FinishedySb_SdyABcSgAItF"></a>
+                    <a name="//apple_ref/swift/Method/isDraggable(returnToPosition:withDuration:onDragStarted:onDragFinished:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE11isDraggable16returnToPosition12withDuration13onDragStarted0kL8FinishedySb_SdyABcSgAItF">isDraggable(returnToPosition:<wbr>withDuration:<wbr>onDragStarted:<wbr>onDragFinished:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows dragging the view and executing actions when the press gesture begins or ends.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isDraggable</span><span class="p">(</span><span class="nv">returnToPosition</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nv">onDragStarted</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?,</span> <span class="nv">onDragFinished</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>returnToPosition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether the view will return to its original position when released. Default is true</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time in seconds that it takes for the view to return to the original position. Default is 0.5</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onDragStarted</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is held</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>onDragFinished</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is released</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE3add4into4with2in6layout15respectSafeAreayAB_So12UIEdgeInsetsVAC15ViewPositioningOAC10LayoutModeOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/add(into:with:in:layout:respectSafeArea:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE3add4into4with2in6layout15respectSafeAreayAB_So12UIEdgeInsetsVAC15ViewPositioningOAC10LayoutModeOSbtF">add(into:<wbr>with:<wbr>in:<wbr>layout:<wbr>respectSafeArea:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads the view into the specified containerView.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, the container&rsquo;s frame doesn&rsquo;t need to be final.
+Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+We strongly recommend to work with constraints as a better practice than frames.
+Also, this function matches left inset to leading and right to trailing of the view.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">into</span> <span class="nv">containerView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span>
+         <span class="n">with</span> <span class="nv">insets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span>
+         <span class="k">in</span> <span class="nv">viewPositioning</span><span class="p">:</span> <span class="kt"><a href="../Enums/ViewPositioning.html">ViewPositioning</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">front</span><span class="p">,</span>
+         <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">,</span>
+         <span class="nv">respectSafeArea</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>insets</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Insets that separate self from the container view. By default, .zero.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewPositioning</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Back or Front. By default, .front.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE3add3top14withLeftOffset05rightH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF"></a>
+                    <a name="//apple_ref/swift/Method/add(top:withLeftOffset:rightOffset:layout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE3add3top14withLeftOffset05rightH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF">add(top:<wbr>withLeftOffset:<wbr>rightOffset:<wbr>layout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a border to the top of the view, inside the view&rsquo;s bounds.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+    Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+    We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">top</span> <span class="nv">border</span><span class="p">:</span> <span class="kt"><a href="../Structs/BorderViewProperties.html">BorderViewProperties</a></span><span class="p">,</span>
+         <span class="n">withLeftOffset</span> <span class="nv">left</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="n">rightOffset</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BorderView.html">BorderView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>border</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Models characteristics of the border to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s left border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s right border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE3add6bottom14withLeftOffset05rightH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF"></a>
+                    <a name="//apple_ref/swift/Method/add(bottom:withLeftOffset:rightOffset:layout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE3add6bottom14withLeftOffset05rightH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF">add(bottom:<wbr>withLeftOffset:<wbr>rightOffset:<wbr>layout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a border to the bottom of the view, inside the view&rsquo;s bounds.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+    Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+    We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">bottom</span> <span class="nv">border</span><span class="p">:</span> <span class="kt"><a href="../Structs/BorderViewProperties.html">BorderViewProperties</a></span><span class="p">,</span>
+         <span class="n">withLeftOffset</span> <span class="nv">left</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rightOffset</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BorderView.html">BorderView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>border</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Models characteristics of the border to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s left border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s right border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE3add4left13withTopOffset06bottomH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF"></a>
+                    <a name="//apple_ref/swift/Method/add(left:withTopOffset:bottomOffset:layout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE3add4left13withTopOffset06bottomH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF">add(left:<wbr>withTopOffset:<wbr>bottomOffset:<wbr>layout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a border to the left of the view, inside the view&rsquo;s bounds.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+    Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+    We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">left</span> <span class="nv">border</span><span class="p">:</span> <span class="kt"><a href="../Structs/BorderViewProperties.html">BorderViewProperties</a></span><span class="p">,</span>
+         <span class="n">withTopOffset</span> <span class="nv">top</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="n">bottomOffset</span> <span class="nv">bottom</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BorderView.html">BorderView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>border</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Models characteristics of the border to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s left border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s right border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE3add5right13withTopOffset06bottomH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF"></a>
+                    <a name="//apple_ref/swift/Method/add(right:withTopOffset:bottomOffset:layout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE3add5right13withTopOffset06bottomH06layoutAC10BorderViewCAC0kL10PropertiesV_0C8Graphics7CGFloatVAoC10LayoutModeOtF">add(right:<wbr>withTopOffset:<wbr>bottomOffset:<wbr>layout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a border to the right of the view, inside the view&rsquo;s bounds.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+    Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+    We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">right</span> <span class="nv">border</span><span class="p">:</span> <span class="kt"><a href="../Structs/BorderViewProperties.html">BorderViewProperties</a></span><span class="p">,</span>
+         <span class="n">withTopOffset</span> <span class="nv">top</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="n">bottomOffset</span> <span class="nv">bottom</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BorderView.html">BorderView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>border</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Models characteristics of the border to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s left border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Offset from the view&rsquo;s right border to where the border should start.
+   By default, 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE6remove6borderyAC10BorderViewC_tF"></a>
+                    <a name="//apple_ref/swift/Method/remove(border:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE6remove6borderyAC10BorderViewC_tF">remove(border:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the border view from self, only if
+the border was a child view to self.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">border</span><span class="p">:</span> <span class="kt"><a href="../Classes/BorderView.html">BorderView</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE10addBorders10properties9positions6layoutyAC20BorderViewPropertiesV_SayAC0I8PositionOGAC10LayoutModeOtF"></a>
+                    <a name="//apple_ref/swift/Method/addBorders(properties:positions:layout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE10addBorders10properties9positions6layoutyAC20BorderViewPropertiesV_SayAC0I8PositionOGAC10LayoutModeOtF">addBorders(properties:<wbr>positions:<wbr>layout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds borders to the selected sides of the view, inside the view&rsquo;s bounds.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addBorders</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="kt"><a href="../Structs/BorderViewProperties.html">BorderViewProperties</a></span><span class="p">,</span> <span class="nv">positions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/BorderPosition.html">BorderPosition</a></span><span class="p">],</span> <span class="nv">layout</span><span class="p">:</span> <span class="kt"><a href="../Enums/LayoutMode.html">LayoutMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">constraints</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>properties</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>characteristics of the borders to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>positions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the sides of the view where borders will be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>layout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Enum indicating the layout mode. By default, .constraints.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE9addShadow5color4size6radius7opacity12cornerRadiusySo10CGColorRefa_So6CGSizeV0C8Graphics7CGFloatVSfAPtF"></a>
+                    <a name="//apple_ref/swift/Method/addShadow(color:size:radius:opacity:cornerRadius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE9addShadow5color4size6radius7opacity12cornerRadiusySo10CGColorRefa_So6CGSizeV0C8Graphics7CGFloatVSfAPtF">addShadow(color:<wbr>size:<wbr>radius:<wbr>opacity:<wbr>cornerRadius:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a drop shadow to the selected view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you decide to use constraints to determine the size, self&rsquo;s frame doesn&rsquo;t need to be final.
+Because of this, it can be used in <code>loadView()</code>, <code>viewDidLoad()</code> or <code>viewWillAppear(animated:)</code>.
+We strongly recommend to work with constraints as a better practice than frames.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addShadow</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">CGColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="o">.</span><span class="n">cgColor</span><span class="p">,</span>
+               <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">2</span><span class="p">),</span>
+               <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span>
+               <span class="nv">opacity</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+               <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the color of the shadow.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>horizontal and vertical size of the shadow.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the overall extension of the shadow from the center of the view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cornerRadius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>how rounded the corners of the shadow are.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE29addLongPressGestureRecognizer20numberOfTapsRequired0ij7TouchesL007minimumF8Duration17allowableMovement6actionySi_SiSd0C8Graphics7CGFloatVySo06UILongfgH0CcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addLongPressGestureRecognizer(numberOfTapsRequired:numberOfTouchesRequired:minimumPressDuration:allowableMovement:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE29addLongPressGestureRecognizer20numberOfTapsRequired0ij7TouchesL007minimumF8Duration17allowableMovement6actionySi_SiSd0C8Graphics7CGFloatVySo06UILongfgH0CcSgtF">addLongPressGestureRecognizer(numberOfTapsRequired:<wbr>numberOfTouchesRequired:<wbr>minimumPressDuration:<wbr>allowableMovement:<wbr>action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a long-press gesture recognizer that executes the closure when long pressed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addLongPressGestureRecognizer</span><span class="p">(</span><span class="nv">numberOfTapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                   <span class="nv">numberOfTouchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                                   <span class="nv">minimumPressDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                                   <span class="nv">allowableMovement</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                                   <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UILongPressGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfTapsRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of full taps required before the press for gesture to be recognized. Default is 0</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfTouchesRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of fingers that must be held down for the gesture to be recognized. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimumPressDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time in seconds the fingers must be held down for the gesture to be recognized. Default is 0.5</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowableMovement</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum movement in pixels allowed before the gesture fails. Once recognized (after minimumPressDuration) there is no limit on finger movement for the remainder of the touch tracking. Default is 10</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is long pressed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE23addPanGestureRecognizer22minimumNumberOfTouches07maximumijK06actionySi_SiySo05UIPanfG0CcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addPanGestureRecognizer(minimumNumberOfTouches:maximumNumberOfTouches:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE23addPanGestureRecognizer22minimumNumberOfTouches07maximumijK06actionySi_SiySo05UIPanfG0CcSgtF">addPanGestureRecognizer(minimumNumberOfTouches:<wbr>maximumNumberOfTouches:<wbr>action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a pan gesture recognizer that executes the closure when panned</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPanGestureRecognizer</span><span class="p">(</span><span class="nv">minimumNumberOfTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="nv">maximumNumberOfTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">.</span><span class="n">max</span><span class="p">,</span>
+                             <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIPanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimumNumberOfTouches</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The minimum number of touches required to match. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximumNumberOfTouches</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of touches that can be down. Default is Int.max</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is panned</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE25addPinchGestureRecognizer6actionyySo07UIPinchfG0CcSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/addPinchGestureRecognizer(action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE25addPinchGestureRecognizer6actionyySo07UIPinchfG0CcSg_tF">addPinchGestureRecognizer(action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a pinch gesture recognizer that executes the closure when pinched</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPinchGestureRecognizer</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIPinchGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is pinched</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE28addRotationGestureRecognizer6actionyySo010UIRotationfG0CcSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/addRotationGestureRecognizer(action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE28addRotationGestureRecognizer6actionyySo010UIRotationfG0CcSg_tF">addRotationGestureRecognizer(action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a rotation gesture recognizer that executes the closure when rotated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addRotationGestureRecognizer</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIRotationGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is rotated</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE33addScreenEdgePanGestureRecognizer4edge6actionySo06UIRectF0V_ySo08UIScreenfghI0CcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addScreenEdgePanGestureRecognizer(edge:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE33addScreenEdgePanGestureRecognizer4edge6actionySo06UIRectF0V_ySo08UIScreenfghI0CcSgtF">addScreenEdgePanGestureRecognizer(edge:<wbr>action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a screen-edge-pan gesture recognizer that executes the closure when panned on the edge</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addScreenEdgePanGestureRecognizer</span><span class="p">(</span><span class="nv">edge</span><span class="p">:</span> <span class="kt">UIRectEdge</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIScreenEdgePanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>edge</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The edge on which this gesture recognizes, relative to the current interface orientation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the edge of the view is panned</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE25addSwipeGestureRecognizer23numberOfTouchesRequired9direction6actionySi_So07UISwipefG9DirectionVySo0nfG0CcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addSwipeGestureRecognizer(numberOfTouchesRequired:direction:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE25addSwipeGestureRecognizer23numberOfTouchesRequired9direction6actionySi_So07UISwipefG9DirectionVySo0nfG0CcSgtF">addSwipeGestureRecognizer(numberOfTouchesRequired:<wbr>direction:<wbr>action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a swipe gesture recognizer that executes the closure when swiped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addSwipeGestureRecognizer</span><span class="p">(</span><span class="nv">numberOfTouchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                               <span class="nv">direction</span><span class="p">:</span> <span class="kt">UISwipeGestureRecognizer</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">right</span><span class="p">,</span>
+                               <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UISwipeGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfTouchesRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of fingers that must swipe. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The desired direction of the swipe. Multiple directions may be specified if they will result in the same behavior (for example, UITableView swipe delete). Default is right</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will execute when the view is swiped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE23addTapGestureRecognizer20numberOfTapsRequired0hi7TouchesK06actionySi_SiySo05UITapfG0CcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addTapGestureRecognizer(numberOfTapsRequired:numberOfTouchesRequired:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE23addTapGestureRecognizer20numberOfTapsRequired0hi7TouchesK06actionySi_SiySo05UITapfG0CcSgtF">addTapGestureRecognizer(numberOfTapsRequired:<wbr>numberOfTouchesRequired:<wbr>action:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a tap gesture recognizer that executes the closure when tapped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addTapGestureRecognizer</span><span class="p">(</span><span class="nv">numberOfTapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="nv">numberOfTouchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="nv">action</span><span class="p">:</span> <span class="p">((</span><span class="kt">UITapGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfTapsRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of taps required to match. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfTouchesRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of fingers required to match. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of fingers required to match. Default is 1</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE8gradientAC12ViewGradientVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/gradient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE8gradientAC12ViewGradientVSgvp">gradient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ViewGradient applied currently to the view.
+A view can only have one gradient at a time.
+When setting this property to a new gradient, the old one will be removed,
+    and when set to .none the current one will be removed.
+The gradient will always have the same direction in relation to the view&rsquo;s
+    orientation at a certain time.
+The gradient will always acommodate to the view&rsquo;s change in size or orientation.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    To avoid memory leak and crashes, you should set the <code>gradient</code> to .none before deallocating the view.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">gradient</span><span class="p">:</span> <span class="kt"><a href="../Structs/ViewGradient.html">ViewGradient</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE15safeLayoutGuideSo08UILayoutF0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/safeLayoutGuide" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE15safeLayoutGuideSo08UILayoutF0Cvp">safeLayoutGuide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is an extension for layout compatibility between iOS 11 and lower versions.
+If the native safe layout guide is not available, then return a regular layout guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">safeLayoutGuide</span><span class="p">:</span> <span class="kt">UILayoutGuide</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE16safeLayoutInsetsSo06UIEdgeF0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/safeLayoutInsets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE16safeLayoutInsetsSo06UIEdgeF0Vvp">safeLayoutInsets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates wether this functionality is available (iOS 11.0 or newer).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">safeLayoutInsets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+<<<<<<< HEAD
+          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-01-07)</p>
+=======
+          <p>&copy; 2021 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2021-12-27)</p>
+>>>>>>> master
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

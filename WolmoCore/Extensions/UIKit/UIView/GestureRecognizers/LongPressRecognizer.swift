@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIView {
-    
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {
@@ -20,15 +19,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var longPressGestureRecognizerAction: Action? {
+        get {
+            let longPressGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.longPressGestureRecognizer) as? Action
+            return longPressGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.longPressGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let longPressGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.longPressGestureRecognizer) as? Action
-            return longPressGestureRecognizerActionInstance
         }
     }
     
@@ -41,11 +40,11 @@ public extension UIView {
      - Parameter allowableMovement: Maximum movement in pixels allowed before the gesture fails. Once recognized (after minimumPressDuration) there is no limit on finger movement for the remainder of the touch tracking. Default is 10
      - Parameter action: The closure that will execute when the view is long pressed
      */
-    public func addLongPressGestureRecognizer(numberOfTapsRequired: Int = 0,
-                                              numberOfTouchesRequired: Int = 1,
-                                              minimumPressDuration: TimeInterval = 0.5,
-                                              allowableMovement: CGFloat = 10,
-                                              action: ((UILongPressGestureRecognizer) -> Void)?) {
+    func addLongPressGestureRecognizer(numberOfTapsRequired: Int = 0,
+                                       numberOfTouchesRequired: Int = 1,
+                                       minimumPressDuration: TimeInterval = 0.5,
+                                       allowableMovement: CGFloat = 10,
+                                       action: ((UILongPressGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         longPressGestureRecognizerAction = action
         
@@ -66,5 +65,4 @@ public extension UIView {
             print("No action for the long-press gesture")
         }
     }
-    
 }

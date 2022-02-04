@@ -11,9 +11,10 @@ import UIKit
 /**
  Indicates the way in which the layout is set.
  */
-
 public enum LayoutMode {
+    /// Sets the layout mode to be based on constraints.
     case constraints
+    /// Sets the layout mode to be based on the frame.
     case frame
 }
 
@@ -21,12 +22,13 @@ public enum LayoutMode {
  Represents the possible positions where you can add a view into another.
  */
 public enum ViewPositioning {
+    /// Positions the view behind another view.
     case back
+    /// Positions the view in front of another view.
     case front
 }
 
 public extension UIView {
-
     /**
      Loads the view into the specified containerView.
 
@@ -40,11 +42,11 @@ public extension UIView {
      We strongly recommend to work with constraints as a better practice than frames.
      Also, this function matches left inset to leading and right to trailing of the view.
      */
-    public func add(into containerView: UIView,
-                    with insets: UIEdgeInsets = .zero,
-                    in viewPositioning: ViewPositioning = .front,
-                    layout: LayoutMode = .constraints,
-                    respectSafeArea: Bool = false) {
+    func add(into containerView: UIView,
+             with insets: UIEdgeInsets = .zero,
+             in viewPositioning: ViewPositioning = .front,
+             layout: LayoutMode = .constraints,
+             respectSafeArea: Bool = false) {
 
         switch layout {
         case .constraints:
@@ -97,5 +99,4 @@ public extension UIView {
             return CGRect(x: x, y: y, width: width, height: height)
         }
     }
-
 }

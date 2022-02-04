@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIImageView {
-    
     /**
      Initializes an UIImageView with a corner radius and an optional content mode (whose default value is "scaleAspectFIll")
      
@@ -44,5 +43,4 @@ public extension UIImageView {
         contentMode = .scaleAspectFit
         image = string.toImage(font: font)
     }
-    
 }

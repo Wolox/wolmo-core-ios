@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UIView {
-    
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {
@@ -20,15 +19,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var tapGestureRecognizerAction: Action? {
+        get {
+            let tapGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer) as? Action
+            return tapGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let tapGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer) as? Action
-            return tapGestureRecognizerActionInstance
         }
     }
     
@@ -39,9 +38,9 @@ public extension UIView {
      - Parameter numberOfTouchesRequired: The number of fingers required to match. Default is 1
      - Parameter action: The number of fingers required to match. Default is 1
      */
-    public func addTapGestureRecognizer(numberOfTapsRequired: Int = 1,
-                                        numberOfTouchesRequired: Int = 1,
-                                        action: ((UITapGestureRecognizer) -> Void)?) {
+    func addTapGestureRecognizer(numberOfTapsRequired: Int = 1,
+                                 numberOfTouchesRequired: Int = 1,
+                                 action: ((UITapGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         tapGestureRecognizerAction = action
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
@@ -59,5 +58,4 @@ public extension UIView {
             print("No action for the tap gesture")
         }
     }
-    
 }

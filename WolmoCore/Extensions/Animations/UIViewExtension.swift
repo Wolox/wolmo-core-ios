@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 public extension UIView {
-    
+    /// Positions where a view may be placed, relative to a superview.
     enum Position {
+        /// Position behind the superview.
         case back
+        /// Position in front of the superview.
         case front
     }
     
@@ -54,7 +56,7 @@ public extension UIView {
      
      */
     
-    public func shake(withDuration duration: TimeInterval = 0.05, repeatShake: Float = 3) {
+    func shake(withDuration duration: TimeInterval = 0.05, repeatShake: Float = 3) {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = duration
         animation.repeatCount = repeatShake
@@ -75,7 +77,7 @@ public extension UIView {
      
      */
     
-    public func isDraggable(returnToPosition: Bool = true, withDuration duration: TimeInterval = 0.5, onDragStarted: ((UIView) -> Void)?, onDragFinished: ((UIView) -> Void)?) {
+    func isDraggable(returnToPosition: Bool = true, withDuration duration: TimeInterval = 0.5, onDragStarted: ((UIView) -> Void)?, onDragFinished: ((UIView) -> Void)?) {
         var origin: CGPoint = frame.origin
         
         addPanGestureRecognizer { [weak self] recognizer in
@@ -100,5 +102,4 @@ public extension UIView {
             }
         }
     }
-    
 }

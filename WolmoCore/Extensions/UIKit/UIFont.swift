@@ -8,23 +8,19 @@
 
 import Foundation
 
-// Needs to be a class or it won't work.
-// TODO: Check why. Maybe for the `setAssociatedObject`? You can check using UILabelSpec.
-public protocol UIFontProvider: class {
-
+/// Declares and object that provides font names associated with specific font text styles.
+public protocol UIFontProvider: AnyObject {
     /**
      Returns a valid font name associated with the font text style specified.
      By default, returns the font name of the font returned by
      `UIFont.preferredFont(forTextStyle:)`.
-
-     - parameter style: A UIFontTextStyle.
-
-     - seealso: `UIFont.preferredFont(forTextStyle:)`.
      */
     func appFontName(for style: UIFont.TextStyle) -> String
-
 }
 
+/**
+ Returns a Boolean value indicating whether the font names of two `UIFontProvider` font text styles are equal.
+ */
 public func == (lhs: UIFontProvider?, rhs: UIFontProvider?) -> Bool {
     switch (lhs, rhs) {
     case (.none, .none): return true
@@ -47,25 +43,30 @@ public func == (lhs: UIFontProvider?, rhs: UIFontProvider?) -> Bool {
 }
 
 public extension UIFontProvider {
+    /**
+     Returns a valid font name associated with the font text style specified.
+     By default, returns the font name of the font returned by
+     `UIFont.preferredFont(forTextStyle:)`.
 
-    public func appFontName(for style: UIFont.TextStyle) -> String {
+     - parameter style: A UIFontTextStyle.
+
+     - seealso: [UIFont.preferredFont(forTextStyle:)](https://developer.apple.com/documentation/uikit/uifont/1619030-preferredfont).
+     */
+    func appFontName(for style: UIFont.TextStyle) -> String {
         return UIFont.preferredFont(forTextStyle: style).fontName
     }
-
 }
 
 private class DefaultFontProvider: UIFontProvider { }
 
 public extension UIFont {
-
     /**
      UIFontProvider used to get the fonts associated with UIFontTextStyles.
     */
-    public static var fontProvider: UIFontProvider? {
+    static var fontProvider: UIFontProvider? {
         get {
             return getAssociatedObject(self, key: &fontProviderKey)
         }
-
         set {
             setAssociatedObject(self, key: &fontProviderKey, value: newValue)
         }
@@ -80,9 +81,9 @@ public extension UIFont {
      - parameter style: The app's font style we want to use.
      - warning: This function may fail in runtime is the font provided by the `fontProvider`
         property is not a valid one (because it doesn't exist or it isn't added in the bundle).
-     - seealso: UIFont.fontProvider and UIFont.preferredFont(forTextStyle:)
+     - seealso: UIFont.fontProvider and [UIFont.preferredFont(forTextStyle:)](https://developer.apple.com/documentation/uikit/uifont/1619030-preferredfont)
     */
-    public static func appFont(for style: UIFont.TextStyle) -> UIFont {
+    static func appFont(for style: UIFont.TextStyle) -> UIFont {
         let defaultFont = UIFont.preferredFont(forTextStyle: style)
         let provider = fontProvider ?? DefaultFontProvider()
         let fontName = provider.appFontName(for: style)
@@ -91,7 +92,6 @@ public extension UIFont {
         }
         fatalError("The font name associated with UIFontTextStyle \(style) is not valid.")
     }
-
 }
 
 private var fontProviderKey: UInt8 = 0

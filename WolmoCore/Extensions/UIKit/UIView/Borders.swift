@@ -8,16 +8,21 @@
 import UIKit
 
 /**
-    Properties a BorderView has.
+ Properties a BorderView has.
  */
 public struct BorderViewProperties {
-    
+    /// The thickness of the BorderView.
     public let thickness: Float
+    /// The color of the BorderView.
     public let color: UIColor
+    /// Boolean value indicating whether the border will have rounded corners or not.
+    public let roundedCorners: Bool
     
-    public init(thickness: Float, color: UIColor) {
+    /// Default initializer for BorderViewProperties.
+    public init(thickness: Float, color: UIColor, rounded: Bool = false) {
         self.thickness = thickness
         self.color = color
+        self.roundedCorners = rounded
     }
 }
 
@@ -25,9 +30,13 @@ public struct BorderViewProperties {
     Positions where a BorderView may appear.
  */
 public enum BorderPosition {
+    /// The BorderView is positioned on top of its parent.
     case top
+    /// The BorderView is positioned on the bottom of its parent.
     case bottom
+    /// The BorderView is positioned to the left of its parent.
     case left
+    /// The BorderView is positioned to the right of its parent.
     case right
 
     fileprivate var direction: UIView.Direction {
@@ -47,39 +56,72 @@ public enum BorderPosition {
     functions. But the only changes you are expected to do with it are:
         hide or show it,
         change its color, its alpha or other properties.
-    -warning: You are not suppose to change or use constraints with this view, that was already handled for you.
+    - warning: You are not supposed to change or use constraints with this view, that has already been handled for you.
  */
 public class BorderView: UIView {
+    /**
+     Positions where a BorderView may appear.
 
+     - seealso: `BorderPosition`.
+     */
     public let position: BorderPosition
 
+    /**
+     Initializer for `BorderView`, without specifying a frame.
+     
+     - parameter position: the position of the BorderView.
+     */
     internal convenience init(position: BorderPosition) {
         self.init(frame: .zero, position: position)
     }
 
+    /**
+     Initializer for `BorderView`.
+     
+     - parameter position: the position of the BorderView.
+     - parameter frame: the desired frame of the BorderView.
+     */
     internal init(frame: CGRect, position: BorderPosition) {
         self.position = position
         super.init(frame: frame)
     }
 
+    /**
+     This override throws a `fatalError` when trying to create a BorderView while only specifying a frame.
+     */
     override public init(frame: CGRect) {
         fatalError("You shouldn't create a BorderView this way.")
     }
 
+    /**
+     This override throws a `fatalError` when trying to create a BorderView while only specifying a `NSCoder`.
+     
+      - warning: Initializing an object with data from an unarchiver has not been implemented.
+     */
     required public init(coder: NSCoder) {
         fatalError("You shouldn't create a BorderView this way.")
     }
-
+    
+    /**
+     If the BorderView has the rounded corners properties, this method sets `ClipsToBounds` to true.
+     
+     - parameter border: the properties of the BorderView. For more details see `BorderViewProperties`.
+     */
+     func clipToBoundsBordersIfNeeded(border: BorderViewProperties) {
+        if border.roundedCorners {
+            self.layer.cornerRadius = CGFloat(border.thickness / 2)
+            self.clipsToBounds = true
+        }
+    }
 }
 
 fileprivate extension UIView {
-    
-    fileprivate enum Direction {
+    enum Direction {
         case horizontal
         case vertical
     }
     
-    fileprivate func addBorderView(from border: BorderViewProperties, position: BorderPosition) -> BorderView {
+    func addBorderView(from border: BorderViewProperties, position: BorderPosition) -> BorderView {
         let borderView = BorderView(position: position)
         borderView.backgroundColor = border.color
         addSubview(borderView)
@@ -88,11 +130,9 @@ fileprivate extension UIView {
         anchor.constraint(equalToConstant: CGFloat(border.thickness)).isActive = true
         return borderView
     }
-
 }
 
 public extension UIView {
-
     /**
      Adds a border to the top of the view, inside the view's bounds.
      
@@ -107,10 +147,12 @@ public extension UIView {
              Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
              We strongly recommend to work with constraints as a better practice than frames.
      */
-    public func add(top border: BorderViewProperties,
-                    withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+    @discardableResult
+    func add(top border: BorderViewProperties,
+             withLeftOffset left: CGFloat = 0,
+             rightOffset right: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -119,14 +161,13 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            let frame = CGRect(x: left,
-                               y: 0,
-                               width: bounds.width - left - right,
-                               height: CGFloat(border.thickness))
-            borderView = BorderView(frame: frame, position: .top)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = createBorderView(border: border,
+                                          firstOffset: left,
+                                          secondOffset: right,
+                                          position: .top)
         }
+        
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
@@ -145,10 +186,11 @@ public extension UIView {
              Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
              We strongly recommend to work with constraints as a better practice than frames.
      */
-    public func add(bottom border: BorderViewProperties,
-                    withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+    @discardableResult
+    func add(bottom border: BorderViewProperties,
+             withLeftOffset left: CGFloat = 0, rightOffset right: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -157,14 +199,13 @@ public extension UIView {
             borderView.leftAnchor.constraint(equalTo: leftAnchor, constant: left).isActive = true
             rightAnchor.constraint(equalTo: borderView.rightAnchor, constant: right).isActive = true
         case .frame:
-            let frame = CGRect(x: left,
-                               y: bounds.height - CGFloat(border.thickness),
-                               width: bounds.width - left - right,
-                               height: CGFloat(border.thickness))
-            borderView = BorderView(frame: frame, position: .bottom)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = createBorderView(border: border,
+                                          firstOffset: left,
+                                          secondOffset: right,
+                                          position: .bottom)
         }
+        
+        borderView.clipToBoundsBordersIfNeeded(border: border)
         
         return borderView
     }
@@ -183,10 +224,12 @@ public extension UIView {
              Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
              We strongly recommend to work with constraints as a better practice than frames.
      */
-    public func add(left border: BorderViewProperties,
-                    withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+    @discardableResult
+    func add(left border: BorderViewProperties,
+             withTopOffset top: CGFloat = 0,
+             bottomOffset bottom: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -195,14 +238,14 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            let frame = CGRect(x: 0,
-                               y: top,
-                               width: CGFloat(border.thickness),
-                               height: bounds.height - top - bottom)
-            borderView = BorderView(frame: frame, position: .left)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = createBorderView(border: border,
+                                          firstOffset: top,
+                                          secondOffset: bottom,
+                                          position: .left)
         }
+        
+        borderView.clipToBoundsBordersIfNeeded(border: border)
+        
         return borderView
     }
     
@@ -220,10 +263,12 @@ public extension UIView {
              Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
              We strongly recommend to work with constraints as a better practice than frames.
      */
-    public func add(right border: BorderViewProperties,
-                    withTopOffset top: CGFloat = 0, bottomOffset bottom: CGFloat = 0,
-                    layout: LayoutMode = .constraints) -> BorderView {
-        let borderView: BorderView
+    @discardableResult
+    func add(right border: BorderViewProperties,
+             withTopOffset top: CGFloat = 0,
+             bottomOffset bottom: CGFloat = 0,
+             layout: LayoutMode = .constraints) -> BorderView {
+        var borderView: BorderView
         
         switch layout {
         case .constraints:
@@ -232,14 +277,40 @@ public extension UIView {
             borderView.topAnchor.constraint(equalTo: topAnchor, constant: top).isActive = true
             bottomAnchor.constraint(equalTo: borderView.bottomAnchor, constant: bottom).isActive = true
         case .frame:
-            let frame = CGRect(x: bounds.width - CGFloat(border.thickness),
-                               y: top,
-                               width: CGFloat(border.thickness),
-                               height: bounds.height - top - bottom)
-            borderView = BorderView(frame: frame, position: .right)
-            borderView.backgroundColor = border.color
-            addSubview(borderView)
+            borderView = createBorderView(border: border,
+                                          firstOffset: top,
+                                          secondOffset: bottom,
+                                          position: .right)
         }
+        
+        borderView.clipToBoundsBordersIfNeeded(border: border)
+        
+        return borderView
+    }
+    
+    private func createBorderView(border: BorderViewProperties,
+                                  firstOffset: CGFloat,
+                                  secondOffset: CGFloat,
+                                  position: BorderPosition) -> BorderView {
+        var frame: CGRect
+        let thickness = CGFloat(border.thickness)
+        
+        switch position {
+        case .top, .bottom:
+            frame = CGRect(x: firstOffset,
+                           y: position == .top ? 0 : bounds.height - thickness,
+                           width: bounds.width - firstOffset - secondOffset,
+                           height: thickness)
+        case .left, .right:
+            frame = CGRect(x: position == .left ? 0 : bounds.width - thickness,
+                           y: firstOffset,
+                           width: thickness,
+                           height: bounds.height - firstOffset - secondOffset)
+        }
+        
+        let borderView = BorderView(frame: frame, position: position)
+        borderView.backgroundColor = border.color
+        addSubview(borderView)
         
         return borderView
     }
@@ -248,10 +319,70 @@ public extension UIView {
         Removes the border view from self, only if
         the border was a child view to self.
     */
-    public func remove(border: BorderView) {
+    func remove(border: BorderView) {
         if border.superview == self {
             border.removeFromSuperview()
         }
     }
+    
+    /**
+     Adds borders to the selected sides of the view, inside the view's bounds.
+     
+     - parameter properties: characteristics of the borders to be added.
+     
+     - parameter positions: the sides of the view where borders will be added.
+     
+     - parameter layout: Enum indicating the layout mode. By default, .constraints.
+     
+     - note: If you decide to use constraints to determine the size, self's frame doesn't need to be final.
+     Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
+     We strongly recommend to work with constraints as a better practice than frames.
+     */
+    
+    func addBorders(properties: BorderViewProperties, positions: [BorderPosition], layout: LayoutMode = .constraints) {
+        positions.forEach { position in
+            switch position {
+            case .top:
+                add(top: properties, layout: layout)
+            case .bottom:
+                add(bottom: properties, layout: layout)
+            case .left:
+                add(left: properties, layout: layout)
+            case .right:
+                add(right: properties, layout: layout)
+            }
+        }
+    }
+}
 
+public extension UIView {
+    /**
+     Adds a drop shadow to the selected view.
+     
+     - parameter color: the color of the shadow.
+     
+     - parameter size: horizontal and vertical size of the shadow.
+     
+     - parameter radius: the overall extension of the shadow from the center of the view.
+     
+     - parameter cornerRadius: how rounded the corners of the shadow are.
+     
+     - note: If you decide to use constraints to determine the size, self's frame doesn't need to be final.
+     Because of this, it can be used in `loadView()`, `viewDidLoad()` or `viewWillAppear(animated:)`.
+     We strongly recommend to work with constraints as a better practice than frames.
+     */
+    func addShadow(color: CGColor = UIColor.black.cgColor,
+                   size: CGSize = CGSize(width: 0, height: 2),
+                   radius: CGFloat = 2.5,
+                   opacity: Float = 0.2,
+                   cornerRadius: CGFloat = 5) {
+        self.layer.shadowColor = color
+        self.layer.shadowOffset = size
+        self.layer.shadowRadius = radius
+        self.layer.shadowOpacity = opacity
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = false
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
 }

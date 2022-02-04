@@ -12,19 +12,26 @@ import Foundation
  Represents the posible directions of a gradient in a view.
  */
 public enum GradientDirection {
+    /// Sets the gradient's direction from left to right.
     case leftToRight
+    /// Sets the gradient's direction from right to left.
     case rightToLeft
+    /// Sets the gradient's direction from top to bottom.
     case topToBottom
+    /// Sets the gradient's direction from bottom to top.
     case bottomToTop
+    /// Sets the gradient's direction from top left to bottom right.
     case topLeftToBottomRight
+    /// Sets the gradient's direction from bottom right to top left.
     case bottomRightToTopLeft
+    /// Sets the gradient's direction from top right to bottom left.
     case topRightToBottomLeft
+    /// Sets the gradient's direction from bottom left to top right.
     case bottomLeftToTopRight
 }
 
 fileprivate extension GradientDirection {
-    
-    fileprivate var startPoint: CGPoint {
+    var startPoint: CGPoint {
         switch self {
         case .leftToRight: return CGPoint(x: 0, y: 0.5)
         case .rightToLeft: return CGPoint(x: 1, y: 0.5)
@@ -37,7 +44,7 @@ fileprivate extension GradientDirection {
         }
     }
     
-    fileprivate var endPoint: CGPoint {
+    var endPoint: CGPoint {
         switch self {
         case .leftToRight: return CGPoint(x: 1, y: 0.5)
         case .rightToLeft: return CGPoint(x: 0, y: 0.5)
@@ -49,7 +56,6 @@ fileprivate extension GradientDirection {
         case .bottomLeftToTopRight: return CGPoint(x: 1, y: 0)
         }
     }
-    
 }
 
 /**
@@ -57,11 +63,12 @@ fileprivate extension GradientDirection {
      It has a UIColor and a location which indicates where that color should be placed in the gradient.
  */
 public struct GradientColor {
-
-    // Color to use in gradient.
+    /// Color to use in gradient.
     public let color: UIColor
-    // Location where to place color inside the gradient.
-    // Number between 0 and 1 (inclusive).
+    /**
+     Location where to place color inside the gradient.
+     Number between 0 and 1 (inclusive).
+     */
     public let location: Float
 
     /**
@@ -80,7 +87,6 @@ public struct GradientColor {
         self.color = color
         self.location = location
     }
-
 }
 
 /**
@@ -90,10 +96,9 @@ public struct GradientColor {
     - note: There can only be one gradient at a time in a view.
  */
 public struct ViewGradient {
-    
-    // Direction of the gradient.
+    /// Direction of the gradient.
     public let direction: GradientDirection
-    // GradientColors involved in the order involved.
+    /// GradientColors involved in the order involved.
     public let colors: [GradientColor]
     
     fileprivate let layer: CAGradientLayer
@@ -127,10 +132,12 @@ public struct ViewGradient {
     */
     public init(colors: [UIColor], direction: GradientDirection) {
         let locations = calculateLocations(for: colors.count)
-        let gradientColors = colors.enumerated().map { (index, color) in GradientColor(color: color, location: locations[index].floatValue)! }
+        let gradientColors = colors.enumerated().map { (index, color) in
+            GradientColor(color: color, location: locations[index].floatValue)!
+        }
+        
         self.init(colors: gradientColors, direction: direction)
     }
-    
 }
 
 private func calculateLocations(for numberOfColors: Int) -> [NSNumber] {
@@ -144,7 +151,6 @@ private func calculateLocations(for numberOfColors: Int) -> [NSNumber] {
 }
 
 public extension UIView {
-
     /**
         ViewGradient applied currently to the view.
         A view can only have one gradient at a time.
@@ -156,7 +162,10 @@ public extension UIView {
 
         - warning: To avoid memory leak and crashes, you should set the `gradient` to .none before deallocating the view.
     */
-    public var gradient: ViewGradient? {
+    var gradient: ViewGradient? {
+        get {
+            return getGradient()
+        }
         set {
             if gradient != nil {
                 removeGradient()
@@ -164,9 +173,6 @@ public extension UIView {
             if let grad = newValue {
                 apply(gradient: grad)
             }
-        }
-        get {
-            return getGradient()
         }
     }
     
@@ -192,7 +198,6 @@ public extension UIView {
     private func getGradient() -> ViewGradient? {
         return getAssociatedObject(self, key: &ViewGradientKey)
     }
-
 }
 
 private var ViewGradientKey: UInt8 = 1

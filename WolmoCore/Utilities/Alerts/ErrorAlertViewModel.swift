@@ -13,9 +13,13 @@ import Foundation
  */
 public struct ErrorAlertViewModel {
     
+    /// The alert title.
     public let title: String?
+    /// The alert message.
     public let message: String?
+    /// The dismiss button title.
     public let dismissButtonTitle: String
+    /// The dismiss button action.
     public let dismissAction: (ErrorAlertViewModel) -> Void
     
     /**

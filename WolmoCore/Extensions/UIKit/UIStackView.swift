@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIStackView {
-
     /**
      Initializes a stack view with a lsit of subviews, spacing, axis orientation, alignment and distribution. It has default values of 0 for spacing, "fill" for distribution and alignment, and horizontal orientation for the stack itself.
      
@@ -19,7 +18,11 @@ extension UIStackView {
      - Parameter alignment: Alignment for the stack view. Default is "fill".
      - Parameter distribution: Distribution for the stack view. Default is "fill".
      */
-    convenience init(arrangedSubviews: UIView..., spacing: CGFloat = 0, axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) {
+    convenience init(arrangedSubviews: UIView...,
+                     spacing: CGFloat = 0,
+                     axis: NSLayoutConstraint.Axis = .horizontal,
+                     alignment: UIStackView.Alignment = .fill,
+                     distribution: UIStackView.Distribution = .fill) {
         self.init(frame: .zero)
         arrangedSubviews.forEach { addArrangedSubview($0) }
         self.axis = axis

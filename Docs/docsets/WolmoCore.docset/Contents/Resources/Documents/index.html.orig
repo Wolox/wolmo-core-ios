@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WolmoCore  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="WolmoCore  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">WolmoCore Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        WolmoCore  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BorderView.html">BorderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChainedAnimation.html">ChainedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MixedAnimation.html">MixedAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NibView.html">NibView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ScrollStackViewController.html">ScrollStackViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SimpleAnimation.html">SimpleAnimation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:9WolmoCore20DefaultDateFormatterSo06NSDateE0Cvp">DefaultDateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:9WolmoCore24DefaultWeekDateFormatterSo06NSDateF0Cvp">DefaultWeekDateFormatter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AnimationContent.html">AnimationContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BorderPosition.html">BorderPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DeviceType.html">DeviceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/GradientDirection.html">GradientDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LayoutMode.html">LayoutMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ViewPositioning.html">ViewPositioning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Comparable.html">Comparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/s:Si">Int</a>
+              </li>
+              <li class="nav-group-task">
+<<<<<<< HEAD
+                <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+=======
+>>>>>>> master
+                <a href="Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Timer.html">Timer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIAlertController.html">UIAlertController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)UICollectionReusableView">UICollectionReusableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)UITableViewHeaderFooterView">UITableViewHeaderFooterView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/s:Su">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore1poiySo18NSAttributedStringCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore1doiy10Foundation3URLVAE_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore1doiyS2S_AA14PathAppendable_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore2eeoiySbAA14UIFontProvider_pSg_ADtF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore10SimpleName2ofSSx_tlF">SimpleName(of:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore10SimpleName6ofTypeSSypXp_tF">SimpleName(ofType:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore19getAssociatedObject_3keyxSgyXl_SVtlF">getAssociatedObject(_:key:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore15performUIUpdate5usingyyyc_tF">performUIUpdate(using:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore19setAssociatedObject_3key5value6policyyyXl_SVxSgSo22objc_AssociationPolicyVtlF">setAssociatedObject(_:key:value:policy:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AlertViewPresenter.html">AlertViewPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AnimationType.html">AnimationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Collapsable.html">Collapsable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Identifiable.html">Identifiable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/NibLoadable.html">NibLoadable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PathAppendable.html">PathAppendable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/UIFontProvider.html">UIFontProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BorderViewProperties.html">BorderViewProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ConfirmationAlertViewModel.html">ConfirmationAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ErrorAlertViewModel.html">ErrorAlertViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/GradientColor.html">GradientColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/RawRepresentableGenerator.html">RawRepresentableGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ViewGradient.html">ViewGradient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:9WolmoCore6Actiona">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:9WolmoCore9Transforma">Transform</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><a href="https://app.bitrise.io/app/d026a7fe0c9dc2f4"><img src="https://app.bitrise.io/app/d026a7fe0c9dc2f4/status.svg?token=9MLbGXfHBhZKaL4KXXmpHQ&branch=master" alt="Build Status"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/wolox/wolmo-core-ios" alt="License"></a>
+<a href="https://github.com/CocoaPods/CocoaPods"><img src="https://img.shields.io/cocoapods/v/WolmoCore" alt="CocoaPods compatible"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
+<img src="https://img.shields.io/badge/Swift-5-orange?logo=swift" alt="Swift 5">
+<a href="https://codecov.io/gh/Wolox/wolmo-core-ios"><img src="https://codecov.io/gh/Wolox/wolmo-core-ios/branch/master/graph/badge.svg?token=NwIrvzjHHP" alt="codecov"></a></p>
+
+<p align="center">
+  <img height="140px" width="400px" src="https://cloud.githubusercontent.com/assets/4109119/25450281/cac5979e-2a94-11e7-9176-8e323df5dab8.png"/>
+</p>
+<h1 id='wolmo' class='heading'>WOLMO</h1>
+
+<p>WOLMO Core iOS is a framework which provides extensions and utilities for iOS commonly used at <a href="http://www.wolox.com.ar/">Wolox</a>.</p>
+
+<p>At Wolox, we complement this framework with <a href="https://github.com/Wolox/wolmo-reactive-core-ios">Wolmo - Reactive Core</a>.</p>
+
+<p><a href="https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-a55f-8295685f5f06.mp4">https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-a55f-8295685f5f06.mp4</a></p>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
+
+<ul>
+<li><a href="#installation">Installation</a>
+
+<ul>
+<li><a href="#cocoapods">CocoaPods</a></li>
+<li><a href="#carthage">Carthage</a></li>
+<li><a href="#manually">Manually</a></li>
+</ul></li>
+<li><a href="#usage">Usage</a>
+
+<ul>
+<li><a href="#utilities">Utilities</a></li>
+<li><a href="#extensions">Extensions</a></li>
+</ul></li>
+<li><a href="#bootstrap">Bootstrap</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p><a href="https://cocoapods.org/">CocoaPods</a> is a dependency manager for Cocoa projects. To use Wolmo Core in your project, update CocoaPods to version 1.10.2 or newer, and add this line to your <code>Podfile</code>.</p>
+<pre class="highlight plaintext"><code>pod 'WolmoCore'
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with Homebrew using the following command:</p>
+<pre class="highlight plaintext"><code>brew update
+brew install carthage
+</code></pre>
+
+<p>To download wolmo-core-ios, add this to your Cartfile:</p>
+<pre class="highlight plaintext"><code>github "Wolox/wolmo-core-ios" ~&gt; 4.1.0
+</code></pre>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p><a href="#bootstrap">Bootstrap</a> the project and then drag it to your workspace.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The framework is divided into 2 sections: <a href="#utilities">Utilities</a> and <a href="#extensions">Extensions</a>.</p>
+
+<p>The main difference between them is that <code>utilities</code> represent components that are independent of the existance of another component. On the other hand, <code>extensions</code> represent extra functionality for other existent components. Extensions exist only because the components they rely on exists.</p>
+<h3 id='utilities' class='heading'>Utilities</h3>
+
+<p>Constitutes a component which is independent from another component.</p>
+
+<p>For example, <a href="WolmoCore/Utilities/Alerts/AlertViewPresenter.swift">AlertViewPresenter</a> represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc&hellip;) which can adopt this behaviour may be an <code><a href="Protocols/AlertViewPresenter.html">AlertViewPresenter</a></code>.</p>
+
+<p>In this framework, we give a default implementation of <code>UIViewController</code> as an <code><a href="Protocols/AlertViewPresenter.html">AlertViewPresenter</a></code>. However, note that they are independent one from another.</p>
+
+<p><code>WolmoCore</code> provides the following utilities:</p>
+
+<ol>
+<li><a href="WolmoCore/Utilities/Alerts/AlertViewPresenter.swift">AlertViewPresenter</a>: Abstracts the logic of presenting different type of alerts.</li>
+<li><a href="WolmoCore/Utilities/AssociatedObject.swift">AssociatedObject</a>: Setter and getter for associated objects. Works with objects and value types.</li>
+<li><a href="WolmoCore/Utilities/Identifiable.swift">Identifiable</a>: Identifies a reusable view. Usually used with <code>UICollectionView</code> and <code>UITableView</code> for cells, headers or footers.</li>
+<li><a href="WolmoCore/Utilities/NibLoadable.swift">NibLoadable</a>: Provides a way to load a resource from a nib, through Identifiable. Usually used to load a UIViewcontroller&rsquo;s view from a .xib.</li>
+<li><a href="WolmoCore/Utilities/DeviceType.swift">DeviceType</a>: Provides the current device type.</li>
+<li><a href="WolmoCore/Utilities/PathAppendable.swift">PathAppendable</a>: Makes a component able to be appended to a URL or string.
+and more&hellip;</li>
+</ol>
+<h3 id='extensions' class='heading'>Extensions</h3>
+
+<p>Extends the behaviour of a component (<code>class</code>, <code>struct</code>, <code>enum</code>, &hellip;) by adding common functionality (functions, computed properties, initializers, &hellip;).</p>
+
+<p>Extensions contain components which depends exclusively on other components.</p>
+
+<p>For example, <a href="WolmoCore/Extensions/UIKit/UIView/Collapsable.swift">Collapsable</a> represents a collapsable element. This behaviour is an addition to a <code>UIView</code>; it would not make sense to have something which is not renderable as <code><a href="Protocols/Collapsable.html">Collapsable</a></code>. Furthermore, it doesn&rsquo;t make sense for <code><a href="Protocols/Collapsable.html">Collapsable</a></code> to exist per se; it is a behaviour added to any view which conforms to it.</p>
+
+<p><code>WolmoCore</code> provides the following extensions:</p>
+
+<ol>
+<li><a href="WolmoCore/Extensions/AVFoundation">AVFoundation</a>: Extensions used for AVFoundation elements, such as <a href="WolmoCore/Extensions/AVFoundation/AVAsset.swift">AVAsset</a> and <a href="WolmoCore/Extensions/AVFoundation/AVPlayerItem.swift">AVPlayerItem</a>.</li>
+<li><a href="WolmoCore/Extensions/UIKit">UIKit</a>: Extensions for UIKit elements, such as <a href="WolmoCore/Extensions/UIKit/UIView/UIView.swift">UIView</a> and <a href="WolmoCore/Extensions/UIKit/UIViewController.swift">UIViewController</a>.</li>
+<li><a href="WolmoCore/Extensions/Foundation">Foundation</a>: Extensions for Foundation elements, such as <a href="WolmoCore/Extensions/Foundation/String.swift">String</a>, <a href="WolmoCore/Extensions/Foundation/Array.swift">Array</a> and <a href="WolmoCore/Extensions/Foundation/Date.swift">Date</a>.</li>
+<li><a href="WolmoCore/Extensions/Animations">Animations</a>: Extensions for <code>UIView</code> to animate it easily, such as <a href="WolmoCore/Extensions/Animations/SimpleAnimation.swift">SimpleAnimation</a>, <a href="WolmoCore/Extensions/Animations/MixedAnimation.swift">MixedAnimation</a> and <a href="WolmoCore/Extensions/Animations/ChainedAnimation.swift">ChainedAnimation</a></li>
+</ol>
+
+<p>You can check in the <a href="AnimationDemo/ViewController.swift">AnimationDemo</a> the contrast between the normal way of doing animations and our way.
+You can see examples of simple animations and one complex animation.
+Moreover, you can check some cases which does not work as expected with our extensions so you don&rsquo;t run into those problems.</p>
+<h2 id='bootstrap' class='heading'>Bootstrap</h2>
+<pre class="highlight plaintext"><code>git clone git@github.com:Wolox/wolmo-core-ios.git
+cd wolmo-core-ios
+script/bootstrap
+</code></pre>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<ol>
+<li>Clone it</li>
+<li><a href="#bootstrap">Bootstrap</a> the repository</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am &#39;Add some feature&#39;</code>)</li>
+<li>Run tests (<code>./script/test</code>)</li>
+<li>Push your branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request to the repository</li>
+</ol>
+<h2 id='about' class='heading'>About</h2>
+
+<p>This project is maintained by <a href="http://www.wolox.com.ar">Wolox</a>.</p>
+
+<p><img height="100px" src="https://user-images.githubusercontent.com/11547820/142273110-5fb5be3f-e215-41af-844d-343a6134d80c.png"/></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><strong>WolMo - Core iOS</strong> is available under the <a href="LICENSE.txt">MIT license</a>.</p>
+<pre class="highlight plaintext"><code>Copyright (c) 2016 Francisco Depascuali &lt;francisco.depascuali@wolox.com.ar&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+<<<<<<< HEAD
+          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-01-07)</p>
+=======
+          <p>&copy; 2021 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2021-12-27)</p>
+>>>>>>> master
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

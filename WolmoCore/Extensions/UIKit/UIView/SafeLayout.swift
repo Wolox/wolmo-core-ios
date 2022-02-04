@@ -9,12 +9,11 @@
 import UIKit
 
 public extension UIView {
-
     /**
      This is an extension for layout compatibility between iOS 11 and lower versions.
      If the native safe layout guide is not available, then return a regular layout guide.
      */
-    public var safeLayoutGuide: UILayoutGuide {
+    var safeLayoutGuide: UILayoutGuide {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide
         } else {
@@ -37,12 +36,12 @@ public extension UIView {
         }
     }
 
-    public var safeLayoutInsets: UIEdgeInsets {
+    /// Indicates wether this functionality is available (iOS 11.0 or newer).
+    var safeLayoutInsets: UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return safeAreaInsets
         } else {
             return .zero
         }
     }
-
 }

@@ -20,15 +20,15 @@ public extension UIView {
     
     // Set our computed property type to a closure
     fileprivate var pinchGestureRecognizerAction: Action? {
+        get {
+            let pinchGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.pinchGestureRecognizer) as? Action
+            return pinchGestureRecognizerActionInstance
+        }
         set {
             if let newValue = newValue {
                 // Computed properties get stored as associated objects
                 objc_setAssociatedObject(self, &AssociatedObjectKeys.pinchGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
-        }
-        get {
-            let pinchGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.pinchGestureRecognizer) as? Action
-            return pinchGestureRecognizerActionInstance
         }
     }
     
@@ -37,7 +37,7 @@ public extension UIView {
      
      - Parameter action: The closure that will execute when the view is pinched
      */
-    public func addPinchGestureRecognizer(action: ((UIPinchGestureRecognizer) -> Void)?) {
+    func addPinchGestureRecognizer(action: ((UIPinchGestureRecognizer) -> Void)?) {
         isUserInteractionEnabled = true
         pinchGestureRecognizerAction = action
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture))

@@ -9,8 +9,7 @@
 import UIKit
 
 public extension UIButton {
-    
-    /*
+    /**
      Sets the button's title underlined with style and for state specified.
      
      - parameter title: Title for the button.
@@ -22,7 +21,7 @@ public extension UIButton {
         By default, Normal.
      
      */
-    public func setUnderlined(title: String, style: NSUnderlineStyle = NSUnderlineStyle.single, color: UIColor? = .none, forState state: UIControl.State = .normal) {
+    func setUnderlined(title: String, style: NSUnderlineStyle = NSUnderlineStyle.single, color: UIColor? = .none, forState state: UIControl.State = .normal) {
         var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.underlineStyle: style.rawValue as AnyObject]
         if let colorAttr = color {
             attributes[NSAttributedString.Key.underlineColor] = colorAttr
@@ -31,7 +30,7 @@ public extension UIButton {
         setAttributedTitle(underlinedText, for: state)
     }
 
-    /* 
+    /**
      Sets the button's title and image with the specified spacing and arrangement.
     
      - parameter title: Title for the button.
@@ -40,9 +39,9 @@ public extension UIButton {
      - parameter imageOnRight: Boolean indicating whether the the image should be to the
             right of the text or to the left. By default, false (to the left).
      
-     - seealso: CGAffineTransform(scaleX:y:)
+     - seealso: `CGAffineTransform(scaleX:y:)`
     **/
-    public func setTitle(title: String, image: UIImage, spacing: CGFloat = 0, imageOnRight: Bool = false) {
+    func setTitle(title: String, image: UIImage, spacing: CGFloat = 0, imageOnRight: Bool = false) {
         setTitle(title, for: .normal)
         setImage(image, for: .normal)
 
@@ -66,5 +65,4 @@ public extension UIButton {
 
         sizeToFit()
     }
-    
 }
