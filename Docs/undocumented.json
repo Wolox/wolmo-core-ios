@@ -1,6 +1,61 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UILabel.swift",
+      "line": 38,
+      "symbol": "UILabel.init(text:font:numberOfLines:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 161,
+      "symbol": "AnchoredConstraints",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.bottom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.height",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.leading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.top",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.trailing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios/WolmoCore/Extensions/UIKit/UIView/Constraints.swift",
+      "line": 162,
+      "symbol": "AnchoredConstraints.width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/juan.martin.gordo/Desktop/Wolmo/wolmo-core-ios"
 }
