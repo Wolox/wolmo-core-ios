@@ -131,6 +131,7 @@
 		D0FD9ABE2773B607008F240F /* GesturesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FD9ABD2773B606008F240F /* GesturesView.xib */; };
 		D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9ABF2773B750008F240F /* GesturesView.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
+		EB0BE94727E1232200748F71 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BE94627E1232200748F71 /* UIDevice.swift */; };
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
@@ -331,6 +332,7 @@
 		D0FD9ABF2773B750008F240F /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0BE94627E1232200748F71 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 				CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */,
 				CE228ADF1EF2FE1E00097B19 /* UIFont.swift */,
 				0CB88321216455D90073459D /* UIImageView.swift */,
+				EB0BE94627E1232200748F71 /* UIDevice.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1111,6 +1114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEC517E1EE5ECD300BC41FE /* UILabel.swift in Sources */,
+				EB0BE94727E1232200748F71 /* UIDevice.swift in Sources */,
 				CE80E0F11E82D1F9005C300E /* PathAppendable.swift in Sources */,
 				0CB8BAB4216F82FF00C8D6C1 /* Comparable.swift in Sources */,
 				CE3A9BA21E607B28005D7E8F /* UIViewController.swift in Sources */,
