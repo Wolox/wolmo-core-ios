@@ -8,7 +8,6 @@
 
 import UIKit
 import WolmoCore
-import AudioToolbox
 
 final class GesturesViewController: UIViewController {
     // MARK: - Properties
