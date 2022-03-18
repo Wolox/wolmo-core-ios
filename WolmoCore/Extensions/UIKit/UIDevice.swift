@@ -10,6 +10,14 @@ import UIKit
 import AudioToolbox
 
 extension UIDevice {
+    /**
+     Makes the current device vibrate.
+     
+     ## Usage
+     ```
+     UIDevice.vibrate()
+     ```
+     */
     static func vibrate() {
         AudioServicesPlaySystemSound(1519)
     }
