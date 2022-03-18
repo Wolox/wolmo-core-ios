@@ -18,7 +18,7 @@ extension UIDevice {
      UIDevice.vibrate()
      ```
      */
-    static func vibrate() {
+    public static func vibrate() {
         AudioServicesPlaySystemSound(1519)
     }
 }

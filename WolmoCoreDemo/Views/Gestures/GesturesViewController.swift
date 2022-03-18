@@ -8,6 +8,7 @@
 
 import UIKit
 import WolmoCore
+import AudioToolbox
 
 final class GesturesViewController: UIViewController {
     // MARK: - Properties
@@ -198,6 +199,7 @@ extension GesturesViewController {
         gesturesView.gestureLabel.addTapGestureRecognizer(numberOfTapsRequired: 1) { [weak self] _ in
             self?.gesturesView.gestureLabel.shake(withDuration: 0.05)
             print("Label tapped!")
+            UIDevice.vibrate()
         }
         gesturesView.gestureLabel.addLongPressGestureRecognizer(minimumPressDuration: 1.0) { _ in
             print("Label long pressed!")

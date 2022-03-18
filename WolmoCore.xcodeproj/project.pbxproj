@@ -594,6 +594,7 @@
 				CE3A9B851E607B28005D7E8F /* UIButton.swift */,
 				CED934841E8456480017CF96 /* UICollectionView.swift */,
 				CE3A9B861E607B28005D7E8F /* UIColor.swift */,
+				EB0BE94627E1232200748F71 /* UIDevice.swift */,
 				CEEC517D1EE5ECD300BC41FE /* UILabel.swift */,
 				B8CF9A8B1EE9EF6E0063F951 /* UIImage.swift */,
 				CE3A9B871E607B28005D7E8F /* UITableView.swift */,
@@ -602,7 +603,6 @@
 				CE3A9B8D1E607B28005D7E8F /* UIViewController.swift */,
 				CE228ADF1EF2FE1E00097B19 /* UIFont.swift */,
 				0CB88321216455D90073459D /* UIImageView.swift */,
-				EB0BE94627E1232200748F71 /* UIDevice.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
