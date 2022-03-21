@@ -15,16 +15,23 @@ final internal class OverviewViewController: ScrollStackViewController {
     private let secondLabel = UILabel()
     private let thirdLabel = UILabel()
     private let fourthLabel = UILabel()
+    private var views: [SimpleView] = []
     
     // MARK: - Lifecyle methods
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
-    }
-    
     override func viewDidLoad() {
         setupView()
         super.viewDidLoad()
+    }
+    
+    override func addChildrenViewControllers() {
+        add(firstView)
+        add(firstLabel)
+        add(secondView)
+        add(secondLabel)
+        add(thirdView)
+        add(thirdLabel)
+        add(CollectionViewController(cellSize: firstView.cardView.frame.size))
+        add(fourthLabel)
     }
     
     // MARK: - Private methods
@@ -35,7 +42,7 @@ final internal class OverviewViewController: ScrollStackViewController {
         
         secondLabel.text = "The parent view will become scrollable if the height of the ViewControllers is taller than the height of the device's display."
         
-        thirdLabel.text = "These are just some generic banners used for showing you this class. You can also create dynamic views in .xib format and add their associated ViewController."
+        thirdLabel.text = "These are just some generic banners used for showing you this class. You can also create dynamic views in .xib format and add their associated ViewController:"
         
         fourthLabel.text = "Cool, right?"
         
@@ -48,22 +55,16 @@ final internal class OverviewViewController: ScrollStackViewController {
             label.numberOfLines = 0
             label.textColor = .white
         }
+        
+        views = [firstView,
+                 secondView,
+                 thirdView]
     }
     
-    override func addChildrenViewControllers() {
-        add(firstView)
-        add(firstLabel)
-        add(secondView)
-        add(secondLabel)
-        add(thirdView)
-        add(thirdLabel)
-        add(fourthView)
-        add(fourthLabel)
-    }
-    
+    // MARK: - Computed properties
     private var firstView: SimpleView {
         let view = SimpleView()
-        view.cardView.backgroundColor = .deepSaffron
+        view.cardView.backgroundColor = .cyberYellow
         view.cardView.addShadow()
         view.cardView.addShadow(opacity: 0.4, cornerRadius: 8)
         
@@ -72,7 +73,7 @@ final internal class OverviewViewController: ScrollStackViewController {
     
     private var secondView: SimpleView {
         let view = SimpleView()
-        view.cardView.backgroundColor = .slateGray
+        view.cardView.backgroundColor = .deepSaffron
         view.cardView.addShadow()
         view.cardView.addShadow(opacity: 0.4, cornerRadius: 8)
         
@@ -95,22 +96,9 @@ final internal class OverviewViewController: ScrollStackViewController {
         
         return view
     }
-    
-    private var fourthView: SimpleView {
-        let view = SimpleView()
-        view.cardView.backgroundColor = .cyberYellow
-        view.cardView.addShadow()
-        view.cardView.addShadow(opacity: 0.4, cornerRadius: 8)
-        
-        if #available(iOS 13.0, *) {
-            view.image.image = UIImage(systemName: "04.square.fill")
-        }
-        
-        return view
-    }
 }
 
-private extension UIColor {
+extension UIColor {
     static var cyberYellow: UIColor {
         UIColor(named: "cyberYellow")!
     }
