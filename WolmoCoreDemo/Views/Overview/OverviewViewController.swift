@@ -97,29 +97,3 @@ final internal class OverviewViewController: ScrollStackViewController {
         return view
     }
 }
-
-extension UIColor {
-    static var cyberYellow: UIColor {
-        UIColor(named: "cyberYellow")!
-    }
-    
-    static var deepSaffron: UIColor {
-        UIColor(named: "deepSaffron")!
-    }
-    
-    static var eerieBlack: UIColor {
-        UIColor(named: "eerieBlack")!
-    }
-    
-    static var pictorialCarmine: UIColor {
-        UIColor(named: "pictorialCarmine")!
-    }
-    
-    static var slateGray: UIColor {
-        UIColor(named: "slateGray")!
-    }
-    
-    static var UARed: UIColor {
-        UIColor(named: "UARed")!
-    }
-}

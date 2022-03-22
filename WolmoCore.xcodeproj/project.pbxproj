@@ -133,6 +133,7 @@
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
+		EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED94A27EA5B6B00EB23EE /* UIColor.swift */; };
 		EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF201627E51F140017CDD1 /* OverviewViewController.swift */; };
 		EBFF202827E8C5290017CDD1 /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF202727E8C5290017CDD1 /* CollectionView.xib */; };
 		EBFF202D27E8C6D40017CDD1 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF202C27E8C6D40017CDD1 /* CollectionView.swift */; };
@@ -339,6 +340,7 @@
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		EBFED94A27EA5B6B00EB23EE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EBFF201627E51F140017CDD1 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		EBFF202727E8C5290017CDD1 /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
 		EBFF202C27E8C6D40017CDD1 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -632,6 +634,7 @@
 		CEB8ED241FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBFED94927EA5B5D00EB23EE /* Extensions */,
 				D0FD9AB32773A6CA008F240F /* Views */,
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
 				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
@@ -775,6 +778,14 @@
 				D0FD9ABF2773B750008F240F /* GesturesView.swift */,
 			);
 			path = Gestures;
+			sourceTree = "<group>";
+		};
+		EBFED94927EA5B5D00EB23EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBFED94A27EA5B6B00EB23EE /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EBFF201527E51EFF0017CDD1 /* Overview */ = {
@@ -1265,6 +1276,7 @@
 				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
 				EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */,
 				D0FD9ABC2773B554008F240F /* GesturesViewController.swift in Sources */,
+				EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */,
 				EBFF202D27E8C6D40017CDD1 /* CollectionView.swift in Sources */,
 				D0FD9AB82773A91A008F240F /* AnimationsView.swift in Sources */,
 				0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */,
