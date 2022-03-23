@@ -10,6 +10,25 @@ import Foundation
 
 public extension Bundle {
     /**
+     Gets the version of the app from `Info.plist` file.
+     */
+    var appVersion: String? {
+        infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
+    /**
+     Static variable used to retrieve app version from `Bundle.main`.
+     
+     ## Usage
+     ```
+        let appVersion = Bundle.mainAppVersion
+     ```
+     */
+    static var mainAppVersion: String? {
+        Bundle.main.appVersion
+    }
+    
+    /**
      Loads a nib from the bundle.
      
      - parameter nibName: Contains a StringRepresentable nib.
