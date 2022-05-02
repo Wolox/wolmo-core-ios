@@ -24,8 +24,6 @@ final internal class PrincipalViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
-        
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {

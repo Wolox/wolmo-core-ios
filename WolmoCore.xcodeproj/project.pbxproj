@@ -120,9 +120,11 @@
 		D0108962276F70A500668EDB /* SimpleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0108961276F70A500668EDB /* SimpleView.xib */; };
 		D0108964276F72AE00668EDB /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0108963276F72AE00668EDB /* SimpleView.swift */; };
 		D03B5018273C52D400D64B87 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D079DD94281F240800DA1D11 /* PrincipalViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079DD93281F240800DA1D11 /* PrincipalViewControllerTest.swift */; };
 		D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134D27500C10005E42EC /* BorderGradientViewController.swift */; };
 		D096135027500D3E005E42EC /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096134F27500D3E005E42EC /* NibView.swift */; };
 		D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */; };
+		D0DCEBEE281F20DA006F98CB /* StringToImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DCEBED281F20DA006F98CB /* StringToImageViewControllerTest.swift */; };
 		D0FD9AB62773A79F008F240F /* AnimationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FD9AB52773A79F008F240F /* AnimationsView.xib */; };
 		D0FD9AB82773A91A008F240F /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9AB72773A91A008F240F /* AnimationsView.swift */; };
 		D0FD9AB92773A9EF008F240F /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEB4AF2281F79C0070C01F /* AnimationsViewController.swift */; };
@@ -321,10 +323,12 @@
 		D010895F276F6B5400668EDB /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
 		D0108961276F70A500668EDB /* SimpleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleView.xib; sourceTree = "<group>"; };
 		D0108963276F72AE00668EDB /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
+		D079DD93281F240800DA1D11 /* PrincipalViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewControllerTest.swift; sourceTree = "<group>"; };
 		D096134D27500C10005E42EC /* BorderGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewController.swift; sourceTree = "<group>"; };
 		D096134F27500D3E005E42EC /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		D096135527502FA7005E42EC /* WolmoCoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolmoCoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderGradientViewControllerTest.swift; sourceTree = "<group>"; };
+		D0DCEBED281F20DA006F98CB /* StringToImageViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImageViewControllerTest.swift; sourceTree = "<group>"; };
 		D0FD9AB52773A79F008F240F /* AnimationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationsView.xib; sourceTree = "<group>"; };
 		D0FD9AB72773A91A008F240F /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		D0FD9ABD2773B606008F240F /* GesturesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GesturesView.xib; sourceTree = "<group>"; };
@@ -705,6 +709,14 @@
 			path = PrincipalView;
 			sourceTree = "<group>";
 		};
+		D079DD92281F23ED00DA1D11 /* PrincipalView */ = {
+			isa = PBXGroup;
+			children = (
+				D079DD93281F240800DA1D11 /* PrincipalViewControllerTest.swift */,
+			);
+			path = PrincipalView;
+			sourceTree = "<group>";
+		};
 		D0961348275005F0005E42EC /* BorderGradient */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +730,7 @@
 		D096135627502FA7005E42EC /* WolmoCoreDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0DCEBEB281F209D006F98CB /* Views */,
 				D096135E27503090005E42EC /* UIKit */,
 			);
 			path = WolmoCoreDemoTests;
@@ -729,6 +742,23 @@
 				D096135727502FA7005E42EC /* BorderGradientViewControllerTest.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D0DCEBEB281F209D006F98CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D079DD92281F23ED00DA1D11 /* PrincipalView */,
+				D0DCEBEC281F20A3006F98CB /* StringToImage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0DCEBEC281F20A3006F98CB /* StringToImage */ = {
+			isa = PBXGroup;
+			children = (
+				D0DCEBED281F20DA006F98CB /* StringToImageViewControllerTest.swift */,
+			);
+			path = StringToImage;
 			sourceTree = "<group>";
 		};
 		D0FD9AB32773A6CA008F240F /* Views */ = {
@@ -1228,6 +1258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D079DD94281F240800DA1D11 /* PrincipalViewControllerTest.swift in Sources */,
+				D0DCEBEE281F20DA006F98CB /* StringToImageViewControllerTest.swift in Sources */,
 				D096135827502FA7005E42EC /* BorderGradientViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1504,7 +1536,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1532,7 +1564,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = WolmoCoreDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WolmoCoreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

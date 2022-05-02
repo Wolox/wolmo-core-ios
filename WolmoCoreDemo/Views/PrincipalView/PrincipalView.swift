@@ -28,10 +28,24 @@ final internal class PrincipalView: NibView {
         }
     }
     
-    @IBOutlet weak var stringsButton: UIButton!
-    @IBOutlet weak var bordersGradientButton: UIButton!
+    @IBOutlet weak var stringsButton: UIButton! {
+        didSet {
+            let image = UIImage(systemName: "pencil") ?? UIImage()
+            stringsButton.setTitle(title: "Strings", image: image.tintedWith(.black))
+        }
+    }
+    
+    @IBOutlet weak var bordersGradientButton: UIButton! {
+        didSet {
+            let image = UIImage(systemName: "app") ?? UIImage()
+            bordersGradientButton.setTitle(title: "Borders & Gradients",
+                                           image: image.tintedWith(.red),
+                                           spacing: 4,
+                                           imageOnRight: true)
+        }
+    }
+    
     @IBOutlet weak var animationsButton: UIButton!
     @IBOutlet weak var gesturesButton: UIButton!
-    
     @IBOutlet weak var gestureLabel: UILabel!
 }
