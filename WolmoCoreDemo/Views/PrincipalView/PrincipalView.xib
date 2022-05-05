@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,7 @@
                 <outlet property="bordersGradientButton" destination="JAd-cU-MHJ" id="JjO-7b-Jct"/>
                 <outlet property="gesturesButton" destination="p3g-ls-1Hi" id="mOC-Ga-81x"/>
                 <outlet property="roundBordersLabel" destination="QhB-9Z-2sJ" id="Cqe-ng-24D"/>
+                <outlet property="scrollStackViewButton" destination="lXP-5Y-yNm" id="98T-KT-WcI"/>
                 <outlet property="stringsButton" destination="AdN-3F-kMZ" id="DnL-MN-Sag"/>
                 <outlet property="titleLabel" destination="Nz0-Cq-KJs" id="pmf-DW-3qk"/>
             </connections>
@@ -25,37 +26,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-1j-qHf">
-                    <rect key="frame" x="107.5" y="176" width="160" height="315"/>
+                    <rect key="frame" x="107" y="151" width="161" height="365"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-3F-kMZ">
-                            <rect key="frame" x="43" y="0.0" width="74" height="30"/>
+                            <rect key="frame" x="43.5" y="0.0" width="74" height="30"/>
                             <state key="normal" title="Strings 🔗"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-cU-MHJ">
-                            <rect key="frame" x="0.5" y="50" width="159" height="30"/>
+                            <rect key="frame" x="1" y="50" width="159" height="30"/>
                             <state key="normal" title="Boders &amp; Gradients 🌈"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXP-5Y-yNm">
+                            <rect key="frame" x="0.0" y="100" width="161" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Stacked Scroll View 📜"/>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-RL-apd" userLabel="Animations">
-                            <rect key="frame" x="29" y="100" width="102" height="30"/>
+                            <rect key="frame" x="29.5" y="150" width="102" height="30"/>
                             <state key="normal" title="Animations 🚀"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-ls-1Hi" userLabel="GestureRecognizer">
-                            <rect key="frame" x="0.0" y="150" width="160" height="30"/>
+                            <rect key="frame" x="0.5" y="200" width="160" height="30"/>
                             <state key="normal" title="Gesture Recognizer 📱"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-Cq-KJs">
-                            <rect key="frame" x="25.5" y="200" width="109.5" height="20.5"/>
+                            <rect key="frame" x="26" y="250" width="109.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Body Style" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-P1-rEG">
-                            <rect key="frame" x="31" y="240.5" width="98" height="34"/>
+                            <rect key="frame" x="31.5" y="290.5" width="98" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Round borders  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-9Z-2sJ">
-                            <rect key="frame" x="15" y="294.5" width="130" height="20.5"/>
+                            <rect key="frame" x="15.5" y="344.5" width="130" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

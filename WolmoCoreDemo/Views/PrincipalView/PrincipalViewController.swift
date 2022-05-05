@@ -41,6 +41,10 @@ private extension PrincipalViewController {
                                               action: #selector(onTapBordersGradientButton),
                                               for: .touchUpInside)
         
+        _view.scrollStackViewButton.addTarget(self,
+                                              action: #selector(onTapScrollStackViewButton),
+                                              for: .touchUpInside)
+        
         _view.animationsButton.addTarget(self,
                                          action: #selector(onTapAnimationsButton),
                                          for: .touchUpInside)
@@ -57,6 +61,11 @@ private extension PrincipalViewController {
     
     @objc func onTapBordersGradientButton() {
         present(BorderGradientViewController(),
+                animated: true)
+    }
+    
+    @objc func onTapScrollStackViewButton() {
+        present(OverviewViewController(),
                 animated: true)
     }
     

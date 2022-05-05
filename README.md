@@ -15,12 +15,6 @@ WOLMO Core iOS is a framework which provides extensions and utilities for iOS co
 
 At Wolox, we complement this framework with [Wolmo - Reactive Core](https://github.com/Wolox/wolmo-reactive-core-ios).
 
-
-
-https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-a55f-8295685f5f06.mp4
-
-
-
 ## Table of Contents
 
   * [Installation](#installation)
@@ -29,6 +23,9 @@ https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-
     * [Manually](#manually)
   * [Usage](#usage)
     * [Documentation](#documentation)
+  * [Examples](#examples)
+    * [Animations & Gestures](#animations--gestures)
+    * [ScrollStack View](#scrollstack-view)
   * [Bootstrap](#bootstrap)
   * [Contributing](#contributing)
   * [About](#about)
@@ -71,6 +68,16 @@ The main difference between them is that `utilities` represent components that a
 ### Documentation
 
 For more information check out the [WolMo Core Documentation](https://wolox.github.io/wolmo-core-ios/Docs/index.html).
+
+## Examples
+
+### Animations & Gestures
+
+https://user-images.githubusercontent.com/11547820/143459897-e5487095-c404-4b79-a55f-8295685f5f06.mp4
+
+### ScrollStack View
+
+https://user-images.githubusercontent.com/81249698/159357395-8d4cd2a9-c84e-4c3c-b427-322e9673dac9.mp4
 
 ## Bootstrap
 ```
