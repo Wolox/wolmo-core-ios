@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CellView" customModule="WolmoCoreDemo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vPy-15-Qal" customClass="CellView" customModule="WolmoCoreDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="l6p-cD-u47">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-Yd-TDN">
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="120"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="310" id="Lgn-x4-4cp"/>
+                            <constraint firstAttribute="height" constant="120" id="vsw-05-M0T"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CPf-Yd-TDN" firstAttribute="top" secondItem="l6p-cD-u47" secondAttribute="top" id="1Xz-ua-7Ed"/>
+                    <constraint firstItem="CPf-Yd-TDN" firstAttribute="centerY" secondItem="l6p-cD-u47" secondAttribute="centerY" id="1o2-eT-7YB"/>
+                    <constraint firstItem="CPf-Yd-TDN" firstAttribute="centerX" secondItem="l6p-cD-u47" secondAttribute="centerX" id="DPg-R8-Mtb"/>
+                    <constraint firstItem="CPf-Yd-TDN" firstAttribute="leading" secondItem="l6p-cD-u47" secondAttribute="leading" id="mHc-8Y-kuX"/>
+                    <constraint firstAttribute="trailing" secondItem="CPf-Yd-TDN" secondAttribute="trailing" id="n8B-BE-MTP"/>
+                    <constraint firstAttribute="bottom" secondItem="CPf-Yd-TDN" secondAttribute="bottom" id="yk3-xs-GuV"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="506" height="197"/>
+            <connections>
+                <outlet property="cellView" destination="CPf-Yd-TDN" id="SqE-re-OD3"/>
+            </connections>
+            <point key="canvasLocation" x="-72.463768115942031" y="70.647321428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>

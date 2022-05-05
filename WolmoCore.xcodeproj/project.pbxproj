@@ -135,6 +135,13 @@
 		EB4ADF1C27AD95ED00218D9E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1B27AD95ED00218D9E /* Operators.swift */; };
 		EB4ADF1E27AD972D00218D9E /* OperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
+		EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED94A27EA5B6B00EB23EE /* UIColor.swift */; };
+		EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF201627E51F140017CDD1 /* OverviewViewController.swift */; };
+		EBFF202827E8C5290017CDD1 /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF202727E8C5290017CDD1 /* CollectionView.xib */; };
+		EBFF202D27E8C6D40017CDD1 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF202C27E8C6D40017CDD1 /* CollectionView.swift */; };
+		EBFF202F27E8DE100017CDD1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF202E27E8DE100017CDD1 /* CollectionViewController.swift */; };
+		EBFF203227E8E1500017CDD1 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF203127E8E1500017CDD1 /* CellView.swift */; };
+		EBFF203427E8E1E70017CDD1 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF203327E8E1E70017CDD1 /* CellView.xib */; };
 		F01FF542CB31E581E5F64727 /* Pods_WolmoCoreDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE942849E4E827F0A6947C37 /* Pods_WolmoCoreDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -337,6 +344,13 @@
 		EB4ADF1B27AD95ED00218D9E /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		EBFED94A27EA5B6B00EB23EE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EBFF201627E51F140017CDD1 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		EBFF202727E8C5290017CDD1 /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
+		EBFF202C27E8C6D40017CDD1 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		EBFF202E27E8DE100017CDD1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		EBFF203127E8E1500017CDD1 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		EBFF203327E8E1E70017CDD1 /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		EE33E2B4C9EF0997B992804A /* Pods-WolmoCore-WolmoCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WolmoCore-WolmoCoreTests/Pods-WolmoCore-WolmoCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -625,6 +639,7 @@
 		CEB8ED241FE968410037ED3D /* WolmoCoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBFED94927EA5B5D00EB23EE /* Extensions */,
 				D0FD9AB32773A6CA008F240F /* Views */,
 				CEB8ED251FE968410037ED3D /* AppDelegate.swift */,
 				CE6E9A1B20C59FB60068CC7A /* CustomFontProvider.swift */,
@@ -740,6 +755,7 @@
 		D0FD9AB32773A6CA008F240F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBFF201527E51EFF0017CDD1 /* Overview */,
 				D0563B7E27513647006622C0 /* PrincipalView */,
 				0C02AB4D21682B8A007DB327 /* StringToImage */,
 				D0961348275005F0005E42EC /* BorderGradient */,
@@ -768,6 +784,43 @@
 				D0FD9ABF2773B750008F240F /* GesturesView.swift */,
 			);
 			path = Gestures;
+			sourceTree = "<group>";
+		};
+		EBFED94927EA5B5D00EB23EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBFED94A27EA5B6B00EB23EE /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBFF201527E51EFF0017CDD1 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF203027E8E12C0017CDD1 /* Collection */,
+				EBFF201627E51F140017CDD1 /* OverviewViewController.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		EBFF202927E8C6470017CDD1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF203127E8E1500017CDD1 /* CellView.swift */,
+				EBFF203327E8E1E70017CDD1 /* CellView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EBFF203027E8E12C0017CDD1 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF202927E8C6470017CDD1 /* Cell */,
+				EBFF202727E8C5290017CDD1 /* CollectionView.xib */,
+				EBFF202C27E8C6D40017CDD1 /* CollectionView.swift */,
+				EBFF202E27E8DE100017CDD1 /* CollectionViewController.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -949,9 +1002,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBFF202827E8C5290017CDD1 /* CollectionView.xib in Resources */,
 				D0108962276F70A500668EDB /* SimpleView.xib in Resources */,
 				D0FD9AB62773A79F008F240F /* AnimationsView.xib in Resources */,
 				0C02AB5521682BD2007DB327 /* StringToImageView.xib in Resources */,
+				EBFF203427E8E1E70017CDD1 /* CellView.xib in Resources */,
 				CEB8ED521FE9688E0037ED3D /* PrincipalView.xib in Resources */,
 				CEB8ED301FE968410037ED3D /* LaunchScreen.storyboard in Resources */,
 				CEB8ED2D1FE968410037ED3D /* Assets.xcassets in Resources */,
@@ -1218,14 +1273,19 @@
 			files = (
 				CEB8ED581FE96ABC0037ED3D /* PrincipalView.swift in Sources */,
 				D0108964276F72AE00668EDB /* SimpleView.swift in Sources */,
+				EBFF202F27E8DE100017CDD1 /* CollectionViewController.swift in Sources */,
 				D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */,
 				D0FD9ABA2773AA4D008F240F /* SimpleExample.swift in Sources */,
 				CEB8ED281FE968410037ED3D /* PrincipalViewController.swift in Sources */,
 				0C02AB5321682BD2007DB327 /* StringToImageView.swift in Sources */,
+				EBFF203227E8E1500017CDD1 /* CellView.swift in Sources */,
 				CEB8ED261FE968410037ED3D /* AppDelegate.swift in Sources */,
 				D096134E27500C10005E42EC /* BorderGradientViewController.swift in Sources */,
 				CE6E9A1C20C59FB60068CC7A /* CustomFontProvider.swift in Sources */,
+				EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */,
 				D0FD9ABC2773B554008F240F /* GesturesViewController.swift in Sources */,
+				EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */,
+				EBFF202D27E8C6D40017CDD1 /* CollectionView.swift in Sources */,
 				D0FD9AB82773A91A008F240F /* AnimationsView.swift in Sources */,
 				0C02AB5221682BD2007DB327 /* StringToImageController.swift in Sources */,
 				D0FD9AB92773A9EF008F240F /* AnimationsViewController.swift in Sources */,

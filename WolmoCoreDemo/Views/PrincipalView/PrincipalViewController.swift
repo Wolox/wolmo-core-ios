@@ -24,8 +24,6 @@ final internal class PrincipalViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
-        
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -41,6 +39,10 @@ private extension PrincipalViewController {
         
         _view.bordersGradientButton.addTarget(self,
                                               action: #selector(onTapBordersGradientButton),
+                                              for: .touchUpInside)
+        
+        _view.scrollStackViewButton.addTarget(self,
+                                              action: #selector(onTapScrollStackViewButton),
                                               for: .touchUpInside)
         
         _view.animationsButton.addTarget(self,
@@ -59,6 +61,11 @@ private extension PrincipalViewController {
     
     @objc func onTapBordersGradientButton() {
         present(BorderGradientViewController(),
+                animated: true)
+    }
+    
+    @objc func onTapScrollStackViewButton() {
+        present(OverviewViewController(),
                 animated: true)
     }
     
