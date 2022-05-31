@@ -134,6 +134,7 @@
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
 		EBF7A6D22846874A002173C6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D12846874A002173C6 /* Optional.swift */; };
+		EBF7A6D42846A29C002173C6 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */; };
 		EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED94A27EA5B6B00EB23EE /* UIColor.swift */; };
 		EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF201627E51F140017CDD1 /* OverviewViewController.swift */; };
 		EBFF202827E8C5290017CDD1 /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF202727E8C5290017CDD1 /* CollectionView.xib */; };
@@ -342,6 +343,7 @@
 		EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		EBF7A6D12846874A002173C6 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
 		EBFED94A27EA5B6B00EB23EE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EBFF201627E51F140017CDD1 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		EBFF202727E8C5290017CDD1 /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
@@ -663,14 +665,15 @@
 				CEE9BFA51E8986D400D0E65D /* ArraySpec.swift */,
 				CE1186AB1EA7F67800105D6F /* BundleSpec.swift */,
 				CEE9BFA61E8986D400D0E65D /* CollectionSpec.swift */,
+				0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */,
 				CEE9BFA71E8986D400D0E65D /* DateSpec.swift */,
 				CEE9BFA81E8986D400D0E65D /* DictionarySpec.swift */,
+				EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */,
+				EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */,
 				CEE9BFA91E8986D400D0E65D /* RawRepresentableSpec.swift */,
 				CEE9BFAA1E8986D400D0E65D /* StringSpec.swift */,
 				CEE9BFAB1E8986D400D0E65D /* TimerSpec.swift */,
 				CEE9BFAC1E8986D400D0E65D /* URLSpec.swift */,
-				0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */,
-				EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1257,6 +1260,7 @@
 				653DCB9B21DE7B5F00C1C332 /* SwipeRecognizerSpec.swift in Sources */,
 				CE6E9A1E20C5A1CE0068CC7A /* UIFontSpec.swift in Sources */,
 				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
+				EBF7A6D42846A29C002173C6 /* OptionalSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
 				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
 				CEE9BFB51E8986D400D0E65D /* CollectionSpec.swift in Sources */,
