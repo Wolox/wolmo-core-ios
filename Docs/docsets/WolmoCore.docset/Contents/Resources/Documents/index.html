@@ -16,7 +16,7 @@
     <a title="WolmoCore  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">WolmoCore 6.2.0 Docs</a> (100% documented)</p>
+        <p><a href="index.html">WolmoCore 6.3.0 Docs</a> (100% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -205,6 +205,9 @@
                 <a href="Functions.html#/s:9WolmoCore10SimpleName6ofTypeSSypXp_tF">SimpleName(ofType:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/s:9WolmoCore2xxoiyS2b_SbtF">^^(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:9WolmoCore19getAssociatedObject_3keyxSgyXl_SVtlF">getAssociatedObject(_:key:)</a>
               </li>
               <li class="nav-group-task">
@@ -314,8 +317,7 @@
 <li><a href="#usage">Usage</a>
 
 <ul>
-<li><a href="#utilities">Utilities</a></li>
-<li><a href="#extensions">Extensions</a></li>
+<li><a href="#documentation">Documentation</a></li>
 </ul></li>
 <li><a href="#bootstrap">Bootstrap</a></li>
 <li><a href="#contributing">Contributing</a></li>
@@ -345,48 +347,12 @@ brew install carthage
 <p><a href="#bootstrap">Bootstrap</a> the project and then drag it to your workspace.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>The framework is divided into 2 sections: <a href="#utilities">Utilities</a> and <a href="#extensions">Extensions</a>.</p>
+<p>The framework is divided into 2 sections: Utilities and Extensions.</p>
 
 <p>The main difference between them is that <code>utilities</code> represent components that are independent of the existance of another component. On the other hand, <code>extensions</code> represent extra functionality for other existent components. Extensions exist only because the components they rely on exists.</p>
-<h3 id='utilities' class='heading'>Utilities</h3>
+<h3 id='documentation' class='heading'>Documentation</h3>
 
-<p>Constitutes a component which is independent from another component.</p>
-
-<p>For example, <a href="WolmoCore/Utilities/Alerts/AlertViewPresenter.swift">AlertViewPresenter</a> represents the behaviour of presenting an alert. In this case, any class (struct, enum, etc&hellip;) which can adopt this behaviour may be an <code><a href="Protocols/AlertViewPresenter.html">AlertViewPresenter</a></code>.</p>
-
-<p>In this framework, we give a default implementation of <code>UIViewController</code> as an <code><a href="Protocols/AlertViewPresenter.html">AlertViewPresenter</a></code>. However, note that they are independent one from another.</p>
-
-<p><code>WolmoCore</code> provides the following utilities:</p>
-
-<ol>
-<li><a href="WolmoCore/Utilities/Alerts/AlertViewPresenter.swift">AlertViewPresenter</a>: Abstracts the logic of presenting different type of alerts.</li>
-<li><a href="WolmoCore/Utilities/AssociatedObject.swift">AssociatedObject</a>: Setter and getter for associated objects. Works with objects and value types.</li>
-<li><a href="WolmoCore/Utilities/Identifiable.swift">Identifiable</a>: Identifies a reusable view. Usually used with <code>UICollectionView</code> and <code>UITableView</code> for cells, headers or footers.</li>
-<li><a href="WolmoCore/Utilities/NibLoadable.swift">NibLoadable</a>: Provides a way to load a resource from a nib, through Identifiable. Usually used to load a UIViewcontroller&rsquo;s view from a .xib.</li>
-<li><a href="WolmoCore/Utilities/DeviceType.swift">DeviceType</a>: Provides the current device type.</li>
-<li><a href="WolmoCore/Utilities/PathAppendable.swift">PathAppendable</a>: Makes a component able to be appended to a URL or string.
-and more&hellip;</li>
-</ol>
-<h3 id='extensions' class='heading'>Extensions</h3>
-
-<p>Extends the behaviour of a component (<code>class</code>, <code>struct</code>, <code>enum</code>, &hellip;) by adding common functionality (functions, computed properties, initializers, &hellip;).</p>
-
-<p>Extensions contain components which depends exclusively on other components.</p>
-
-<p>For example, <a href="WolmoCore/Extensions/UIKit/UIView/Collapsable.swift">Collapsable</a> represents a collapsable element. This behaviour is an addition to a <code>UIView</code>; it would not make sense to have something which is not renderable as <code><a href="Protocols/Collapsable.html">Collapsable</a></code>. Furthermore, it doesn&rsquo;t make sense for <code><a href="Protocols/Collapsable.html">Collapsable</a></code> to exist per se; it is a behaviour added to any view which conforms to it.</p>
-
-<p><code>WolmoCore</code> provides the following extensions:</p>
-
-<ol>
-<li><a href="WolmoCore/Extensions/AVFoundation">AVFoundation</a>: Extensions used for AVFoundation elements, such as <a href="WolmoCore/Extensions/AVFoundation/AVAsset.swift">AVAsset</a> and <a href="WolmoCore/Extensions/AVFoundation/AVPlayerItem.swift">AVPlayerItem</a>.</li>
-<li><a href="WolmoCore/Extensions/UIKit">UIKit</a>: Extensions for UIKit elements, such as <a href="WolmoCore/Extensions/UIKit/UIView/UIView.swift">UIView</a> and <a href="WolmoCore/Extensions/UIKit/UIViewController.swift">UIViewController</a>.</li>
-<li><a href="WolmoCore/Extensions/Foundation">Foundation</a>: Extensions for Foundation elements, such as <a href="WolmoCore/Extensions/Foundation/String.swift">String</a>, <a href="WolmoCore/Extensions/Foundation/Array.swift">Array</a> and <a href="WolmoCore/Extensions/Foundation/Date.swift">Date</a>.</li>
-<li><a href="WolmoCore/Extensions/Animations">Animations</a>: Extensions for <code>UIView</code> to animate it easily, such as <a href="WolmoCore/Extensions/Animations/SimpleAnimation.swift">SimpleAnimation</a>, <a href="WolmoCore/Extensions/Animations/MixedAnimation.swift">MixedAnimation</a> and <a href="WolmoCore/Extensions/Animations/ChainedAnimation.swift">ChainedAnimation</a></li>
-</ol>
-
-<p>You can check in the <a href="AnimationDemo/ViewController.swift">AnimationDemo</a> the contrast between the normal way of doing animations and our way.
-You can see examples of simple animations and one complex animation.
-Moreover, you can check some cases which does not work as expected with our extensions so you don&rsquo;t run into those problems.</p>
+<p>For more information check out the <a href="https://wolox.github.io/wolmo-core-ios/Docs/index.html">WolMo Core Documentation</a>.</p>
 <h2 id='bootstrap' class='heading'>Bootstrap</h2>
 <pre class="highlight plaintext"><code>git clone git@github.com:Wolox/wolmo-core-ios.git
 cd wolmo-core-ios
@@ -435,7 +401,7 @@ THE SOFTWARE.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-01-07)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-02-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

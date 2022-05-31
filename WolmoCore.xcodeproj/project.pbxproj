@@ -132,6 +132,8 @@
 		D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9ABF2773B750008F240F /* GesturesView.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
+		EB4ADF1C27AD95ED00218D9E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1B27AD95ED00218D9E /* Operators.swift */; };
+		EB4ADF1E27AD972D00218D9E /* OperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
 		EBF7A6D22846874A002173C6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D12846874A002173C6 /* Optional.swift */; };
 		EBF7A6D42846A29C002173C6 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */; };
@@ -341,6 +343,8 @@
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringSpec.swift; sourceTree = "<group>"; };
+		EB4ADF1B27AD95ED00218D9E /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		EBF7A6D12846874A002173C6 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
@@ -557,6 +561,7 @@
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
 				CE1186911EA7A5FE00105D6F /* General.swift */,
 				D010895F276F6B5400668EDB /* ScrollStackViewController.swift */,
+				EB4ADF1B27AD95ED00218D9E /* Operators.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */,
 				CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */,
 				CE1186931EA7A7C600105D6F /* GeneralSpec.swift */,
+				EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1200,6 +1206,7 @@
 				653DCB8B21DE7B5200C1C332 /* RotationRecognizer.swift in Sources */,
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
+				EB4ADF1C27AD95ED00218D9E /* Operators.swift in Sources */,
 				D0108960276F6B5400668EDB /* ScrollStackViewController.swift in Sources */,
 				CE4F2CBA2135EFF4007BB465 /* SafeLayout.swift in Sources */,
 				CE1DDFDD209A646B007471A0 /* ChainedAnimation.swift in Sources */,
@@ -1245,6 +1252,7 @@
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
 				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
+				EB4ADF1E27AD972D00218D9E /* OperatorsSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
 				CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */,
 				CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */,
