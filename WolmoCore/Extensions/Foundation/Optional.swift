@@ -9,7 +9,7 @@
 import Foundation
 
 extension Optional where Wrapped: Collection {
-    /// Returns a boolean value determining wether the optional collection is either empty or `nil`.
+    /// Returns a boolean value determining whether the optional collection is either empty or `nil`.
     var isNilOrEmpty: Bool {
         return self?.isEmpty ?? true
     }
