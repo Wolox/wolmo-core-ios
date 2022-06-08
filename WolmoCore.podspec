@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WolmoCore"
-  spec.version      = "6.3.0"
+  spec.version      = "6.4.0"
   spec.summary      = "Wolox Mobile SDK core library for iOS"
   spec.description  = <<-DESC
 WOLMO Core iOS is a framework which provides extensions and utilities for iOS commonly used at Wolox.
