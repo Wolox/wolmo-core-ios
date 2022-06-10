@@ -17,7 +17,7 @@
     <a title="UIView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">WolmoCore 6.4.0 Docs</a> (100% documented)</p>
+        <p><a href="../index.html">WolmoCore 6.4.0 Docs</a> (97% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -159,6 +159,9 @@
                 <a href="../Extensions/UILabel.html">UILabel</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/UIStackView.html">UIStackView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/UITableView.html">UITableView</a>
               </li>
               <li class="nav-group-task">
@@ -254,6 +257,9 @@
           <li class="nav-group-name">
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnchoredConstraints.html">AnchoredConstraints</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/BorderViewProperties.html">BorderViewProperties</a>
               </li>
@@ -555,6 +561,76 @@
                               <td>
                                 <div>
                                   <p>The closure that will execute when the view is released</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE18applyAccessibility5trait5label4hintySo21UIAccessibilityTraitsa_SSSgAJtF"></a>
+                    <a name="//apple_ref/swift/Method/applyAccessibility(trait:label:hint:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE18applyAccessibility5trait5label4hintySo21UIAccessibilityTraitsa_SSSgAJtF">applyAccessibility(trait:<wbr>label:<wbr>hint:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies accessibility features to the view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applyAccessibility</span><span class="p">(</span><span class="nv">trait</span><span class="p">:</span> <span class="kt">UIAccessibilityTraits</span><span class="p">,</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trait</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Accessibility trait for the view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>label</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Accessibility label for the view. This parameter is an optional with default value set to nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Accessibility hint for the view. This parameter is an optional with default value set to nil.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1238,6 +1314,360 @@ We strongly recommend to work with constraints as a better practice than frames.
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE6anchor3top7leading6bottom8trailing7padding4sizeAC19AnchoredConstraintsVSo19NSLayoutYAxisAnchorCSg_So0m5XAxisO0CSgAoRSo12UIEdgeInsetsVSo6CGSizeVtF"></a>
+                    <a name="//apple_ref/swift/Method/anchor(top:leading:bottom:trailing:padding:size:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE6anchor3top7leading6bottom8trailing7padding4sizeAC19AnchoredConstraintsVSo19NSLayoutYAxisAnchorCSg_So0m5XAxisO0CSgAoRSo12UIEdgeInsetsVSo6CGSizeVtF">anchor(top:<wbr>leading:<wbr>bottom:<wbr>trailing:<wbr>padding:<wbr>size:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constrains the view to the specified anchors and size, with optional padding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">anchor</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">,</span>
+            <span class="nv">leading</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">,</span>
+            <span class="nv">bottom</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">,</span>
+            <span class="nv">trailing</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">,</span>
+            <span class="nv">padding</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span>
+            <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnchoredConstraints.html">AnchoredConstraints</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>top</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Top anchor to which the view&rsquo;s top anchor will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leading</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>leading anchor to which the view&rsquo;s leading anchor will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bottom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>bottom anchor to which the view&rsquo;s bottom anchor will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trailing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>trailing anchor to which the view&rsquo;s trailing anchor will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>padding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>these are the constants to be added to the anchors, grouped in a UIEdgeInsets object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>size to which the view will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns an AnchoredConstraints object, that contains the view&rsquo;s top, bottom, leading, trailing, width and height constraints. This result is discardable.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE13fillSuperview7paddingySo12UIEdgeInsetsV_tF"></a>
+                    <a name="//apple_ref/swift/Method/fillSuperview(padding:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE13fillSuperview7paddingySo12UIEdgeInsetsV_tF">fillSuperview(padding:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constrains the view to the borders of its superview, with optional padding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fillSuperview</span><span class="p">(</span><span class="nv">padding</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>padding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When using this parameter, the view will fill out its superview, using this paramater as padding.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE17centerInSuperview4sizeySo6CGSizeV_tF"></a>
+                    <a name="//apple_ref/swift/Method/centerInSuperview(size:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE17centerInSuperview4sizeySo6CGSizeV_tF">centerInSuperview(size:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Centers the view to its superview, and constrains its height and width to the specified size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centerInSuperview</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Size to which the view will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE18centerXInSuperviewyyF"></a>
+                    <a name="//apple_ref/swift/Method/centerXInSuperview()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE18centerXInSuperviewyyF">centerXInSuperview()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Centers the view&rsquo;s x axis to its superview.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centerXInSuperview</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE18centerYInSuperviewyyF"></a>
+                    <a name="//apple_ref/swift/Method/centerYInSuperview()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE18centerYInSuperviewyyF">centerYInSuperview()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Centers the view&rsquo;s y axis to its superview.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centerYInSuperview</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE14constrainWidth8constanty0C8Graphics7CGFloatV_tF"></a>
+                    <a name="//apple_ref/swift/Method/constrainWidth(constant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE14constrainWidth8constanty0C8Graphics7CGFloatV_tF">constrainWidth(constant:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constrains the view&rsquo;s width to the specified parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">constrainWidth</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Constant to which the view&rsquo;s width will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC9WolmoCoreE15constrainHeight8constanty0C8Graphics7CGFloatV_tF"></a>
+                    <a name="//apple_ref/swift/Method/constrainHeight(constant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC9WolmoCoreE15constrainHeight8constanty0C8Graphics7CGFloatV_tF">constrainHeight(constant:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constrains the view&rsquo;s height to the specified parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">constrainHeight</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Constant to which the view&rsquo;s height will be constrained.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:So6UIViewC9WolmoCoreE29addLongPressGestureRecognizer20numberOfTapsRequired0ij7TouchesL007minimumF8Duration17allowableMovement6actionySi_SiSd0C8Graphics7CGFloatVySo06UILongfgH0CcSgtF"></a>
                     <a name="//apple_ref/swift/Method/addLongPressGestureRecognizer(numberOfTapsRequired:numberOfTouchesRequired:minimumPressDuration:allowableMovement:action:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:So6UIViewC9WolmoCoreE29addLongPressGestureRecognizer20numberOfTapsRequired0ij7TouchesL007minimumF8Duration17allowableMovement6actionySi_SiSd0C8Graphics7CGFloatVySo06UILongfgH0CcSgtF">addLongPressGestureRecognizer(numberOfTapsRequired:<wbr>numberOfTouchesRequired:<wbr>minimumPressDuration:<wbr>allowableMovement:<wbr>action:<wbr>)</a>
@@ -1797,7 +2227,7 @@ If the native safe layout guide is not available, then return a regular layout g
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-06-08)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/Wolox/wolmo-core-ios/" target="_blank" rel="external noopener">Wolox</a>. All rights reserved. (Last updated: 2022-06-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
