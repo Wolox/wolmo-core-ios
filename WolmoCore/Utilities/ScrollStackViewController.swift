@@ -18,7 +18,7 @@ open class ScrollStackViewController: UIViewController {
 
     // MARK: - Lifecycle methods
     /**
-     This override sets the NavigationBar to be shown in the view, and shows no Buttons on the right side it.
+     This override sets the NavigationBar to be shown in the view, and shows no Buttons on the right side of it.
      */
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ open class ScrollStackViewController: UIViewController {
     /**
      Method for loading the view sections into the parent view.
      
-     Override this method and use the `add(_:)` functions to load UIViews and UIViewControllers with their corresponding views.
+     Override this and use the `add(_:)` methods to load UIViews and UIViewControllers with their corresponding views.
      */
     open func addChildrenViewControllers() {
         // Override this function with the view sections
@@ -66,7 +66,7 @@ extension ScrollStackViewController {
     }
 
     /**
-     Loads and displays a UIViewController (and it's corresponding view) into the current ViewController.
+     Loads and displays a UIViewController (and its corresponding view) into the current ViewController.
      */
     open func add(_ child: UIViewController) {
         addChild(child)

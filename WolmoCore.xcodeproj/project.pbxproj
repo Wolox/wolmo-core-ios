@@ -135,7 +135,11 @@
 		D0FD9AC02773B750008F240F /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD9ABF2773B750008F240F /* GesturesView.swift */; };
 		D27199AADDE91077C56AE64D /* Pods_WolmoCoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC62BFBF33EAC22B4539AD5 /* Pods_WolmoCoreDemo.framework */; };
 		EB3919682785F464003C43A7 /* NSAttributedStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */; };
+		EB4ADF1C27AD95ED00218D9E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1B27AD95ED00218D9E /* Operators.swift */; };
+		EB4ADF1E27AD972D00218D9E /* OperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */; };
 		EBD98937277A313100235095 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD98936277A313100235095 /* NSAttributedString.swift */; };
+		EBF7A6D22846874A002173C6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D12846874A002173C6 /* Optional.swift */; };
+		EBF7A6D42846A29C002173C6 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */; };
 		EBFED94B27EA5B6B00EB23EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED94A27EA5B6B00EB23EE /* UIColor.swift */; };
 		EBFF201727E51F140017CDD1 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF201627E51F140017CDD1 /* OverviewViewController.swift */; };
 		EBFF202827E8C5290017CDD1 /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF202727E8C5290017CDD1 /* CollectionView.xib */; };
@@ -345,7 +349,11 @@
 		D77BF9D9477847DC4E32FF7D /* Pods_WolmoCore_WolmoCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WolmoCore_WolmoCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2487D8A4CB667A03EBBCE2 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringSpec.swift; sourceTree = "<group>"; };
+		EB4ADF1B27AD95ED00218D9E /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsSpec.swift; sourceTree = "<group>"; };
 		EBD98936277A313100235095 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		EBF7A6D12846874A002173C6 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
 		EBFED94A27EA5B6B00EB23EE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EBFF201627E51F140017CDD1 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		EBFF202727E8C5290017CDD1 /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
@@ -559,6 +567,7 @@
 				CE80E0F01E82D1F9005C300E /* PathAppendable.swift */,
 				CE1186911EA7A5FE00105D6F /* General.swift */,
 				D010895F276F6B5400668EDB /* ScrollStackViewController.swift */,
+				EB4ADF1B27AD95ED00218D9E /* Operators.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -593,14 +602,15 @@
 				CE3A9B781E607B28005D7E8F /* Array.swift */,
 				CE3A9B7B1E607B28005D7E8F /* Bundle.swift */,
 				CEE9BFCD1E8986F700D0E65D /* Collection.swift */,
+				0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */,
 				CE3A9B791E607B28005D7E8F /* Date.swift */,
 				CE3A9B7A1E607B28005D7E8F /* Dictionary.swift */,
+				EBD98936277A313100235095 /* NSAttributedString.swift */,
+				EBF7A6D12846874A002173C6 /* Optional.swift */,
 				CE3A9B7E1E607B28005D7E8F /* RawRepresentable.swift */,
 				CE3A9B7F1E607B28005D7E8F /* String.swift */,
 				CE3A9B7C1E607B28005D7E8F /* Timer.swift */,
 				CE3A9B7D1E607B28005D7E8F /* URL.swift */,
-				0CB8BAB3216F82FF00C8D6C1 /* Comparable.swift */,
-				EBD98936277A313100235095 /* NSAttributedString.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -669,14 +679,15 @@
 				CEE9BFA51E8986D400D0E65D /* ArraySpec.swift */,
 				CE1186AB1EA7F67800105D6F /* BundleSpec.swift */,
 				CEE9BFA61E8986D400D0E65D /* CollectionSpec.swift */,
+				0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */,
 				CEE9BFA71E8986D400D0E65D /* DateSpec.swift */,
 				CEE9BFA81E8986D400D0E65D /* DictionarySpec.swift */,
+				EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */,
+				EBF7A6D32846A29C002173C6 /* OptionalSpec.swift */,
 				CEE9BFA91E8986D400D0E65D /* RawRepresentableSpec.swift */,
 				CEE9BFAA1E8986D400D0E65D /* StringSpec.swift */,
 				CEE9BFAB1E8986D400D0E65D /* TimerSpec.swift */,
 				CEE9BFAC1E8986D400D0E65D /* URLSpec.swift */,
-				0CB8BAB5216F835E00C8D6C1 /* ComparableSpec.swift */,
-				EB3919672785F464003C43A7 /* NSAttributedStringSpec.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -706,6 +717,7 @@
 				CE11869F1EA7CA7900105D6F /* NibLoadableSpec.swift */,
 				CEE9BFC71E8986DC00D0E65D /* PathAppendableSpec.swift */,
 				CE1186931EA7A7C600105D6F /* GeneralSpec.swift */,
+				EB4ADF1D27AD972D00218D9E /* OperatorsSpec.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1205,6 +1217,7 @@
 				CE3A9B9A1E607B28005D7E8F /* UIAlertController.swift in Sources */,
 				0714723923D7754500D9C819 /* Accessibility.swift in Sources */,
 				B988B97D1D244D6300824685 /* ConfirmationAlertViewModel.swift in Sources */,
+				EB4ADF1C27AD95ED00218D9E /* Operators.swift in Sources */,
 				D0108960276F6B5400668EDB /* ScrollStackViewController.swift in Sources */,
 				CE4F2CBA2135EFF4007BB465 /* SafeLayout.swift in Sources */,
 				CE1DDFDD209A646B007471A0 /* ChainedAnimation.swift in Sources */,
@@ -1217,6 +1230,7 @@
 				CEE9BFCE1E8986F700D0E65D /* Collection.swift in Sources */,
 				653DCB8F21DE7B5200C1C332 /* TapRecognizer.swift in Sources */,
 				CE3A9B911E607B28005D7E8F /* Date.swift in Sources */,
+				EBF7A6D22846874A002173C6 /* Optional.swift in Sources */,
 				CED934851E8456480017CF96 /* UICollectionView.swift in Sources */,
 				CE1186891EA79EFF00105D6F /* NibLoadable.swift in Sources */,
 				B988B9811D24621000824685 /* DeviceType.swift in Sources */,
@@ -1250,6 +1264,7 @@
 				CEE9BFB71E8986D400D0E65D /* DictionarySpec.swift in Sources */,
 				CEE9BFCC1E8986DC00D0E65D /* PathAppendableSpec.swift in Sources */,
 				CE1186941EA7A7C600105D6F /* GeneralSpec.swift in Sources */,
+				EB4ADF1E27AD972D00218D9E /* OperatorsSpec.swift in Sources */,
 				CEE9BFB91E8986D400D0E65D /* StringSpec.swift in Sources */,
 				CEEC51801EE5EE3400BC41FE /* UILabelSpec.swift in Sources */,
 				CEE9BFCA1E8986DC00D0E65D /* AssociatedObjectSpec.swift in Sources */,
@@ -1265,6 +1280,7 @@
 				653DCB9B21DE7B5F00C1C332 /* SwipeRecognizerSpec.swift in Sources */,
 				CE6E9A1E20C5A1CE0068CC7A /* UIFontSpec.swift in Sources */,
 				CE11868D1EA7A0E100105D6F /* UICollectionViewSpec.swift in Sources */,
+				EBF7A6D42846A29C002173C6 /* OptionalSpec.swift in Sources */,
 				CEE9BFBA1E8986D400D0E65D /* TimerSpec.swift in Sources */,
 				CE11869E1EA7C9DE00105D6F /* Resources.swift in Sources */,
 				CEE9BFB51E8986D400D0E65D /* CollectionSpec.swift in Sources */,

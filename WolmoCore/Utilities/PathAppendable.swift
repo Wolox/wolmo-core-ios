@@ -55,7 +55,6 @@ public extension PathAppendable {
     func toPath() -> String {
         return String(describing: self)
     }
-    
 }
 
 extension String: PathAppendable {}
