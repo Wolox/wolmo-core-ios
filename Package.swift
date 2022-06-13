@@ -11,15 +11,11 @@ let package = Package(
             targets: ["WolmoCore"]),
     ],
     dependencies: [],
-    targets: [.target(
+    targets: [
+        .target(
             name: "WolmoCore",
             dependencies: [],
-            path: "Sources/WolmoCore",
-            exclude: ["AnimationDemoTests",
-            "AnimationDemoUITests",
-            "WolmoCoreDemo",
-            "WolmoCoreTests",
-            "WolmoCoreDemoTests"]),
+            path: "Sources/WolmoCore"),
         .testTarget(
             name: "WolmoCoreTests",
             dependencies: ["WolmoCore"],
