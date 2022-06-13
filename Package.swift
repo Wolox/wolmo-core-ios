@@ -1,21 +1,23 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "wolmo-core-ios",
+    name: "WolmoCore",
     products: [
         .library(
-            name: "wolmo-core-ios",
-            targets: ["wolmo-core-ios"]),
+            name: "WolmoCore",
+            targets: ["WolmoCore"]),
     ],
     dependencies: [],
     targets: [.target(
-            name: "wolmo-core-ios",
-            dependencies: []),
+            name: "WolmoCore",
+            dependencies: [],
+	    path: "Sources/WolmoCore"),
         .testTarget(
-            name: "wolmo-core-iosTests",
-            dependencies: ["wolmo-core-ios"]),
+            name: "WolmoCoreTests",
+            dependencies: ["WolmoCore"],
+	    path: "WolmoCoreTests"),
     ]
 )
