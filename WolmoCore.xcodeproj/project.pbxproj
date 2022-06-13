@@ -514,7 +514,8 @@
 				9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */,
 				9D896ABD1CDE3EC5008B0E5F /* Info.plist */,
 			);
-			path = WolmoCore;
+			name = WolmoCore;
+			path = Sources/WolmoCore;
 			sourceTree = "<group>";
 		};
 		9D896AC61CDE3EC5008B0E5F /* WolmoCoreTests */ = {
