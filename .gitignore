@@ -3,6 +3,8 @@ profile
 DerivedData
 .idea/
 
+.swiftpm/
+
 # xcode noise
 build/*
 *.perspective
