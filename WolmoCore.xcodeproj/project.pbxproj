@@ -1485,10 +1485,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods",
 				);
-				INFOPLIST_FILE = WolmoCore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/WolmoCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Pods";
+				MARKETING_VERSION = 6.4.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
@@ -1517,10 +1518,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods",
 				);
-				INFOPLIST_FILE = WolmoCore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/WolmoCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Pods";
+				MARKETING_VERSION = 6.4.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
