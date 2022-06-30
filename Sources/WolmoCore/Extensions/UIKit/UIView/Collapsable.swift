@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Represents a collapsable element.

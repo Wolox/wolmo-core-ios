@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public extension UIView {
     // In order to create computed properties for extensions, we need a key to

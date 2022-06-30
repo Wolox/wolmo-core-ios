@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  DeviceType provides the current device type,
