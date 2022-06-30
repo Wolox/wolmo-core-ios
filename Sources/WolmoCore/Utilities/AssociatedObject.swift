@@ -6,6 +6,8 @@
 //  Copyright © 2016 Wolox. All rights reserved.
 //
 
+import Foundation
+
 /**
  Sets an associated value for a given object using a given key and association policy, whether it is a value type or a class.
  

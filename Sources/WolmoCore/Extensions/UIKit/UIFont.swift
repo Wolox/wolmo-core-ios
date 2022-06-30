@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Declares and object that provides font names associated with specific font text styles.
 public protocol UIFontProvider: AnyObject {

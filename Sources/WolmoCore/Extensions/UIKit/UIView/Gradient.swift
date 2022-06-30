@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Represents the posible directions of a gradient in a view.

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Represents an object which is loaded from a nib.

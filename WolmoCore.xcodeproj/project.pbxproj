@@ -172,6 +172,13 @@
 			remoteGlobalIDString = CEB8ED221FE968410037ED3D;
 			remoteInfo = WolmoCoreDemo;
 		};
+		EB0CC37F286CF3AD007CC1CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D896AAF1CDE3EC5008B0E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB8ED221FE968410037ED3D;
+			remoteInfo = WolmoCoreDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -889,6 +896,7 @@
 			);
 			dependencies = (
 				CE74869C2047067D00636D98 /* PBXTargetDependency */,
+				EB0CC380286CF3AD007CC1CD /* PBXTargetDependency */,
 			);
 			name = WolmoCoreTests;
 			productName = WolmoCoreTests;
@@ -1339,6 +1347,11 @@
 			isa = PBXTargetDependency;
 			target = CEB8ED221FE968410037ED3D /* WolmoCoreDemo */;
 			targetProxy = D096135927502FA7005E42EC /* PBXContainerItemProxy */;
+		};
+		EB0CC380286CF3AD007CC1CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB8ED221FE968410037ED3D /* WolmoCoreDemo */;
+			targetProxy = EB0CC37F286CF3AD007CC1CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

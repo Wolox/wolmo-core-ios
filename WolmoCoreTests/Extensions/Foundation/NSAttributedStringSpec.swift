@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Quick
 import Nimble
 import WolmoCore
