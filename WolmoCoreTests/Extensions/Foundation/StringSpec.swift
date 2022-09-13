@@ -34,7 +34,7 @@ public class StringSpec: QuickSpec {
         describe("#localized(withArguments:bundle:)") {
             it("should localize the string and then format it with the arguments passed") {
                 let key = "some.example.formatting_key"
-                let result = key.localized(withArguments: 5, "Test", bundle: Bundle(for: StringSpec.self))
+                let result = key.localized(withArguments: 5, "Test", bundle: Bundle.module)
                 expect(result).to(equal("The number is 5, and my name Test."))
             }
         }

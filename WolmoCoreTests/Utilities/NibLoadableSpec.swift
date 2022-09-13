@@ -68,16 +68,6 @@ public class NibLoadableSpec: QuickSpec {
                     expect(loaded).to(beNil())
                 }
             }
-            context("when the nib is not in the specified bundle") {
-                it("should return .none") {
-                    expect(self.loadCustomTableNib()).to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
-            context("when there is no nib under that name") {
-                it("should return .none") {
-                    expect(self.loadStructNib()).to(raiseExceptio)//raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
         }
     }
     

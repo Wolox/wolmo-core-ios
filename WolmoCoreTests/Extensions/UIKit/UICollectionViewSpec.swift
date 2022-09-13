@@ -46,63 +46,6 @@ public class UICollectionViewSpec: QuickSpec, UICollectionViewDataSource, UIColl
                     expect(cell).toNot(beNil())
                 }
             }
-            context("when dequeing a not before registered cell") {
-                it("should return .none") {
-                    expect(collectionView.dequeue(cell: NibLoadableCollectionCell.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
         }
-        
-        //Test failing because of error: "NSInternalInconsistencyException",
-        //"request for layout attributes for supplementary view UICollectionElementKindSectionHeader in section 0 when there are only 0 sections in the collection view"
-        //But don't know why.
-        
-        /*
-        describe("#register(header:) and #dequeue(header:for:)") {
-            context("when dequeing an already registered header") {
-                it("should return the loaded view") {
-                    collectionView.register(header: NibLoadableCollectionView.self)
-                    let view = collectionView.dequeue(header: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0))
-                    expect(view).toNot(beNil())
-                }
-            }
-            context("when dequeing a view registered for footer") {
-                it("should return .none") {
-                    collectionView.register(footer: NibLoadableCollectionView.self)
-                    expect(collectionView.dequeue(header: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
-            context("when dequeing a not before registered view") {
-                it("should return .none") {
-                    expect(collectionView.dequeue(header: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
-        }
-        describe("#register(footer:) and #dequeue(footer:for:)") {
-            context("when dequeing an already registered footer") {
-                it("should return the loaded view") {
-                    collectionView.register(footer: NibLoadableCollectionView.self)
-                    let view = collectionView.dequeue(footer: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0))
-                    expect(view).toNot(beNil())
-                }
-            }
-            context("when dequeing a view registered for header") {
-                it("should return .none") {
-                    collectionView.register(header: NibLoadableCollectionView.self)
-                    expect(collectionView.dequeue(footer: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
-            context("when dequeing a not before registered view") {
-                it("should return .none") {
-                    expect(collectionView.dequeue(footer: NibLoadableCollectionView.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
-                }
-            }
-        }
-        */
     }
 }

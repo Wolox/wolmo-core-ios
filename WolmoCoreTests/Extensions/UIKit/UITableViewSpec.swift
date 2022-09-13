@@ -13,7 +13,6 @@ import Nimble
 import WolmoCore
 
 public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDelegate {
-
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -63,7 +62,7 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
             context("when dequeing a not before registered cell") {
                 it("should return .none") {
                     expect(tableView.dequeue(cell: NibLoadableTableCell.self, for: IndexPath(row: 0, section: 0)))
-                        .to(raiseException(named: "NSInternalInconsistencyException"))
+                        .to(equal(.none))
                 }
             }
         }
@@ -83,81 +82,5 @@ public class UITableViewSpec: QuickSpec, UITableViewDataSource, UITableViewDeleg
                 }
             }
         }
-        
-        //Test failing because of `dequeueReusableHeaderFooterView(withIdentifier: headerType.identifier)` always returns nil.
-        //But don't know why.
-        /*
-        describe("#register(header:) and #dequeue(header:for:)") {
-            
-            context("when dequeing an already registered header") {
-                
-                it("should return the loaded view") {
-                    //Test failing because of error: "NSInternalInconsistencyException",
-                    //"request for layout attributes for supplementary view UICollectionElementKindSectionHeader in section 0 when there are only 0 sections in the collection view"
-                    //But don't know why.
-                    tableView.register(header: NibLoadableTableView.self)
-                    let view = tableView.dequeue(header: NibLoadableTableView.self)
-                    expect(view).toNot(beNil())
-                }
-                
-            }
-            
-            context("when dequeing a view registered for footer") {
-                
-                it("should return the loaded view since footer and header are interchangeable in table views") {
-                    tableView.register(footer: NibLoadableTableView.self)
-                    let view = tableView.dequeue(header: NibLoadableTableView.self)
-                    expect(view).toNot(beNil())
-                }
-                
-            }
-            
-            context("when dequeing a not before registered view") {
-                
-                it("should return .none") {
-                    let view = tableView.dequeue(header: NibLoadableTableView.self)
-                    expect(view).to(beNil())
-                }
-                
-            }
-            
-        }
-        
-        describe("#register(footer:) and #dequeue(footer:for:)") {
-            
-            context("when dequeing an already registered footer") {
-                
-                it("should return the loaded view") {
-                    //Test failing because of error: "NSInternalInconsistencyException",
-                    //"request for layout attributes for supplementary view UICollectionElementKindSectionHeader in section 0 when there are only 0 sections in the collection view"
-                    //But don't know why.
-                    tableView.register(footer: NibLoadableTableView.self)
-                    let view = tableView.dequeue(footer: NibLoadableTableView.self)
-                    expect(view).toNot(beNil())
-                }
-                
-            }
-            
-            context("when dequeing a view registered for header") {
-                
-                it("should return the loaded view since footer and header are interchangeable in table views") {
-                    tableView.register(header: NibLoadableTableView.self)
-                    let view = tableView.dequeue(footer: NibLoadableTableView.self)
-                    expect(view).toNot(beNil())
-                }
-                
-            }
-            
-            context("when dequeing a not before registered view") {
-                
-                it("should return .none") {
-                    let view = tableView.dequeue(footer: NibLoadableTableView.self)
-                    expect(view).to(beNil())
-                }
-                
-            }
-            
-        }
-        */
     }
 }
