@@ -21,7 +21,7 @@ public class StringSpec: QuickSpec {
         describe("#localized(bundle:)") {
             it("should localize the string according to main bundle") {
                 let key = "some.example.key"
-                let localized = key.localized(bundle: Bundle(for: StringSpec.self))
+                let localized = key.localized(bundle: Bundle.module)
                 expect(localized).to(equal("This is my localized string."))
             }
         }

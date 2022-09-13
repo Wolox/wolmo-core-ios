@@ -28,6 +28,8 @@ let package = Package(
                            .product(name: "Quick", package: "Quick"),
                            .product(name: "Nimble", package: "Nimble"),
                            .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
-            path: "WolmoCoreTests"),
+            path: "WolmoCoreTests",
+            exclude: ["Info.plist"],
+            resources: [.copy("Localizable.strings")]),
     ]
 )

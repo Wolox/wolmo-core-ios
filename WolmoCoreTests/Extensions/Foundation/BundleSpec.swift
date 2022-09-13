@@ -13,6 +13,7 @@ import WolmoCore
 
 public class BundleSpec: QuickSpec {
     override public func spec() {
+        // TODO: check if this is correct, find a solution for Nib loading in Bundle
         // let bundle = Bundle(for: BundleSpec.self)
         let bundle = Bundle.module
         
