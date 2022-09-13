@@ -321,7 +321,6 @@ public class DateSpec: QuickSpec {
             context("When getting the week day for every day in a week") {
                 it("should match to the week made of date's string representation") {
                     let _week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-//                    let week = DefaultWeekDateFormatter.getWeekDay(withFormat: "EEEEE")
                     expect(week.map { $0.getWeekDay() }).to(equal(_week))
                 }
             }
