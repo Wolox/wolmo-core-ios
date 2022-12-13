@@ -27,7 +27,7 @@ public extension NSAttributedString {
         let font: UIFont = self.attribute(
             NSAttributedString.Key.font,
             at: self.length-1,
-            effectiveRange: nil) as! UIFont //swiftlint:disable:this force_cast
+            effectiveRange: nil) as! UIFont // swiftlint:disable:this force_cast
         let superscriptPointSize = font.pointSize * CGFloat(percentageSize)
         let superscriptFont = UIFont(descriptor: font.fontDescriptor, size: superscriptPointSize)
         let newString = NSMutableAttributedString(attributedString: self)
@@ -59,7 +59,7 @@ public extension NSAttributedString {
         let font: UIFont = self.attribute(
             NSAttributedString.Key.font,
             at: self.length-1,
-            effectiveRange: nil) as! UIFont //swiftlint:disable:this force_cast
+            effectiveRange: nil) as! UIFont // swiftlint:disable:this force_cast
         let subscriptPointSize = font.pointSize * CGFloat(percentageSize)
         let subscriptFont = UIFont(descriptor: font.fontDescriptor, size: subscriptPointSize)
         let newString = NSMutableAttributedString(attributedString: self)
