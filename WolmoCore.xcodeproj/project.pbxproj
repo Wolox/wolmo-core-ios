@@ -172,6 +172,13 @@
 			remoteGlobalIDString = CEB8ED221FE968410037ED3D;
 			remoteInfo = WolmoCoreDemo;
 		};
+		EB0CC37F286CF3AD007CC1CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D896AAF1CDE3EC5008B0E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB8ED221FE968410037ED3D;
+			remoteInfo = WolmoCoreDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -514,7 +521,8 @@
 				9D896ABB1CDE3EC5008B0E5F /* WolmoCore.h */,
 				9D896ABD1CDE3EC5008B0E5F /* Info.plist */,
 			);
-			path = WolmoCore;
+			name = WolmoCore;
+			path = Sources/WolmoCore;
 			sourceTree = "<group>";
 		};
 		9D896AC61CDE3EC5008B0E5F /* WolmoCoreTests */ = {
@@ -888,6 +896,7 @@
 			);
 			dependencies = (
 				CE74869C2047067D00636D98 /* PBXTargetDependency */,
+				EB0CC380286CF3AD007CC1CD /* PBXTargetDependency */,
 			);
 			name = WolmoCoreTests;
 			productName = WolmoCoreTests;
@@ -1339,6 +1348,11 @@
 			target = CEB8ED221FE968410037ED3D /* WolmoCoreDemo */;
 			targetProxy = D096135927502FA7005E42EC /* PBXContainerItemProxy */;
 		};
+		EB0CC380286CF3AD007CC1CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB8ED221FE968410037ED3D /* WolmoCoreDemo */;
+			targetProxy = EB0CC37F286CF3AD007CC1CD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1486,7 +1500,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods",
 				);
-				INFOPLIST_FILE = WolmoCore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/WolmoCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1495,6 +1509,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Pods",
 				);
+				MARKETING_VERSION = 6.4.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",
@@ -1523,7 +1538,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods",
 				);
-				INFOPLIST_FILE = WolmoCore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/WolmoCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1532,6 +1547,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Pods",
 				);
+				MARKETING_VERSION = 6.4.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(OTHER_LDFLAGS)",

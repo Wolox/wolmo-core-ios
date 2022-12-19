@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Quick
 import Nimble
 import WolmoCore
@@ -74,7 +75,7 @@ public class NibLoadableSpec: QuickSpec {
             }
             context("when there is no nib under that name") {
                 it("should return .none") {
-                    expect(self.loadStructNib()).to(raiseException(named: "NSInternalInconsistencyException"))
+                    expect(self.loadStructNib()).to(raiseExceptio)//raiseException(named: "NSInternalInconsistencyException"))
                 }
             }
         }

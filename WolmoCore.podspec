@@ -13,8 +13,8 @@ At Wolox, we complement this framework with Wolmo - Reactive Core.
   spec.author             = "Wolox"
   spec.ios.deployment_target = "12.0"
   spec.source       = { :git => "https://github.com/Wolox/wolmo-core-ios.git", :tag => "#{spec.version}" }
-  spec.source_files  = "WolmoCore/**/*.{h,m,swift}"
-  spec.exclude_files = "WolmoCoreDemo", "WolmoCoreTests", "WolmoCoreDemoTests"
+  spec.source_files  = "Sources/WolmoCore/**/*.{h,m,swift}"
+  spec.exclude_files = "AnimationDemoTests", "AnimationDemoUITests", "WolmoCoreDemo", "WolmoCoreTests", "WolmoCoreDemoTests"
   spec.swift_versions = "5.0"
 
 end

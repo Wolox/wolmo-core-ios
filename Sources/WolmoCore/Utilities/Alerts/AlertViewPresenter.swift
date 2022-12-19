@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  AlertViewPresenter abstracts the logic of presenting different type of alerts.
