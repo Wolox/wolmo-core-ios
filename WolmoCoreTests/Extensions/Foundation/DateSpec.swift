@@ -438,7 +438,7 @@ public class DateSpec: QuickSpec {
             //  is `MM/dd/yyyy, HH:mm:ss` for default formatter.
             it("should return the string with the right format and time information") {
                 let string = date.toString(withLocalized: "yyyy-MM-dd ss:mm:HH")
-                expect(string).to(equal("04/12/1992, 21:55:17"))
+                expect(string).to(equal("04/12/1992 21:55:17"))
             }
         }
     }

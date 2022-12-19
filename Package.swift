@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "WolmoCore",
-            targets: ["WolmoCore"]),
+            targets: ["WolmoCore"])
     ],
     dependencies: [.package(url: "https://github.com/Quick/Quick.git",
                             from: "5.0.1"),
@@ -28,6 +28,8 @@ let package = Package(
                            .product(name: "Quick", package: "Quick"),
                            .product(name: "Nimble", package: "Nimble"),
                            .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
-            path: "WolmoCoreTests"),
+            path: "WolmoCoreTests",
+            exclude: ["Info.plist"],
+            resources: [.copy("Localizable.strings")])
     ]
 )

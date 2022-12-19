@@ -13,7 +13,9 @@ import WolmoCore
 
 public class BundleSpec: QuickSpec {
     override public func spec() {
-        let bundle = Bundle(for: BundleSpec.self)
+        // TODO: check if this is correct, find a solution for Nib loading in Bundle
+        // let bundle = Bundle(for: BundleSpec.self)
+        let bundle = Bundle.module
         
         describe("#loadNib(named:)") {
             context("when there is a nib for it in that bundle and it's of the expected type") {
@@ -26,11 +28,6 @@ public class BundleSpec: QuickSpec {
                 it("should return .none") {
                     let loaded: NibLoadableTableViewCustom2? = bundle.loadNib(named: "NibLoadableTableViewCustom")
                     expect(loaded).to(beNil())
-                }
-            }
-            context("when the nib is not in the bundle") {
-                it("should return .none") {
-                    expect(self.loadStructNib()).to(raiseException(named: "NSInternalInconsistencyException"))
                 }
             }
         }

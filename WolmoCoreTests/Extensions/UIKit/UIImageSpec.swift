@@ -25,9 +25,8 @@ public class UIImageSpec: QuickSpec {
         
         describe("#resized") {
             beforeEach {
-                let bundle = Bundle(for: type(of: self))
-                originalImage = UIImage(named: "50by50", in: bundle, compatibleWith: .none)
-                // The original size of the image is 50x50, so it's aspect ratio is 1:1
+                originalImage = UIImage(named: "50by50", in: Bundle.module, compatibleWith: .none)
+                // The original size of the image is 50x50, so its aspect ratio is 1:1
             }
             
             context("When the wanted size is bigger") {
